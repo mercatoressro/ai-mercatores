@@ -468,31 +468,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-              >
-                <div
-                  className="px-3 py-2 rounded-lg flex items-center gap-2"
-                  style={{
-                    background:
-                      "linear-gradient(145deg, hsl(225 25% 10% / 0.9), hsl(225 30% 6% / 0.9))",
-                    border: "1px solid hsl(260 70% 60% / 0.12)",
-                    backdropFilter: "blur(20px)",
-                  }}
-                >
-                  <div className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />
-                  <span className="text-[9px] font-mono text-secondary/60 uppercase tracking-wider">
-                    3 moduly aktívne
-                  </span>
-                </div>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none" />
-    </section>
-  );
-};
-
-export default HeroSection;
