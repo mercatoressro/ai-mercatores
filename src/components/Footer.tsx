@@ -1,3 +1,5 @@
+import { ArrowRight } from "lucide-react";
+
 const navLinks = [
   { label: "Domov", href: "#" },
   { label: "Riešenia", href: "#riesenia" },
@@ -9,12 +11,15 @@ const navLinks = [
 
 const Footer = () => {
   return (
-    <footer className="relative border-t border-border/30 bg-background">
-      <div className="container mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-3 gap-12">
+    <footer className="relative border-t border-border/20">
+      {/* Subtle top glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+
+      <div className="container mx-auto px-6 lg:px-8 py-20">
+        <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
           <div>
-            <div className="font-display font-bold text-xl mb-3">
-              <span className="text-foreground">ai.</span>
+            <div className="font-display font-bold text-xl tracking-tight mb-4">
+              <span className="text-foreground/90">ai.</span>
               <span className="gradient-text-primary">mercatores</span>
               <span className="text-muted-foreground">.sk</span>
             </div>
@@ -24,11 +29,11 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-display font-semibold text-sm mb-4">Navigácia</h4>
-            <ul className="space-y-2">
+            <h4 className="font-display text-xs uppercase tracking-widest text-muted-foreground/50 font-semibold mb-5">Navigácia</h4>
+            <ul className="space-y-3">
               {navLinks.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  <a href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">
                     {link.label}
                   </a>
                 </li>
@@ -37,27 +42,25 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-display font-semibold text-sm mb-4">Kontakt</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <h4 className="font-display text-xs uppercase tracking-widest text-muted-foreground/50 font-semibold mb-5">Kontakt</h4>
+            <ul className="space-y-3 text-sm text-muted-foreground mb-8">
               <li>ai.mercatores.sk</li>
               <li>info@mercatores.sk</li>
             </ul>
-            <a
-              href="#kontakt"
-              className="inline-flex items-center mt-6 px-5 py-2.5 rounded-lg text-sm font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-all"
-            >
-              Dohodnúť konzultáciu
+            <a href="#kontakt" className="btn-primary inline-flex items-center gap-2 px-6 py-3 text-sm">
+              <span>Dohodnúť konzultáciu</span>
+              <ArrowRight size={14} />
             </a>
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-border/20 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-muted-foreground">
+        <div className="mt-20 pt-8 border-t border-border/15 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-muted-foreground/40">
             © {new Date().getFullYear()} ai.mercatores.sk. Všetky práva vyhradené.
           </p>
-          <div className="flex gap-6 text-xs text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">Ochrana súkromia</a>
-            <a href="#" className="hover:text-foreground transition-colors">Podmienky</a>
+          <div className="flex gap-8 text-xs text-muted-foreground/40">
+            <a href="#" className="hover:text-muted-foreground transition-colors duration-300">Ochrana súkromia</a>
+            <a href="#" className="hover:text-muted-foreground transition-colors duration-300">Podmienky</a>
           </div>
         </div>
       </div>

@@ -11,46 +11,50 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section id="ako-to-funguje" className="relative py-24 md:py-32">
-      <div className="container mx-auto px-6">
+    <section id="ako-to-funguje" className="relative py-28 md:py-36 section-glow">
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center mb-20"
         >
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/60 font-mono mb-4">Proces</span>
+          <h2 className="font-display text-section mb-5">
             Ako to <span className="gradient-text-primary">funguje</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
+          <p className="text-muted-foreground max-w-lg mx-auto text-base">
             Päť krokov od diagnostiky po riadený výkon.
           </p>
         </motion.div>
 
         <div className="relative max-w-3xl mx-auto">
-          {/* Vertical line */}
-          <div className="absolute left-6 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-secondary/30 to-transparent hidden sm:block" />
+          {/* Timeline line */}
+          <div className="absolute left-8 md:left-10 top-6 bottom-6 w-px bg-gradient-to-b from-primary/30 via-secondary/20 to-transparent hidden sm:block" />
 
-          <div className="space-y-8">
+          <div className="space-y-6">
             {steps.map((step, i) => (
               <motion.div
                 key={step.num}
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="flex gap-6 group"
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.6, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                className="flex gap-5 md:gap-7 group"
               >
-                <div className="relative z-10 w-12 h-12 md:w-16 md:h-16 rounded-xl bg-muted flex items-center justify-center shrink-0 border border-border/50 group-hover:border-primary/50 group-hover:bg-primary/10 transition-all duration-500">
-                  <step.icon size={22} className="text-muted-foreground group-hover:text-primary transition-colors duration-500" />
+                <div className="relative z-10 icon-container w-16 h-16 md:w-20 md:h-20 flex items-center justify-center shrink-0">
+                  <step.icon size={22} className="text-primary/70 group-hover:text-primary transition-colors duration-500" />
                 </div>
-                <div className="glass-card p-5 flex-1 group-hover:bg-muted/20 transition-all duration-500">
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="text-xs font-mono text-primary/60">{step.num}</span>
-                    <h3 className="font-display font-semibold">{step.title}</h3>
+
+                <div className="gradient-border-card flex-1 group">
+                  <div className="gradient-border-inner p-6">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="text-[10px] font-mono text-primary/40 tracking-wider">{step.num}</span>
+                      <h3 className="font-display text-base font-semibold">{step.title}</h3>
+                    </div>
+                    <p className="text-[0.8125rem] text-muted-foreground leading-relaxed">{step.desc}</p>
                   </div>
-                  <p className="text-sm text-muted-foreground">{step.desc}</p>
                 </div>
               </motion.div>
             ))}

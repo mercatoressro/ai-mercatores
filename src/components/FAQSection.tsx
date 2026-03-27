@@ -21,16 +21,17 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section id="faq" className="relative py-24 md:py-32 section-gradient">
-      <div className="container mx-auto px-6">
+    <section id="faq" className="relative py-28 md:py-36 section-glow">
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center mb-20"
         >
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/60 font-mono mb-4">FAQ</span>
+          <h2 className="font-display text-section mb-5">
             Časté <span className="gradient-text-primary">otázky</span>
           </h2>
         </motion.div>
@@ -39,16 +40,20 @@ const FAQSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-3xl mx-auto"
         >
           <Accordion type="single" collapsible className="space-y-3">
             {faqs.map((faq, i) => (
-              <AccordionItem key={i} value={`faq-${i}`} className="glass-card px-6 border-none">
-                <AccordionTrigger className="text-sm font-medium text-foreground hover:text-primary transition-colors py-5 hover:no-underline">
+              <AccordionItem
+                key={i}
+                value={`faq-${i}`}
+                className="glass-card-static px-7 border-none data-[state=open]:glow-subtle transition-shadow duration-500"
+              >
+                <AccordionTrigger className="text-[0.875rem] font-medium text-foreground/90 hover:text-primary transition-colors py-6 hover:no-underline gap-4 [&[data-state=open]]:text-primary">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-sm text-muted-foreground pb-5">
+                <AccordionContent className="text-[0.8125rem] text-muted-foreground pb-6 leading-relaxed">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>

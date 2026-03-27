@@ -30,48 +30,56 @@ const pillars = [
 
 const Solutions = () => {
   return (
-    <section id="riesenia" className="relative py-24 md:py-32">
-      <div className="container mx-auto px-6">
+    <section id="riesenia" className="relative py-28 md:py-36">
+      {/* Ambient glow */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-[hsl(200_100%_55%/0.03)] rounded-full blur-[100px]" />
+        <div className="absolute bottom-1/4 -right-20 w-[400px] h-[400px] bg-[hsl(260_70%_60%/0.03)] rounded-full blur-[80px]" />
+      </div>
+
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center mb-20"
         >
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/60 font-mono mb-4">Riešenia</span>
+          <h2 className="font-display text-section mb-5">
             Čo robí <span className="gradient-text-primary">ai.mercatores.sk</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
+          <p className="text-muted-foreground max-w-lg mx-auto text-base">
             Štyri piliere, ktoré menia firmu na riadený výkonný systém.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-5 max-w-5xl mx-auto">
           {pillars.map((p, i) => (
             <motion.div
               key={p.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="glass-card p-6 group hover:bg-muted/20 transition-all duration-500"
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                  <p.icon size={22} className="text-primary" />
+              <div className="gradient-border-card group h-full">
+                <div className="gradient-border-inner p-7 h-full">
+                  <div className="flex items-start gap-4 mb-5">
+                    <div className="icon-container w-12 h-12 flex items-center justify-center shrink-0">
+                      <p.icon size={20} className="text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-display text-lg font-semibold">{p.title}</h3>
+                      <p className="text-sm text-muted-foreground mt-1.5">{p.desc}</p>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {p.cases.map((c) => (
+                      <span key={c} className="tag-pill">{c}</span>
+                    ))}
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-display text-lg font-semibold">{p.title}</h3>
-                  <p className="text-sm text-muted-foreground mt-1">{p.desc}</p>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-2 mt-4">
-                {p.cases.map((c) => (
-                  <span key={c} className="text-xs px-3 py-1.5 rounded-full bg-muted/50 text-muted-foreground border border-border/30">
-                    {c}
-                  </span>
-                ))}
               </div>
             </motion.div>
           ))}
