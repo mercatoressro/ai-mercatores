@@ -32,67 +32,99 @@ const HeroSection = () => {
       {/* ══════ CINEMATIC BACKGROUND LAYERS ══════ */}
 
       {/* Base deep layer */}
-      <div className="absolute inset-0 bg-[hsl(225_35%_2%)]" />
+      <div className="absolute inset-0 bg-[hsl(222_40%_2%)]" />
 
-      {/* Radial depth layers */}
+      {/* Deep spatial radials — room depth */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-[-20%] left-[10%] w-[900px] h-[900px] bg-[hsl(220_80%_15%/0.35)] rounded-full blur-[150px]" />
-        <div className="absolute top-[5%] right-[-5%] w-[700px] h-[700px] bg-[hsl(210_100%_30%/0.2)] rounded-full blur-[120px]" />
-        <div className="absolute bottom-[-10%] left-[30%] w-[600px] h-[600px] bg-[hsl(250_60%_25%/0.15)] rounded-full blur-[130px]" />
-        <div className="absolute top-[30%] right-[20%] w-[400px] h-[400px] bg-[hsl(200_100%_50%/0.06)] rounded-full blur-[100px]" />
+        <div className="absolute top-[-30%] left-[5%] w-[1100px] h-[1100px] bg-[hsl(218_80%_12%/0.5)] rounded-full blur-[180px]" />
+        <div className="absolute top-[0%] right-[-10%] w-[900px] h-[900px] bg-[hsl(210_100%_22%/0.35)] rounded-full blur-[140px]" />
+        <div className="absolute bottom-[-15%] left-[25%] w-[800px] h-[700px] bg-[hsl(248_55%_18%/0.25)] rounded-full blur-[150px]" />
+        <div className="absolute top-[25%] right-[15%] w-[600px] h-[500px] bg-[hsl(200_100%_40%/0.1)] rounded-full blur-[120px]" />
+        <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[600px] bg-[hsl(215_80%_10%/0.4)] rounded-full blur-[200px]" />
       </div>
 
-      {/* Light streaks */}
+      {/* Concentrated blue glow — hero focal point */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div
+          className="absolute top-[10%] right-[10%] w-[700px] h-[500px] bg-[hsl(200_100%_50%/0.12)] rounded-full blur-[120px]"
+          animate={{ opacity: [0.12, 0.2, 0.12], scale: [1, 1.05, 1] }}
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute top-[30%] left-[40%] w-[500px] h-[400px] bg-[hsl(205_100%_55%/0.08)] rounded-full blur-[100px]"
+          animate={{ opacity: [0.08, 0.15, 0.08] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+        />
+        <motion.div
+          className="absolute bottom-[15%] left-[15%] w-[450px] h-[350px] bg-[hsl(260_65%_50%/0.08)] rounded-full blur-[90px]"
+          animate={{ opacity: [0.08, 0.14, 0.08] }}
+          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 3 }}
+        />
+        <motion.div
+          className="absolute top-[5%] left-[60%] w-[300px] h-[300px] bg-[hsl(195_100%_55%/0.06)] rounded-full blur-[70px]"
+          animate={{ opacity: [0.06, 0.12, 0.06] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        />
+      </div>
+
+      {/* Light streaks — vertical rays */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div
-          className="absolute top-0 left-[35%] w-[2px] h-[60%] opacity-[0.07]"
-          style={{
-            background:
-              "linear-gradient(to bottom, transparent, hsl(200 100% 60%), transparent)",
-          }}
+          className="absolute top-0 left-[30%] w-[3px] h-[70%] opacity-[0.1]"
+          style={{ background: "linear-gradient(to bottom, transparent 5%, hsl(200 100% 60%) 40%, transparent 90%)" }}
         />
         <div
-          className="absolute top-[10%] left-[55%] w-[1px] h-[50%] opacity-[0.05]"
-          style={{
-            background:
-              "linear-gradient(to bottom, transparent, hsl(260 70% 65%), transparent)",
-          }}
+          className="absolute top-0 left-[52%] w-[2px] h-[55%] opacity-[0.07]"
+          style={{ background: "linear-gradient(to bottom, transparent 10%, hsl(210 100% 65%) 50%, transparent 85%)" }}
         />
         <div
-          className="absolute top-[5%] right-[25%] w-[1px] h-[70%] opacity-[0.04]"
-          style={{
-            background:
-              "linear-gradient(to bottom, transparent, hsl(195 100% 55%), transparent)",
-          }}
+          className="absolute top-0 right-[22%] w-[2px] h-[65%] opacity-[0.08]"
+          style={{ background: "linear-gradient(to bottom, transparent 5%, hsl(195 100% 55%) 35%, transparent 80%)" }}
+        />
+        <div
+          className="absolute top-0 left-[70%] w-[1px] h-[80%] opacity-[0.05]"
+          style={{ background: "linear-gradient(to bottom, transparent, hsl(260 70% 65%) 45%, transparent 90%)" }}
+        />
+        <div
+          className="absolute top-0 left-[15%] w-[1px] h-[50%] opacity-[0.04]"
+          style={{ background: "linear-gradient(to bottom, transparent, hsl(200 100% 50%), transparent)" }}
+        />
+        {/* Diagonal light ray */}
+        <div
+          className="absolute top-0 right-[5%] w-[1px] h-[90%] opacity-[0.04]"
+          style={{ background: "linear-gradient(to bottom, transparent, hsl(200 100% 60%) 30%, transparent 70%)", transform: "rotate(15deg)", transformOrigin: "top center" }}
+        />
+        <div
+          className="absolute top-0 left-[42%] w-[1px] h-[60%] opacity-[0.03]"
+          style={{ background: "linear-gradient(to bottom, transparent, hsl(260 60% 60%), transparent)", transform: "rotate(-8deg)", transformOrigin: "top center" }}
         />
       </div>
 
-      {/* Neon blue bloom — key glow */}
-      <div className="absolute inset-0 pointer-events-none">
-        <motion.div
-          className="absolute top-[15%] right-[15%] w-[500px] h-[350px] bg-[hsl(200_100%_55%/0.07)] rounded-full blur-[100px]"
-          animate={{ opacity: [0.07, 0.12, 0.07] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      {/* Horizontal ambient light bands */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div
+          className="absolute top-[20%] left-0 right-0 h-[1px] opacity-[0.06]"
+          style={{ background: "linear-gradient(to right, transparent 10%, hsl(200 100% 55%) 40%, hsl(260 70% 60%) 60%, transparent 90%)" }}
         />
-        <motion.div
-          className="absolute bottom-[20%] left-[20%] w-[350px] h-[250px] bg-[hsl(260_70%_55%/0.05)] rounded-full blur-[80px]"
-          animate={{ opacity: [0.05, 0.09, 0.05] }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2,
-          }}
+        <div
+          className="absolute top-[55%] left-0 right-0 h-[1px] opacity-[0.04]"
+          style={{ background: "linear-gradient(to right, transparent 20%, hsl(195 100% 50%) 50%, transparent 80%)" }}
         />
       </div>
 
-      {/* Network grid subtle */}
-      <div className="opacity-30">
+      {/* Network grid — more visible */}
+      <div className="opacity-50">
         <NetworkGrid />
       </div>
 
-      {/* Grid overlay */}
-      <div className="absolute inset-0 grid-pattern opacity-[0.04] pointer-events-none" />
+      {/* Grid overlay — structural tech feel */}
+      <div className="absolute inset-0 grid-pattern opacity-[0.06] pointer-events-none" />
+
+      {/* Vignette — depth framing */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: "radial-gradient(ellipse 70% 60% at 50% 50%, transparent 40%, hsl(222 40% 2% / 0.6) 100%)" }}
+      />
 
       {/* ══════ CONTENT ══════ */}
       <div className="relative z-10 container mx-auto px-6 lg:px-8 pt-28 lg:pt-32 pb-16 lg:pb-20">
