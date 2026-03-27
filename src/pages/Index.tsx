@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import SectionDivider from "@/components/SectionDivider";
 import PainPoints from "@/components/PainPoints";
 import Solutions from "@/components/Solutions";
 import WhyFail from "@/components/WhyFail";
@@ -13,17 +14,26 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Header />
       <HeroSection />
+      <SectionDivider variant="glow" />
       <PainPoints />
+      <SectionDivider variant="subtle" />
       <Solutions />
+      <SectionDivider variant="gradient" />
       <WhyFail />
+      <SectionDivider variant="subtle" />
       <HowItWorks />
+      <SectionDivider variant="glow" />
       <ForWhom />
+      <SectionDivider variant="subtle" />
       <Impact />
+      <SectionDivider variant="gradient" />
       <Philosophy />
+      <SectionDivider variant="glow" />
       <FAQSection />
+      <SectionDivider variant="subtle" />
       <CTASection />
       <Footer />
     </div>

@@ -18,16 +18,17 @@ const notFor = [
 
 const ForWhom = () => {
   return (
-    <section id="pre-koho" className="relative py-24 md:py-32 section-gradient">
-      <div className="container mx-auto px-6">
+    <section id="pre-koho" className="relative py-28 md:py-36 section-elevated">
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center mb-20"
         >
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/60 font-mono mb-4">Segmenty</span>
+          <h2 className="font-display text-section mb-5">
             Pre koho <span className="gradient-text-primary">je to</span>
           </h2>
         </motion.div>
@@ -36,16 +37,19 @@ const ForWhom = () => {
           {segments.map((s, i) => (
             <motion.div
               key={s.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="glass-card p-5 text-center hover:bg-muted/20 transition-all duration-500 group"
+              transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="w-10 h-10 mx-auto mb-3 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <s.icon size={20} className="text-primary" />
+              <div className="gradient-border-card group h-full">
+                <div className="gradient-border-inner p-6 text-center h-full flex flex-col items-center justify-center">
+                  <div className="icon-container w-11 h-11 flex items-center justify-center mb-3">
+                    <s.icon size={18} className="text-primary" />
+                  </div>
+                  <p className="text-sm font-medium">{s.title}</p>
+                </div>
               </div>
-              <p className="text-sm font-medium">{s.title}</p>
             </motion.div>
           ))}
         </div>
@@ -54,18 +58,24 @@ const ForWhom = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="glass-card p-6 max-w-2xl mx-auto"
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="glass-card-static p-8 max-w-2xl mx-auto relative overflow-hidden"
         >
-          <h3 className="font-display text-lg font-semibold text-muted-foreground mb-4">Pre koho to nie je</h3>
-          <ul className="space-y-3">
-            {notFor.map((n) => (
-              <li key={n} className="flex items-start gap-3 text-sm text-muted-foreground">
-                <XCircle size={16} className="text-destructive/50 shrink-0 mt-0.5" />
-                {n}
-              </li>
-            ))}
-          </ul>
+          <div className="absolute inset-0 bg-gradient-to-br from-destructive/[0.02] to-transparent pointer-events-none" />
+          <div className="relative z-10">
+            <div className="flex items-center gap-2 mb-5">
+              <div className="w-2 h-2 rounded-full bg-muted-foreground/30" />
+              <h3 className="font-display text-sm uppercase tracking-widest text-muted-foreground">Pre koho to nie je</h3>
+            </div>
+            <ul className="space-y-3.5">
+              {notFor.map((n) => (
+                <li key={n} className="flex items-start gap-3 text-[0.8125rem] text-muted-foreground/70">
+                  <XCircle size={16} className="text-muted-foreground/30 shrink-0 mt-0.5" />
+                  {n}
+                </li>
+              ))}
+            </ul>
+          </div>
         </motion.div>
       </div>
     </section>

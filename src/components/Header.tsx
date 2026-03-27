@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, ArrowRight } from "lucide-react";
 
 const navItems = [
   { label: "Domov", href: "#" },
@@ -16,85 +16,96 @@ const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 30);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
         scrolled
-          ? "glass border-b border-border/30 shadow-lg shadow-background/50"
+          ? "glass shadow-[0_4px_30px_-10px_hsl(200_100%_55%/0.08)]"
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="font-display font-bold text-xl tracking-tight">
-          <span className="text-foreground">ai.</span>
-          <span className="gradient-text-primary">mercatores</span>
-          <span className="text-muted-foreground">.sk</span>
-        </a>
-
-        <nav className="hidden lg:flex items-center gap-8">
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 relative group"
-            >
-              {item.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
-            </a>
-          ))}
-        </nav>
-
-        <div className="hidden lg:block">
-          <a
-            href="#kontakt"
-            className="inline-flex items-center px-5 py-2.5 rounded-lg text-sm font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 glow-primary"
-          >
-            Dohodnúť AI audit
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="flex items-center justify-between h-[72px]">
+          <a href="#" className="font-display font-bold text-[1.15rem] tracking-tight relative group">
+            <span className="text-foreground/90">ai.</span>
+            <span className="gradient-text-primary">mercatores</span>
+            <span className="text-muted-foreground">.sk</span>
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary/40 transition-all duration-500 group-hover:w-full" />
           </a>
-        </div>
 
-        <button
-          className="lg:hidden text-foreground"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+          <nav className="hidden lg:flex items-center gap-1">
+            {navItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="px-4 py-2 text-[0.8125rem] text-muted-foreground hover:text-foreground transition-colors duration-400 relative group rounded-lg hover:bg-muted/20"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+
+          <div className="hidden lg:block">
+            <a
+              href="#kontakt"
+              className="btn-primary inline-flex items-center gap-2 px-6 py-2.5 text-[0.8125rem]"
+            >
+              <span>Dohodnúť AI audit</span>
+              <ArrowRight size={14} />
+            </a>
+          </div>
+
+          <button
+            className="lg:hidden text-foreground/80 hover:text-foreground transition-colors p-2"
+            onClick={() => setMobileOpen(!mobileOpen)}
+          >
+            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile nav */}
-      {mobileOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="lg:hidden glass border-t border-border/30 px-6 py-6 space-y-4"
-        >
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              onClick={() => setMobileOpen(false)}
-              className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {item.label}
-            </a>
-          ))}
-          <a
-            href="#kontakt"
-            onClick={() => setMobileOpen(false)}
-            className="block text-center px-5 py-2.5 rounded-lg text-sm font-semibold bg-primary text-primary-foreground"
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="lg:hidden glass border-t border-border/20 overflow-hidden"
           >
-            Dohodnúť AI audit
-          </a>
-        </motion.div>
-      )}
+            <div className="px-6 py-6 space-y-1">
+              {navItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/20 rounded-lg transition-all"
+                >
+                  {item.label}
+                </a>
+              ))}
+              <div className="pt-3">
+                <a
+                  href="#kontakt"
+                  onClick={() => setMobileOpen(false)}
+                  className="btn-primary flex items-center justify-center gap-2 px-6 py-3 text-sm w-full"
+                >
+                  <span>Dohodnúť AI audit</span>
+                  <ArrowRight size={14} />
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 };
