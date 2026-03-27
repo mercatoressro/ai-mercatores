@@ -1,67 +1,110 @@
 import { motion } from "framer-motion";
-import { XCircle, CheckCircle, ArrowRight } from "lucide-react";
+import { XCircle, CheckCircle } from "lucide-react";
 
 const fails = [
-  "Firmy nakúpia nástroje, ale nezavedú proces",
-  "AI bez ownershipu sa rozpadne",
-  "Bez správy nepríde reálny dopad",
-  "Izolované riešenia vytvárajú ďalší chaos",
+  "Firma kúpi nástroje bez jasného cieľa",
+  "AI sa nenasadí do reálnych procesov",
+  "Chýba interný ownership",
+  "Systémy zostanú odpojené",
+  "Tím nevie, čo má s riešením robiť",
+  "Po spustení sa tomu nikto nevenuje",
+  "Výsledkom je ďalší chaos namiesto výkonu",
 ];
 
 const ourWay = [
-  "Audit a diagnostika",
-  "Návrh architektúry",
-  "Implementácia a integrácie",
-  "Prepojenie s tímom",
-  "Správa a optimalizácia",
+  "Začíname auditom a diagnostikou",
+  "Navrhujeme architektúru, nie len tool stack",
+  "AI prepájame s obchodom, marketingom a operatívou",
+  "Riešenie implementujeme do reality firmy",
+  "Nastavujeme ownership a logiku používania",
+  "Riešenie spravujeme a optimalizujeme",
+  "Cieľom je funkčný systém, nie len technológia",
 ];
 
 const WhyFail = () => {
   return (
     <section className="relative py-28 md:py-36 section-deep overflow-hidden">
-      <div className="absolute inset-0 grid-pattern opacity-10 pointer-events-none" />
+      <div className="absolute inset-0 grid-pattern opacity-[0.06] pointer-events-none" />
+
+      {/* Extra depth glow */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[hsl(0_72%_55%/0.02)] rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[hsl(200_100%_55%/0.03)] rounded-full blur-[120px]" />
+      </div>
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-20"
+          className="text-center mb-6"
         >
-          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-destructive/60 font-mono mb-4">Realita trhu</span>
-          <h2 className="font-display text-section mb-5">
-            Prečo väčšina AI projektov <span className="gradient-text">zlyhá</span>
+          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-destructive/50 font-mono mb-4">
+            Realita trhu
+          </span>
+          <h2 className="font-display text-section mb-5 max-w-3xl mx-auto">
+            Väčšina AI projektov nezlyhá na technológii.{" "}
+            <span className="gradient-text">
+              Zlyhá na tom, že sa nikdy nestane súčasťou fungovania firmy.
+            </span>
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {/* Bežný stav */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-center text-muted-foreground max-w-xl mx-auto text-[0.9375rem] leading-relaxed mb-16"
+        >
+          Firmy dnes často nekupujú zlé nástroje. Zlyhávajú na tom, že ich nevedia premeniť na proces, ownership a dlhodobo riadený výkon.
+        </motion.p>
+
+        {/* Comparison grid */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto relative">
+          {/* Vertical divider on desktop */}
+          <div className="hidden md:block absolute left-1/2 top-8 bottom-8 w-px -translate-x-1/2">
+            <div className="w-full h-full bg-gradient-to-b from-transparent via-border/40 to-transparent" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-background border border-border/40 flex items-center justify-center">
+              <span className="text-[10px] font-mono text-muted-foreground">vs</span>
+            </div>
+          </div>
+
+          {/* Left: Bežný stav */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="glass-card-static p-8 relative overflow-hidden"
+            className="glass-card-static p-7 md:p-8 relative overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-destructive/[0.03] to-transparent pointer-events-none" />
             <div className="relative z-10">
-              <div className="flex items-center gap-2 mb-8">
+              <div className="flex items-center gap-2.5 mb-8">
                 <div className="w-2 h-2 rounded-full bg-destructive/40" />
-                <h3 className="font-display text-sm uppercase tracking-widest text-muted-foreground">Bežný stav</h3>
+                <h3 className="font-display text-sm uppercase tracking-widest text-muted-foreground">
+                  Bežný stav
+                </h3>
               </div>
-              <ul className="space-y-5">
+              <ul className="space-y-4">
                 {fails.map((f) => (
                   <li key={f} className="flex items-start gap-3">
-                    <XCircle size={18} className="text-destructive/50 shrink-0 mt-0.5" />
-                    <span className="text-[0.875rem] text-muted-foreground leading-relaxed">{f}</span>
+                    <XCircle
+                      size={16}
+                      className="text-destructive/40 shrink-0 mt-0.5"
+                    />
+                    <span className="text-[0.8125rem] text-muted-foreground leading-relaxed">
+                      {f}
+                    </span>
                   </li>
                 ))}
               </ul>
             </div>
           </motion.div>
 
-          {/* Riadená transformácia */}
+          {/* Right: Riadená AI transformácia */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -69,20 +112,29 @@ const WhyFail = () => {
             transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="gradient-border-card h-full">
-              <div className="gradient-border-inner p-8 h-full relative overflow-hidden">
+              <div className="gradient-border-inner p-7 md:p-8 h-full relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.04] to-secondary/[0.02] pointer-events-none" />
                 <div className="relative z-10">
-                  <div className="flex items-center gap-2 mb-8">
-                    <div className="w-2 h-2 rounded-full bg-primary" />
-                    <h3 className="font-display text-sm uppercase tracking-widest text-primary/80">Riadená AI transformácia</h3>
+                  <div className="flex items-center gap-2.5 mb-8">
+                    <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                    <h3 className="font-display text-sm uppercase tracking-widest text-primary/80">
+                      Riadená AI transformácia
+                    </h3>
                   </div>
-                  <ul className="space-y-5">
+                  <ul className="space-y-4">
                     {ourWay.map((w, i) => (
                       <li key={w} className="flex items-start gap-3">
-                        <CheckCircle size={18} className="text-primary/70 shrink-0 mt-0.5" />
+                        <CheckCircle
+                          size={16}
+                          className="text-primary/60 shrink-0 mt-0.5"
+                        />
                         <div>
-                          <span className="text-[10px] font-mono text-primary/40 mr-2">0{i + 1}</span>
-                          <span className="text-[0.875rem] text-foreground/80 leading-relaxed">{w}</span>
+                          <span className="text-[10px] font-mono text-primary/35 mr-2">
+                            0{i + 1}
+                          </span>
+                          <span className="text-[0.8125rem] text-foreground/80 leading-relaxed">
+                            {w}
+                          </span>
                         </div>
                       </li>
                     ))}
@@ -92,6 +144,24 @@ const WhyFail = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Closing statement */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-center mt-16 max-w-2xl mx-auto"
+        >
+          <div className="h-px w-16 mx-auto bg-gradient-to-r from-transparent via-primary/30 to-transparent mb-8" />
+          <p className="font-display text-lg md:text-xl font-semibold text-foreground/90">
+            „My nedodávame AI ako efekt.{" "}
+            <span className="gradient-text-primary">
+              Dodávame ju ako riadený systém pre výkon firmy.
+            </span>
+            "
+          </p>
+        </motion.div>
       </div>
     </section>
   );

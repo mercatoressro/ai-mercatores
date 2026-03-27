@@ -1,18 +1,44 @@
 import { motion } from "framer-motion";
-import { Search, PenTool, Rocket, Users, BarChart3 } from "lucide-react";
+import { Search, PenTool, Rocket, Users, BarChart3, ArrowRight } from "lucide-react";
 
 const steps = [
-  { num: "01", title: "Audit a diagnostika", desc: "Zmapujeme vaše procesy, identifikujeme úzke miesta a príležitosti pre AI.", icon: Search },
-  { num: "02", title: "Návrh transformačnej architektúry", desc: "Vytvoríme plán nasadenia AI naprieč obchodom, marketingom a operatívou.", icon: PenTool },
-  { num: "03", title: "Implementácia a integrácie", desc: "Nasadíme riešenia a prepojíme ich s vašimi existujúcimi systémami.", icon: Rocket },
-  { num: "04", title: "Spustenie a prepojenie s tímom", desc: "Zapojíme váš tím, nastavíme workflow a zabezpečíme adopciu.", icon: Users },
-  { num: "05", title: "Správa a optimalizácia", desc: "Priebežne spravujeme, vyhodnocujeme a optimalizujeme výkon.", icon: BarChart3 },
+  {
+    num: "01",
+    title: "Audit a diagnostika",
+    desc: "Zistíme, kde vo firme vznikajú straty, úzke miesta a nevyužité príležitosti pre AI.",
+    icon: Search,
+  },
+  {
+    num: "02",
+    title: "Návrh transformačnej architektúry",
+    desc: "Navrhneme, kde má AI reálne pomôcť, ako sa napojí na procesy a aké workflow bude riadiť.",
+    icon: PenTool,
+  },
+  {
+    num: "03",
+    title: "Implementácia a integrácie",
+    desc: "Nasadíme riešenia do obchodu, marketingu a operatívy a prepojíme ich s existujúcimi nástrojmi.",
+    icon: Rocket,
+  },
+  {
+    num: "04",
+    title: "Spustenie a prepojenie s tímom",
+    desc: "Zapojíme ľudí, procesy a systém do jedného funkčného modelu.",
+    icon: Users,
+  },
+  {
+    num: "05",
+    title: "Správa a optimalizácia",
+    desc: "Priebežne sledujeme výkon, upravujeme logiku a optimalizujeme dopad.",
+    icon: BarChart3,
+  },
 ];
 
 const HowItWorks = () => {
   return (
     <section id="ako-to-funguje" className="relative py-28 md:py-36 section-glow">
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -20,46 +46,110 @@ const HowItWorks = () => {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-20"
         >
-          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/60 font-mono mb-4">Proces</span>
+          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/60 font-mono mb-4">
+            Proces
+          </span>
           <h2 className="font-display text-section mb-5">
-            Ako to <span className="gradient-text-primary">funguje</span>
+            Od auditu po{" "}
+            <span className="gradient-text-primary">riadený výkon</span>
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto text-base">
-            Päť krokov od diagnostiky po riadený výkon.
+            Päť krokov transformácie. Žiadne experimenty. Riadený systém.
           </p>
         </motion.div>
 
-        <div className="relative max-w-3xl mx-auto">
-          {/* Timeline line */}
-          <div className="absolute left-8 md:left-10 top-6 bottom-6 w-px bg-gradient-to-b from-primary/30 via-secondary/20 to-transparent hidden sm:block" />
+        {/* Process nodes */}
+        <div className="relative max-w-4xl mx-auto">
+          {/* Desktop: horizontal connector line */}
+          <div className="hidden lg:block absolute top-[3.25rem] left-[10%] right-[10%] h-px">
+            <div className="w-full h-full bg-gradient-to-r from-primary/10 via-primary/25 to-primary/10" />
+            {/* Animated flow dot */}
+            <motion.div
+              className="absolute top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary/60"
+              animate={{ left: ["0%", "100%"] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+              style={{ filter: "blur(0.5px)" }}
+            />
+          </div>
 
-          <div className="space-y-6">
+          {/* Steps grid — horizontal on lg, vertical on mobile */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-4">
             {steps.map((step, i) => (
               <motion.div
                 key={step.num}
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.6, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                className="flex gap-5 md:gap-7 group"
+                transition={{
+                  duration: 0.5,
+                  delay: i * 0.08,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                className="relative group"
               >
-                <div className="relative z-10 icon-container w-16 h-16 md:w-20 md:h-20 flex items-center justify-center shrink-0">
-                  <step.icon size={22} className="text-primary/70 group-hover:text-primary transition-colors duration-500" />
-                </div>
+                {/* Mobile connector */}
+                {i < steps.length - 1 && (
+                  <div className="sm:hidden absolute left-[1.75rem] top-[4.5rem] bottom-[-1.25rem] w-px bg-gradient-to-b from-primary/20 to-transparent" />
+                )}
 
-                <div className="gradient-border-card flex-1 group">
-                  <div className="gradient-border-inner p-6">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="text-[10px] font-mono text-primary/40 tracking-wider">{step.num}</span>
-                      <h3 className="font-display text-base font-semibold">{step.title}</h3>
+                <div className="gradient-border-card h-full">
+                  <div className="gradient-border-inner p-5 lg:p-4 xl:p-5 h-full text-center lg:text-left">
+                    {/* Icon node */}
+                    <div className="icon-container w-14 h-14 flex items-center justify-center mx-auto lg:mx-0 mb-4 relative">
+                      <step.icon
+                        size={20}
+                        className="text-primary/70 group-hover:text-primary transition-colors duration-500"
+                      />
+                      {/* Pulse ring */}
+                      <div className="absolute inset-0 rounded-xl border border-primary/0 group-hover:border-primary/20 transition-all duration-700 group-hover:scale-110" />
                     </div>
-                    <p className="text-[0.8125rem] text-muted-foreground leading-relaxed">{step.desc}</p>
+
+                    {/* Step number */}
+                    <span className="text-[10px] font-mono text-primary/40 tracking-wider mb-1.5 block">
+                      {step.num}
+                    </span>
+
+                    {/* Title */}
+                    <h3 className="font-display text-sm font-semibold mb-2 leading-tight">
+                      {step.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-[0.75rem] text-muted-foreground leading-relaxed">
+                      {step.desc}
+                    </p>
                   </div>
                 </div>
+
+                {/* Arrow connector between cards on lg */}
+                {i < steps.length - 1 && (
+                  <div className="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 z-20">
+                    <ArrowRight size={14} className="text-primary/25" />
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>
         </div>
+
+        {/* Closing statement */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center mt-16 max-w-2xl mx-auto"
+        >
+          <div className="glass-card-static p-6 md:p-8">
+            <p className="text-[0.9375rem] text-foreground/80 leading-relaxed font-medium">
+              „AI transformácia zlyháva vtedy, keď sa berie ako jednorazový projekt.{" "}
+              <span className="gradient-text-primary">
+                Funguje vtedy, keď sa riadi ako systém.
+              </span>
+              "
+            </p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
