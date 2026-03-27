@@ -219,202 +219,255 @@ const HeroSection = () => {
 
           {/* ═══ RIGHT COLUMN — AI Strategy Document ═══ */}
           <motion.div
-            initial={{ opacity: 0, y: 40, rotateY: -8 }}
+            initial={{ opacity: 0, y: 50, rotateY: -10 }}
             animate={{ opacity: 1, y: 0, rotateY: 0 }}
             transition={{
-              duration: 1,
+              duration: 1.1,
               delay: 0.7,
               ease: [0.22, 1, 0.36, 1],
             }}
             className="lg:col-span-5 hidden lg:flex justify-center items-center"
           >
-            <div className="relative">
-              {/* Glow behind card */}
-              <div className="absolute -inset-8 bg-[hsl(200_100%_55%/0.06)] rounded-3xl blur-[60px]" />
+            <div className="relative" style={{ perspective: "1200px" }}>
+              {/* Large ambient glow behind */}
+              <div
+                className="absolute -inset-16 rounded-3xl blur-[80px]"
+                style={{ background: "radial-gradient(ellipse at 50% 40%, hsl(200 100% 50% / 0.1), hsl(260 70% 50% / 0.04), transparent 70%)" }}
+              />
               <motion.div
-                className="absolute -inset-12 bg-[hsl(260_70%_55%/0.04)] rounded-3xl blur-[80px]"
-                animate={{ opacity: [0.04, 0.08, 0.04] }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
+                className="absolute -inset-20 rounded-3xl blur-[100px]"
+                style={{ background: "radial-gradient(ellipse at 60% 30%, hsl(200 100% 55% / 0.08), transparent 60%)" }}
+                animate={{ opacity: [0.08, 0.15, 0.08] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               />
 
-              {/* Main AI strategy card */}
+              {/* ══ MAIN CARD — 3D perspective tilt ══ */}
               <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{
-                  duration: 8,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="relative w-[340px] xl:w-[380px]"
-                style={{ perspective: "1000px" }}
+                animate={{ y: [0, -12, 0] }}
+                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                className="relative w-[360px] xl:w-[400px]"
+                style={{ transform: "rotateY(-4deg) rotateX(2deg)" }}
               >
+                {/* Edge glow frame */}
+                <div
+                  className="absolute -inset-[1px] rounded-2xl"
+                  style={{
+                    background: "linear-gradient(160deg, hsl(200 100% 55% / 0.25), hsl(260 70% 60% / 0.1), hsl(200 100% 55% / 0.08), transparent 60%)",
+                    filter: "blur(0.5px)",
+                  }}
+                />
+
                 <div
                   className="rounded-2xl overflow-hidden relative"
                   style={{
-                    background:
-                      "linear-gradient(160deg, hsl(225 25% 10% / 0.9), hsl(225 30% 5% / 0.95))",
-                    border: "1px solid hsl(200 100% 55% / 0.12)",
-                    boxShadow:
-                      "0 40px 80px -20px hsl(200 100% 55% / 0.1), 0 0 0 1px hsl(200 100% 55% / 0.05), inset 0 1px 0 hsl(200 100% 80% / 0.05)",
+                    background: "linear-gradient(160deg, hsl(222 30% 11% / 0.95), hsl(225 35% 5% / 0.98))",
+                    boxShadow: `
+                      0 50px 100px -30px hsl(200 100% 40% / 0.15),
+                      0 30px 60px -20px hsl(220 80% 10% / 0.5),
+                      0 0 80px -20px hsl(200 100% 55% / 0.08),
+                      inset 0 1px 0 hsl(200 100% 80% / 0.06),
+                      inset 0 0 40px hsl(200 100% 55% / 0.02)
+                    `,
                   }}
                 >
-                  {/* Card header */}
-                  <div className="px-7 pt-7 pb-5 border-b border-border/20">
-                    <div className="flex items-center justify-between mb-4">
+                  {/* Top accent line */}
+                  <div
+                    className="absolute top-0 left-[15%] right-[15%] h-[1px]"
+                    style={{ background: "linear-gradient(to right, transparent, hsl(200 100% 55% / 0.4), transparent)" }}
+                  />
+
+                  {/* Card header — document title zone */}
+                  <div className="px-8 pt-8 pb-5 relative">
+                    {/* Subtle inner glow */}
+                    <div className="absolute top-0 right-0 w-40 h-40 bg-[hsl(200_100%_55%/0.03)] rounded-full blur-[50px] pointer-events-none" />
+
+                    <div className="flex items-center justify-between mb-5 relative z-10">
                       <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                        <span className="text-[9px] uppercase tracking-[0.2em] text-primary/60 font-mono">
-                          AI Strategy
+                        <div className="relative">
+                          <div className="w-2.5 h-2.5 rounded-full bg-primary" />
+                          <div className="absolute inset-0 w-2.5 h-2.5 rounded-full bg-primary animate-ping opacity-40" />
+                        </div>
+                        <span className="text-[9px] uppercase tracking-[0.25em] text-primary/70 font-mono font-medium">
+                          AI STRATEGY
                         </span>
                       </div>
-                      <span className="text-[9px] text-muted-foreground/40 font-mono">
+                      <div
+                        className="px-2 py-0.5 rounded text-[8px] font-mono uppercase tracking-wider text-primary/50"
+                        style={{ background: "hsl(200 100% 55% / 0.06)", border: "1px solid hsl(200 100% 55% / 0.1)" }}
+                      >
                         2026
-                      </span>
+                      </div>
                     </div>
-                    <h3 className="font-display text-xl font-bold text-foreground mb-1">
-                      AI Playbook
-                    </h3>
-                    <p className="text-[11px] text-muted-foreground">
-                      Strategický dokument pre lídrov
-                    </p>
+
+                    {/* Document title */}
+                    <div className="relative z-10">
+                      <h3 className="font-display text-2xl xl:text-[1.75rem] font-bold text-foreground tracking-tight mb-2">
+                        AI Playbook
+                      </h3>
+                      <div
+                        className="h-[2px] w-12 rounded-full mb-3"
+                        style={{ background: "linear-gradient(to right, hsl(200 100% 55%), hsl(200 100% 55% / 0.2))" }}
+                      />
+                      <p className="text-[12px] text-muted-foreground leading-relaxed">
+                        Strategický dokument pre lídrov, ktorí chcú AI premeniť na výkon firmy.
+                      </p>
+                    </div>
                   </div>
 
+                  {/* Divider */}
+                  <div
+                    className="mx-8 h-[1px]"
+                    style={{ background: "linear-gradient(to right, hsl(200 100% 55% / 0.15), hsl(200 100% 55% / 0.05), transparent)" }}
+                  />
+
                   {/* Card body — module overview */}
-                  <div className="px-7 py-5 space-y-4">
+                  <div className="px-8 py-6 space-y-5">
                     {[
-                      {
-                        label: "Obchod",
-                        value: "Pipeline & Lead AI",
-                        color: "hsl(200 100% 55%)",
-                        w: "85%",
-                      },
-                      {
-                        label: "Marketing",
-                        value: "Personalizácia & Kampane",
-                        color: "hsl(260 70% 60%)",
-                        w: "72%",
-                      },
-                      {
-                        label: "Operatíva",
-                        value: "Workflow & Reporting",
-                        color: "hsl(195 100% 55%)",
-                        w: "90%",
-                      },
+                      { label: "Obchod", value: "Pipeline & Lead AI", color: "hsl(200 100% 55%)", w: "85%" },
+                      { label: "Marketing", value: "Personalizácia & Kampane", color: "hsl(260 70% 60%)", w: "72%" },
+                      { label: "Operatíva", value: "Workflow & Reporting", color: "hsl(195 100% 55%)", w: "90%" },
                     ].map((module, i) => (
                       <div key={module.label}>
-                        <div className="flex items-center justify-between mb-1.5">
-                          <div className="flex items-center gap-2">
+                        <div className="flex items-center justify-between mb-2">
+                          <div className="flex items-center gap-2.5">
                             <div
-                              className="w-1.5 h-1.5 rounded-full"
-                              style={{ background: module.color }}
+                              className="w-2 h-2 rounded-sm"
+                              style={{ background: module.color, boxShadow: `0 0 8px ${module.color}40` }}
                             />
-                            <span className="text-[11px] font-medium text-foreground/70">
+                            <span className="text-[12px] font-medium text-foreground/80">
                               {module.label}
                             </span>
                           </div>
-                          <span className="text-[10px] text-muted-foreground/50 font-mono">
+                          <span className="text-[10px] text-muted-foreground/40 font-mono">
                             {module.value}
                           </span>
                         </div>
-                        <div className="h-1 rounded-full bg-muted/20 overflow-hidden">
+                        <div className="h-1.5 rounded-full bg-[hsl(225_20%_12%)] overflow-hidden">
                           <motion.div
                             className="h-full rounded-full"
                             style={{
-                              background: `linear-gradient(90deg, ${module.color}, ${module.color}80)`,
+                              background: `linear-gradient(90deg, ${module.color}, ${module.color}60)`,
+                              boxShadow: `0 0 12px ${module.color}30`,
                             }}
                             initial={{ width: "0%" }}
                             animate={{ width: module.w }}
-                            transition={{
-                              duration: 1.5,
-                              delay: 1.5 + i * 0.3,
-                              ease: "easeOut",
-                            }}
+                            transition={{ duration: 1.8, delay: 1.5 + i * 0.3, ease: "easeOut" }}
                           />
                         </div>
                       </div>
                     ))}
                   </div>
 
+                  {/* Divider */}
+                  <div
+                    className="mx-8 h-[1px]"
+                    style={{ background: "linear-gradient(to right, transparent, hsl(200 100% 55% / 0.1), transparent)" }}
+                  />
+
                   {/* Card footer */}
-                  <div className="px-7 py-4 border-t border-border/15">
+                  <div className="px-8 py-5">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
                         <div className="flex -space-x-1.5">
                           {[0, 1, 2].map((i) => (
                             <div
                               key={i}
-                              className="w-5 h-5 rounded-full border border-background/80"
+                              className="w-6 h-6 rounded-full border-2 border-[hsl(225_30%_8%)]"
                               style={{
-                                background: `linear-gradient(135deg, hsl(${200 + i * 30} 60% 40%), hsl(${200 + i * 30} 60% 25%))`,
+                                background: `linear-gradient(135deg, hsl(${200 + i * 30} 55% 40%), hsl(${200 + i * 30} 55% 22%))`,
                               }}
                             />
                           ))}
                         </div>
-                        <span className="text-[9px] text-muted-foreground/40">
+                        <span className="text-[10px] text-muted-foreground/40 font-medium">
                           Executive Team
                         </span>
                       </div>
-                      <div className="flex items-center gap-1">
-                        <div className="w-1 h-1 rounded-full bg-primary/50" />
-                        <span className="text-[9px] font-mono text-primary/40">
-                          LIVE
+                      <div className="flex items-center gap-1.5">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary/60 animate-pulse" />
+                        <span className="text-[9px] font-mono text-primary/50 uppercase tracking-wider">
+                          Live
                         </span>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                {/* Accent line on left */}
+                {/* Left accent edge line */}
                 <div
-                  className="absolute left-0 top-[15%] bottom-[15%] w-[2px] rounded-full"
+                  className="absolute left-0 top-[10%] bottom-[10%] w-[2px] rounded-full"
                   style={{
-                    background:
-                      "linear-gradient(to bottom, transparent, hsl(200 100% 55% / 0.5), transparent)",
+                    background: "linear-gradient(to bottom, transparent, hsl(200 100% 55% / 0.5), hsl(260 70% 60% / 0.2), transparent)",
+                    boxShadow: "0 0 8px hsl(200 100% 55% / 0.2)",
+                  }}
+                />
+
+                {/* Bottom accent edge line */}
+                <div
+                  className="absolute bottom-0 left-[20%] right-[20%] h-[1px]"
+                  style={{
+                    background: "linear-gradient(to right, transparent, hsl(200 100% 55% / 0.2), transparent)",
                   }}
                 />
               </motion.div>
 
-              {/* Small floating badge */}
+              {/* ══ FLOATING BADGE — bottom-left ══ */}
               <motion.div
                 animate={{ y: [0, -8, 0] }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1,
-                }}
-                className="absolute -bottom-6 -left-8 z-10"
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="absolute -bottom-8 -left-10 z-10"
               >
                 <div
-                  className="px-4 py-2.5 rounded-xl text-center"
+                  className="px-5 py-3 rounded-xl text-center"
                   style={{
-                    background:
-                      "linear-gradient(145deg, hsl(225 25% 10% / 0.9), hsl(225 30% 6% / 0.9))",
-                    border: "1px solid hsl(200 100% 55% / 0.1)",
+                    background: "linear-gradient(145deg, hsl(222 28% 12% / 0.95), hsl(225 30% 6% / 0.95))",
+                    border: "1px solid hsl(200 100% 55% / 0.12)",
                     backdropFilter: "blur(20px)",
-                    boxShadow:
-                      "0 20px 40px -15px hsl(200 100% 55% / 0.08)",
+                    boxShadow: "0 25px 50px -15px hsl(200 100% 40% / 0.12), 0 0 0 1px hsl(200 100% 55% / 0.04)",
                   }}
                 >
-                  <div className="text-[9px] text-muted-foreground/50 uppercase tracking-widest mb-0.5">
+                  <div className="text-[9px] text-muted-foreground/50 uppercase tracking-widest mb-1">
                     AI Readiness
                   </div>
-                  <div className="font-display text-lg font-bold gradient-text-primary">
+                  <div className="font-display text-xl font-bold gradient-text-primary">
                     94%
                   </div>
                 </div>
               </motion.div>
 
-              {/* Small floating badge top-right */}
+              {/* ══ FLOATING BADGE — top-right ══ */}
               <motion.div
                 animate={{ y: [0, -6, 0] }}
-                transition={{
-                  duration: 7,
-                  repeat: Infinity,
+                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+                className="absolute -top-5 -right-8 z-10"
+              >
+                <div
+                  className="px-3.5 py-2 rounded-lg flex items-center gap-2"
+                  style={{
+                    background: "linear-gradient(145deg, hsl(222 28% 12% / 0.95), hsl(225 30% 6% / 0.95))",
+                    border: "1px solid hsl(260 70% 60% / 0.12)",
+                    backdropFilter: "blur(20px)",
+                    boxShadow: "0 15px 30px -10px hsl(260 70% 40% / 0.1)",
+                  }}
+                >
+                  <div className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />
+                  <span className="text-[9px] font-mono text-secondary/60 uppercase tracking-wider">
+                    3 moduly aktívne
+                  </span>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Bottom gradient fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none" />
+    </section>
+  );
+};
+
+export default HeroSection;
                   ease: "easeInOut",
                   delay: 2,
                 }}
