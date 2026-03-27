@@ -467,9 +467,7 @@ const HeroSection = () => {
   );
 };
 
-
-                }}
-                className="absolute -top-4 -right-6 z-10"
+export default HeroSection;
               >
                 <div
                   className="px-3 py-2 rounded-lg flex items-center gap-2"
