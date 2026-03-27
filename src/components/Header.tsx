@@ -35,9 +35,9 @@ const Header = () => {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-[72px]">
           <a href="#" className="font-display font-bold text-[1.15rem] tracking-tight relative group">
-            <span className="text-foreground">ai.</span>
+            <span className="text-white">ai.</span>
             <span className="gradient-text-primary">mercatores</span>
-            <span className="text-muted-foreground">.sk</span>
+            <span className="text-foreground/70">.sk</span>
             <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary/40 transition-all duration-500 group-hover:w-full" />
           </a>
 
@@ -46,7 +46,7 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="px-4 py-2 text-[0.8125rem] text-muted-foreground hover:text-foreground transition-colors duration-400 relative group rounded-lg hover:bg-muted/20"
+                className="px-4 py-2 text-[0.8125rem] text-foreground/70 hover:text-foreground transition-colors duration-400 relative group rounded-lg hover:bg-muted/20"
               >
                 {item.label}
               </a>
@@ -87,7 +87,7 @@ const Header = () => {
                   key={item.label}
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/20 rounded-lg transition-all"
+                  className="block px-4 py-3 text-sm text-foreground/75 hover:text-foreground hover:bg-muted/20 rounded-lg transition-all"
                 >
                   {item.label}
                 </a>

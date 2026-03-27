@@ -75,10 +75,10 @@ const ForWhom = () => {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-20"
         >
-          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/80 font-mono mb-4">
+          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary font-mono font-medium mb-4">
             Segmenty
           </span>
-          <h2 className="font-display text-section mb-5">
+          <h2 className="font-display text-section mb-5 text-white">
             Pre firmy, ktoré chcú{" "}
             <span className="gradient-text-primary">rásť bez ďalšieho chaosu</span>
           </h2>
@@ -87,7 +87,7 @@ const ForWhom = () => {
           </p>
         </motion.div>
 
-        {/* Segment cards — 3+2 grid */}
+        {/* Segment cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto mb-8">
           {segments.map((s, i) => (
             <motion.div
@@ -107,20 +107,20 @@ const ForWhom = () => {
                     <div className="icon-container w-10 h-10 flex items-center justify-center shrink-0">
                       <s.icon size={18} className="text-primary" />
                     </div>
-                    <h3 className="font-display text-[0.9375rem] font-semibold">
+                    <h3 className="font-display text-[0.9375rem] font-bold text-white">
                       {s.title}
                     </h3>
                   </div>
-                  <p className="text-[0.8125rem] text-muted-foreground/85 leading-relaxed mb-4">
+                  <p className="text-[0.875rem] text-foreground/75 leading-relaxed mb-4">
                     {s.desc}
                   </p>
                   <ul className="space-y-2">
                     {s.points.map((p) => (
                       <li
                         key={p}
-                        className="flex items-center gap-2 text-[0.75rem] text-foreground/70"
+                        className="flex items-center gap-2 text-[0.8125rem] text-foreground/80"
                       >
-                        <div className="w-1 h-1 rounded-full bg-primary/40 shrink-0" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary/50 shrink-0" />
                         {p}
                       </li>
                     ))}
@@ -137,7 +137,7 @@ const ForWhom = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-center text-muted-foreground/70 text-[0.8125rem] italic max-w-2xl mx-auto mb-20"
+          className="text-center text-foreground/65 text-[0.875rem] italic max-w-2xl mx-auto mb-20"
         >
           „Najväčší zmysel to dáva firmám, ktoré už cítia, že ďalší rast bez systému len znásobí chaos."
         </motion.p>
@@ -154,8 +154,8 @@ const ForWhom = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-destructive/[0.02] to-transparent pointer-events-none" />
             <div className="relative z-10">
               <div className="flex items-center gap-2.5 mb-8">
-                <div className="w-2 h-2 rounded-full bg-muted-foreground/30" />
-                <h3 className="font-display text-sm uppercase tracking-widest text-muted-foreground/70">
+                <div className="w-2 h-2 rounded-full bg-muted-foreground/40" />
+                <h3 className="font-display text-sm uppercase tracking-widest text-foreground/75 font-bold">
                   Pre koho to nie je
                 </h3>
               </div>
@@ -163,18 +163,18 @@ const ForWhom = () => {
                 {notFor.map((n) => (
                   <div
                     key={n}
-                    className="flex items-start gap-3 text-[0.8125rem] text-muted-foreground/75"
+                    className="flex items-start gap-3 text-[0.875rem] text-foreground/70"
                   >
                     <XCircle
                       size={15}
-                      className="text-muted-foreground/40 shrink-0 mt-0.5"
+                      className="text-muted-foreground/50 shrink-0 mt-0.5"
                     />
                     {n}
                   </div>
                 ))}
               </div>
               <div className="h-px w-full bg-gradient-to-r from-transparent via-border/30 to-transparent mt-8 mb-6" />
-              <p className="text-[0.8125rem] text-muted-foreground/65 text-center italic">
+              <p className="text-[0.875rem] text-foreground/60 text-center italic">
                 „Ak firma nechce meniť fungovanie, AI jej nepomôže. Len pridá ďalšiu vrstvu chaosu."
               </p>
             </div>

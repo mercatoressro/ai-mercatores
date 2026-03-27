@@ -8,7 +8,7 @@
   :root {
     /* Core palette — deep midnight with blue undertone */
     --background: 225 30% 3%;
-    --foreground: 210 30% 93%;
+    --foreground: 210 30% 96%;
 
     /* Surfaces — layered depth */
     --card: 225 25% 7%;
@@ -30,7 +30,7 @@
 
     /* Muted — soft ash */
     --muted: 225 18% 13%;
-    --muted-foreground: 220 15% 62%;
+    --muted-foreground: 220 15% 72%;
 
     /* Accent — bright sky */
     --accent: 195 100% 62%;
@@ -77,11 +77,14 @@
     font-family: 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    line-height: 1.7;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Grotesk', system-ui, sans-serif;
     letter-spacing: -0.02em;
+    font-weight: 700;
   }
 }
 
@@ -281,12 +284,12 @@
 
   /* ═══════ TAG PILLS ═══════ */
   .tag-pill {
-    background: hsl(var(--muted) / 0.5);
-    border: 1px solid hsl(var(--border) / 0.4);
+    background: hsl(var(--muted) / 0.6);
+    border: 1px solid hsl(var(--border) / 0.5);
     border-radius: 9999px;
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     padding: 0.375rem 0.875rem;
-    color: hsl(var(--muted-foreground) / 0.95);
+    color: hsl(var(--foreground) / 0.85);
     transition: all 0.3s ease;
   }
 

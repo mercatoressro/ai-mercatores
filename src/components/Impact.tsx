@@ -57,8 +57,7 @@ const Impact = () => {
   return (
     <section className="relative py-28 md:py-36">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[hsl(200_100%_55%/0.03)] rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[300px] bg-[hsl(260_70%_60%/0.02)] rounded-full blur-[100px]" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[hsl(200_100%_55%/0.02)] rounded-full blur-[120px]" />
       </div>
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
@@ -70,10 +69,10 @@ const Impact = () => {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-20"
         >
-          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/80 font-mono mb-4">
+          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary font-mono font-medium mb-4">
             Výsledky
           </span>
-          <h2 className="font-display text-section mb-5">
+          <h2 className="font-display text-section mb-5 text-white">
             Výsledkom nie je viac AI.{" "}
             <span className="gradient-text">Výsledkom je výkonnejšia firma.</span>
           </h2>
@@ -98,17 +97,14 @@ const Impact = () => {
             >
               <div className="gradient-border-card group h-full">
                 <div className="gradient-border-inner p-6 h-full relative overflow-hidden">
-                  {/* Subtle inner glow */}
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-[hsl(var(--glow-primary)/0.03)] rounded-full blur-[40px] pointer-events-none" />
-
                   <div className="relative z-10">
                     <div className="icon-container w-10 h-10 flex items-center justify-center mb-4">
                       <item.icon size={18} className="text-primary" />
                     </div>
-                    <h3 className="text-sm font-semibold mb-2 leading-snug">
+                    <h3 className="text-sm font-bold mb-2 leading-snug text-white">
                       {item.title}
                     </h3>
-                    <p className="text-[0.75rem] text-muted-foreground/85 leading-relaxed">
+                    <p className="text-[0.8125rem] text-foreground/75 leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
@@ -127,7 +123,7 @@ const Impact = () => {
           className="text-center mt-16 max-w-2xl mx-auto"
         >
           <div className="h-px w-16 mx-auto bg-gradient-to-r from-transparent via-primary/30 to-transparent mb-8" />
-          <p className="text-muted-foreground/80 text-[0.9375rem] leading-relaxed italic">
+          <p className="text-foreground/75 text-[0.9375rem] leading-relaxed italic">
             „Keď je AI správne navrhnutá a riadená, nevytvára ďalší nástroj. Odstraňuje zbytočné trenie vo firme."
           </p>
         </motion.div>

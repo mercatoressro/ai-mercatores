@@ -22,19 +22,19 @@ const CTASection = () => {
   };
 
   const inputClasses =
-    "w-full px-5 py-3.5 rounded-xl bg-[hsl(225_25%_7%/0.8)] border border-border/40 text-sm text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-primary/40 focus:shadow-[0_0_20px_-5px_hsl(200_100%_55%/0.15)] transition-all duration-300";
+    "w-full px-5 py-3.5 rounded-xl bg-[hsl(225_25%_8%/0.9)] border border-border/50 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/40 focus:shadow-[0_0_20px_-5px_hsl(200_100%_55%/0.15)] transition-all duration-300";
 
   return (
     <section
       id="kontakt"
       className="relative py-28 md:py-36 section-deep overflow-hidden"
     >
-      {/* Ambient background */}
+      {/* Ambient background (dimmed) */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[hsl(200_100%_55%/0.04)] rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-[hsl(260_70%_60%/0.03)] rounded-full blur-[100px]" />
+        <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[hsl(200_100%_55%/0.03)] rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-[hsl(260_70%_60%/0.02)] rounded-full blur-[100px]" />
       </div>
-      <div className="absolute inset-0 grid-pattern opacity-[0.06] pointer-events-none" />
+      <div className="absolute inset-0 grid-pattern opacity-[0.04] pointer-events-none" />
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         {/* Header */}
@@ -45,10 +45,10 @@ const CTASection = () => {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/80 font-mono mb-4">
+          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary font-mono font-medium mb-4">
             Kontakt
           </span>
-          <h2 className="font-display text-section mb-5">
+          <h2 className="font-display text-section mb-5 text-white">
             Zistite, kde vám AI prinesie{" "}
             <span className="gradient-text-hero">najväčší reálny dopad</span>
           </h2>
@@ -73,7 +73,7 @@ const CTASection = () => {
               <div className="gradient-border-inner p-8 md:p-10 space-y-5">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs text-muted-foreground/70 mb-2 uppercase tracking-wider">
+                    <label className="block text-xs text-foreground/70 mb-2 uppercase tracking-wider font-medium">
                       Meno
                     </label>
                     <input
@@ -85,7 +85,7 @@ const CTASection = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs text-muted-foreground/70 mb-2 uppercase tracking-wider">
+                    <label className="block text-xs text-foreground/70 mb-2 uppercase tracking-wider font-medium">
                       Firma
                     </label>
                     <input
@@ -99,7 +99,7 @@ const CTASection = () => {
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs text-muted-foreground/70 mb-2 uppercase tracking-wider">
+                    <label className="block text-xs text-foreground/70 mb-2 uppercase tracking-wider font-medium">
                       E-mail
                     </label>
                     <input
@@ -112,7 +112,7 @@ const CTASection = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs text-muted-foreground/70 mb-2 uppercase tracking-wider">
+                    <label className="block text-xs text-foreground/70 mb-2 uppercase tracking-wider font-medium">
                       Telefón
                     </label>
                     <input
@@ -125,7 +125,7 @@ const CTASection = () => {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs text-muted-foreground/70 mb-2 uppercase tracking-wider">
+                  <label className="block text-xs text-foreground/70 mb-2 uppercase tracking-wider font-medium">
                     Stručný opis situácie
                   </label>
                   <textarea
@@ -144,7 +144,7 @@ const CTASection = () => {
                   <span>Chcem AI audit</span>
                   <ArrowRight size={16} />
                 </button>
-                <p className="text-[11px] text-muted-foreground/55 text-center leading-relaxed">
+                <p className="text-[11px] text-foreground/55 text-center leading-relaxed">
                   Prvý krok nie je nákup nástroja. Prvý krok je pochopiť, kde má
                   AI vo vašej firme najväčší efekt.
                 </p>
@@ -169,7 +169,7 @@ const CTASection = () => {
               <div className="gradient-border-inner p-6">
                 <div className="flex items-center gap-2 mb-5">
                   <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                  <span className="text-[10px] uppercase tracking-widest text-muted-foreground/70">
+                  <span className="text-[10px] uppercase tracking-widest text-foreground/65 font-mono">
                     AI Audit Overview
                   </span>
                 </div>
@@ -181,14 +181,14 @@ const CTASection = () => {
                   ].map((area) => (
                     <div key={area.label} className="space-y-1.5">
                       <div className="flex justify-between">
-                        <span className="text-[11px] text-foreground/60">
+                        <span className="text-[11px] text-foreground/75">
                           {area.label}
                         </span>
-                        <span className="text-[10px] text-primary/55 font-mono">
+                        <span className="text-[10px] text-primary/75 font-mono">
                           {area.w}
                         </span>
                       </div>
-                      <div className="h-1.5 rounded-full bg-muted/30 overflow-hidden">
+                      <div className="h-1.5 rounded-full bg-muted/40 overflow-hidden">
                         <div
                           className="h-full rounded-full bg-gradient-to-r from-primary/80 to-accent/60"
                           style={{ width: area.w }}
@@ -203,7 +203,7 @@ const CTASection = () => {
             {/* Process card */}
             <div className="gradient-border-card">
               <div className="gradient-border-inner p-6">
-                <div className="text-[10px] uppercase tracking-widest text-muted-foreground/65 mb-3">
+                <div className="text-[10px] uppercase tracking-widest text-foreground/60 font-medium mb-3">
                   Postup
                 </div>
                 <div className="space-y-3">
@@ -215,13 +215,13 @@ const CTASection = () => {
                   ].map((step, i) => (
                     <div
                       key={step}
-                      className="flex items-center gap-3 text-[0.75rem]"
+                      className="flex items-center gap-3 text-[0.8125rem]"
                     >
-                       <span className="text-[10px] font-mono text-primary/50 w-4">
+                       <span className="text-[10px] font-mono text-primary/70 w-4">
                         0{i + 1}
                       </span>
-                      <div className="w-1 h-1 rounded-full bg-primary/40" />
-                      <span className="text-foreground/60">{step}</span>
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary/50" />
+                      <span className="text-foreground/75">{step}</span>
                     </div>
                   ))}
                 </div>
@@ -231,10 +231,10 @@ const CTASection = () => {
             {/* Microcopy card */}
             <div className="gradient-border-card">
               <div className="gradient-border-inner p-6 text-center">
-                <p className="text-[0.8125rem] text-muted-foreground/80 leading-relaxed">
+                <p className="text-[0.875rem] text-foreground/75 leading-relaxed">
                   Bez zbytočnej vaty.
                   <br />
-                  <span className="text-foreground/70">
+                  <span className="text-foreground/90 font-medium">
                     Najprv diagnostika, potom riešenie.
                   </span>
                 </p>
