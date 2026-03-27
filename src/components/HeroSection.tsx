@@ -467,8 +467,8 @@ const HeroSection = () => {
   );
 };
 
+
 export default HeroSection;
-                  ease: "easeInOut",
                   delay: 2,
                 }}
                 className="absolute -top-4 -right-6 z-10"
