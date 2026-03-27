@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, BookOpen, Shield, Zap, BarChart3 } from "lucide-react";
+import { ArrowRight, Layers, Shield, Zap, BarChart3 } from "lucide-react";
 import NetworkGrid from "./NetworkGrid";
 
 const fadeUp = (delay = 0) => ({
@@ -168,14 +168,14 @@ const HeroSection = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary" />
             </span>
-            BEZPLATNE PRE PARTNEROV
+            AI TRANSFORMÁCIA PRE FIRMY
           </div>
           <div
             className="h-[1px] flex-1 max-w-[140px] hidden sm:block"
             style={{ background: "linear-gradient(to right, hsl(200 100% 55% / 0.25), transparent)" }}
           />
           <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/45 font-mono hidden sm:block">
-            AI PLAYBOOK 2026
+            AI.MERCATORES.SK
           </span>
         </motion.div>
 
@@ -218,8 +218,9 @@ const HeroSection = () => {
               className="font-display leading-[0.92] tracking-[-0.045em] font-extrabold mb-10"
               style={{ fontSize: "clamp(3.5rem, 7.5vw, 7rem)" }}
             >
-              <span className="block text-foreground drop-shadow-[0_0_40px_hsl(200_100%_50%/0.08)]">Strategický</span>
+              <span className="block text-foreground drop-shadow-[0_0_40px_hsl(200_100%_50%/0.08)]">Pomáhame firmám</span>
               <span className="block">
+                <span className="text-foreground">zavádzať </span>
                 <span
                   className="inline-block"
                   style={{
@@ -231,9 +232,9 @@ const HeroSection = () => {
                 >
                   AI
                 </span>
-                <span className="text-foreground"> dokument</span>
+                <span className="text-foreground"> do obchodu,</span>
               </span>
-              <span className="block text-foreground">pre lídrov</span>
+              <span className="block text-foreground">marketingu a operatívy</span>
             </motion.h1>
 
             {/* Subheadline */}
@@ -241,8 +242,8 @@ const HeroSection = () => {
               variants={fadeUp(0.15)}
               className="text-base md:text-lg text-foreground/50 leading-[1.8] mb-14 max-w-[520px]"
             >
-              Pre našich partnerov sme pripravili strategický AI dokument, ktorý ukazuje, ako zavádzať správne{" "}
-              <span className="text-foreground/85 font-semibold">AI nástroje</span> do obchodných, marketingových a prevádzkových procesov — skôr než konkurencia.
+              Navrhujeme, nasadzujeme a spravujeme{" "}
+              <span className="text-foreground/85 font-semibold">AI riešenia</span> tak, aby firmám reálne zlepšovali obchod, marketing aj operatívu — nie len vyzerali dobre v prezentácii.
             </motion.p>
 
             {/* CTA */}
@@ -260,7 +261,7 @@ const HeroSection = () => {
                   `,
                 }}
               >
-                <span className="relative z-10">ZÍSKAŤ PLAYBOOK ZDARMA</span>
+                <span className="relative z-10">DOHODNÚŤ AI KONZULTÁCIU</span>
                 <ArrowRight size={19} className="relative z-10 group-hover:translate-x-1 transition-transform" />
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -275,7 +276,7 @@ const HeroSection = () => {
                 />
               </a>
               <p className="text-[11px] text-muted-foreground/35 mt-5 tracking-wide">
-                Bez záväzkov · Ihneď k dispozícii · Pre firmy od 10 do 500 ľudí
+                Audit. Návrh. Nasadenie. Správa.
               </p>
             </motion.div>
 
@@ -285,9 +286,9 @@ const HeroSection = () => {
               className="flex flex-wrap gap-3"
             >
               {[
-                { icon: Zap, label: "ÚSPORA ČASU", desc: "Automatizujte rutinné úlohy a šetrite čas i náklady." },
-                { icon: BarChart3, label: "VYŠŠÍ ZISK", desc: "Získajte hlboké dáta pre lepšie strategické rozhodnutia." },
-                { icon: Shield, label: "INOVÁCIE", desc: "Odomknite nové príležitosti a prekonajte konkurenciu." },
+                { icon: Zap, label: "MENEJ CHAOSU", desc: "AI zavádzame do reálnych procesov, nie mimo nich." },
+                { icon: BarChart3, label: "VIAC VÝKONU", desc: "Lepšie rozhodovanie, konzistentnejší obchod a efektívnejší tím." },
+                { icon: Shield, label: "JEDEN SYSTÉM", desc: "Prepájame obchod, marketing a operatívu do funkčného modelu." },
               ].map((b) => (
                 <div
                   key={b.label}
@@ -374,7 +375,7 @@ const HeroSection = () => {
                     {/* Status indicator */}
                     <div className="flex items-center justify-center gap-2 mb-6 relative z-10">
                       <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                      <span className="text-[8px] uppercase tracking-[0.25em] font-mono text-primary/50">Dokument pripravený</span>
+                      <span className="text-[8px] uppercase tracking-[0.25em] font-mono text-primary/50">Systém aktívny</span>
                     </div>
 
                     {/* Book icon */}
@@ -388,7 +389,7 @@ const HeroSection = () => {
                         boxShadow: "0 0 40px hsl(200 100% 55% / 0.1), inset 0 1px 0 hsl(200 100% 80% / 0.05)",
                       }}
                     >
-                      <BookOpen size={30} className="text-primary" />
+                      <Layers size={30} className="text-primary" />
                     </motion.div>
 
                     {/* Title */}
@@ -400,13 +401,13 @@ const HeroSection = () => {
                         WebkitTextFillColor: "transparent",
                       }}
                     >
-                      AI STRATEGY
+                      AI CONTROL LAYER
                     </h3>
                     <p
                       className="text-[11px] uppercase tracking-[0.25em] font-mono font-semibold relative z-10"
                       style={{ color: "hsl(200 100% 58%)" }}
                     >
-                      PARTNER EDITION
+                      BUSINESS TRANSFORMATION
                     </p>
                   </div>
 
@@ -424,7 +425,9 @@ const HeroSection = () => {
                   {/* Tags */}
                   <div className="px-9 py-5 text-center relative z-10">
                     <p className="text-[10px] uppercase tracking-[0.15em] text-muted-foreground/35 leading-[2.2]">
-                      Obchodné procesy • Automatizácia • Implementácia
+                      Obchodné procesy • Marketing • Operatíva
+                      <br />
+                      Automatizácia • Reporting • Implementácia
                     </p>
                   </div>
 
@@ -437,8 +440,8 @@ const HeroSection = () => {
                     }}
                   >
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-[9px] uppercase tracking-[0.2em] text-muted-foreground/30 font-mono">Obsah</span>
-                      <span className="text-[9px] text-primary/35 font-mono">3 moduly</span>
+                      <span className="text-[9px] uppercase tracking-[0.2em] text-muted-foreground/30 font-mono">Vrstvy</span>
+                      <span className="text-[9px] text-primary/35 font-mono">3 aktívne</span>
                     </div>
                     <div className="space-y-3">
                       {[
@@ -473,8 +476,8 @@ const HeroSection = () => {
                   {/* Bottom metrics row */}
                   <div className="mx-7 mb-7 flex gap-3">
                     {[
-                      { label: "AI Readiness", value: "94%" },
-                      { label: "Moduly", value: "3 aktívne" },
+                      { label: "AI Coverage", value: "94%" },
+                      { label: "Procesy", value: "3 aktívne" },
                     ].map((m) => (
                       <div
                         key={m.label}
@@ -549,7 +552,7 @@ const HeroSection = () => {
                 >
                   <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                   <span className="text-[9px] font-mono text-primary/65 uppercase tracking-wider">
-                    PDF Ready
+                    Live
                   </span>
                 </div>
               </motion.div>
