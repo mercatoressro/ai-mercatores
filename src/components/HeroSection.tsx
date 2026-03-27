@@ -530,7 +530,6 @@ const HeroSection = () => {
                   </span>
                 </div>
               </motion.div>
-              </motion.div>
 
               {/* Floating badge — top right */}
               <motion.div
