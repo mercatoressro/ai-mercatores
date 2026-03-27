@@ -30,7 +30,7 @@
 
     /* Muted — soft ash */
     --muted: 225 18% 13%;
-    --muted-foreground: 220 15% 52%;
+    --muted-foreground: 220 15% 62%;
 
     /* Accent — bright sky */
     --accent: 195 100% 62%;
@@ -286,7 +286,7 @@
     border-radius: 9999px;
     font-size: 0.75rem;
     padding: 0.375rem 0.875rem;
-    color: hsl(var(--muted-foreground));
+    color: hsl(var(--muted-foreground) / 0.95);
     transition: all 0.3s ease;
   }
 

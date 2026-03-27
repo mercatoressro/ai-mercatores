@@ -41,7 +41,7 @@ const WhyFail = () => {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-6"
         >
-          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-destructive/50 font-mono mb-4">
+          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-destructive/65 font-mono mb-4">
             Realita trhu
           </span>
           <h2 className="font-display text-section mb-5 max-w-3xl mx-auto">
@@ -57,7 +57,7 @@ const WhyFail = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-center text-muted-foreground max-w-xl mx-auto text-[0.9375rem] leading-relaxed mb-16"
+          className="text-center text-muted-foreground/80 max-w-xl mx-auto text-[0.9375rem] leading-relaxed mb-16"
         >
           Firmy dnes často nekupujú zlé nástroje. Zlyhávajú na tom, že ich nevedia premeniť na proces, ownership a dlhodobo riadený výkon.
         </motion.p>
@@ -84,7 +84,7 @@ const WhyFail = () => {
             <div className="relative z-10">
               <div className="flex items-center gap-2.5 mb-8">
                 <div className="w-2 h-2 rounded-full bg-destructive/40" />
-                <h3 className="font-display text-sm uppercase tracking-widest text-muted-foreground">
+                <h3 className="font-display text-sm uppercase tracking-widest text-muted-foreground/80">
                   Bežný stav
                 </h3>
               </div>
@@ -93,9 +93,9 @@ const WhyFail = () => {
                   <li key={f} className="flex items-start gap-3">
                     <XCircle
                       size={16}
-                      className="text-destructive/40 shrink-0 mt-0.5"
+                      className="text-destructive/55 shrink-0 mt-0.5"
                     />
-                    <span className="text-[0.8125rem] text-muted-foreground leading-relaxed">
+                    <span className="text-[0.8125rem] text-muted-foreground/80 leading-relaxed">
                       {f}
                     </span>
                   </li>
@@ -117,7 +117,7 @@ const WhyFail = () => {
                 <div className="relative z-10">
                   <div className="flex items-center gap-2.5 mb-8">
                     <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                    <h3 className="font-display text-sm uppercase tracking-widest text-primary/80">
+                    <h3 className="font-display text-sm uppercase tracking-widest text-primary/90">
                       Riadená AI transformácia
                     </h3>
                   </div>
@@ -126,13 +126,13 @@ const WhyFail = () => {
                       <li key={w} className="flex items-start gap-3">
                         <CheckCircle
                           size={16}
-                          className="text-primary/60 shrink-0 mt-0.5"
+                          className="text-primary/75 shrink-0 mt-0.5"
                         />
                         <div>
-                          <span className="text-[10px] font-mono text-primary/35 mr-2">
+                          <span className="text-[10px] font-mono text-primary/50 mr-2">
                             0{i + 1}
                           </span>
-                          <span className="text-[0.8125rem] text-foreground/80 leading-relaxed">
+                          <span className="text-[0.8125rem] text-foreground/90 leading-relaxed">
                             {w}
                           </span>
                         </div>
@@ -154,7 +154,7 @@ const WhyFail = () => {
           className="text-center mt-16 max-w-2xl mx-auto"
         >
           <div className="h-px w-16 mx-auto bg-gradient-to-r from-transparent via-primary/30 to-transparent mb-8" />
-          <p className="font-display text-lg md:text-xl font-semibold text-foreground/90">
+          <p className="font-display text-lg md:text-xl font-semibold text-foreground">
             „My nedodávame AI ako efekt.{" "}
             <span className="gradient-text-primary">
               Dodávame ju ako riadený systém pre výkon firmy.

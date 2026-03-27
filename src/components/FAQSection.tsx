@@ -60,7 +60,7 @@ const FAQSection = () => {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-20"
         >
-          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/60 font-mono mb-4">
+          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/80 font-mono mb-4">
             FAQ
           </span>
           <h2 className="font-display text-section mb-5">
@@ -86,10 +86,10 @@ const FAQSection = () => {
                 value={`faq-${i}`}
                 className="glass-card-static px-7 border-none data-[state=open]:glow-subtle transition-shadow duration-500"
               >
-                <AccordionTrigger className="text-[0.875rem] font-medium text-foreground/90 hover:text-primary transition-colors py-6 hover:no-underline gap-4 [&[data-state=open]]:text-primary">
+                <AccordionTrigger className="text-[0.875rem] font-medium text-foreground hover:text-primary transition-colors py-6 hover:no-underline gap-4 [&[data-state=open]]:text-primary">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-[0.8125rem] text-muted-foreground pb-6 leading-relaxed">
+                <AccordionContent className="text-[0.8125rem] text-muted-foreground/85 pb-6 leading-relaxed">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>
@@ -103,7 +103,7 @@ const FAQSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-center text-muted-foreground/50 text-[0.8125rem] mt-12 max-w-xl mx-auto"
+          className="text-center text-muted-foreground/65 text-[0.8125rem] mt-12 max-w-xl mx-auto"
         >
           Ak máte otázky špecifické pre vašu firmu, najrýchlejšie ich zodpovie úvodný AI audit.
         </motion.p>

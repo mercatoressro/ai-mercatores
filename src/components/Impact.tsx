@@ -70,7 +70,7 @@ const Impact = () => {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-20"
         >
-          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/60 font-mono mb-4">
+          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/80 font-mono mb-4">
             Výsledky
           </span>
           <h2 className="font-display text-section mb-5">
@@ -108,7 +108,7 @@ const Impact = () => {
                     <h3 className="text-sm font-semibold mb-2 leading-snug">
                       {item.title}
                     </h3>
-                    <p className="text-[0.75rem] text-muted-foreground leading-relaxed">
+                    <p className="text-[0.75rem] text-muted-foreground/85 leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
@@ -127,7 +127,7 @@ const Impact = () => {
           className="text-center mt-16 max-w-2xl mx-auto"
         >
           <div className="h-px w-16 mx-auto bg-gradient-to-r from-transparent via-primary/30 to-transparent mb-8" />
-          <p className="text-muted-foreground text-[0.9375rem] leading-relaxed italic">
+          <p className="text-muted-foreground/80 text-[0.9375rem] leading-relaxed italic">
             „Keď je AI správne navrhnutá a riadená, nevytvára ďalší nástroj. Odstraňuje zbytočné trenie vo firme."
           </p>
         </motion.div>

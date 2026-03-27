@@ -83,7 +83,7 @@ const Solutions = () => {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-20"
         >
-          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/60 font-mono mb-4">
+          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/80 font-mono mb-4">
             Systém
           </span>
           <h2 className="font-display text-section mb-5">
@@ -123,7 +123,7 @@ const Solutions = () => {
                       <h3 className="font-display text-lg font-semibold mb-1.5">
                         {p.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-sm text-muted-foreground/90 leading-relaxed">
                         {p.desc}
                       </p>
                     </div>
@@ -132,8 +132,8 @@ const Solutions = () => {
                   {/* Mini dashboard indicator */}
                   <div className="flex items-center gap-2 mb-5 relative z-10">
                     <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[hsl(var(--muted)/0.4)] border border-border/30">
-                      <p.metric.icon size={12} className="text-primary/60" />
-                      <span className="text-[10px] font-mono text-primary/50 uppercase tracking-wider">
+                      <p.metric.icon size={12} className="text-primary/70" />
+                      <span className="text-[10px] font-mono text-primary/60 uppercase tracking-wider">
                         {p.metric.label}
                       </span>
                     </div>
@@ -164,7 +164,7 @@ const Solutions = () => {
           className="text-center mt-16 max-w-2xl mx-auto"
         >
           <div className="h-px w-16 mx-auto bg-gradient-to-r from-transparent via-primary/30 to-transparent mb-8" />
-          <p className="text-muted-foreground text-[0.9375rem] leading-relaxed italic">
+          <p className="text-muted-foreground/80 text-[0.9375rem] leading-relaxed italic">
             „Nejde o izolované nástroje. Ide o jeden riadený systém, ktorý prepája výkon firmy naprieč oddeleniami."
           </p>
         </motion.div>
