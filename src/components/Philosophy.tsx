@@ -24,7 +24,7 @@ const Philosophy = () => {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-3xl mx-auto text-center"
         >
-          <span className="inline-block text-[10px] uppercase tracking-[0.3em] text-primary/50 font-mono mb-6">Filozofia</span>
+          <span className="inline-block text-[10px] uppercase tracking-[0.3em] text-primary/70 font-mono mb-6">Filozofia</span>
 
           <h2 className="font-display text-section mb-14 leading-[1.15]">
             ai.mercatores.sk premieňa AI na{" "}
@@ -39,7 +39,7 @@ const Philosophy = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-                className="text-lg md:text-xl text-muted-foreground leading-relaxed"
+                className="text-lg md:text-xl text-muted-foreground/85 leading-relaxed"
               >
                 {t}
               </motion.p>

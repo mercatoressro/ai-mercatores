@@ -45,7 +45,7 @@ const CTASection = () => {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/60 font-mono mb-4">
+          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/80 font-mono mb-4">
             Kontakt
           </span>
           <h2 className="font-display text-section mb-5">
@@ -144,7 +144,7 @@ const CTASection = () => {
                   <span>Chcem AI audit</span>
                   <ArrowRight size={16} />
                 </button>
-                <p className="text-[11px] text-muted-foreground/40 text-center leading-relaxed">
+                <p className="text-[11px] text-muted-foreground/55 text-center leading-relaxed">
                   Prvý krok nie je nákup nástroja. Prvý krok je pochopiť, kde má
                   AI vo vašej firme najväčší efekt.
                 </p>
@@ -169,7 +169,7 @@ const CTASection = () => {
               <div className="gradient-border-inner p-6">
                 <div className="flex items-center gap-2 mb-5">
                   <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                  <span className="text-[10px] uppercase tracking-widest text-muted-foreground">
+                  <span className="text-[10px] uppercase tracking-widest text-muted-foreground/70">
                     AI Audit Overview
                   </span>
                 </div>
@@ -181,10 +181,10 @@ const CTASection = () => {
                   ].map((area) => (
                     <div key={area.label} className="space-y-1.5">
                       <div className="flex justify-between">
-                        <span className="text-[11px] text-foreground/50">
+                        <span className="text-[11px] text-foreground/60">
                           {area.label}
                         </span>
-                        <span className="text-[10px] text-primary/40 font-mono">
+                        <span className="text-[10px] text-primary/55 font-mono">
                           {area.w}
                         </span>
                       </div>
@@ -203,7 +203,7 @@ const CTASection = () => {
             {/* Process card */}
             <div className="gradient-border-card">
               <div className="gradient-border-inner p-6">
-                <div className="text-[10px] uppercase tracking-widest text-muted-foreground mb-3">
+                <div className="text-[10px] uppercase tracking-widest text-muted-foreground/65 mb-3">
                   Postup
                 </div>
                 <div className="space-y-3">
@@ -217,11 +217,11 @@ const CTASection = () => {
                       key={step}
                       className="flex items-center gap-3 text-[0.75rem]"
                     >
-                      <span className="text-[10px] font-mono text-primary/35 w-4">
+                       <span className="text-[10px] font-mono text-primary/50 w-4">
                         0{i + 1}
                       </span>
-                      <div className="w-1 h-1 rounded-full bg-primary/30" />
-                      <span className="text-foreground/50">{step}</span>
+                      <div className="w-1 h-1 rounded-full bg-primary/40" />
+                      <span className="text-foreground/60">{step}</span>
                     </div>
                   ))}
                 </div>
@@ -231,10 +231,10 @@ const CTASection = () => {
             {/* Microcopy card */}
             <div className="gradient-border-card">
               <div className="gradient-border-inner p-6 text-center">
-                <p className="text-[0.8125rem] text-muted-foreground leading-relaxed">
+                <p className="text-[0.8125rem] text-muted-foreground/80 leading-relaxed">
                   Bez zbytočnej vaty.
                   <br />
-                  <span className="text-foreground/60">
+                  <span className="text-foreground/70">
                     Najprv diagnostika, potom riešenie.
                   </span>
                 </p>
