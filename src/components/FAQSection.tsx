@@ -7,16 +7,46 @@ import {
 } from "@/components/ui/accordion";
 
 const faqs = [
-  { q: "Pre aké firmy je riešenie vhodné?", a: "Pre malé a stredné B2B firmy, služby, retail, zdravotníctvo a firmy v raste, ktoré chcú systémovo riadiť obchod, marketing a operatívu pomocou AI." },
-  { q: "Musíme mať už svoje systémy?", a: "Nie nevyhnutne. Dokážeme pracovať s existujúcimi nástrojmi aj navrhnúť riešenie od nuly. Počas auditu zmapujeme váš aktuálny stav." },
-  { q: "Viete sa napojiť na CRM a ďalšie nástroje?", a: "Áno. Integrujeme sa s bežnými CRM, marketingovými a prevádzkovými nástrojmi. Konkrétne integrácie riešime v rámci návrhu architektúry." },
-  { q: "Koľko trvá nasadenie?", a: "Závisí od rozsahu. Prvé výsledky vidíte typicky v priebehu týždňov. Kompletná transformácia prebieha postupne, v riadených fázach." },
-  { q: "Robíte aj správu po spustení?", a: "Áno. Správa a optimalizácia je kľúčová časť nášho modelu. Nepustíme riešenie do sveta a neodídeme." },
-  { q: "Je to vhodné aj pre menšie tímy?", a: "Áno. AI a automatizácia sú práve pre menšie tímy mimoriadne efektívne — dokážu nahradiť manuálnu prácu a zvýšiť výkon bez nutnosti prijímať." },
-  { q: "Čo ak nevieme, kde začať?", a: "Presne na to slúži náš AI audit. Pozrieme sa na vaše procesy a navrhneme konkrétne miesta, kde AI prinesie najvyšší efekt." },
-  { q: "Ako vyzerá prvý krok spolupráce?", a: "Vyplníte krátky formulár, dohodneme si úvodnú konzultáciu a prejdeme diagnostikou vašich procesov." },
-  { q: "Viete riešiť obchod, marketing aj operatívu naraz?", a: "Áno, a presne v tom je naša pridaná hodnota. Nepracujeme v izolovaných silách, ale prepájame všetky tri oblasti do jedného riadeného systému." },
-  { q: "Čo ak už máme časť nástrojov zavedenú?", a: "Budeme na nich stavať. Nenahrádzame funkčné veci — doplníme chýbajúce časti a prepojíme ich do uceleného systému." },
+  {
+    q: "Pre aké firmy je riešenie vhodné?",
+    a: "Pre malé a stredné firmy, ktoré chcú systémovo riadiť obchod, marketing a operatívu. Najčastejšie pracujeme s B2B firmami, službami, retailom, zdravotníctvom a firmami v raste — od 10 do 500 ľudí.",
+  },
+  {
+    q: "Musíme mať už pripravené vlastné systémy?",
+    a: "Nie. Dokážeme pracovať s existujúcimi nástrojmi aj navrhnúť riešenie od nuly. V rámci auditu zmapujeme váš aktuálny stav a navrhneme, čo ponechať, čo doplniť a čo prepojiť.",
+  },
+  {
+    q: "Viete sa napojiť na CRM, marketingové a interné nástroje?",
+    a: "Áno. Integrujeme sa s bežnými CRM, e-mailovými, marketingovými a prevádzkovými nástrojmi. Konkrétne integrácie riešime v rámci návrhu architektúry — vždy podľa reality vašej firmy.",
+  },
+  {
+    q: "Koľko zvyčajne trvá prvé nasadenie?",
+    a: "Závisí od rozsahu. Prvé výsledky vidíte typicky v priebehu týždňov. Kompletná transformácia prebieha postupne, v riadených fázach — nie ako jednorazový veľký projekt.",
+  },
+  {
+    q: "Robíte aj správu po spustení?",
+    a: "Áno, a považujeme to za kľúčovú časť. AI riešenie bez priebežnej správy a optimalizácie stráca efekt. Nepustíme riešenie do sveta a neodídeme.",
+  },
+  {
+    q: "Je riešenie vhodné aj pre menší tím?",
+    a: "Áno. AI a automatizácia sú pre menšie tímy mimoriadne efektívne — dokážu nahradiť manuálnu prácu a zvýšiť výkon bez nutnosti rozširovať tím.",
+  },
+  {
+    q: "Čo ak ešte nevieme, kde začať?",
+    a: "Presne na to slúži náš AI audit. Pozrieme sa na vaše procesy v obchode, marketingu a operatíve a navrhneme konkrétne miesta, kde AI prinesie najvyšší efekt.",
+  },
+  {
+    q: "Viete riešiť obchod, marketing aj operatívu naraz?",
+    a: "Áno, a presne v tom je naša pridaná hodnota. Nepracujeme v izolovaných silách — prepájame všetky tri oblasti do jedného riadeného systému.",
+  },
+  {
+    q: "Čo ak už máme časť nástrojov zavedenú?",
+    a: "Budeme na nich stavať. Nenahrádzame funkčné veci — doplníme chýbajúce časti, prepojíme ich a zaradíme do uceleného systému.",
+  },
+  {
+    q: "Čo je prvý krok spolupráce?",
+    a: "Vyplníte krátky formulár alebo nám napíšete. Dohodneme si úvodnú konzultáciu, kde prejdeme diagnostikou vašich procesov a navrhneme ďalší postup.",
+  },
 ];
 
 const FAQSection = () => {
@@ -30,10 +60,16 @@ const FAQSection = () => {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-20"
         >
-          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/60 font-mono mb-4">FAQ</span>
+          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/60 font-mono mb-4">
+            FAQ
+          </span>
           <h2 className="font-display text-section mb-5">
-            Časté <span className="gradient-text-primary">otázky</span>
+            Časté{" "}
+            <span className="gradient-text-primary">otázky</span>
           </h2>
+          <p className="text-muted-foreground max-w-lg mx-auto text-base">
+            Odpovede na to, čo nás klienti pýtajú najčastejšie pred spoluprácou.
+          </p>
         </motion.div>
 
         <motion.div
@@ -60,6 +96,17 @@ const FAQSection = () => {
             ))}
           </Accordion>
         </motion.div>
+
+        {/* Transition text */}
+        <motion.p
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="text-center text-muted-foreground/50 text-[0.8125rem] mt-12 max-w-xl mx-auto"
+        >
+          Ak máte otázky špecifické pre vašu firmu, najrýchlejšie ich zodpovie úvodný AI audit.
+        </motion.p>
       </div>
     </section>
   );
