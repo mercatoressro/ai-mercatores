@@ -509,30 +509,27 @@ const HeroSection = () => {
                 />
               </motion.div>
 
-              {/* ═══ DOCUMENT PREVIEW — bottom floating ═══ */}
+              {/* ═══ Status badge — bottom center ═══ */}
               <motion.div
                 animate={{ y: [0, -7, 0] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-                className="absolute -bottom-14 left-1/2 -translate-x-1/2 z-20"
+                className="absolute -bottom-10 left-1/2 -translate-x-1/2 z-20"
               >
                 <div
-                  className="w-[150px] rounded-xl overflow-hidden relative"
+                  className="px-4 py-2.5 rounded-xl flex items-center gap-2.5"
                   style={{
-                    background: "linear-gradient(180deg, hsl(0 0% 96%), hsl(0 0% 90%))",
-                    boxShadow: "0 25px 60px -15px hsl(220 80% 5% / 0.6), 0 0 0 1px hsl(0 0% 100% / 0.12)",
+                    background: "linear-gradient(145deg, hsl(222 28% 13% / 0.97), hsl(225 30% 5% / 0.97))",
+                    border: "1px solid hsl(200 100% 55% / 0.12)",
+                    backdropFilter: "blur(24px)",
+                    boxShadow: "0 20px 40px -12px hsl(200 100% 35% / 0.15)",
                   }}
                 >
-                  <div className="p-3.5">
-                    <div className="h-2.5 w-16 rounded bg-[hsl(220_20%_65%)] mb-2" />
-                    <div className="h-1.5 w-full rounded bg-[hsl(220_15%_78%)] mb-1" />
-                    <div className="h-1.5 w-3/4 rounded bg-[hsl(220_15%_78%)] mb-2.5" />
-                    <div className="h-10 w-full rounded bg-[hsl(200_60%_82%/0.5)]" />
-                  </div>
-                  <div
-                    className="absolute top-0 right-0 w-6 h-6"
-                    style={{ background: "linear-gradient(225deg, hsl(220 15% 72%) 50%, transparent 50%)" }}
-                  />
+                  <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                  <span className="text-[9px] font-mono text-foreground/50 uppercase tracking-wider">
+                    3 procesy nasadené
+                  </span>
                 </div>
+              </motion.div>
               </motion.div>
 
               {/* Floating badge — top right */}
