@@ -161,7 +161,7 @@ const HeroSection = () => {
             style={{
               background: "linear-gradient(135deg, hsl(200 100% 55% / 0.14), hsl(200 100% 55% / 0.04))",
               border: "1px solid hsl(200 100% 55% / 0.25)",
-              color: "hsl(200 100% 72%)",
+              color: "hsl(200 100% 80%)",
             }}
           >
             <span className="relative flex h-1.5 w-1.5">
@@ -174,7 +174,7 @@ const HeroSection = () => {
             className="h-[1px] flex-1 max-w-[140px] hidden sm:block"
             style={{ background: "linear-gradient(to right, hsl(200 100% 55% / 0.25), transparent)" }}
           />
-          <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/45 font-mono hidden sm:block">
+          <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/60 font-mono hidden sm:block">
             AI.MERCATORES.SK
           </span>
         </motion.div>
@@ -197,7 +197,7 @@ const HeroSection = () => {
               <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
             </svg>
           </div>
-          <span className="text-[16px] font-display font-bold tracking-wide text-foreground/90">
+          <span className="text-[16px] font-display font-bold tracking-wide text-foreground">
             AI.MERCATORES.SK
           </span>
         </motion.div>
@@ -216,7 +216,7 @@ const HeroSection = () => {
             <motion.h1
               variants={fadeUp(0)}
               className="font-display leading-[0.92] tracking-[-0.045em] font-extrabold mb-10"
-              style={{ fontSize: "clamp(3.5rem, 7.5vw, 7rem)" }}
+              style={{ fontSize: "clamp(3.5rem, 7.5vw, 7rem)", textShadow: "0 0 60px hsl(200 100% 50% / 0.12), 0 2px 4px hsl(220 50% 3% / 0.5)" }}
             >
               <span className="block text-foreground drop-shadow-[0_0_40px_hsl(200_100%_50%/0.08)]">
                 <span
@@ -230,16 +230,16 @@ const HeroSection = () => {
                 >
                   AI
                 </span>
-                <span className="text-foreground">, ktoré reálne</span>
+                <span className="text-white">, ktoré reálne</span>
               </span>
-              <span className="block text-foreground">funguje</span>
-              <span className="block text-foreground">vo firme</span>
+              <span className="block text-white">funguje</span>
+              <span className="block text-white">vo firme</span>
             </motion.h1>
 
             {/* Subheadline */}
             <motion.p
               variants={fadeUp(0.15)}
-              className="text-base md:text-lg text-foreground/50 leading-[1.8] mb-14 max-w-[520px]"
+              className="text-base md:text-lg text-foreground/70 leading-[1.8] mb-14 max-w-[520px]"
             >
               Architektúra, nasadenie a správa AI v obchode, marketingu a operatíve. Systém, ktorý beží — nie prezentácia, ktorá leží v šuplíku.
             </motion.p>
@@ -273,7 +273,7 @@ const HeroSection = () => {
                   }}
                 />
               </a>
-              <p className="text-[11px] text-muted-foreground/35 mt-5 tracking-wide">
+              <p className="text-[11px] text-muted-foreground/50 mt-5 tracking-wide">
                 Architektúra · Nasadenie · Správa · Výkon
               </p>
             </motion.div>
@@ -299,12 +299,12 @@ const HeroSection = () => {
                   }}
                 >
                   <div className="flex items-center gap-2 mb-2">
-                    <b.icon size={13} className="text-primary/50" />
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-primary/65">
+                    <b.icon size={13} className="text-primary/70" />
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-primary/80">
                       {b.label}
                     </span>
                   </div>
-                  <span className="block text-[11px] text-muted-foreground/45 leading-relaxed">
+                  <span className="block text-[11px] text-muted-foreground/60 leading-relaxed">
                     {b.desc}
                   </span>
                 </div>
@@ -373,7 +373,7 @@ const HeroSection = () => {
                     {/* Status indicator */}
                     <div className="flex items-center justify-center gap-2 mb-6 relative z-10">
                       <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                      <span className="text-[8px] uppercase tracking-[0.25em] font-mono text-primary/50">Systém aktívny</span>
+                      <span className="text-[8px] uppercase tracking-[0.25em] font-mono text-primary/65">Systém aktívny</span>
                     </div>
 
                     {/* Book icon */}
@@ -394,7 +394,7 @@ const HeroSection = () => {
                     <h3
                       className="font-display text-[1.8rem] xl:text-[2rem] font-extrabold tracking-tight mb-2 relative z-10"
                       style={{
-                        background: "linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 75%))",
+                        background: "linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 82%))",
                         WebkitBackgroundClip: "text",
                         WebkitTextFillColor: "transparent",
                       }}
@@ -403,7 +403,7 @@ const HeroSection = () => {
                     </h3>
                     <p
                       className="text-[11px] uppercase tracking-[0.25em] font-mono font-semibold relative z-10"
-                      style={{ color: "hsl(200 100% 58%)" }}
+                      style={{ color: "hsl(200 100% 65%)" }}
                     >
                       BUSINESS TRANSFORMATION
                     </p>
@@ -422,7 +422,7 @@ const HeroSection = () => {
 
                   {/* Tags */}
                   <div className="px-9 py-5 text-center relative z-10">
-                    <p className="text-[10px] uppercase tracking-[0.15em] text-muted-foreground/35 leading-[2.2]">
+                    <p className="text-[10px] uppercase tracking-[0.15em] text-muted-foreground/50 leading-[2.2]">
                       Obchodné procesy • Marketing • Operatíva
                       <br />
                       Automatizácia • Reporting • Implementácia
@@ -438,8 +438,8 @@ const HeroSection = () => {
                     }}
                   >
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-[9px] uppercase tracking-[0.2em] text-muted-foreground/30 font-mono">Vrstvy</span>
-                      <span className="text-[9px] text-primary/35 font-mono">3 aktívne</span>
+                      <span className="text-[9px] uppercase tracking-[0.2em] text-muted-foreground/45 font-mono">Vrstvy</span>
+                      <span className="text-[9px] text-primary/50 font-mono">3 aktívne</span>
                     </div>
                     <div className="space-y-3">
                       {[
@@ -449,10 +449,10 @@ const HeroSection = () => {
                       ].map((item, i) => (
                         <div key={item.name}>
                           <div className="flex items-center gap-3 mb-1.5">
-                            <span className="text-[9px] font-mono text-primary/35 w-5">0{i+1}</span>
-                            <div className="w-1 h-1 rounded-full bg-primary/30" />
-                            <span className="text-[11.5px] text-foreground/45 flex-1">{item.name}</span>
-                            <span className="text-[9px] font-mono text-primary/30">{item.progress}%</span>
+                            <span className="text-[9px] font-mono text-primary/50 w-5">0{i+1}</span>
+                            <div className="w-1 h-1 rounded-full bg-primary/40" />
+                            <span className="text-[11.5px] text-foreground/60 flex-1">{item.name}</span>
+                            <span className="text-[9px] font-mono text-primary/45">{item.progress}%</span>
                           </div>
                           <div className="ml-8 h-[2px] rounded-full bg-[hsl(200_100%_55%/0.06)] overflow-hidden">
                             <motion.div
@@ -485,10 +485,10 @@ const HeroSection = () => {
                           border: "1px solid hsl(200 100% 55% / 0.04)",
                         }}
                       >
-                        <span className="block text-[8px] uppercase tracking-[0.2em] text-muted-foreground/25 font-mono mb-1">{m.label}</span>
+                        <span className="block text-[8px] uppercase tracking-[0.2em] text-muted-foreground/40 font-mono mb-1">{m.label}</span>
                         <span
                           className="block text-[13px] font-bold font-mono"
-                          style={{ color: "hsl(200 100% 60%)" }}
+                          style={{ color: "hsl(200 100% 65%)" }}
                         >
                           {m.value}
                         </span>
