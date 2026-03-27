@@ -168,7 +168,7 @@ const HeroSection = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary" />
             </span>
-            AI TRANSFORMÁCIA PRE FIRMY
+            AI PRE OBCHOD, MARKETING A OPERATÍVU
           </div>
           <div
             className="h-[1px] flex-1 max-w-[140px] hidden sm:block"
@@ -218,9 +218,7 @@ const HeroSection = () => {
               className="font-display leading-[0.92] tracking-[-0.045em] font-extrabold mb-10"
               style={{ fontSize: "clamp(3.5rem, 7.5vw, 7rem)" }}
             >
-              <span className="block text-foreground drop-shadow-[0_0_40px_hsl(200_100%_50%/0.08)]">Pomáhame firmám</span>
-              <span className="block">
-                <span className="text-foreground">zavádzať </span>
+              <span className="block text-foreground drop-shadow-[0_0_40px_hsl(200_100%_50%/0.08)]">
                 <span
                   className="inline-block"
                   style={{
@@ -232,9 +230,10 @@ const HeroSection = () => {
                 >
                   AI
                 </span>
-                <span className="text-foreground"> do obchodu,</span>
+                <span className="text-foreground">, ktoré reálne</span>
               </span>
-              <span className="block text-foreground">marketingu a operatívy</span>
+              <span className="block text-foreground">funguje</span>
+              <span className="block text-foreground">vo firme</span>
             </motion.h1>
 
             {/* Subheadline */}
@@ -242,8 +241,7 @@ const HeroSection = () => {
               variants={fadeUp(0.15)}
               className="text-base md:text-lg text-foreground/50 leading-[1.8] mb-14 max-w-[520px]"
             >
-              Navrhujeme, nasadzujeme a spravujeme{" "}
-              <span className="text-foreground/85 font-semibold">AI riešenia</span> tak, aby firmám reálne zlepšovali obchod, marketing aj operatívu — nie len vyzerali dobre v prezentácii.
+              Architektúra, nasadenie a správa AI v obchode, marketingu a operatíve. Systém, ktorý beží — nie prezentácia, ktorá leží v šuplíku.
             </motion.p>
 
             {/* CTA */}
@@ -276,7 +274,7 @@ const HeroSection = () => {
                 />
               </a>
               <p className="text-[11px] text-muted-foreground/35 mt-5 tracking-wide">
-                Audit. Návrh. Nasadenie. Správa.
+                Architektúra · Nasadenie · Správa · Výkon
               </p>
             </motion.div>
 
@@ -286,9 +284,9 @@ const HeroSection = () => {
               className="flex flex-wrap gap-3"
             >
               {[
-                { icon: Zap, label: "MENEJ CHAOSU", desc: "AI zavádzame do reálnych procesov, nie mimo nich." },
-                { icon: BarChart3, label: "VIAC VÝKONU", desc: "Lepšie rozhodovanie, konzistentnejší obchod a efektívnejší tím." },
-                { icon: Shield, label: "JEDEN SYSTÉM", desc: "Prepájame obchod, marketing a operatívu do funkčného modelu." },
+                { icon: Zap, label: "MENEJ CHAOSU", desc: "AI zavádzame do existujúcich procesov, nie vedľa nich." },
+                { icon: BarChart3, label: "MERATEĽNÝ VÝKON", desc: "Obchod, konverzie a operatíva pod kontrolou — nie pod dojmom." },
+                { icon: Shield, label: "JEDEN SYSTÉM", desc: "Obchod, marketing a operatíva prepojené v jednom funkčnom modeli." },
               ].map((b) => (
                 <div
                   key={b.label}
