@@ -10,10 +10,9 @@ const thoughts = [
 const Philosophy = () => {
   return (
     <section className="relative py-32 md:py-44 section-deep overflow-hidden">
-      {/* Dramatic ambient */}
+      {/* Dramatic ambient (dimmed) */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[hsl(200_100%_55%/0.03)] rounded-full blur-[120px]" />
-        <div className="absolute top-1/3 left-1/4 w-[300px] h-[300px] bg-[hsl(260_70%_60%/0.03)] rounded-full blur-[80px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[hsl(200_100%_55%/0.02)] rounded-full blur-[120px]" />
       </div>
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
@@ -24,9 +23,9 @@ const Philosophy = () => {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-3xl mx-auto text-center"
         >
-          <span className="inline-block text-[10px] uppercase tracking-[0.3em] text-primary/70 font-mono mb-6">Filozofia</span>
+          <span className="inline-block text-[10px] uppercase tracking-[0.3em] text-primary font-mono font-medium mb-6">Filozofia</span>
 
-          <h2 className="font-display text-section mb-14 leading-[1.15]">
+          <h2 className="font-display text-section mb-14 leading-[1.15] text-white">
             ai.mercatores.sk premieňa AI na{" "}
             <span className="gradient-text-hero">reálny firemný výkon</span>
           </h2>
@@ -39,7 +38,7 @@ const Philosophy = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-                className="text-lg md:text-xl text-muted-foreground/85 leading-relaxed"
+                className="text-lg md:text-xl text-foreground/80 leading-relaxed"
               >
                 {t}
               </motion.p>
@@ -56,9 +55,9 @@ const Philosophy = () => {
             <div className="gradient-border-card">
               <div className="gradient-border-inner px-8 py-4">
                 <span className="font-display font-bold text-xl tracking-tight">
-                  <span className="text-foreground/90">ai.</span>
+                  <span className="text-white">ai.</span>
                   <span className="gradient-text-primary">mercatores</span>
-                  <span className="text-muted-foreground">.sk</span>
+                  <span className="text-foreground/70">.sk</span>
                 </span>
               </div>
             </div>

@@ -46,14 +46,14 @@ const HowItWorks = () => {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-20"
         >
-          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/80 font-mono mb-4">
+          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary font-mono font-medium mb-4">
             Proces
           </span>
-          <h2 className="font-display text-section mb-5">
+          <h2 className="font-display text-section mb-5 text-white">
             Od auditu po{" "}
             <span className="gradient-text-primary">riadený výkon</span>
           </h2>
-          <p className="text-muted-foreground max-w-lg mx-auto text-base">
+          <p className="text-muted-foreground max-w-lg mx-auto text-base leading-relaxed">
             Päť krokov transformácie. Žiadne experimenty. Riadený systém.
           </p>
         </motion.div>
@@ -63,7 +63,6 @@ const HowItWorks = () => {
           {/* Desktop: horizontal connector line */}
           <div className="hidden lg:block absolute top-[3.25rem] left-[10%] right-[10%] h-px">
             <div className="w-full h-full bg-gradient-to-r from-primary/10 via-primary/25 to-primary/10" />
-            {/* Animated flow dot */}
             <motion.div
               className="absolute top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary/60"
               animate={{ left: ["0%", "100%"] }}
@@ -72,7 +71,7 @@ const HowItWorks = () => {
             />
           </div>
 
-          {/* Steps grid — horizontal on lg, vertical on mobile */}
+          {/* Steps grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-4">
             {steps.map((step, i) => (
               <motion.div
@@ -98,24 +97,22 @@ const HowItWorks = () => {
                     <div className="icon-container w-14 h-14 flex items-center justify-center mx-auto lg:mx-0 mb-4 relative">
                       <step.icon
                         size={20}
-                        className="text-primary/70 group-hover:text-primary transition-colors duration-500"
+                        className="text-primary group-hover:text-primary transition-colors duration-500"
                       />
-                      {/* Pulse ring */}
-                      <div className="absolute inset-0 rounded-xl border border-primary/0 group-hover:border-primary/20 transition-all duration-700 group-hover:scale-110" />
                     </div>
 
                     {/* Step number */}
-                    <span className="text-[10px] font-mono text-primary/55 tracking-wider mb-1.5 block">
+                    <span className="text-[10px] font-mono text-primary/75 tracking-wider mb-1.5 block">
                       {step.num}
                     </span>
 
                     {/* Title */}
-                    <h3 className="font-display text-sm font-semibold mb-2 leading-tight">
+                    <h3 className="font-display text-sm font-bold mb-2 leading-tight text-white">
                       {step.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-[0.75rem] text-muted-foreground/85 leading-relaxed">
+                    <p className="text-[0.8125rem] text-foreground/75 leading-relaxed">
                       {step.desc}
                     </p>
                   </div>
@@ -124,7 +121,7 @@ const HowItWorks = () => {
                 {/* Arrow connector between cards on lg */}
                 {i < steps.length - 1 && (
                   <div className="hidden lg:flex absolute -right-3 top-1/2 -translate-y-1/2 z-20">
-                    <ArrowRight size={14} className="text-primary/25" />
+                    <ArrowRight size={14} className="text-primary/30" />
                   </div>
                 )}
               </motion.div>
@@ -141,7 +138,7 @@ const HowItWorks = () => {
           className="text-center mt-16 max-w-2xl mx-auto"
         >
           <div className="glass-card-static p-6 md:p-8">
-            <p className="text-[0.9375rem] text-foreground/90 leading-relaxed font-medium">
+            <p className="text-[0.9375rem] text-foreground/90 leading-relaxed font-semibold">
               „AI transformácia zlyháva vtedy, keď sa berie ako jednorazový projekt.{" "}
               <span className="gradient-text-primary">
                 Funguje vtedy, keď sa riadi ako systém.

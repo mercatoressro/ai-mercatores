@@ -37,7 +37,7 @@ const cards = [
 const PainPoints = () => {
   return (
     <section className="relative py-28 md:py-36 section-elevated">
-      <div className="absolute inset-0 dot-pattern opacity-10 pointer-events-none" />
+      <div className="absolute inset-0 dot-pattern opacity-[0.06] pointer-events-none" />
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <motion.div
@@ -47,11 +47,11 @@ const PainPoints = () => {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-20"
         >
-          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/80 font-mono mb-4">Diagnostika</span>
-          <h2 className="font-display text-section mb-5">
+          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary font-mono font-medium mb-4">Diagnostika</span>
+          <h2 className="font-display text-section mb-5 text-white">
             Kde firmy <span className="gradient-text-hero">strácajú výkon</span>
           </h2>
-          <p className="text-muted-foreground max-w-lg mx-auto text-base">
+          <p className="text-muted-foreground max-w-lg mx-auto text-base leading-relaxed">
             Tri oblasti, kde bez systému a AI vzniká najväčší chaos a straty.
           </p>
         </motion.div>
@@ -70,11 +70,11 @@ const PainPoints = () => {
                   <div className="icon-container w-12 h-12 flex items-center justify-center mb-6">
                     <card.icon size={20} className="text-primary" />
                   </div>
-                  <h3 className="font-display text-xl font-semibold mb-5">{card.title}</h3>
+                  <h3 className="font-display text-xl font-bold mb-5 text-white">{card.title}</h3>
                   <ul className="space-y-3.5">
                     {card.items.map((item, j) => (
-                      <li key={j} className="flex items-start gap-3 text-[0.8125rem] text-muted-foreground/90 leading-relaxed">
-                        <span className="mt-2 w-1 h-1 rounded-full bg-destructive/50 shrink-0" />
+                      <li key={j} className="flex items-start gap-3 text-[0.875rem] text-foreground/80 leading-relaxed">
+                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-destructive/60 shrink-0" />
                         {item}
                       </li>
                     ))}

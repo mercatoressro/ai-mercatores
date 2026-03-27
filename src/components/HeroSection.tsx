@@ -29,121 +29,99 @@ const HeroSection = () => {
       {/* Deep room radials */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-40%] left-[-10%] w-[1400px] h-[1400px] bg-[hsl(218_80%_8%/0.7)] rounded-full blur-[220px]" />
-        <div className="absolute top-[-10%] right-[-15%] w-[1200px] h-[1000px] bg-[hsl(210_100%_15%/0.45)] rounded-full blur-[180px]" />
-        <div className="absolute bottom-[-25%] left-[15%] w-[1000px] h-[800px] bg-[hsl(248_50%_12%/0.35)] rounded-full blur-[190px]" />
-        <div className="absolute top-[15%] right-[15%] w-[900px] h-[700px] bg-[hsl(205_100%_30%/0.15)] rounded-full blur-[150px]" />
-        <div className="absolute top-[40%] left-[30%] w-[1200px] h-[600px] bg-[hsl(215_80%_6%/0.6)] rounded-full blur-[220px]" />
-        {/* Extra depth layer */}
-        <div className="absolute top-[60%] right-[5%] w-[800px] h-[500px] bg-[hsl(220_60%_18%/0.1)] rounded-full blur-[140px]" />
+        <div className="absolute top-[-10%] right-[-15%] w-[1200px] h-[1000px] bg-[hsl(210_100%_15%/0.4)] rounded-full blur-[180px]" />
+        <div className="absolute bottom-[-25%] left-[15%] w-[1000px] h-[800px] bg-[hsl(248_50%_12%/0.3)] rounded-full blur-[190px]" />
+        <div className="absolute top-[15%] right-[15%] w-[900px] h-[700px] bg-[hsl(205_100%_30%/0.1)] rounded-full blur-[150px]" />
+        <div className="absolute top-[40%] left-[30%] w-[1200px] h-[600px] bg-[hsl(215_80%_6%/0.5)] rounded-full blur-[220px]" />
+        <div className="absolute top-[60%] right-[5%] w-[800px] h-[500px] bg-[hsl(220_60%_18%/0.08)] rounded-full blur-[140px]" />
       </div>
 
-      {/* AI room — architectural light structures */}
+      {/* AI room — architectural light structures (dimmed) */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Ceiling panel lights */}
         <div
-          className="absolute top-[6%] left-[3%] right-[3%] h-[1px] opacity-[0.1]"
+          className="absolute top-[6%] left-[3%] right-[3%] h-[1px] opacity-[0.07]"
           style={{ background: "linear-gradient(to right, transparent 5%, hsl(200 100% 60%) 20%, hsl(200 100% 60%) 80%, transparent 95%)" }}
         />
         <div
-          className="absolute top-[7.5%] left-[3%] right-[3%] h-[30px] opacity-[0.02]"
+          className="absolute top-[7.5%] left-[3%] right-[3%] h-[30px] opacity-[0.015]"
           style={{ background: "linear-gradient(to bottom, hsl(200 100% 60%), transparent)" }}
         />
         <div
-          className="absolute top-[10%] left-[12%] right-[12%] h-[1px] opacity-[0.06]"
+          className="absolute top-[10%] left-[12%] right-[12%] h-[1px] opacity-[0.04]"
           style={{ background: "linear-gradient(to right, transparent, hsl(210 100% 65%) 35%, hsl(210 100% 65%) 65%, transparent)" }}
         />
-        {/* Secondary ceiling frame */}
         <div
-          className="absolute top-[14%] left-[20%] right-[20%] h-[1px] opacity-[0.04]"
+          className="absolute top-[14%] left-[20%] right-[20%] h-[1px] opacity-[0.03]"
           style={{ background: "linear-gradient(to right, transparent, hsl(200 100% 55%) 40%, hsl(200 100% 55%) 60%, transparent)" }}
         />
-        {/* Floor reflection */}
         <div
-          className="absolute bottom-[12%] left-[8%] right-[8%] h-[1px] opacity-[0.05]"
+          className="absolute bottom-[12%] left-[8%] right-[8%] h-[1px] opacity-[0.04]"
           style={{ background: "linear-gradient(to right, transparent, hsl(200 100% 50%) 25%, hsl(200 100% 50%) 75%, transparent)" }}
-        />
-        <div
-          className="absolute bottom-[12%] left-[8%] right-[8%] h-[40px] opacity-[0.015]"
-          style={{ background: "linear-gradient(to top, hsl(200 100% 50%), transparent)" }}
         />
       </div>
 
-      {/* Vertical light pillars — wall columns */}
+      {/* Vertical light pillars (dimmed) */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div
-          className="absolute top-0 left-[6%] w-[2px] h-full opacity-[0.07]"
+          className="absolute top-0 left-[6%] w-[2px] h-full opacity-[0.05]"
           style={{ background: "linear-gradient(to bottom, transparent 3%, hsl(200 100% 55%) 20%, hsl(200 100% 55%) 70%, transparent 95%)" }}
         />
         <div
-          className="absolute top-0 right-[6%] w-[2px] h-full opacity-[0.07]"
+          className="absolute top-0 right-[6%] w-[2px] h-full opacity-[0.05]"
           style={{ background: "linear-gradient(to bottom, transparent 3%, hsl(200 100% 55%) 20%, hsl(200 100% 55%) 70%, transparent 95%)" }}
         />
         <div
-          className="absolute top-0 left-[32%] w-[1px] h-[80%] opacity-[0.04]"
+          className="absolute top-0 left-[32%] w-[1px] h-[80%] opacity-[0.03]"
           style={{ background: "linear-gradient(to bottom, transparent, hsl(210 100% 60%) 30%, transparent 85%)" }}
         />
         <div
-          className="absolute top-0 right-[28%] w-[1px] h-[70%] opacity-[0.035]"
+          className="absolute top-0 right-[28%] w-[1px] h-[70%] opacity-[0.025]"
           style={{ background: "linear-gradient(to bottom, transparent, hsl(260 60% 55%), transparent)" }}
         />
-        {/* Diagonal energy beam */}
-        <div
-          className="absolute top-0 left-[50%] w-[1px] h-[120%] opacity-[0.025] origin-top"
-          style={{
-            background: "linear-gradient(to bottom, transparent, hsl(200 100% 60%) 30%, transparent 70%)",
-            transform: "rotate(15deg)",
-          }}
-        />
       </div>
 
-      {/* AI screen / digital wall panel glow in background */}
+      {/* AI screen glow (dimmed) */}
       <div className="absolute inset-0 pointer-events-none">
         <div
-          className="absolute top-[10%] right-[3%] w-[45%] h-[60%] rounded-2xl opacity-[0.03]"
+          className="absolute top-[10%] right-[3%] w-[45%] h-[60%] rounded-2xl opacity-[0.02]"
           style={{
-            border: "1px solid hsl(200 100% 55% / 0.15)",
-            background: "linear-gradient(180deg, hsl(200 100% 50% / 0.05), transparent 60%)",
+            border: "1px solid hsl(200 100% 55% / 0.1)",
+            background: "linear-gradient(180deg, hsl(200 100% 50% / 0.04), transparent 60%)",
           }}
         />
       </div>
 
-      {/* Pulsing focal glows — stronger */}
+      {/* Pulsing focal glows (dimmed for text readability) */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
-          className="absolute top-[5%] right-[8%] w-[900px] h-[600px] bg-[hsl(200_100%_50%/0.16)] rounded-full blur-[140px]"
-          animate={{ opacity: [0.16, 0.26, 0.16], scale: [1, 1.05, 1] }}
+          className="absolute top-[5%] right-[8%] w-[900px] h-[600px] bg-[hsl(200_100%_50%/0.1)] rounded-full blur-[140px]"
+          animate={{ opacity: [0.1, 0.18, 0.1], scale: [1, 1.05, 1] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute top-[30%] left-[25%] w-[600px] h-[500px] bg-[hsl(205_100%_55%/0.08)] rounded-full blur-[110px]"
-          animate={{ opacity: [0.08, 0.15, 0.08] }}
+          className="absolute top-[30%] left-[25%] w-[600px] h-[500px] bg-[hsl(205_100%_55%/0.05)] rounded-full blur-[110px]"
+          animate={{ opacity: [0.05, 0.1, 0.05] }}
           transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
         />
         <motion.div
-          className="absolute bottom-[5%] right-[20%] w-[500px] h-[400px] bg-[hsl(260_60%_50%/0.07)] rounded-full blur-[100px]"
-          animate={{ opacity: [0.07, 0.12, 0.07] }}
+          className="absolute bottom-[5%] right-[20%] w-[500px] h-[400px] bg-[hsl(260_60%_50%/0.05)] rounded-full blur-[100px]"
+          animate={{ opacity: [0.05, 0.09, 0.05] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 3.5 }}
-        />
-        {/* Central spotlight */}
-        <motion.div
-          className="absolute top-[20%] left-[40%] w-[400px] h-[400px] bg-[hsl(200_100%_60%/0.04)] rounded-full blur-[80px]"
-          animate={{ opacity: [0.04, 0.08, 0.04] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         />
       </div>
 
-      {/* Network grid overlay */}
-      <div className="opacity-45">
+      {/* Network grid overlay (dimmed) */}
+      <div className="opacity-30">
         <NetworkGrid />
       </div>
 
-      {/* Tech grid */}
-      <div className="absolute inset-0 grid-pattern opacity-[0.04] pointer-events-none" />
+      {/* Tech grid (dimmed) */}
+      <div className="absolute inset-0 grid-pattern opacity-[0.03] pointer-events-none" />
 
-      {/* Vignette — stronger */}
+      {/* Vignette */}
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ background: "radial-gradient(ellipse 70% 60% at 50% 50%, transparent 30%, hsl(222 50% 1.5% / 0.8) 100%)" }}
+        style={{ background: "radial-gradient(ellipse 70% 60% at 50% 50%, transparent 30%, hsl(222 50% 1.5% / 0.85) 100%)" }}
       />
 
       {/* ══════ CONTENT ══════ */}
@@ -161,7 +139,7 @@ const HeroSection = () => {
             style={{
               background: "linear-gradient(135deg, hsl(200 100% 55% / 0.14), hsl(200 100% 55% / 0.04))",
               border: "1px solid hsl(200 100% 55% / 0.25)",
-              color: "hsl(200 100% 80%)",
+              color: "hsl(200 100% 82%)",
             }}
           >
             <span className="relative flex h-1.5 w-1.5">
@@ -174,7 +152,7 @@ const HeroSection = () => {
             className="h-[1px] flex-1 max-w-[140px] hidden sm:block"
             style={{ background: "linear-gradient(to right, hsl(200 100% 55% / 0.25), transparent)" }}
           />
-          <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/60 font-mono hidden sm:block">
+          <span className="text-[10px] uppercase tracking-[0.22em] text-foreground/70 font-mono hidden sm:block">
             AI.MERCATORES.SK
           </span>
         </motion.div>
@@ -197,7 +175,7 @@ const HeroSection = () => {
               <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
             </svg>
           </div>
-          <span className="text-[16px] font-display font-bold tracking-wide text-foreground">
+          <span className="text-[16px] font-display font-bold tracking-wide text-white">
             AI.MERCATORES.SK
           </span>
         </motion.div>
@@ -216,13 +194,13 @@ const HeroSection = () => {
             <motion.h1
               variants={fadeUp(0)}
               className="font-display leading-[0.92] tracking-[-0.045em] font-extrabold mb-10"
-              style={{ fontSize: "clamp(3.5rem, 7.5vw, 7rem)", textShadow: "0 0 60px hsl(200 100% 50% / 0.12), 0 2px 4px hsl(220 50% 3% / 0.5)" }}
+              style={{ fontSize: "clamp(3.5rem, 7.5vw, 7rem)", textShadow: "0 0 80px hsl(200 100% 50% / 0.15), 0 2px 4px hsl(220 50% 3% / 0.6)" }}
             >
-              <span className="block text-foreground drop-shadow-[0_0_40px_hsl(200_100%_50%/0.08)]">
+              <span className="block drop-shadow-[0_0_40px_hsl(200_100%_50%/0.08)]">
                 <span
                   className="inline-block"
                   style={{
-                    background: "linear-gradient(135deg, hsl(200 100% 55%), hsl(210 100% 65%), hsl(200 100% 50%))",
+                    background: "linear-gradient(135deg, hsl(200 100% 60%), hsl(210 100% 70%), hsl(200 100% 55%))",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     filter: "drop-shadow(0 0 30px hsl(200 100% 50% / 0.3))",
@@ -239,7 +217,7 @@ const HeroSection = () => {
             {/* Subheadline */}
             <motion.p
               variants={fadeUp(0.15)}
-              className="text-base md:text-lg text-foreground/70 leading-[1.8] mb-14 max-w-[520px]"
+              className="text-base md:text-lg text-foreground/80 leading-[1.85] mb-14 max-w-[520px]"
             >
               Architektúra, nasadenie a správa AI v obchode, marketingu a operatíve. Systém, ktorý beží — nie prezentácia, ktorá leží v šuplíku.
             </motion.p>
@@ -265,15 +243,8 @@ const HeroSection = () => {
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   style={{ background: "linear-gradient(135deg, hsl(210 100% 42%), hsl(200 100% 48%))" }}
                 />
-                {/* Shine sweep */}
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
-                  style={{
-                    background: "linear-gradient(105deg, transparent 40%, hsl(0 0% 100% / 0.08) 45%, transparent 50%)",
-                  }}
-                />
               </a>
-              <p className="text-[11px] text-muted-foreground/50 mt-5 tracking-wide">
+              <p className="text-[11px] text-muted-foreground/70 mt-5 tracking-wide">
                 Architektúra · Nasadenie · Správa · Výkon
               </p>
             </motion.div>
@@ -292,19 +263,19 @@ const HeroSection = () => {
                   key={b.label}
                   className="px-5 py-4 rounded-xl max-w-[210px]"
                   style={{
-                    background: "linear-gradient(145deg, hsl(225 22% 10% / 0.8), hsl(225 25% 5% / 0.6))",
-                    border: "1px solid hsl(200 100% 55% / 0.08)",
+                    background: "linear-gradient(145deg, hsl(225 22% 12% / 0.9), hsl(225 25% 6% / 0.8))",
+                    border: "1px solid hsl(200 100% 55% / 0.1)",
                     backdropFilter: "blur(20px)",
                     boxShadow: "0 8px 30px -10px hsl(220 80% 5% / 0.3)",
                   }}
                 >
                   <div className="flex items-center gap-2 mb-2">
-                    <b.icon size={13} className="text-primary/70" />
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-primary/80">
+                    <b.icon size={13} className="text-primary" />
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-primary">
                       {b.label}
                     </span>
                   </div>
-                  <span className="block text-[11px] text-muted-foreground/60 leading-relaxed">
+                  <span className="block text-[11.5px] text-foreground/70 leading-relaxed">
                     {b.desc}
                   </span>
                 </div>
@@ -323,13 +294,7 @@ const HeroSection = () => {
               {/* Ambient glow behind card */}
               <div
                 className="absolute -inset-28 rounded-3xl blur-[120px]"
-                style={{ background: "radial-gradient(ellipse at 50% 35%, hsl(200 100% 50% / 0.16), hsl(260 70% 50% / 0.05), transparent 65%)" }}
-              />
-              <motion.div
-                className="absolute -inset-32 rounded-3xl blur-[140px]"
-                style={{ background: "radial-gradient(ellipse at 55% 25%, hsl(200 100% 55% / 0.12), transparent 55%)" }}
-                animate={{ opacity: [0.12, 0.22, 0.12] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                style={{ background: "radial-gradient(ellipse at 50% 35%, hsl(200 100% 50% / 0.12), hsl(260 70% 50% / 0.04), transparent 65%)" }}
               />
 
               {/* ═══ MAIN DOCUMENT CARD ═══ */}
@@ -373,7 +338,7 @@ const HeroSection = () => {
                     {/* Status indicator */}
                     <div className="flex items-center justify-center gap-2 mb-6 relative z-10">
                       <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                      <span className="text-[8px] uppercase tracking-[0.25em] font-mono text-primary/65">Systém aktívny</span>
+                      <span className="text-[8px] uppercase tracking-[0.25em] font-mono text-primary/80">Systém aktívny</span>
                     </div>
 
                     {/* Book icon */}
@@ -392,18 +357,13 @@ const HeroSection = () => {
 
                     {/* Title */}
                     <h3
-                      className="font-display text-[1.8rem] xl:text-[2rem] font-extrabold tracking-tight mb-2 relative z-10"
-                      style={{
-                        background: "linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 82%))",
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
-                      }}
+                      className="font-display text-[1.8rem] xl:text-[2rem] font-extrabold tracking-tight mb-2 relative z-10 text-white"
                     >
                       AI CONTROL LAYER
                     </h3>
                     <p
                       className="text-[11px] uppercase tracking-[0.25em] font-mono font-semibold relative z-10"
-                      style={{ color: "hsl(200 100% 65%)" }}
+                      style={{ color: "hsl(200 100% 70%)" }}
                     >
                       BUSINESS TRANSFORMATION
                     </p>
@@ -422,7 +382,7 @@ const HeroSection = () => {
 
                   {/* Tags */}
                   <div className="px-9 py-5 text-center relative z-10">
-                    <p className="text-[10px] uppercase tracking-[0.15em] text-muted-foreground/50 leading-[2.2]">
+                    <p className="text-[10px] uppercase tracking-[0.15em] text-foreground/60 leading-[2.2]">
                       Obchodné procesy • Marketing • Operatíva
                       <br />
                       Automatizácia • Reporting • Implementácia
@@ -433,13 +393,13 @@ const HeroSection = () => {
                   <div
                     className="mx-7 mb-5 px-6 py-5 rounded-xl"
                     style={{
-                      background: "linear-gradient(145deg, hsl(222 25% 11% / 0.7), hsl(225 30% 6% / 0.5))",
-                      border: "1px solid hsl(200 100% 55% / 0.06)",
+                      background: "linear-gradient(145deg, hsl(222 25% 12% / 0.8), hsl(225 30% 7% / 0.6))",
+                      border: "1px solid hsl(200 100% 55% / 0.08)",
                     }}
                   >
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-[9px] uppercase tracking-[0.2em] text-muted-foreground/45 font-mono">Vrstvy</span>
-                      <span className="text-[9px] text-primary/50 font-mono">3 aktívne</span>
+                      <span className="text-[9px] uppercase tracking-[0.2em] text-foreground/55 font-mono">Vrstvy</span>
+                      <span className="text-[9px] text-primary/70 font-mono">3 aktívne</span>
                     </div>
                     <div className="space-y-3">
                       {[
@@ -449,12 +409,12 @@ const HeroSection = () => {
                       ].map((item, i) => (
                         <div key={item.name}>
                           <div className="flex items-center gap-3 mb-1.5">
-                            <span className="text-[9px] font-mono text-primary/50 w-5">0{i+1}</span>
-                            <div className="w-1 h-1 rounded-full bg-primary/40" />
-                            <span className="text-[11.5px] text-foreground/60 flex-1">{item.name}</span>
-                            <span className="text-[9px] font-mono text-primary/45">{item.progress}%</span>
+                            <span className="text-[9px] font-mono text-primary/70 w-5">0{i+1}</span>
+                            <div className="w-1 h-1 rounded-full bg-primary/50" />
+                            <span className="text-[11.5px] text-foreground/80 flex-1">{item.name}</span>
+                            <span className="text-[9px] font-mono text-primary/65">{item.progress}%</span>
                           </div>
-                          <div className="ml-8 h-[2px] rounded-full bg-[hsl(200_100%_55%/0.06)] overflow-hidden">
+                          <div className="ml-8 h-[2px] rounded-full bg-[hsl(200_100%_55%/0.08)] overflow-hidden">
                             <motion.div
                               className="h-full rounded-full"
                               style={{
@@ -481,14 +441,14 @@ const HeroSection = () => {
                         key={m.label}
                         className="flex-1 px-4 py-3 rounded-lg text-center"
                         style={{
-                          background: "hsl(222 25% 9% / 0.5)",
-                          border: "1px solid hsl(200 100% 55% / 0.04)",
+                          background: "hsl(222 25% 10% / 0.6)",
+                          border: "1px solid hsl(200 100% 55% / 0.06)",
                         }}
                       >
-                        <span className="block text-[8px] uppercase tracking-[0.2em] text-muted-foreground/40 font-mono mb-1">{m.label}</span>
+                        <span className="block text-[8px] uppercase tracking-[0.2em] text-foreground/50 font-mono mb-1">{m.label}</span>
                         <span
                           className="block text-[13px] font-bold font-mono"
-                          style={{ color: "hsl(200 100% 65%)" }}
+                          style={{ color: "hsl(200 100% 70%)" }}
                         >
                           {m.value}
                         </span>
@@ -523,7 +483,7 @@ const HeroSection = () => {
                   }}
                 >
                   <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                  <span className="text-[9px] font-mono text-foreground/50 uppercase tracking-wider">
+                  <span className="text-[9px] font-mono text-foreground/70 uppercase tracking-wider">
                     3 procesy nasadené
                   </span>
                 </div>
@@ -545,7 +505,7 @@ const HeroSection = () => {
                   }}
                 >
                   <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                  <span className="text-[9px] font-mono text-primary/65 uppercase tracking-wider">
+                  <span className="text-[9px] font-mono text-primary/80 uppercase tracking-wider">
                     Live
                   </span>
                 </div>
@@ -566,8 +526,8 @@ const HeroSection = () => {
                     boxShadow: "0 15px 30px -10px hsl(200 100% 40% / 0.1)",
                   }}
                 >
-                  <Shield size={10} className="text-primary/50" />
-                  <span className="text-[8px] font-mono text-primary/50 uppercase tracking-wider">
+                  <Shield size={10} className="text-primary/70" />
+                  <span className="text-[8px] font-mono text-primary/70 uppercase tracking-wider">
                     Verified
                   </span>
                 </div>
