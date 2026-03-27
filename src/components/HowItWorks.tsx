@@ -46,7 +46,7 @@ const HowItWorks = () => {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-20"
         >
-          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/60 font-mono mb-4">
+          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/80 font-mono mb-4">
             Proces
           </span>
           <h2 className="font-display text-section mb-5">
@@ -105,7 +105,7 @@ const HowItWorks = () => {
                     </div>
 
                     {/* Step number */}
-                    <span className="text-[10px] font-mono text-primary/40 tracking-wider mb-1.5 block">
+                    <span className="text-[10px] font-mono text-primary/55 tracking-wider mb-1.5 block">
                       {step.num}
                     </span>
 
@@ -115,7 +115,7 @@ const HowItWorks = () => {
                     </h3>
 
                     {/* Description */}
-                    <p className="text-[0.75rem] text-muted-foreground leading-relaxed">
+                    <p className="text-[0.75rem] text-muted-foreground/85 leading-relaxed">
                       {step.desc}
                     </p>
                   </div>
@@ -141,7 +141,7 @@ const HowItWorks = () => {
           className="text-center mt-16 max-w-2xl mx-auto"
         >
           <div className="glass-card-static p-6 md:p-8">
-            <p className="text-[0.9375rem] text-foreground/80 leading-relaxed font-medium">
+            <p className="text-[0.9375rem] text-foreground/90 leading-relaxed font-medium">
               „AI transformácia zlyháva vtedy, keď sa berie ako jednorazový projekt.{" "}
               <span className="gradient-text-primary">
                 Funguje vtedy, keď sa riadi ako systém.

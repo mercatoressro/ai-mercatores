@@ -47,7 +47,7 @@ const PainPoints = () => {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-20"
         >
-          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/60 font-mono mb-4">Diagnostika</span>
+          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary/80 font-mono mb-4">Diagnostika</span>
           <h2 className="font-display text-section mb-5">
             Kde firmy <span className="gradient-text-hero">strácajú výkon</span>
           </h2>
@@ -73,7 +73,7 @@ const PainPoints = () => {
                   <h3 className="font-display text-xl font-semibold mb-5">{card.title}</h3>
                   <ul className="space-y-3.5">
                     {card.items.map((item, j) => (
-                      <li key={j} className="flex items-start gap-3 text-[0.8125rem] text-muted-foreground leading-relaxed">
+                      <li key={j} className="flex items-start gap-3 text-[0.8125rem] text-muted-foreground/90 leading-relaxed">
                         <span className="mt-2 w-1 h-1 rounded-full bg-destructive/50 shrink-0" />
                         {item}
                       </li>
