@@ -42,7 +42,7 @@ const HowItWorks = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-20"
         >
@@ -78,7 +78,7 @@ const HowItWorks = () => {
                 key={step.num}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-40px" }}
+                viewport={{ once: true, amount: 0.05 }}
                 transition={{
                   duration: 0.5,
                   delay: i * 0.08,
@@ -133,7 +133,7 @@ const HowItWorks = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: true, amount: 0.05 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-16 max-w-2xl mx-auto"
         >
