@@ -49,7 +49,7 @@ const WhyFail = () => {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-center text-foreground/85 max-w-xl mx-auto text-[0.9375rem] leading-relaxed mb-16"
         >
