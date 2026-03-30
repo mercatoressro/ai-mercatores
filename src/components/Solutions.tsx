@@ -89,7 +89,7 @@ const Solutions = () => {
             Čo robí{" "}
             <span className="gradient-text-primary">ai.mercatores.sk</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto text-base leading-relaxed">
+          <p className="text-foreground/80 max-w-xl mx-auto text-base leading-relaxed">
             Štyri piliere, ktoré menia firmu na riadený výkonný systém — nie izolované nástroje, ale jeden prepojený model.
           </p>
         </motion.div>
@@ -122,7 +122,7 @@ const Solutions = () => {
                       <h3 className="font-display text-lg font-bold mb-1.5 text-white">
                         {p.title}
                       </h3>
-                      <p className="text-sm text-foreground/80 leading-relaxed">
+                      <p className="text-sm text-foreground/90 leading-relaxed">
                         {p.desc}
                       </p>
                     </div>
@@ -163,7 +163,7 @@ const Solutions = () => {
           className="text-center mt-16 max-w-2xl mx-auto"
         >
           <div className="h-px w-16 mx-auto bg-gradient-to-r from-transparent via-primary/30 to-transparent mb-8" />
-          <p className="text-foreground/80 text-[0.9375rem] leading-relaxed italic">
+          <p className="text-foreground/85 text-[0.9375rem] leading-relaxed italic">
             „Nejde o izolované nástroje. Ide o jeden riadený systém, ktorý prepája výkon firmy naprieč oddeleniami."
           </p>
         </motion.div>

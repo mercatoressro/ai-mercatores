@@ -82,7 +82,7 @@ const ForWhom = () => {
             Pre firmy, ktoré chcú{" "}
             <span className="gradient-text-primary">rásť bez ďalšieho chaosu</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto text-base leading-relaxed">
+          <p className="text-foreground/80 max-w-xl mx-auto text-base leading-relaxed">
             Kde ai.mercatores.sk dáva najväčší zmysel — a pre koho naopak nie.
           </p>
         </motion.div>
@@ -111,14 +111,14 @@ const ForWhom = () => {
                       {s.title}
                     </h3>
                   </div>
-                  <p className="text-[0.875rem] text-foreground/75 leading-relaxed mb-4">
+                  <p className="text-[0.9rem] text-foreground/85 leading-relaxed mb-4">
                     {s.desc}
                   </p>
                   <ul className="space-y-2">
                     {s.points.map((p) => (
                       <li
                         key={p}
-                        className="flex items-center gap-2 text-[0.8125rem] text-foreground/80"
+                        className="flex items-center gap-2 text-[0.8125rem] text-foreground/90"
                       >
                         <div className="w-1.5 h-1.5 rounded-full bg-primary/50 shrink-0" />
                         {p}
@@ -137,7 +137,7 @@ const ForWhom = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-center text-foreground/65 text-[0.875rem] italic max-w-2xl mx-auto mb-20"
+          className="text-center text-foreground/75 text-[0.875rem] italic max-w-2xl mx-auto mb-20"
         >
           „Najväčší zmysel to dáva firmám, ktoré už cítia, že ďalší rast bez systému len znásobí chaos."
         </motion.p>
@@ -155,7 +155,7 @@ const ForWhom = () => {
             <div className="relative z-10">
               <div className="flex items-center gap-2.5 mb-8">
                 <div className="w-2 h-2 rounded-full bg-muted-foreground/40" />
-                <h3 className="font-display text-sm uppercase tracking-widest text-foreground/75 font-bold">
+                <h3 className="font-display text-sm uppercase tracking-widest text-foreground/85 font-bold">
                   Pre koho to nie je
                 </h3>
               </div>
@@ -163,7 +163,7 @@ const ForWhom = () => {
                 {notFor.map((n) => (
                   <div
                     key={n}
-                    className="flex items-start gap-3 text-[0.875rem] text-foreground/70"
+                    className="flex items-start gap-3 text-[0.9rem] text-foreground/80"
                   >
                     <XCircle
                       size={15}
@@ -174,7 +174,7 @@ const ForWhom = () => {
                 ))}
               </div>
               <div className="h-px w-full bg-gradient-to-r from-transparent via-border/30 to-transparent mt-8 mb-6" />
-              <p className="text-[0.875rem] text-foreground/60 text-center italic">
+              <p className="text-[0.875rem] text-foreground/70 text-center italic">
                 „Ak firma nechce meniť fungovanie, AI jej nepomôže. Len pridá ďalšiu vrstvu chaosu."
               </p>
             </div>

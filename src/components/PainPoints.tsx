@@ -51,7 +51,7 @@ const PainPoints = () => {
           <h2 className="font-display text-section mb-5 text-white">
             Kde firmy <span className="gradient-text-hero">strácajú výkon</span>
           </h2>
-          <p className="text-muted-foreground max-w-lg mx-auto text-base leading-relaxed">
+          <p className="text-foreground/80 max-w-lg mx-auto text-base leading-relaxed">
             Tri oblasti, kde bez systému a AI vzniká najväčší chaos a straty.
           </p>
         </motion.div>
@@ -73,7 +73,7 @@ const PainPoints = () => {
                   <h3 className="font-display text-xl font-bold mb-5 text-white">{card.title}</h3>
                   <ul className="space-y-3.5">
                     {card.items.map((item, j) => (
-                      <li key={j} className="flex items-start gap-3 text-[0.875rem] text-foreground/80 leading-relaxed">
+                      <li key={j} className="flex items-start gap-3 text-[0.9rem] text-foreground/90 leading-relaxed">
                         <span className="mt-2 w-1.5 h-1.5 rounded-full bg-destructive/60 shrink-0" />
                         {item}
                       </li>

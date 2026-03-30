@@ -152,7 +152,7 @@ const HeroSection = () => {
             className="h-[1px] flex-1 max-w-[140px] hidden sm:block"
             style={{ background: "linear-gradient(to right, hsl(200 100% 55% / 0.25), transparent)" }}
           />
-          <span className="text-[10px] uppercase tracking-[0.22em] text-foreground/70 font-mono hidden sm:block">
+          <span className="text-[10px] uppercase tracking-[0.22em] text-foreground/80 font-mono hidden sm:block">
             AI.MERCATORES.SK
           </span>
         </motion.div>
@@ -217,7 +217,7 @@ const HeroSection = () => {
             {/* Subheadline */}
             <motion.p
               variants={fadeUp(0.15)}
-              className="text-base md:text-lg text-foreground/80 leading-[1.85] mb-14 max-w-[520px]"
+              className="text-base md:text-lg text-foreground/90 leading-[1.85] mb-14 max-w-[520px]"
             >
               Architektúra, nasadenie a správa AI v obchode, marketingu a operatíve. Systém, ktorý beží — nie prezentácia, ktorá leží v šuplíku.
             </motion.p>
@@ -244,7 +244,7 @@ const HeroSection = () => {
                   style={{ background: "linear-gradient(135deg, hsl(210 100% 42%), hsl(200 100% 48%))" }}
                 />
               </a>
-              <p className="text-[11px] text-muted-foreground/70 mt-5 tracking-wide">
+              <p className="text-[11px] text-muted-foreground mt-5 tracking-wide">
                 Architektúra · Nasadenie · Správa · Výkon
               </p>
             </motion.div>
@@ -275,7 +275,7 @@ const HeroSection = () => {
                       {b.label}
                     </span>
                   </div>
-                  <span className="block text-[11.5px] text-foreground/70 leading-relaxed">
+                  <span className="block text-[11.5px] text-foreground/85 leading-relaxed">
                     {b.desc}
                   </span>
                 </div>
@@ -382,7 +382,7 @@ const HeroSection = () => {
 
                   {/* Tags */}
                   <div className="px-9 py-5 text-center relative z-10">
-                    <p className="text-[10px] uppercase tracking-[0.15em] text-foreground/60 leading-[2.2]">
+                    <p className="text-[10px] uppercase tracking-[0.15em] text-foreground/75 leading-[2.2]">
                       Obchodné procesy • Marketing • Operatíva
                       <br />
                       Automatizácia • Reporting • Implementácia
@@ -398,7 +398,7 @@ const HeroSection = () => {
                     }}
                   >
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-[9px] uppercase tracking-[0.2em] text-foreground/55 font-mono">Vrstvy</span>
+                      <span className="text-[9px] uppercase tracking-[0.2em] text-foreground/70 font-mono">Vrstvy</span>
                       <span className="text-[9px] text-primary/70 font-mono">3 aktívne</span>
                     </div>
                     <div className="space-y-3">
@@ -411,7 +411,7 @@ const HeroSection = () => {
                           <div className="flex items-center gap-3 mb-1.5">
                             <span className="text-[9px] font-mono text-primary/70 w-5">0{i+1}</span>
                             <div className="w-1 h-1 rounded-full bg-primary/50" />
-                            <span className="text-[11.5px] text-foreground/80 flex-1">{item.name}</span>
+                            <span className="text-[11.5px] text-foreground/90 flex-1">{item.name}</span>
                             <span className="text-[9px] font-mono text-primary/65">{item.progress}%</span>
                           </div>
                           <div className="ml-8 h-[2px] rounded-full bg-[hsl(200_100%_55%/0.08)] overflow-hidden">
@@ -445,7 +445,7 @@ const HeroSection = () => {
                           border: "1px solid hsl(200 100% 55% / 0.06)",
                         }}
                       >
-                        <span className="block text-[8px] uppercase tracking-[0.2em] text-foreground/50 font-mono mb-1">{m.label}</span>
+                        <span className="block text-[8px] uppercase tracking-[0.2em] text-foreground/65 font-mono mb-1">{m.label}</span>
                         <span
                           className="block text-[13px] font-bold font-mono"
                           style={{ color: "hsl(200 100% 70%)" }}
@@ -483,7 +483,7 @@ const HeroSection = () => {
                   }}
                 >
                   <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                  <span className="text-[9px] font-mono text-foreground/70 uppercase tracking-wider">
+                  <span className="text-[9px] font-mono text-foreground/80 uppercase tracking-wider">
                     3 procesy nasadené
                   </span>
                 </div>

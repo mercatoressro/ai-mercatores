@@ -53,7 +53,7 @@ const HowItWorks = () => {
             Od auditu po{" "}
             <span className="gradient-text-primary">riadený výkon</span>
           </h2>
-          <p className="text-muted-foreground max-w-lg mx-auto text-base leading-relaxed">
+          <p className="text-foreground/80 max-w-lg mx-auto text-base leading-relaxed">
             Päť krokov transformácie. Žiadne experimenty. Riadený systém.
           </p>
         </motion.div>
@@ -112,7 +112,7 @@ const HowItWorks = () => {
                     </h3>
 
                     {/* Description */}
-                    <p className="text-[0.8125rem] text-foreground/75 leading-relaxed">
+                    <p className="text-[0.8125rem] text-foreground/85 leading-relaxed">
                       {step.desc}
                     </p>
                   </div>

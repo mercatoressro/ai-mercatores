@@ -76,7 +76,7 @@ const Impact = () => {
             Výsledkom nie je viac AI.{" "}
             <span className="gradient-text">Výsledkom je výkonnejšia firma.</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto text-base leading-relaxed">
+          <p className="text-foreground/80 max-w-xl mx-auto text-base leading-relaxed">
             Dopad nie je mágia technológie. Je to výsledok lepšie navrhnutého a riadeného systému.
           </p>
         </motion.div>
@@ -104,7 +104,7 @@ const Impact = () => {
                     <h3 className="text-sm font-bold mb-2 leading-snug text-white">
                       {item.title}
                     </h3>
-                    <p className="text-[0.8125rem] text-foreground/75 leading-relaxed">
+                    <p className="text-[0.8125rem] text-foreground/85 leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
@@ -123,7 +123,7 @@ const Impact = () => {
           className="text-center mt-16 max-w-2xl mx-auto"
         >
           <div className="h-px w-16 mx-auto bg-gradient-to-r from-transparent via-primary/30 to-transparent mb-8" />
-          <p className="text-foreground/75 text-[0.9375rem] leading-relaxed italic">
+          <p className="text-foreground/85 text-[0.9375rem] leading-relaxed italic">
             „Keď je AI správne navrhnutá a riadená, nevytvára ďalší nástroj. Odstraňuje zbytočné trenie vo firme."
           </p>
         </motion.div>

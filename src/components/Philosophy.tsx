@@ -38,7 +38,7 @@ const Philosophy = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-                className="text-lg md:text-xl text-foreground/80 leading-relaxed"
+                className="text-lg md:text-xl text-foreground/90 leading-relaxed"
               >
                 {t}
               </motion.p>
