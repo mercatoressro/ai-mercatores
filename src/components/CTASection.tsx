@@ -52,7 +52,7 @@ const CTASection = () => {
             Zistite, kde vám AI prinesie{" "}
             <span className="gradient-text-hero">najväčší reálny dopad</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-base leading-relaxed">
+          <p className="text-foreground/80 max-w-2xl mx-auto text-base leading-relaxed">
             Pozrieme sa na vaše obchodné, marketingové a prevádzkové procesy a
             navrhneme konkrétne miesta, kde AI a automatizácia prinesú najvyšší
             efekt.
@@ -73,7 +73,7 @@ const CTASection = () => {
               <div className="gradient-border-inner p-8 md:p-10 space-y-5">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs text-foreground/70 mb-2 uppercase tracking-wider font-medium">
+                    <label className="block text-xs text-foreground/80 mb-2 uppercase tracking-wider font-medium">
                       Meno
                     </label>
                     <input
@@ -85,7 +85,7 @@ const CTASection = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs text-foreground/70 mb-2 uppercase tracking-wider font-medium">
+                    <label className="block text-xs text-foreground/80 mb-2 uppercase tracking-wider font-medium">
                       Firma
                     </label>
                     <input
@@ -99,7 +99,7 @@ const CTASection = () => {
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs text-foreground/70 mb-2 uppercase tracking-wider font-medium">
+                    <label className="block text-xs text-foreground/80 mb-2 uppercase tracking-wider font-medium">
                       E-mail
                     </label>
                     <input
@@ -112,7 +112,7 @@ const CTASection = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs text-foreground/70 mb-2 uppercase tracking-wider font-medium">
+                    <label className="block text-xs text-foreground/80 mb-2 uppercase tracking-wider font-medium">
                       Telefón
                     </label>
                     <input
@@ -125,7 +125,7 @@ const CTASection = () => {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-xs text-foreground/70 mb-2 uppercase tracking-wider font-medium">
+                  <label className="block text-xs text-foreground/80 mb-2 uppercase tracking-wider font-medium">
                     Stručný opis situácie
                   </label>
                   <textarea
@@ -144,7 +144,7 @@ const CTASection = () => {
                   <span>Chcem AI audit</span>
                   <ArrowRight size={16} />
                 </button>
-                <p className="text-[11px] text-foreground/55 text-center leading-relaxed">
+                <p className="text-[11px] text-foreground/65 text-center leading-relaxed">
                   Prvý krok nie je nákup nástroja. Prvý krok je pochopiť, kde má
                   AI vo vašej firme najväčší efekt.
                 </p>
@@ -169,7 +169,7 @@ const CTASection = () => {
               <div className="gradient-border-inner p-6">
                 <div className="flex items-center gap-2 mb-5">
                   <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                  <span className="text-[10px] uppercase tracking-widest text-foreground/65 font-mono">
+                  <span className="text-[10px] uppercase tracking-widest text-foreground/75 font-mono">
                     AI Audit Overview
                   </span>
                 </div>
@@ -181,7 +181,7 @@ const CTASection = () => {
                   ].map((area) => (
                     <div key={area.label} className="space-y-1.5">
                       <div className="flex justify-between">
-                        <span className="text-[11px] text-foreground/75">
+                        <span className="text-[11px] text-foreground/85">
                           {area.label}
                         </span>
                         <span className="text-[10px] text-primary/75 font-mono">
@@ -203,7 +203,7 @@ const CTASection = () => {
             {/* Process card */}
             <div className="gradient-border-card">
               <div className="gradient-border-inner p-6">
-                <div className="text-[10px] uppercase tracking-widest text-foreground/60 font-medium mb-3">
+                <div className="text-[10px] uppercase tracking-widest text-foreground/70 font-medium mb-3">
                   Postup
                 </div>
                 <div className="space-y-3">
@@ -221,7 +221,7 @@ const CTASection = () => {
                         0{i + 1}
                       </span>
                       <div className="w-1.5 h-1.5 rounded-full bg-primary/50" />
-                      <span className="text-foreground/75">{step}</span>
+                      <span className="text-foreground/85">{step}</span>
                     </div>
                   ))}
                 </div>
@@ -231,7 +231,7 @@ const CTASection = () => {
             {/* Microcopy card */}
             <div className="gradient-border-card">
               <div className="gradient-border-inner p-6 text-center">
-                <p className="text-[0.875rem] text-foreground/75 leading-relaxed">
+                <p className="text-[0.875rem] text-foreground/85 leading-relaxed">
                   Bez zbytočnej vaty.
                   <br />
                   <span className="text-foreground/90 font-medium">

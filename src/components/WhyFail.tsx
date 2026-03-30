@@ -51,7 +51,7 @@ const WhyFail = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-center text-foreground/75 max-w-xl mx-auto text-[0.9375rem] leading-relaxed mb-16"
+          className="text-center text-foreground/85 max-w-xl mx-auto text-[0.9375rem] leading-relaxed mb-16"
         >
           Firmy dnes často nekupujú zlé nástroje. Zlyhávajú na tom, že ich nevedia premeniť na proces, ownership a dlhodobo riadený výkon.
         </motion.p>
@@ -78,7 +78,7 @@ const WhyFail = () => {
             <div className="relative z-10">
               <div className="flex items-center gap-2.5 mb-8">
                 <div className="w-2 h-2 rounded-full bg-destructive/50" />
-                <h3 className="font-display text-sm uppercase tracking-widest text-foreground/80 font-bold">
+                <h3 className="font-display text-sm uppercase tracking-widest text-foreground/90 font-bold">
                   Bežný stav
                 </h3>
               </div>
@@ -89,7 +89,7 @@ const WhyFail = () => {
                       size={16}
                       className="text-destructive/70 shrink-0 mt-0.5"
                     />
-                    <span className="text-[0.875rem] text-foreground/75 leading-relaxed">
+                    <span className="text-[0.9rem] text-foreground/85 leading-relaxed">
                       {f}
                     </span>
                   </li>
@@ -126,7 +126,7 @@ const WhyFail = () => {
                           <span className="text-[10px] font-mono text-primary/70 mr-2">
                             0{i + 1}
                           </span>
-                          <span className="text-[0.875rem] text-foreground/90 leading-relaxed">
+                          <span className="text-[0.9rem] text-foreground/95 leading-relaxed">
                             {w}
                           </span>
                         </div>
