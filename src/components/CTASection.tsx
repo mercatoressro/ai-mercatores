@@ -32,8 +32,8 @@ const CTASection = () => {
     >
       {/* Photo background */}
       <div className="absolute inset-0 pointer-events-none">
-        <img src={bgNetwork} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.1]" />
-        <div className="absolute inset-0 bg-background/93" />
+        <img src={bgNetwork} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.25]" />
+        <div className="absolute inset-0 bg-background/85" />
         <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[hsl(200_100%_55%/0.03)] rounded-full blur-[120px]" />
         <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-[hsl(260_70%_60%/0.02)] rounded-full blur-[100px]" />
       </div>
