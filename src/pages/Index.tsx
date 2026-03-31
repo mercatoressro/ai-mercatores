@@ -12,6 +12,7 @@ import HundredChanges from "@/components/HundredChanges";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import CliqSalesForm from "@/components/CliqSalesForm";
 
 const Index = () => {
   return (
