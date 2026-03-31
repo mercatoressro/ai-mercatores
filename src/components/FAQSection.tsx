@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import bgDashboard from "@/assets/bg-dashboard.jpg";
 
 const faqs = [
   {
