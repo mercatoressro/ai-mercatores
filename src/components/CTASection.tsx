@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail, Phone, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import bgNetwork from "@/assets/bg-network.jpg";
 
@@ -231,16 +231,30 @@ const CTASection = () => {
               </div>
             </div>
 
-            {/* Microcopy card */}
+            {/* Contact card */}
             <div className="gradient-border-card">
-              <div className="gradient-border-inner p-6 text-center">
-                <p className="text-[0.875rem] text-foreground/85 leading-relaxed">
-                  Bez zbytočnej vaty.
-                  <br />
-                  <span className="text-foreground/90 font-medium">
-                    Najprv diagnostika, potom riešenie.
-                  </span>
-                </p>
+              <div className="gradient-border-inner p-6">
+                <div className="text-[10px] uppercase tracking-widest text-foreground/70 font-medium mb-4">
+                  Kontakt
+                </div>
+                <div className="space-y-3">
+                  <a href="mailto:ai@ai.mercatores.sk" className="flex items-center gap-3 text-[0.8125rem] text-foreground/85 hover:text-foreground transition-colors">
+                    <Mail size={14} className="text-primary/70 flex-shrink-0" />
+                    ai@ai.mercatores.sk
+                  </a>
+                  <a href="mailto:ai@mercatores.sk" className="flex items-center gap-3 text-[0.8125rem] text-foreground/85 hover:text-foreground transition-colors">
+                    <Mail size={14} className="text-primary/70 flex-shrink-0" />
+                    ai@mercatores.sk
+                  </a>
+                  <a href="tel:+421905600095" className="flex items-center gap-3 text-[0.8125rem] text-foreground/85 hover:text-foreground transition-colors">
+                    <Phone size={14} className="text-primary/70 flex-shrink-0" />
+                    0905 600 095
+                  </a>
+                  <a href="https://wa.me/421905600095" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[0.8125rem] text-foreground/85 hover:text-foreground transition-colors">
+                    <MessageCircle size={14} className="text-primary/70 flex-shrink-0" />
+                    WhatsApp: 0905 600 095
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>
