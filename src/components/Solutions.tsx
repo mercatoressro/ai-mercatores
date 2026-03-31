@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Handshake, Megaphone, Cog, Layers, TrendingUp, Zap, BarChart3, GitBranch } from "lucide-react";
+import bgOperations from "@/assets/bg-operations.jpg";
 
 const pillars = [
   {
@@ -67,8 +68,10 @@ const pillars = [
 const Solutions = () => {
   return (
     <section id="riesenia" className="relative py-28 md:py-36">
-      {/* Ambient background (dimmed) */}
+      {/* Photo background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <img src={bgOperations} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.08]" />
+        <div className="absolute inset-0 bg-background/95" />
         <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-[hsl(200_100%_55%/0.02)] rounded-full blur-[120px]" />
         <div className="absolute bottom-1/4 -right-20 w-[400px] h-[400px] bg-[hsl(260_70%_60%/0.02)] rounded-full blur-[100px]" />
       </div>
