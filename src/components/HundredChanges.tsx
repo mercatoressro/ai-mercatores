@@ -10,8 +10,8 @@ import {
   Rocket,
   Globe,
 } from "lucide-react";
-import bgNetwork from "@/assets/bg-network.jpg";
-import bgDashboard from "@/assets/bg-dashboard.jpg";
+import cropNetwork from "@/assets/crop-network.jpg";
+import cropDashboard from "@/assets/crop-dashboard.jpg";
 
 const blocks = [
   {
