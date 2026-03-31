@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Search, PenTool, Rocket, Users, BarChart3, ArrowRight } from "lucide-react";
-import bgMeeting from "@/assets/bg-meeting.jpg";
+import cropOperations from "@/assets/crop-operations.jpg";
 
 const steps = [
   {
