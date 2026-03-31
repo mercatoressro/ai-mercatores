@@ -9,6 +9,7 @@ import {
   Layers,
   TrendingDown,
 } from "lucide-react";
+import bgDashboard from "@/assets/bg-dashboard.jpg";
 
 const impacts = [
   {
