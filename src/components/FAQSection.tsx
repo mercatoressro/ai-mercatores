@@ -53,6 +53,10 @@ const faqs = [
 const FAQSection = () => {
   return (
     <section id="faq" className="relative py-28 md:py-36 section-glow">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <img src={bgDashboard} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.07]" />
+        <div className="absolute inset-0 bg-background/95" />
+      </div>
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
