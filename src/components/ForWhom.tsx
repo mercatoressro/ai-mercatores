@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Building2, Briefcase, ShoppingBag, HeartPulse, TrendingUp, XCircle } from "lucide-react";
+import bgOperations from "@/assets/bg-operations.jpg";
 
 const segments = [
   {
