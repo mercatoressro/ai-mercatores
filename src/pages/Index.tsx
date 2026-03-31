@@ -8,6 +8,7 @@ import HowItWorks from "@/components/HowItWorks";
 import ForWhom from "@/components/ForWhom";
 import Impact from "@/components/Impact";
 import Philosophy from "@/components/Philosophy";
+import HundredChanges from "@/components/HundredChanges";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -30,6 +31,8 @@ const Index = () => {
       <SectionDivider variant="subtle" />
       <Impact />
       <SectionDivider variant="gradient" />
+      <HundredChanges />
+      <SectionDivider variant="glow" />
       <Philosophy />
       <SectionDivider variant="glow" />
       <FAQSection />
