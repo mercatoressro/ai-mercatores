@@ -25,7 +25,10 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-[105vh] flex items-center overflow-hidden">
       {/* ══════ CINEMATIC BACKGROUND ══════ */}
-      <div className="absolute inset-0 bg-[hsl(222_50%_1.5%)]" />
+      <div className="absolute inset-0">
+        <img src={bgMeeting} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.12]" />
+        <div className="absolute inset-0 bg-[hsl(222_50%_1.5%/0.92)]" />
+      </div>
 
       {/* Deep room radials */}
       <div className="absolute inset-0 pointer-events-none">
