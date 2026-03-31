@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail, Phone, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import bgNetwork from "@/assets/bg-network.jpg";
 
