@@ -13,8 +13,8 @@ const Philosophy = () => {
     <section className="relative py-32 md:py-44 section-deep overflow-hidden">
       {/* Photo background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <img src={bgMeeting} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.08]" />
-        <div className="absolute inset-0 bg-background/94" />
+        <img src={bgMeeting} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.25]" />
+        <div className="absolute inset-0 bg-background/85" />
       </div>
       {/* Dramatic ambient (dimmed) */}
       <div className="absolute inset-0 pointer-events-none">
