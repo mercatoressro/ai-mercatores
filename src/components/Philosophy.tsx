@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import bgMeeting from "@/assets/bg-meeting.jpg";
 
 const thoughts = [
   "Obchodné výsledky nie sú náhoda, ale architektúra.",
