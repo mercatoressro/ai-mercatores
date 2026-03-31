@@ -7,7 +7,7 @@ const CliqSalesForm = () => {
     script.async = true;
     document.body.appendChild(script);
     return () => {
-      document.body.removeChild(script);
+      script.parentNode?.removeChild(script);
     };
   }, []);
 
