@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { XCircle, CheckCircle } from "lucide-react";
+import bgNetwork from "@/assets/bg-network.jpg";
 
 const fails = [
   "Firma kúpi nástroje bez jasného cieľa",
