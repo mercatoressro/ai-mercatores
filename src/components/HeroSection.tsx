@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Layers, Shield, Zap, BarChart3 } from "lucide-react";
 import NetworkGrid from "./NetworkGrid";
+import bgMeeting from "@/assets/bg-meeting.jpg";
 
 const fadeUp = (delay = 0) => ({
   hidden: { opacity: 0, y: 30 },
