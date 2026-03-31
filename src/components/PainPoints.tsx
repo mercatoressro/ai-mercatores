@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { TrendingDown, Target, Settings } from "lucide-react";
+import bgDashboard from "@/assets/bg-dashboard.jpg";
 
 const cards = [
   {
