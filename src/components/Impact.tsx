@@ -9,7 +9,7 @@ import {
   Layers,
   TrendingDown,
 } from "lucide-react";
-import bgDashboard from "@/assets/bg-dashboard.jpg";
+import cropDashboard from "@/assets/crop-dashboard.jpg";
 
 const impacts = [
   {
