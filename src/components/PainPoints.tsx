@@ -39,8 +39,8 @@ const PainPoints = () => {
   return (
     <section className="relative py-28 md:py-36 section-elevated">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <img src={bgDashboard} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.07]" />
-        <div className="absolute inset-0 bg-background/95" />
+        <img src={bgDashboard} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.25]" />
+        <div className="absolute inset-0 bg-background/85" />
       </div>
       <div className="absolute inset-0 dot-pattern opacity-[0.06] pointer-events-none" />
 
