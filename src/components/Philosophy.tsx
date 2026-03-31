@@ -11,12 +11,11 @@ const thoughts = [
 const Philosophy = () => {
   return (
     <section className="relative py-32 md:py-44 section-deep overflow-hidden">
-      {/* Photo background */}
+      {/* CROP 1 — Meeting / strategic discussion */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <img src={bgMeeting} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.25]" />
-        <div className="absolute inset-0 bg-background/85" />
+        <img src={cropMeeting} alt="" className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.18] mix-blend-luminosity" />
+        <div className="absolute inset-0 bg-[hsl(225_30%_3%/0.85)]" />
       </div>
-      {/* Dramatic ambient (dimmed) */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[hsl(200_100%_55%/0.02)] rounded-full blur-[120px]" />
       </div>
