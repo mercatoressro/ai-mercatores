@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Handshake, Megaphone, Cog, Layers, TrendingUp, Zap, BarChart3, GitBranch } from "lucide-react";
+import bgOperations from "@/assets/bg-operations.jpg";
 
 const pillars = [
   {
