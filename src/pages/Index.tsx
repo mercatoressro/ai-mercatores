@@ -39,6 +39,7 @@ const Index = () => {
       <FAQSection />
       <SectionDivider variant="subtle" />
       <CTASection />
+      <CliqSalesForm />
       <Footer />
     </div>
   );
