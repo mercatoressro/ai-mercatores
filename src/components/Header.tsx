@@ -7,6 +7,7 @@ const navItems = [
   { label: "Riešenia", href: "#riesenia" },
   { label: "Ako to funguje", href: "#ako-to-funguje" },
   { label: "Pre koho", href: "#pre-koho" },
+  { label: "100 zmien", href: "#100-zmien" },
   { label: "FAQ", href: "#faq" },
   { label: "Kontakt", href: "#kontakt" },
 ];
