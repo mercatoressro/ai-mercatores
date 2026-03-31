@@ -9,7 +9,7 @@ import {
   Layers,
   TrendingDown,
 } from "lucide-react";
-import bgDashboard from "@/assets/bg-dashboard.jpg";
+import cropDashboard from "@/assets/crop-dashboard.jpg";
 
 const impacts = [
   {
@@ -58,8 +58,8 @@ const Impact = () => {
   return (
     <section className="relative py-28 md:py-36">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <img src={bgDashboard} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.25]" />
-        <div className="absolute inset-0 bg-background/85" />
+        <img src={cropDashboard} alt="" className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.18] mix-blend-luminosity" />
+        <div className="absolute inset-0 bg-[hsl(225_30%_3%/0.85)]" />
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[hsl(200_100%_55%/0.02)] rounded-full blur-[120px]" />
       </div>
 

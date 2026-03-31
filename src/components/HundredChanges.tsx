@@ -10,8 +10,8 @@ import {
   Rocket,
   Globe,
 } from "lucide-react";
-import bgNetwork from "@/assets/bg-network.jpg";
-import bgDashboard from "@/assets/bg-dashboard.jpg";
+import cropNetwork from "@/assets/crop-network.jpg";
+import cropDashboard from "@/assets/crop-dashboard.jpg";
 
 const blocks = [
   {
@@ -203,16 +203,16 @@ const HundredChanges = () => {
       {/* Photo texture */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <img
-          src={bgNetwork}
+          src={cropNetwork}
           alt=""
-          className="absolute inset-0 w-full h-full object-cover opacity-[0.12] mix-blend-luminosity"
+          className="absolute inset-0 w-full h-full object-cover opacity-[0.15] mix-blend-luminosity"
         />
         <img
-          src={bgDashboard}
+          src={cropDashboard}
           alt=""
           className="absolute inset-0 w-full h-full object-cover opacity-[0.06] mix-blend-overlay"
         />
-        <div className="absolute inset-0 bg-[hsl(225_30%_2.5%/0.88)]" />
+        <div className="absolute inset-0 bg-[hsl(225_30%_2.5%/0.86)]" />
       </div>
 
       {/* Ambient glow — subtle */}
