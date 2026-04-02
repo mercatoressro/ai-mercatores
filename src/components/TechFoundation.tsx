@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
+import logoGHL from "@/assets/logo-gohighlevel.png";
+import logoOpenClaw from "@/assets/logo-openclaw.png";
 
 const platforms = [
   {
     name: "Go High Level",
-    abbr: "GHL",
+    logo: logoGHL,
     description:
       "Využívame ho tam, kde firma potrebuje prepojiť lead management, CRM, kampane, komunikáciu, formuláre, funnel logiku a automatizované follow-upy do jedného riadeného prostredia.",
     gradient: "from-primary/20 to-primary/5",
@@ -13,7 +15,7 @@ const platforms = [
   },
   {
     name: "OpenClaw",
-    abbr: "OC",
+    logo: logoOpenClaw,
     description:
       "Využívame ho tam, kde je cieľom vyššia miera autonómie, práca s AI agentmi, špecializované workflow a flexibilnejšie nasadenie inteligentných procesov nad konkrétnym firemným použitím.",
     gradient: "from-secondary/20 to-secondary/5",
@@ -97,15 +99,14 @@ const TechFoundation = () => {
                   } to-transparent`}
                 />
 
-                {/* Logo container */}
-                <div
-                  className={`inline-flex items-center justify-center w-14 h-14 rounded-xl border border-border/30 bg-card/80 mb-6`}
-                >
-                  <span
-                    className={`text-lg font-bold ${platform.accentColor} font-display`}
-                  >
-                    {platform.abbr}
-                  </span>
+                {/* Logo */}
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl border border-border/30 bg-white/10 backdrop-blur-sm mb-6 p-2">
+                  <img
+                    src={platform.logo}
+                    alt={`${platform.name} logo`}
+                    loading="lazy"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
 
                 {/* Name */}
