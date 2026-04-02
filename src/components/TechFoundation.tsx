@@ -99,15 +99,14 @@ const TechFoundation = () => {
                   } to-transparent`}
                 />
 
-                {/* Logo container */}
-                <div
-                  className={`inline-flex items-center justify-center w-14 h-14 rounded-xl border border-border/30 bg-card/80 mb-6`}
-                >
-                  <span
-                    className={`text-lg font-bold ${platform.accentColor} font-display`}
-                  >
-                    {platform.abbr}
-                  </span>
+                {/* Logo */}
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl border border-border/30 bg-white/10 backdrop-blur-sm mb-6 p-2">
+                  <img
+                    src={platform.logo}
+                    alt={`${platform.name} logo`}
+                    loading="lazy"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
 
                 {/* Name */}
