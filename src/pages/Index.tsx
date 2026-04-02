@@ -25,6 +25,8 @@ const Index = () => {
       <SectionDivider variant="subtle" />
       <Solutions />
       <SectionDivider variant="gradient" />
+      <TechFoundation />
+      <SectionDivider variant="subtle" />
       <WhyFail />
       <SectionDivider variant="subtle" />
       <HowItWorks />
