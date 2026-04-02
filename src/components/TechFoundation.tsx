@@ -15,7 +15,7 @@ const platforms = [
   },
   {
     name: "OpenClaw",
-    abbr: "OC",
+    logo: logoOpenClaw,
     description:
       "Využívame ho tam, kde je cieľom vyššia miera autonómie, práca s AI agentmi, špecializované workflow a flexibilnejšie nasadenie inteligentných procesov nad konkrétnym firemným použitím.",
     gradient: "from-secondary/20 to-secondary/5",
