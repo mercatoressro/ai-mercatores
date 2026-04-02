@@ -6,7 +6,7 @@ import logoOpenClaw from "@/assets/logo-openclaw.png";
 const platforms = [
   {
     name: "Go High Level",
-    abbr: "GHL",
+    logo: logoGHL,
     description:
       "Využívame ho tam, kde firma potrebuje prepojiť lead management, CRM, kampane, komunikáciu, formuláre, funnel logiku a automatizované follow-upy do jedného riadeného prostredia.",
     gradient: "from-primary/20 to-primary/5",
