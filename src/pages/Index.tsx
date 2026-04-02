@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import SectionDivider from "@/components/SectionDivider";
 import PainPoints from "@/components/PainPoints";
 import Solutions from "@/components/Solutions";
+import TechFoundation from "@/components/TechFoundation";
 import WhyFail from "@/components/WhyFail";
 import HowItWorks from "@/components/HowItWorks";
 import ForWhom from "@/components/ForWhom";
