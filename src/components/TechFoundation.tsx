@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
+import logoGHL from "@/assets/logo-gohighlevel.png";
+import logoOpenClaw from "@/assets/logo-openclaw.png";
 
 const platforms = [
   {
