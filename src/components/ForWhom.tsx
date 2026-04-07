@@ -92,10 +92,6 @@ const ForWhom = () => {
           {segments.map((s, i) => (
             <div
               key={s.title}
-                duration: 0.5,
-                delay: i * 0.08,
-                ease: [0.22, 1, 0.36, 1],
-              }}
             >
               <div className="gradient-border-card group h-full">
                 <div className="gradient-border-inner p-6 h-full">

@@ -74,10 +74,6 @@ const HowItWorks = () => {
             {steps.map((step, i) => (
               <div
                 key={step.num}
-                  duration: 0.5,
-                  delay: i * 0.08,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
                 className="relative group"
               >
                 {/* Mobile connector */}

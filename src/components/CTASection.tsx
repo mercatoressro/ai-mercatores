@@ -148,10 +148,6 @@ const CTASection = () => {
 
           {/* Side visual — 2 cols */}
           <div
-              duration: 0.6,
-              delay: 0.2,
-              ease: [0.22, 1, 0.36, 1],
-            }}
             className="lg:col-span-2 hidden lg:flex flex-col gap-5"
           >
             {/* AI audit overview card */}

@@ -115,10 +115,6 @@ const BlockCard = ({
 
   return (
     <div
-        duration: 0.55,
-        delay: index * 0.07,
-        ease: [0.22, 1, 0.36, 1],
-      }}
       onClick={onClick}
       className="group cursor-pointer h-full"
     >
