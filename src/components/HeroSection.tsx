@@ -139,7 +139,7 @@ const HeroSection = () => {
           className="flex items-center gap-4 mb-5 lg:mb-8"
         >
           <div
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[9px] uppercase tracking-[0.22em] font-mono font-semibold"
+            className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full text-[8px] sm:text-[9px] uppercase tracking-[0.18em] sm:tracking-[0.22em] font-mono font-semibold"
             style={{
               background: "linear-gradient(135deg, hsl(200 100% 55% / 0.14), hsl(200 100% 55% / 0.04))",
               border: "1px solid hsl(200 100% 55% / 0.25)",
