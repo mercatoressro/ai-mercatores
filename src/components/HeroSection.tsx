@@ -96,7 +96,7 @@ const HeroSection = () => {
       </div>
 
       {/* Pulsing focal glows (dimmed for text readability) */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none hidden md:block">
         <motion.div
           className="absolute top-[5%] right-[8%] w-[900px] h-[600px] bg-[hsl(200_100%_50%/0.1)] rounded-full blur-[140px]"
           animate={{ opacity: [0.1, 0.18, 0.1], scale: [1, 1.05, 1] }}

@@ -33,7 +33,7 @@ const Header = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-[72px]">
           <a href="#" className="font-display font-bold text-[1.15rem] tracking-tight relative group">
             <span className="text-white">ai.</span>
