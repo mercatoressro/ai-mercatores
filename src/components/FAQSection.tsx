@@ -57,7 +57,7 @@ const FAQSection = () => {
         <img src={bgDashboard} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.25]" />
         <div className="absolute inset-0 bg-background/85" />
       </div>
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

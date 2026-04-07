@@ -76,7 +76,7 @@ const Solutions = () => {
         <div className="absolute bottom-1/4 -right-20 w-[400px] h-[400px] bg-[hsl(260_70%_60%/0.02)] rounded-full blur-[100px]" />
       </div>
 
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -15,7 +15,7 @@ const Footer = () => {
       {/* Subtle top glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
 
-      <div className="container mx-auto px-6 lg:px-8 py-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
           <div>
             <div className="font-display font-bold text-xl tracking-tight mb-4">
