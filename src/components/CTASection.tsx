@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { ArrowRight, Mail, Phone, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import bgNetwork from "@/assets/bg-network.jpg";
@@ -41,10 +40,7 @@ const CTASection = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="text-center mb-16"
         >
           <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary font-mono font-medium mb-4">
@@ -59,14 +55,11 @@ const CTASection = () => {
             navrhneme konkrétne miesta, kde AI a automatizácia prinesú najvyšší
             efekt.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid lg:grid-cols-5 gap-10 max-w-5xl mx-auto items-start">
           {/* Form — 3 cols */}
-          <motion.form
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          <form
             onSubmit={handleSubmit}
             className="lg:col-span-3"
           >
@@ -151,13 +144,10 @@ const CTASection = () => {
                 </p>
               </div>
             </div>
-          </motion.form>
+          </form>
 
           {/* Side visual — 2 cols */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
+          <div
               duration: 0.6,
               delay: 0.2,
               ease: [0.22, 1, 0.36, 1],
@@ -254,7 +244,7 @@ const CTASection = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

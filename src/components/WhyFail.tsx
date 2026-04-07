@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { XCircle, CheckCircle } from "lucide-react";
 import bgNetwork from "@/assets/bg-network.jpg";
 
@@ -33,10 +32,7 @@ const WhyFail = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="text-center mb-6"
         >
           <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-destructive/80 font-mono font-medium mb-4">
@@ -48,16 +44,13 @@ const WhyFail = () => {
               Zlyhá na tom, že sa nikdy nestane súčasťou fungovania firmy.
             </span>
           </h2>
-        </motion.div>
+        </div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+        <p
           className="text-center text-foreground/85 max-w-xl mx-auto text-[0.9375rem] leading-relaxed mb-16"
         >
           Firmy dnes často nekupujú zlé nástroje. Zlyhávajú na tom, že ich nevedia premeniť na proces, ownership a dlhodobo riadený výkon.
-        </motion.p>
+        </p>
 
         {/* Comparison grid */}
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto relative">
@@ -70,10 +63,7 @@ const WhyFail = () => {
           </div>
 
           {/* Left: Bežný stav */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          <div
             className="glass-card-static p-7 md:p-8 relative overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-destructive/[0.03] to-transparent pointer-events-none" />
@@ -98,13 +88,10 @@ const WhyFail = () => {
                 ))}
               </ul>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right: Riadená AI transformácia */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+          <div
           >
             <div className="gradient-border-card h-full">
               <div className="gradient-border-inner p-7 md:p-8 h-full relative overflow-hidden">
@@ -137,14 +124,11 @@ const WhyFail = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Closing statement */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+        <div
           className="text-center mt-16 max-w-2xl mx-auto"
         >
           <div className="h-px w-16 mx-auto bg-gradient-to-r from-transparent via-primary/30 to-transparent mb-8" />
@@ -155,7 +139,7 @@ const WhyFail = () => {
             </span>
             "
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

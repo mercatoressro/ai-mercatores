@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Building2, Briefcase, ShoppingBag, HeartPulse, TrendingUp, XCircle } from "lucide-react";
 import bgOperations from "@/assets/bg-operations.jpg";
 
@@ -73,10 +72,7 @@ const ForWhom = () => {
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="text-center mb-20"
         >
           <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary font-mono font-medium mb-4">
@@ -89,16 +85,13 @@ const ForWhom = () => {
           <p className="text-foreground/80 max-w-xl mx-auto text-base leading-relaxed">
             Kde ai.mercatores.sk dáva najväčší zmysel — a pre koho naopak nie.
           </p>
-        </motion.div>
+        </div>
 
         {/* Segment cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto mb-8">
           {segments.map((s, i) => (
-            <motion.div
+            <div
               key={s.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
                 duration: 0.5,
                 delay: i * 0.08,
                 ease: [0.22, 1, 0.36, 1],
@@ -130,25 +123,19 @@ const ForWhom = () => {
                   </ul>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Closing statement for "pre koho" */}
-        <motion.p
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+        <p
           className="text-center text-foreground/75 text-[0.875rem] italic max-w-2xl mx-auto mb-20"
         >
           „Najväčší zmysel to dáva firmám, ktoré už cítia, že ďalší rast bez systému len znásobí chaos."
-        </motion.p>
+        </p>
 
         {/* "Pre koho to nie je" panel */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="max-w-3xl mx-auto"
         >
           <div className="glass-card-static p-8 md:p-10 relative overflow-hidden">
@@ -180,7 +167,7 @@ const ForWhom = () => {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

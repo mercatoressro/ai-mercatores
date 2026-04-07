@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import cropMeeting from "@/assets/crop-meeting.jpg";
 
 const thoughts = [
@@ -21,10 +20,7 @@ const Philosophy = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="max-w-3xl mx-auto text-center"
         >
           <span className="inline-block text-[10px] uppercase tracking-[0.3em] text-primary font-mono font-medium mb-6">Filozofia</span>
@@ -36,22 +32,16 @@ const Philosophy = () => {
 
           <div className="space-y-8 mb-16">
             {thoughts.map((t, i) => (
-              <motion.p
+              <p
                 key={i}
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
                 className="text-lg md:text-xl text-foreground/90 leading-relaxed"
               >
                 {t}
-              </motion.p>
+              </p>
             ))}
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+          <div
             className="inline-block"
           >
             <div className="gradient-border-card">
@@ -63,8 +53,8 @@ const Philosophy = () => {
                 </span>
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );

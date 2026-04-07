@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Handshake, Megaphone, Cog, Layers, TrendingUp, Zap, BarChart3, GitBranch } from "lucide-react";
 import bgOperations from "@/assets/bg-operations.jpg";
 
@@ -78,10 +77,7 @@ const Solutions = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="text-center mb-20"
         >
           <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary font-mono font-medium mb-4">
@@ -94,16 +90,13 @@ const Solutions = () => {
           <p className="text-foreground/80 max-w-xl mx-auto text-base leading-relaxed">
             Štyri piliere, ktoré menia firmu na riadený výkonný systém — nie izolované nástroje, ale jeden prepojený model.
           </p>
-        </motion.div>
+        </div>
 
         {/* 2x2 pillar grid */}
         <div className="grid md:grid-cols-2 gap-5 lg:gap-6 max-w-5xl mx-auto">
           {pillars.map((p, i) => (
-            <motion.div
+            <div
               key={p.title}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
                 duration: 0.6,
                 delay: i * 0.1,
                 ease: [0.22, 1, 0.36, 1],
@@ -151,22 +144,19 @@ const Solutions = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Closing statement */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+        <div
           className="text-center mt-16 max-w-2xl mx-auto"
         >
           <div className="h-px w-16 mx-auto bg-gradient-to-r from-transparent via-primary/30 to-transparent mb-8" />
           <p className="text-foreground/85 text-[0.9375rem] leading-relaxed italic">
             „Nejde o izolované nástroje. Ide o jeden riadený systém, ktorý prepája výkon firmy naprieč oddeleniami."
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

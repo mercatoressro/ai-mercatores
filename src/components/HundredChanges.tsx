@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useState } from "react";
 import {
   ArrowRight,
@@ -115,10 +114,7 @@ const BlockCard = ({
   const Icon = block.icon;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 24 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{
+    <div
         duration: 0.55,
         delay: index * 0.07,
         ease: [0.22, 1, 0.36, 1],
@@ -189,7 +185,7 @@ const BlockCard = ({
           ))}
         </ul>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -227,10 +223,7 @@ const HundredChanges = () => {
       {/* ── CONTENT ── */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* ═══ A. HEADER ═══ */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="text-center mb-8"
         >
           {/* Badge pill */}
@@ -252,17 +245,14 @@ const HundredChanges = () => {
             doplnkom a stávajú sa novou vrstvou riadenia, predaja, marketingu a
             operatívy.
           </p>
-        </motion.div>
+        </div>
 
         {/* Glow divider */}
-        <motion.div
-          initial={{ opacity: 0, scaleX: 0.3 }}
-          animate={{ opacity: 1, scaleX: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+        <div
           className="max-w-md mx-auto mb-16 md:mb-20"
         >
           <div className="h-px bg-gradient-to-r from-transparent via-[hsl(var(--border-glow)/0.3)] to-transparent" />
-        </motion.div>
+        </div>
 
         {/* ═══ B. CARD GRID — 4+3 layout ═══ */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-5 mb-6">
@@ -293,10 +283,7 @@ const HundredChanges = () => {
         </div>
 
         {/* ═══ C. CLOSING STATEMENT ═══ */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="max-w-3xl mx-auto mb-14 md:mb-16"
         >
           <div className="relative rounded-2xl border border-border/30 bg-[hsl(225_25%_5%/0.7)] px-8 py-10 md:px-12 md:py-12 text-center overflow-hidden">
@@ -314,13 +301,10 @@ const HundredChanges = () => {
               </span>
             </blockquote>
           </div>
-        </motion.div>
+        </div>
 
         {/* ═══ D. CTA BOX ═══ */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+        <div
           className="max-w-3xl mx-auto"
         >
           <div className="relative rounded-2xl border border-[hsl(var(--border-glow)/0.25)] bg-[hsl(225_25%_7%/0.8)] overflow-hidden shadow-[0_0_60px_-20px_hsl(var(--glow-primary)/0.15)]">
@@ -346,7 +330,7 @@ const HundredChanges = () => {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
