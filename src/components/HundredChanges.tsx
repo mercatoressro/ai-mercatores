@@ -118,8 +118,6 @@ const BlockCard = ({
       onClick={onClick}
       className="group cursor-pointer h-full"
     >
-      className="group cursor-pointer h-full"
-    >
       <div
         className={`relative h-full rounded-2xl border p-6 lg:p-7 transition-all duration-400 overflow-hidden
           ${
