@@ -31,13 +31,13 @@ const HeroSection = () => {
       </div>
 
       {/* Deep room radials */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-[-40%] left-[-10%] w-[1400px] h-[1400px] bg-[hsl(218_80%_8%/0.7)] rounded-full blur-[220px]" />
-        <div className="absolute top-[-10%] right-[-15%] w-[1200px] h-[1000px] bg-[hsl(210_100%_15%/0.4)] rounded-full blur-[180px]" />
-        <div className="absolute bottom-[-25%] left-[15%] w-[1000px] h-[800px] bg-[hsl(248_50%_12%/0.3)] rounded-full blur-[190px]" />
-        <div className="absolute top-[15%] right-[15%] w-[900px] h-[700px] bg-[hsl(205_100%_30%/0.1)] rounded-full blur-[150px]" />
-        <div className="absolute top-[40%] left-[30%] w-[1200px] h-[600px] bg-[hsl(215_80%_6%/0.5)] rounded-full blur-[220px]" />
-        <div className="absolute top-[60%] right-[5%] w-[800px] h-[500px] bg-[hsl(220_60%_18%/0.08)] rounded-full blur-[140px]" />
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-[-40%] left-[-10%] w-[600px] md:w-[1400px] h-[600px] md:h-[1400px] bg-[hsl(218_80%_8%/0.7)] rounded-full blur-[120px] md:blur-[220px]" />
+        <div className="absolute top-[-10%] right-[-15%] w-[500px] md:w-[1200px] h-[400px] md:h-[1000px] bg-[hsl(210_100%_15%/0.4)] rounded-full blur-[100px] md:blur-[180px]" />
+        <div className="absolute bottom-[-25%] left-[15%] w-[400px] md:w-[1000px] h-[300px] md:h-[800px] bg-[hsl(248_50%_12%/0.3)] rounded-full blur-[100px] md:blur-[190px]" />
+        <div className="hidden md:block absolute top-[15%] right-[15%] w-[900px] h-[700px] bg-[hsl(205_100%_30%/0.1)] rounded-full blur-[150px]" />
+        <div className="hidden md:block absolute top-[40%] left-[30%] w-[1200px] h-[600px] bg-[hsl(215_80%_6%/0.5)] rounded-full blur-[220px]" />
+        <div className="hidden md:block absolute top-[60%] right-[5%] w-[800px] h-[500px] bg-[hsl(220_60%_18%/0.08)] rounded-full blur-[140px]" />
       </div>
 
       {/* AI room — architectural light structures (dimmed) */}
