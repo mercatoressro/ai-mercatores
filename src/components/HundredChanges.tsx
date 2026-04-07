@@ -281,7 +281,7 @@ const HundredChanges = () => {
             />
           ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 max-w-[calc(75%+0.9375rem)] xl:max-w-none xl:mx-auto mb-20 md:mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 xl:max-w-none xl:mx-auto mb-20 md:mb-24">
           {blocks.slice(4).map((block, i) => (
             <BlockCard
               key={block.id}

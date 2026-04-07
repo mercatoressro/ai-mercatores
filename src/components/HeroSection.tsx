@@ -265,7 +265,7 @@ const HeroSection = () => {
               ].map((b) => (
                 <div
                   key={b.label}
-                  className="px-5 py-4 rounded-xl max-w-[210px]"
+                  className="px-4 py-3 md:px-5 md:py-4 rounded-xl max-w-[210px]"
                   style={{
                     background: "linear-gradient(145deg, hsl(225 22% 12% / 0.9), hsl(225 25% 6% / 0.8))",
                     border: "1px solid hsl(200 100% 55% / 0.1)",
