@@ -227,10 +227,10 @@ const HeroSection = () => {
             </motion.p>
 
             {/* CTA */}
-            <motion.div variants={fadeUp(0.25)} className="mb-14">
+            <motion.div variants={fadeUp(0.25)} className="mb-10 md:mb-14">
               <a
                 href="#kontakt"
-                className="inline-flex items-center gap-3.5 px-14 py-6 rounded-2xl text-[0.95rem] font-bold uppercase tracking-[0.12em] text-white relative overflow-hidden group"
+                className="inline-flex items-center gap-3 px-8 py-4 md:px-14 md:py-6 rounded-xl md:rounded-2xl text-[0.85rem] md:text-[0.95rem] font-bold uppercase tracking-[0.12em] text-white relative overflow-hidden group"
                 style={{
                   background: "linear-gradient(135deg, hsl(200 100% 48%), hsl(215 100% 42%))",
                   boxShadow: `
@@ -248,7 +248,7 @@ const HeroSection = () => {
                   style={{ background: "linear-gradient(135deg, hsl(210 100% 42%), hsl(200 100% 48%))" }}
                 />
               </a>
-              <p className="text-[11px] text-muted-foreground mt-5 tracking-wide">
+              <p className="text-[11px] text-muted-foreground mt-4 md:mt-5 tracking-wide">
                 Architektúra · Nasadenie · Správa · Výkon
               </p>
             </motion.div>
