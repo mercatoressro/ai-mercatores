@@ -1,9 +1,7 @@
-import { motion } from "framer-motion";
-
-const floatAnim = (duration: number, delay: number = 0) => ({
-  animate: { y: [0, -12, 0] },
-  transition: { duration, repeat: Infinity, ease: "easeInOut" as const, delay },
-});
+const floatClass = (i: number) => {
+  const durations = ["animate-float", "animate-float-slow"];
+  return durations[i % durations.length];
+};
 
 const AIPlatformVisual = () => {
   return (
@@ -12,90 +10,13 @@ const AIPlatformVisual = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-[hsl(200_100%_55%/0.06)] rounded-full blur-[80px]" />
       <div className="absolute top-1/3 left-1/3 w-[200px] h-[200px] bg-[hsl(260_70%_60%/0.05)] rounded-full blur-[60px]" />
 
-      {/* ══════ SVG CONNECTION LINES ══════ */}
+      {/* SVG CONNECTION LINES */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 500 600" fill="none" preserveAspectRatio="xMidYMid meet">
-        {/* Central hub connections */}
-        <motion.path
-          d="M250 280 L120 160"
-          stroke="url(#line-grad-1)"
-          strokeWidth="1"
-          strokeDasharray="4 4"
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: 1, opacity: 0.5 }}
-          transition={{ duration: 2, delay: 1.2, ease: "easeOut" }}
-        />
-        <motion.path
-          d="M250 280 L380 140"
-          stroke="url(#line-grad-1)"
-          strokeWidth="1"
-          strokeDasharray="4 4"
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: 1, opacity: 0.5 }}
-          transition={{ duration: 2, delay: 1.4, ease: "easeOut" }}
-        />
-        <motion.path
-          d="M250 280 L100 350"
-          stroke="url(#line-grad-2)"
-          strokeWidth="1"
-          strokeDasharray="4 4"
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: 1, opacity: 0.4 }}
-          transition={{ duration: 2, delay: 1.6, ease: "easeOut" }}
-        />
-        <motion.path
-          d="M250 280 L400 370"
-          stroke="url(#line-grad-2)"
-          strokeWidth="1"
-          strokeDasharray="4 4"
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: 1, opacity: 0.4 }}
-          transition={{ duration: 2, delay: 1.8, ease: "easeOut" }}
-        />
-        <motion.path
-          d="M250 280 L250 470"
-          stroke="url(#line-grad-1)"
-          strokeWidth="1"
-          strokeDasharray="4 4"
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: 1, opacity: 0.4 }}
-          transition={{ duration: 2, delay: 2.0, ease: "easeOut" }}
-        />
-
-        {/* Data flow dots on paths */}
-        <motion.circle
-          cx="0" cy="0" r="2.5"
-          fill="hsl(200 100% 55%)"
-          opacity="0.8"
-          animate={{
-            cx: [250, 120],
-            cy: [280, 160],
-            opacity: [0.8, 0],
-          }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        />
-        <motion.circle
-          cx="0" cy="0" r="2.5"
-          fill="hsl(260 70% 60%)"
-          opacity="0.8"
-          animate={{
-            cx: [250, 380],
-            cy: [280, 140],
-            opacity: [0.8, 0],
-          }}
-          transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 2.5 }}
-        />
-        <motion.circle
-          cx="0" cy="0" r="2"
-          fill="hsl(195 100% 62%)"
-          opacity="0.6"
-          animate={{
-            cx: [250, 250],
-            cy: [280, 470],
-            opacity: [0.6, 0],
-          }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 3 }}
-        />
-
+        <path d="M250 280 L120 160" stroke="url(#line-grad-1)" strokeWidth="1" strokeDasharray="4 4" opacity="0.5" />
+        <path d="M250 280 L380 140" stroke="url(#line-grad-1)" strokeWidth="1" strokeDasharray="4 4" opacity="0.5" />
+        <path d="M250 280 L100 350" stroke="url(#line-grad-2)" strokeWidth="1" strokeDasharray="4 4" opacity="0.4" />
+        <path d="M250 280 L400 370" stroke="url(#line-grad-2)" strokeWidth="1" strokeDasharray="4 4" opacity="0.4" />
+        <path d="M250 280 L250 470" stroke="url(#line-grad-1)" strokeWidth="1" strokeDasharray="4 4" opacity="0.4" />
         <defs>
           <linearGradient id="line-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="hsl(200 100% 55%)" stopOpacity="0.5" />
@@ -108,15 +29,9 @@ const AIPlatformVisual = () => {
         </defs>
       </svg>
 
-      {/* ══════ CENTRAL HUB — AI Orchestration ══════ */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[55%] z-20"
-      >
+      {/* CENTRAL HUB */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[55%] z-20">
         <div className="relative">
-          {/* Outer ring glow */}
           <div className="absolute -inset-4 rounded-2xl bg-[hsl(200_100%_55%/0.08)] blur-xl animate-pulse-glow" />
           <div className="gradient-border-card">
             <div className="gradient-border-inner px-6 py-4 text-center">
@@ -132,16 +47,10 @@ const AIPlatformVisual = () => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
-      {/* ══════ TOP LEFT — Obchod ══════ */}
-      <motion.div
-        initial={{ opacity: 0, x: -30, y: -20 }}
-        animate={{ opacity: 1, x: 0, y: 0 }}
-        transition={{ duration: 0.7, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute top-[8%] left-[2%] z-10"
-        {...floatAnim(7, 0)}
-      >
+      {/* TOP LEFT — Obchod */}
+      <div className={`absolute top-[8%] left-[2%] z-10 ${floatClass(0)}`}>
         <div className="glass-card-static p-4 w-[175px]">
           <div className="flex items-center gap-2 mb-3">
             <div className="w-6 h-6 rounded-md bg-[hsl(200_100%_55%/0.12)] border border-[hsl(200_100%_55%/0.2)] flex items-center justify-center">
@@ -159,25 +68,14 @@ const AIPlatformVisual = () => {
               <span className="text-[11px] font-mono text-foreground/50">auto</span>
             </div>
             <div className="h-1 rounded-full bg-muted/30 overflow-hidden">
-              <motion.div
-                className="h-full rounded-full bg-gradient-to-r from-primary/80 to-primary/40"
-                initial={{ width: "0%" }}
-                animate={{ width: "82%" }}
-                transition={{ duration: 1.5, delay: 2, ease: "easeOut" }}
-              />
+              <div className="h-full rounded-full bg-gradient-to-r from-primary/80 to-primary/40" style={{ width: "82%" }} />
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
-      {/* ══════ TOP RIGHT — Marketing ══════ */}
-      <motion.div
-        initial={{ opacity: 0, x: 30, y: -20 }}
-        animate={{ opacity: 1, x: 0, y: 0 }}
-        transition={{ duration: 0.7, delay: 1.4, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute top-[4%] right-[2%] z-10"
-        {...floatAnim(8, 1)}
-      >
+      {/* TOP RIGHT — Marketing */}
+      <div className={`absolute top-[4%] right-[2%] z-10 ${floatClass(1)}`}>
         <div className="glass-card-static p-4 w-[175px]">
           <div className="flex items-center gap-2 mb-3">
             <div className="w-6 h-6 rounded-md bg-[hsl(260_70%_60%/0.12)] border border-[hsl(260_70%_60%/0.2)] flex items-center justify-center">
@@ -208,16 +106,10 @@ const AIPlatformVisual = () => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
-      {/* ══════ MIDDLE LEFT — Workflow Status ══════ */}
-      <motion.div
-        initial={{ opacity: 0, x: -30 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.7, delay: 1.6, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute top-[42%] left-[-3%] z-10"
-        {...floatAnim(9, 2)}
-      >
+      {/* MIDDLE LEFT — Workflow Status */}
+      <div className={`absolute top-[42%] left-[-3%] z-10 ${floatClass(0)}`}>
         <div className="glass-card-static p-4 w-[160px]">
           <div className="text-[9px] uppercase tracking-widest text-muted-foreground/50 mb-2.5">Workflow</div>
           <div className="space-y-2.5">
@@ -234,16 +126,10 @@ const AIPlatformVisual = () => {
             ))}
           </div>
         </div>
-      </motion.div>
+      </div>
 
-      {/* ══════ MIDDLE RIGHT — AI Tasks ══════ */}
-      <motion.div
-        initial={{ opacity: 0, x: 30 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.7, delay: 1.8, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute top-[48%] right-[-2%] z-10"
-        {...floatAnim(6, 0.5)}
-      >
+      {/* MIDDLE RIGHT — AI Tasks */}
+      <div className={`absolute top-[48%] right-[-2%] z-10 ${floatClass(1)}`}>
         <div className="glass-card-static p-4 w-[155px]">
           <div className="text-[9px] uppercase tracking-widest text-muted-foreground/50 mb-1">AI Tasks</div>
           <div className="text-2xl font-display font-bold gradient-text-primary">247</div>
@@ -251,26 +137,15 @@ const AIPlatformVisual = () => {
           <div className="mt-2 flex gap-1">
             {[1, 2, 3, 4, 5].map((i) => (
               <div key={i} className="flex-1 h-0.5 rounded-full bg-primary/30">
-                <motion.div
-                  className="h-full rounded-full bg-primary/70"
-                  initial={{ width: "0%" }}
-                  animate={{ width: "100%" }}
-                  transition={{ duration: 0.4, delay: 2 + i * 0.15 }}
-                />
+                <div className="h-full rounded-full bg-primary/70" style={{ width: "100%" }} />
               </div>
             ))}
           </div>
         </div>
-      </motion.div>
+      </div>
 
-      {/* ══════ BOTTOM — Operatíva ══════ */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 2.0, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute bottom-[6%] left-1/2 -translate-x-1/2 z-10"
-        {...floatAnim(7.5, 1.5)}
-      >
+      {/* BOTTOM — Operatíva */}
+      <div className={`absolute bottom-[6%] left-1/2 -translate-x-1/2 z-10 ${floatClass(0)}`}>
         <div className="glass-card-static p-4 w-[200px]">
           <div className="flex items-center gap-2 mb-3">
             <div className="w-6 h-6 rounded-md bg-[hsl(195_100%_62%/0.12)] border border-[hsl(195_100%_62%/0.2)] flex items-center justify-center">
@@ -289,20 +164,12 @@ const AIPlatformVisual = () => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Orbiting accent dots */}
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[55%] w-1.5 h-1.5 rounded-full bg-primary/60"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[55%] w-1.5 h-1.5 rounded-full bg-primary/60 animate-orbit"
         style={{ transformOrigin: "0 120px" }}
-      />
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[55%] w-1 h-1 rounded-full bg-secondary/50"
-        animate={{ rotate: -360 }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        style={{ transformOrigin: "0 180px" }}
       />
     </div>
   );
