@@ -197,8 +197,8 @@ const HeroSection = () => {
             {/* MASSIVE HEADLINE */}
             <motion.h1
               variants={fadeUp(0)}
-              className="font-display leading-[0.92] tracking-[-0.045em] font-extrabold mb-10"
-              style={{ fontSize: "clamp(3.5rem, 7.5vw, 7rem)", textShadow: "0 0 80px hsl(200 100% 50% / 0.15), 0 2px 4px hsl(220 50% 3% / 0.6)" }}
+              className="font-display leading-[0.92] tracking-[-0.045em] font-extrabold mb-8 md:mb-10"
+              style={{ fontSize: "clamp(2.5rem, 7.5vw, 7rem)", textShadow: "0 0 80px hsl(200 100% 50% / 0.15), 0 2px 4px hsl(220 50% 3% / 0.6)" }}
             >
               <span className="block drop-shadow-[0_0_40px_hsl(200_100%_50%/0.08)]">
                 <span
