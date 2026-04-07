@@ -23,7 +23,7 @@ const container = {
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[105vh] flex items-center overflow-hidden">
+    <section className="relative min-h-screen lg:min-h-[105vh] flex items-center overflow-hidden">
       {/* ══════ CINEMATIC BACKGROUND ══════ */}
       <div className="absolute inset-0">
         <img src={bgMeeting} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.3]" />
