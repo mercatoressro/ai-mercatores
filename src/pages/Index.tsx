@@ -44,6 +44,7 @@ const Index = () => {
       <SectionDivider variant="subtle" />
       <CTASection />
       <CliqSalesForm />
+      </main>
       <Footer />
     </div>
   );
