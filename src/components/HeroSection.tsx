@@ -166,7 +166,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex items-center gap-3 mb-12 lg:mb-16"
+          className="flex items-center gap-3 mb-8 md:mb-12 lg:mb-16"
         >
           <div
             className="w-10 h-10 rounded-xl flex items-center justify-center"
