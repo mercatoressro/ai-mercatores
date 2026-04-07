@@ -19,6 +19,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Header />
+      <main>
       <HeroSection />
       <SectionDivider variant="glow" />
       <PainPoints />
@@ -43,6 +44,7 @@ const Index = () => {
       <SectionDivider variant="subtle" />
       <CTASection />
       <CliqSalesForm />
+      </main>
       <Footer />
     </div>
   );

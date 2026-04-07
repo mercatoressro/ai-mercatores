@@ -226,7 +226,7 @@ const HundredChanges = () => {
       <div className="absolute inset-0 grid-pattern opacity-[0.025] pointer-events-none" />
 
       {/* ── CONTENT ── */}
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* ═══ A. HEADER ═══ */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -281,7 +281,7 @@ const HundredChanges = () => {
             />
           ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 max-w-[calc(75%+0.9375rem)] xl:max-w-none xl:mx-auto mb-20 md:mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 xl:max-w-none xl:mx-auto mb-20 md:mb-24">
           {blocks.slice(4).map((block, i) => (
             <BlockCard
               key={block.id}

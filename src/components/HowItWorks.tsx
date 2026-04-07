@@ -42,7 +42,7 @@ const HowItWorks = () => {
         <img src={cropOperations} alt="" className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.18] mix-blend-luminosity" />
         <div className="absolute inset-0 bg-[hsl(225_30%_3%/0.85)]" />
       </div>
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

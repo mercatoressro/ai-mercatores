@@ -23,7 +23,7 @@ const container = {
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[105vh] flex items-center overflow-hidden">
+    <section className="relative min-h-screen lg:min-h-[105vh] flex items-center overflow-hidden">
       {/* ══════ CINEMATIC BACKGROUND ══════ */}
       <div className="absolute inset-0">
         <img src={bgMeeting} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.3]" />
@@ -31,13 +31,13 @@ const HeroSection = () => {
       </div>
 
       {/* Deep room radials */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-[-40%] left-[-10%] w-[1400px] h-[1400px] bg-[hsl(218_80%_8%/0.7)] rounded-full blur-[220px]" />
-        <div className="absolute top-[-10%] right-[-15%] w-[1200px] h-[1000px] bg-[hsl(210_100%_15%/0.4)] rounded-full blur-[180px]" />
-        <div className="absolute bottom-[-25%] left-[15%] w-[1000px] h-[800px] bg-[hsl(248_50%_12%/0.3)] rounded-full blur-[190px]" />
-        <div className="absolute top-[15%] right-[15%] w-[900px] h-[700px] bg-[hsl(205_100%_30%/0.1)] rounded-full blur-[150px]" />
-        <div className="absolute top-[40%] left-[30%] w-[1200px] h-[600px] bg-[hsl(215_80%_6%/0.5)] rounded-full blur-[220px]" />
-        <div className="absolute top-[60%] right-[5%] w-[800px] h-[500px] bg-[hsl(220_60%_18%/0.08)] rounded-full blur-[140px]" />
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-[-40%] left-[-10%] w-[600px] md:w-[1400px] h-[600px] md:h-[1400px] bg-[hsl(218_80%_8%/0.7)] rounded-full blur-[120px] md:blur-[220px]" />
+        <div className="absolute top-[-10%] right-[-15%] w-[500px] md:w-[1200px] h-[400px] md:h-[1000px] bg-[hsl(210_100%_15%/0.4)] rounded-full blur-[100px] md:blur-[180px]" />
+        <div className="absolute bottom-[-25%] left-[15%] w-[400px] md:w-[1000px] h-[300px] md:h-[800px] bg-[hsl(248_50%_12%/0.3)] rounded-full blur-[100px] md:blur-[190px]" />
+        <div className="hidden md:block absolute top-[15%] right-[15%] w-[900px] h-[700px] bg-[hsl(205_100%_30%/0.1)] rounded-full blur-[150px]" />
+        <div className="hidden md:block absolute top-[40%] left-[30%] w-[1200px] h-[600px] bg-[hsl(215_80%_6%/0.5)] rounded-full blur-[220px]" />
+        <div className="hidden md:block absolute top-[60%] right-[5%] w-[800px] h-[500px] bg-[hsl(220_60%_18%/0.08)] rounded-full blur-[140px]" />
       </div>
 
       {/* AI room — architectural light structures (dimmed) */}
@@ -96,7 +96,7 @@ const HeroSection = () => {
       </div>
 
       {/* Pulsing focal glows (dimmed for text readability) */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none hidden md:block">
         <motion.div
           className="absolute top-[5%] right-[8%] w-[900px] h-[600px] bg-[hsl(200_100%_50%/0.1)] rounded-full blur-[140px]"
           animate={{ opacity: [0.1, 0.18, 0.1], scale: [1, 1.05, 1] }}
@@ -129,7 +129,7 @@ const HeroSection = () => {
       />
 
       {/* ══════ CONTENT ══════ */}
-      <div className="relative z-10 container mx-auto px-6 lg:px-8 pt-28 lg:pt-24 pb-20 lg:pb-24">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-24 pb-16 lg:pb-24">
 
         {/* ── TOP BAR ── */}
         <motion.div
@@ -139,7 +139,7 @@ const HeroSection = () => {
           className="flex items-center gap-4 mb-5 lg:mb-8"
         >
           <div
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[9px] uppercase tracking-[0.22em] font-mono font-semibold"
+            className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full text-[8px] sm:text-[9px] uppercase tracking-[0.18em] sm:tracking-[0.22em] font-mono font-semibold"
             style={{
               background: "linear-gradient(135deg, hsl(200 100% 55% / 0.14), hsl(200 100% 55% / 0.04))",
               border: "1px solid hsl(200 100% 55% / 0.25)",
@@ -166,7 +166,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex items-center gap-3 mb-12 lg:mb-16"
+          className="flex items-center gap-3 mb-8 md:mb-12 lg:mb-16"
         >
           <div
             className="w-10 h-10 rounded-xl flex items-center justify-center"
@@ -197,8 +197,8 @@ const HeroSection = () => {
             {/* MASSIVE HEADLINE */}
             <motion.h1
               variants={fadeUp(0)}
-              className="font-display leading-[0.92] tracking-[-0.045em] font-extrabold mb-10"
-              style={{ fontSize: "clamp(3.5rem, 7.5vw, 7rem)", textShadow: "0 0 80px hsl(200 100% 50% / 0.15), 0 2px 4px hsl(220 50% 3% / 0.6)" }}
+              className="font-display leading-[0.92] tracking-[-0.045em] font-extrabold mb-8 md:mb-10"
+              style={{ fontSize: "clamp(2.5rem, 7.5vw, 7rem)", textShadow: "0 0 80px hsl(200 100% 50% / 0.15), 0 2px 4px hsl(220 50% 3% / 0.6)" }}
             >
               <span className="block drop-shadow-[0_0_40px_hsl(200_100%_50%/0.08)]">
                 <span
@@ -227,10 +227,10 @@ const HeroSection = () => {
             </motion.p>
 
             {/* CTA */}
-            <motion.div variants={fadeUp(0.25)} className="mb-14">
+            <motion.div variants={fadeUp(0.25)} className="mb-10 md:mb-14">
               <a
                 href="#kontakt"
-                className="inline-flex items-center gap-3.5 px-14 py-6 rounded-2xl text-[0.95rem] font-bold uppercase tracking-[0.12em] text-white relative overflow-hidden group"
+                className="inline-flex items-center gap-3 px-8 py-4 md:px-14 md:py-6 rounded-xl md:rounded-2xl text-[0.85rem] md:text-[0.95rem] font-bold uppercase tracking-[0.12em] text-white relative overflow-hidden group"
                 style={{
                   background: "linear-gradient(135deg, hsl(200 100% 48%), hsl(215 100% 42%))",
                   boxShadow: `
@@ -248,7 +248,7 @@ const HeroSection = () => {
                   style={{ background: "linear-gradient(135deg, hsl(210 100% 42%), hsl(200 100% 48%))" }}
                 />
               </a>
-              <p className="text-[11px] text-muted-foreground mt-5 tracking-wide">
+              <p className="text-[11px] text-muted-foreground mt-4 md:mt-5 tracking-wide">
                 Architektúra · Nasadenie · Správa · Výkon
               </p>
             </motion.div>
@@ -265,7 +265,7 @@ const HeroSection = () => {
               ].map((b) => (
                 <div
                   key={b.label}
-                  className="px-5 py-4 rounded-xl max-w-[210px]"
+                  className="px-4 py-3 md:px-5 md:py-4 rounded-xl max-w-[210px]"
                   style={{
                     background: "linear-gradient(145deg, hsl(225 22% 12% / 0.9), hsl(225 25% 6% / 0.8))",
                     border: "1px solid hsl(200 100% 55% / 0.1)",
