@@ -35,8 +35,7 @@ const WhyFail = () => {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-6"
         >
@@ -53,8 +52,7 @@ const WhyFail = () => {
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-center text-foreground/85 max-w-xl mx-auto text-[0.9375rem] leading-relaxed mb-16"
         >
@@ -74,8 +72,7 @@ const WhyFail = () => {
           {/* Left: Bežný stav */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.05 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="glass-card-static p-7 md:p-8 relative overflow-hidden"
           >
@@ -106,8 +103,7 @@ const WhyFail = () => {
           {/* Right: Riadená AI transformácia */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.05 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="gradient-border-card h-full">
@@ -147,8 +143,7 @@ const WhyFail = () => {
         {/* Closing statement */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mt-16 max-w-2xl mx-auto"
         >

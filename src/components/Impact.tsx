@@ -67,8 +67,7 @@ const Impact = () => {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-20"
         >
@@ -90,8 +89,7 @@ const Impact = () => {
             <motion.div
               key={item.title}
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.05 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{
                 duration: 0.5,
                 delay: i * 0.06,
@@ -120,8 +118,7 @@ const Impact = () => {
         {/* Closing statement */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-16 max-w-2xl mx-auto"
         >

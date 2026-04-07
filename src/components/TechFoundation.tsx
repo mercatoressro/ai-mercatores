@@ -37,8 +37,7 @@ const TechFoundation = () => {
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="flex justify-center mb-6"
         >
@@ -53,8 +52,7 @@ const TechFoundation = () => {
         {/* Headline */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 font-display"
         >
@@ -67,8 +65,7 @@ const TechFoundation = () => {
         {/* Intro text */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-muted-foreground text-base md:text-lg text-center max-w-3xl mx-auto mb-16 leading-relaxed"
         >
@@ -84,8 +81,7 @@ const TechFoundation = () => {
             <motion.div
               key={platform.name}
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 + index * 0.15 }}
               className="group"
             >
@@ -126,8 +122,7 @@ const TechFoundation = () => {
         {/* Closing block */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
           className="max-w-3xl mx-auto text-center mb-12"
         >
@@ -144,8 +139,7 @@ const TechFoundation = () => {
         {/* Closing statement */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
           className="text-center"
         >

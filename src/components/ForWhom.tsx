@@ -75,8 +75,7 @@ const ForWhom = () => {
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-20"
         >
@@ -98,8 +97,7 @@ const ForWhom = () => {
             <motion.div
               key={s.title}
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.05 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.5,
                 delay: i * 0.08,
@@ -139,8 +137,7 @@ const ForWhom = () => {
         {/* Closing statement for "pre koho" */}
         <motion.p
           initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-center text-foreground/75 text-[0.875rem] italic max-w-2xl mx-auto mb-20"
         >
@@ -150,8 +147,7 @@ const ForWhom = () => {
         {/* "Pre koho to nie je" panel */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-3xl mx-auto"
         >

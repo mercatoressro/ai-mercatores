@@ -117,8 +117,7 @@ const BlockCard = ({
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.05 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{
         duration: 0.55,
         delay: index * 0.07,
@@ -230,8 +229,7 @@ const HundredChanges = () => {
         {/* ═══ A. HEADER ═══ */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-8"
         >
@@ -259,8 +257,7 @@ const HundredChanges = () => {
         {/* Glow divider */}
         <motion.div
           initial={{ opacity: 0, scaleX: 0.3 }}
-          whileInView={{ opacity: 1, scaleX: 1 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, scaleX: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-md mx-auto mb-16 md:mb-20"
         >
@@ -298,8 +295,7 @@ const HundredChanges = () => {
         {/* ═══ C. CLOSING STATEMENT ═══ */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-3xl mx-auto mb-14 md:mb-16"
         >
@@ -323,8 +319,7 @@ const HundredChanges = () => {
         {/* ═══ D. CTA BOX ═══ */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="max-w-3xl mx-auto"
         >
