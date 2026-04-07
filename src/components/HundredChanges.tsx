@@ -196,11 +196,13 @@ const HundredChanges = () => {
         <img
           src={cropNetwork}
           alt=""
+          loading="lazy"
           className="absolute inset-0 w-full h-full object-cover opacity-[0.15] mix-blend-luminosity"
         />
         <img
           src={cropDashboard}
           alt=""
+          loading="lazy"
           className="absolute inset-0 w-full h-full object-cover opacity-[0.06] mix-blend-overlay"
         />
         <div className="absolute inset-0 bg-[hsl(225_30%_2.5%/0.86)]" />
