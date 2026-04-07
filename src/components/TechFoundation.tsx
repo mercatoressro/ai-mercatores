@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import logoGHL from "@/assets/logo-gohighlevel.png";
 import logoOpenClaw from "@/assets/logo-openclaw.png";
@@ -35,11 +34,7 @@ const TechFoundation = () => {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+        <div
           className="flex justify-center mb-6"
         >
           <Badge
@@ -48,45 +43,33 @@ const TechFoundation = () => {
           >
             Technologický základ
           </Badge>
-        </motion.div>
+        </div>
 
         {/* Headline */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+        <h2
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 font-display"
         >
           Technologický základ,{" "}
           <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             na ktorom staviame
           </span>
-        </motion.h2>
+        </h2>
 
         {/* Intro text */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+        <p
           className="text-muted-foreground text-base md:text-lg text-center max-w-3xl mx-auto mb-16 leading-relaxed"
         >
           AI transformácia firmy nestojí na jednom nástroji. Stojí na správne navrhnutej
           kombinácii platforiem, workflow a riadiacej logiky. Preto pracujeme s riešeniami,
           ktoré umožňujú prepojiť obchod, marketing, automatizáciu aj operatívu do jedného
           funkčného systému.
-        </motion.p>
+        </p>
 
         {/* Platform Cards */}
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-16">
           {platforms.map((platform, index) => (
-            <motion.div
+            <div
               key={platform.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 + index * 0.15 }}
               className="group"
             >
               <div
@@ -119,16 +102,12 @@ const TechFoundation = () => {
                   {platform.description}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Closing block */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+        <div
           className="max-w-3xl mx-auto text-center mb-12"
         >
           <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-4 font-display">
@@ -139,21 +118,17 @@ const TechFoundation = () => {
             prepájame ich s procesmi firmy a spravujeme ich tak, aby prinášali reálny výkon
             — v obchode, marketingu aj operatíve.
           </p>
-        </motion.div>
+        </div>
 
         {/* Closing statement */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+        <div
           className="text-center"
         >
           <p className="text-muted-foreground/70 text-sm md:text-base italic max-w-2xl mx-auto border-t border-border/30 pt-8">
             Nástroje samy osebe firmu nezmenia. Rozhoduje to, ako sú zapojené do reálneho
             fungovania firmy.
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

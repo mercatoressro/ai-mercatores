@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { TrendingDown, Target, Settings } from "lucide-react";
 import bgDashboard from "@/assets/bg-dashboard.jpg";
 
@@ -45,13 +44,7 @@ const PainPoints = () => {
       <div className="absolute inset-0 dot-pattern opacity-[0.06] pointer-events-none" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-20"
-        >
+        <div className="text-center mb-20">
           <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary font-mono font-medium mb-4">Diagnostika</span>
           <h2 className="font-display text-section mb-5 text-white">
             Kde firmy <span className="gradient-text-hero">strácajú výkon</span>
@@ -59,17 +52,11 @@ const PainPoints = () => {
           <p className="text-foreground/80 max-w-lg mx-auto text-base leading-relaxed">
             Tri oblasti, kde bez systému a AI vzniká najväčší chaos a straty.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
-          {cards.map((card, i) => (
-            <motion.div
-              key={card.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.05 }}
-              transition={{ duration: 0.6, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-            >
+          {cards.map((card) => (
+            <div key={card.title}>
               <div className="gradient-border-card group h-full">
                 <div className="gradient-border-inner p-7 h-full">
                   <div className="icon-container w-12 h-12 flex items-center justify-center mb-6">
@@ -86,7 +73,7 @@ const PainPoints = () => {
                   </ul>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

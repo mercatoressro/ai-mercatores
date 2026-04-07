@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
@@ -72,11 +71,7 @@ const FAQSection = () => {
         <div className="absolute inset-0 bg-background/85" />
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="text-center mb-20"
         >
           <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary font-mono font-medium mb-4">
@@ -89,13 +84,9 @@ const FAQSection = () => {
           <p className="text-foreground/80 max-w-lg mx-auto text-base leading-relaxed">
             Odpovede na to, čo nás klienti pýtajú najčastejšie pred spoluprácou.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="max-w-3xl mx-auto"
         >
           <Accordion type="single" collapsible className="space-y-3">
@@ -114,18 +105,14 @@ const FAQSection = () => {
               </AccordionItem>
             ))}
           </Accordion>
-        </motion.div>
+        </div>
 
         {/* Transition text */}
-        <motion.p
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+        <p
           className="text-center text-foreground/75 text-[0.875rem] mt-12 max-w-xl mx-auto"
         >
           Ak máte otázky špecifické pre vašu firmu, najrýchlejšie ich zodpovie úvodný AI audit.
-        </motion.p>
+        </p>
       </div>
     </section>
   );

@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import {
   Zap,
   Clock,
@@ -65,11 +64,7 @@ const Impact = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="text-center mb-20"
         >
           <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary font-mono font-medium mb-4">
@@ -82,17 +77,13 @@ const Impact = () => {
           <p className="text-foreground/80 max-w-xl mx-auto text-base leading-relaxed">
             Dopad nie je mágia technológie. Je to výsledok lepšie navrhnutého a riadeného systému.
           </p>
-        </motion.div>
+        </div>
 
         {/* Impact cards grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
           {impacts.map((item, i) => (
-            <motion.div
+            <div
               key={item.title}
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.05 }}
-              transition={{
                 duration: 0.5,
                 delay: i * 0.06,
                 ease: [0.22, 1, 0.36, 1],
@@ -113,23 +104,19 @@ const Impact = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Closing statement */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+        <div
           className="text-center mt-16 max-w-2xl mx-auto"
         >
           <div className="h-px w-16 mx-auto bg-gradient-to-r from-transparent via-primary/30 to-transparent mb-8" />
           <p className="text-foreground/85 text-[0.9375rem] leading-relaxed italic">
             „Keď je AI správne navrhnutá a riadená, nevytvára ďalší nástroj. Odstraňuje zbytočné trenie vo firme."
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Search, PenTool, Rocket, Users, BarChart3, ArrowRight } from "lucide-react";
 import cropOperations from "@/assets/crop-operations.jpg";
 
@@ -44,11 +43,7 @@ const HowItWorks = () => {
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        <div
           className="text-center mb-20"
         >
           <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary font-mono font-medium mb-4">
@@ -61,17 +56,15 @@ const HowItWorks = () => {
           <p className="text-foreground/80 max-w-lg mx-auto text-base leading-relaxed">
             Päť krokov transformácie. Žiadne experimenty. Riadený systém.
           </p>
-        </motion.div>
+        </div>
 
         {/* Process nodes */}
         <div className="relative max-w-4xl mx-auto">
           {/* Desktop: horizontal connector line */}
           <div className="hidden lg:block absolute top-[3.25rem] left-[10%] right-[10%] h-px">
             <div className="w-full h-full bg-gradient-to-r from-primary/10 via-primary/25 to-primary/10" />
-            <motion.div
+            <div
               className="absolute top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary/60"
-              animate={{ left: ["0%", "100%"] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
               style={{ filter: "blur(0.5px)" }}
             />
           </div>
@@ -79,12 +72,8 @@ const HowItWorks = () => {
           {/* Steps grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-4">
             {steps.map((step, i) => (
-              <motion.div
+              <div
                 key={step.num}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.05 }}
-                transition={{
                   duration: 0.5,
                   delay: i * 0.08,
                   ease: [0.22, 1, 0.36, 1],
@@ -129,17 +118,13 @@ const HowItWorks = () => {
                     <ArrowRight size={14} className="text-primary/30" />
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Closing statement */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.05 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+        <div
           className="text-center mt-16 max-w-2xl mx-auto"
         >
           <div className="glass-card-static p-6 md:p-8">
@@ -151,7 +136,7 @@ const HowItWorks = () => {
               "
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
