@@ -51,6 +51,19 @@ const faqs = [
 ];
 
 const FAQSection = () => {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  };
+
   return (
     <section id="faq" className="relative py-28 md:py-36 section-glow">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
