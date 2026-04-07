@@ -97,10 +97,6 @@ const Solutions = () => {
           {pillars.map((p, i) => (
             <div
               key={p.title}
-                duration: 0.6,
-                delay: i * 0.1,
-                ease: [0.22, 1, 0.36, 1],
-              }}
             >
               <div className="gradient-border-card group h-full">
                 <div className="gradient-border-inner p-7 lg:p-8 h-full relative overflow-hidden">

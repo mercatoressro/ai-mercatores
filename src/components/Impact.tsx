@@ -84,10 +84,6 @@ const Impact = () => {
           {impacts.map((item, i) => (
             <div
               key={item.title}
-                duration: 0.5,
-                delay: i * 0.06,
-                ease: [0.22, 1, 0.36, 1],
-              }}
             >
               <div className="gradient-border-card group h-full">
                 <div className="gradient-border-inner p-6 h-full relative overflow-hidden">
