@@ -46,7 +46,7 @@ const PainPoints = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
           <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary font-mono font-medium mb-4">Diagnostika</span>
-          <h2 className="font-display text-section mb-5 text-white">
+          <h2 className="font-display text-section mb-4 text-white">
             Kde firmy <span className="gradient-text-hero">strácajú výkon</span>
           </h2>
           <p className="text-foreground/80 max-w-lg mx-auto text-base leading-relaxed">

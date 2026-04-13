@@ -23,7 +23,7 @@ const Philosophy = () => {
         <div
           className="max-w-3xl mx-auto text-center"
         >
-          <span className="inline-block text-[10px] uppercase tracking-[0.3em] text-primary font-mono font-medium mb-6">Filozofia</span>
+          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary font-mono font-medium mb-4">Filozofia</span>
 
           <h2 className="font-display text-section mb-14 leading-[1.15] text-white">
             ai.mercatores.sk premieňa AI na{" "}
