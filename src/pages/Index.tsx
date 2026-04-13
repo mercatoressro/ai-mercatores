@@ -23,6 +23,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import bgMeeting from "@/assets/bg-meeting.jpg";
 import bgDashboard from "@/assets/bg-dashboard.jpg";
+import logoGHL from "@/assets/logo-gohighlevel.png";
+import logoOpenClaw from "@/assets/logo-openclaw.png";
+import logoOpenAI from "@/assets/logo-openai.png";
 
 const Index = () => {
   return (
@@ -111,14 +114,20 @@ const Index = () => {
             <p className="text-center text-sm text-muted-foreground uppercase tracking-widest font-mono mb-10">
               Dôverujú nám:
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-12 opacity-50">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <div
-                  key={i}
-                  className="w-28 h-10 rounded bg-foreground/5 flex items-center justify-center text-xs text-foreground/30 font-mono"
-                >
-                  Partner {i}
-                </div>
+            <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
+              {[
+                { src: logoGHL, alt: "GoHighLevel", width: 140 },
+                { src: logoOpenClaw, alt: "OpenClaw", width: 130 },
+                { src: logoOpenAI, alt: "OpenAI", width: 120 },
+              ].map((logo) => (
+                <img
+                  key={logo.alt}
+                  src={logo.src}
+                  alt={logo.alt}
+                  loading="lazy"
+                  className="h-10 w-auto object-contain opacity-60 hover:opacity-90 transition-opacity duration-300 brightness-0 invert"
+                  style={{ maxWidth: logo.width }}
+                />
               ))}
             </div>
           </div>
