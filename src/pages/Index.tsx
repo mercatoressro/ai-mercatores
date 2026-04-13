@@ -52,12 +52,12 @@ const Index = () => {
                   Obchodná architektúra Mercatores · AI vrstva pre výkon a riadenie
                 </div>
 
-                <h1 className="font-display text-hero mb-6 text-foreground leading-[1.08]">
-                  Pomáhame firmám rásť cez obchodný systém, AI nástroje a&nbsp;exekúciu v&nbsp;praxi.
+                <h1 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] mb-5 text-foreground leading-[1.12]">
+                  Pomáhame firmám rásť cez AI&nbsp;nástroje a&nbsp;obchodný systém.
                 </h1>
 
-                <p className="text-[1.05rem] text-muted-foreground leading-relaxed max-w-xl mb-8">
-                  Navrhneme vám funkčný obchodný model, nasadíme AI do obchodu, marketingu a operatívy a pomôžeme vám to celé reálne uviesť do praxe. Od stratégie až po riadenie výkonu.
+                <p className="text-[0.95rem] text-muted-foreground leading-relaxed max-w-xl mb-8">
+                  Navrhneme obchodný model, nasadíme AI do procesov a pomôžeme vám to reálne zaviesť do praxe. Stratégia, implementácia, riadenie výkonu.
                 </p>
 
                 <div className="flex flex-wrap gap-3 mb-5">
