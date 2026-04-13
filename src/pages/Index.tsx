@@ -1,13 +1,14 @@
 import {
+  BarChart3,
+  GitBranch,
   Users,
-  Brain,
-  Heart,
-  Briefcase,
-  Target,
-  GraduationCap,
   Settings,
-  FileText,
+  Target,
   ArrowRight,
+  CheckCircle2,
+  Layers,
+  LineChart,
+  Bot,
 } from "lucide-react";
 import {
   Accordion,
@@ -17,59 +18,52 @@ import {
 } from "@/components/ui/accordion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import heroImage from "@/assets/hero-ai-room.jpg";
 import photoAi1 from "@/assets/photo-ai-1.png";
 import photoAi2 from "@/assets/photo-ai-2.png";
 import photoAi3 from "@/assets/photo-ai-3.png";
 import photoAi4 from "@/assets/photo-ai-4.png";
-import logoGHL from "@/assets/logo-gohighlevel.png";
-import logoOpenClaw from "@/assets/logo-openclaw.png";
-import logoOpenAI from "@/assets/logo-openai.png";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Header />
       <main>
-        {/* Hero Section */}
-        <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
+        {/* ═══════ HERO ═══════ */}
+        <section className="relative pt-28 pb-20 md:pt-36 md:pb-28">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              {/* Left — text */}
-              <div className="animate-[heroFadeUp_0.7s_ease-out]">
-                <h1 className="font-display text-hero mb-8 text-foreground">
-                  Posúvame váš B2B obchod vpred.{" "}
-                  <span className="gradient-text-primary">S podporou AI.</span>
+              <div className="animate-[heroFadeUp_0.6s_ease-out]">
+                <div className="text-[0.7rem] uppercase tracking-[0.15em] text-muted-foreground font-medium mb-6">
+                  Mercatores · AI & Growth Division
+                </div>
+                <h1 className="font-display text-hero mb-6 text-foreground">
+                  Obchodný systém, AI nástroje a exekúcia v praxi.
                 </h1>
-
                 <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mb-10">
-                  V Mercatores sme profesionáli na B2B predaj a outsourcing obchodu.
-                  Kombinujeme dlhoročné obchodné skúsenosti s inováciami a umelou
-                  inteligenciou pre dosiahnutie maximálnych výsledkov.
+                  Pomáhame firmám rásť cez funkčný obchodný systém, nasadenie AI agentov do procesov a riadenie výkonu. Nie teória — implementácia, podpora a merateľné výsledky.
                 </p>
-
-                <a
-                  href="#sluzby"
-                  className="btn-primary inline-flex items-center gap-2 px-8 py-4 text-sm font-bold uppercase tracking-wider"
-                >
-                  <span>NAŠE SLUŽBY</span>
-                  <ArrowRight size={16} />
-                </a>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href="#kontakt"
+                    className="btn-primary inline-flex items-center gap-2 px-7 py-3.5 text-sm"
+                  >
+                    Dohodnúť konzultáciu
+                    <ArrowRight size={16} />
+                  </a>
+                  <a
+                    href="#system"
+                    className="btn-secondary inline-flex items-center gap-2 px-7 py-3.5 text-sm"
+                  >
+                    Pozrieť riešenie
+                  </a>
+                </div>
               </div>
 
-              {/* Right — hero image with gradient border */}
-              <div className="relative flex justify-center lg:justify-end animate-[heroFadeUp_0.7s_ease-out_0.2s_both]">
-                {/* Gradient circle behind image */}
-                <div
-                  className="absolute -inset-8 rounded-full opacity-60 blur-2xl"
-                  style={{
-                    background: "conic-gradient(from 180deg, hsl(186 100% 50%), hsl(262 83% 58%), hsl(186 100% 50%))",
-                  }}
-                />
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl max-w-[560px] w-full">
+              <div className="relative flex justify-center lg:justify-end animate-[heroFadeUp_0.6s_ease-out_0.15s_both]">
+                <div className="relative rounded-xl overflow-hidden max-w-[520px] w-full border border-border">
                   <img
                     src={photoAi1}
-                    alt="AI boardroom s holografickými displejmi"
+                    alt="Executive AI control room"
                     className="w-full h-auto object-cover"
                     fetchPriority="high"
                   />
@@ -79,310 +73,280 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Banner Section */}
-        <section className="relative py-12 overflow-hidden bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5">
+        {/* ═══════ ČO RIEŠIME — Systém ═══════ */}
+        <section id="system" className="py-20 md:py-28 section-elevated">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <Brain size={24} className="text-primary" />
-                </div>
-                <p className="text-lg md:text-xl font-display font-bold text-foreground max-w-lg">
-                  Zistite, ako môžeme zvýšiť vaše tržby vďaka modernému prístupu k obchodu
-                </p>
-              </div>
-              <a
-                href="#kontakt"
-                className="btn-primary inline-flex items-center gap-2 px-8 py-4 text-sm font-bold uppercase tracking-wider whitespace-nowrap"
-              >
-                BEZPLATNÁ KONZULTÁCIA
-                <ArrowRight size={16} />
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Trust Section */}
-        <section className="py-14 border-y border-border">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-center text-sm text-muted-foreground uppercase tracking-widest font-mono mb-10">
-              Dôverujú nám:
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-              {[
-                { src: logoGHL, alt: "GoHighLevel", width: 140 },
-                { src: logoOpenClaw, alt: "OpenClaw", width: 130 },
-                { src: logoOpenAI, alt: "OpenAI", width: 120 },
-              ].map((logo) => (
-                <img
-                  key={logo.alt}
-                  src={logo.src}
-                  alt={logo.alt}
-                  loading="lazy"
-                  className="h-10 w-auto object-contain opacity-40 hover:opacity-70 transition-opacity duration-300 grayscale"
-                  style={{ maxWidth: logo.width }}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* About Section */}
-        <section id="o-nas" className="relative py-24 md:py-32">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Quote */}
-            <div className="max-w-3xl mx-auto mb-20">
-              <div className="glass-card-static p-10 md:p-14 text-center">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-8">
-                  <Heart size={24} className="text-primary" />
-                </div>
-                <blockquote className="text-xl md:text-2xl font-display font-bold text-foreground leading-relaxed mb-6">
-                  "Moderný obchod už nie je len o telefonátoch. Je o dátach, automatizácii a budovaní dlhodobých vzťahov."
-                </blockquote>
-                <p className="text-sm text-muted-foreground">— Tím Mercatores</p>
-              </div>
-            </div>
-
-            {/* Description */}
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-display text-section mb-6 text-foreground">
-                Sme obchodníci s <span className="gradient-text-primary">vášňou pre inovácie</span>
+            <div className="max-w-3xl mx-auto text-center mb-16">
+              <h2 className="font-display text-section mb-5 text-foreground">
+                Čo dodávame
               </h2>
-              <p className="text-muted-foreground text-base leading-relaxed mb-6">
-                Jadrom DNA spoločnosti Mercatores je B2B obchod. Pomáhame firmám rásť, získavať nových klientov a budovať silné obchodné oddelenia. Naše skúsenosti z terénu nám umožňujú prinášať reálne výsledky, nie len teóriu.
+              <p className="text-muted-foreground text-base leading-relaxed">
+                Jeden ucelený systém — od obchodnej stratégie cez CRM a AI agentov až po reporting a riadenie výkonu. Nie katalóg služieb, ale funkčný celok.
               </p>
-              <p className="text-muted-foreground text-base leading-relaxed mb-10">
-                Uvedomujeme si však, že obchod sa vyvíja. Preto do našich procesov aktívne zapájame umelú inteligenciu. AI nám neslúži ako náhrada za ľudský kontakt, ale ako silný nástroj na automatizáciu rutiny, presnejšie cielenie a analytiku, vďaka čomu predávame efektívnejšie.
-              </p>
-              <a href="#sluzby" className="btn-primary inline-flex items-center gap-2 px-8 py-3 text-sm font-bold uppercase tracking-wider">
-                <span>VIAC O NÁS</span>
-                <ArrowRight size={16} />
-              </a>
             </div>
-          </div>
-        </section>
 
-        {/* Why Us Section */}
-        <section className="relative py-24 md:py-32 section-elevated">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-display text-section mb-16 text-center text-foreground">
-              Prečo práve <span className="gradient-text-primary">my</span>
-            </h2>
-
-            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
               {[
-                {
-                  icon: Brain,
-                  image: photoAi2,
-                  title: "Technologická expertíza",
-                  desc: "Sme špecialisti na implementáciu AI riešení. Pomohli sme už desiatkam firiem zautomatizovať ich procesy a zaviesť moderné technológie do každodennej praxe.",
-                },
                 {
                   icon: Target,
-                  image: photoAi3,
-                  title: "Neustála inovácia",
-                  desc: "Sledujeme najnovšie trendy v oblasti umelej inteligencie a strojového učenia. Všetky nové poznatky okamžite testujeme a prinášame priamo do vašej firmy.",
+                  title: "Obchodný systém",
+                  desc: "Pipeline, CRM, follow-up a štruktúra obchodu. Nastavíme proces, ktorý tím dokáže opakovať a škálovať.",
+                },
+                {
+                  icon: Bot,
+                  title: "AI agenti a automatizácie",
+                  desc: "Nasadíme AI agentov na rutinnú prácu — kvalifikácia leadov, príprava ponúk, interná komunikácia, zákaznícka podpora.",
+                },
+                {
+                  icon: LineChart,
+                  title: "Reporting a riadenie výkonu",
+                  desc: "Executive prehľad v reálnom čase. KPI, pipeline stav, konverzie a výkon tímu na jednom mieste.",
                 },
                 {
                   icon: Settings,
-                  image: photoAi4,
-                  title: "Hladká integrácia",
-                  desc: "AI nevnímame ako izolovaný nástroj, ale ako súčasť celého ekosystému firmy. Zabezpečujeme plynulú integráciu s vašimi existujúcimi systémami a procesmi.",
-                },
-              ].map((item) => (
-                <div key={item.title} className="glass-card p-0 group overflow-hidden">
-                  <div className="h-40 overflow-hidden">
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  </div>
-                  <div className="p-8">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-                      <item.icon size={24} className="text-primary" />
-                    </div>
-                    <h3 className="font-display text-lg font-bold text-foreground mb-3">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section id="sluzby" className="relative py-24 md:py-32">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 gap-4">
-              <h2 className="font-display text-section text-foreground">
-                Čomu sa <span className="gradient-text-primary">venujeme</span>
-              </h2>
-              <a href="#kontakt" className="text-sm text-primary hover:text-primary/80 transition-colors font-semibold uppercase tracking-wider">
-                VŠETKY SLUŽBY →
-              </a>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: Brain,
-                  title: "AI Audit a Stratégia",
-                  desc: "Zanalyzujeme vaše firemné procesy a navrhneme konkrétne oblasti, kde vám umelá inteligencia môže ušetriť čas a peniaze.",
-                },
-                {
-                  icon: Settings,
-                  title: "Automatizácia procesov",
-                  desc: "Odstránime manuálnu prácu. Prepojíme vaše systémy a vytvoríme inteligentné automatizácie, ktoré pracujú 24/7 bez chýb.",
+                  title: "Integrácia do existujúcich nástrojov",
+                  desc: "Prepojenie s vašim CRM, e-mailom, kalendárom a internými systémami. Žiadne duplikovanie práce.",
                 },
                 {
                   icon: Users,
-                  title: "AI Asistenti a Chatboti",
-                  desc: "Vytvoríme vám interných asistentov vyškolených na vašich dátach, alebo inteligentných chatbotov pre zákaznícku podporu.",
+                  title: "Podpora tímu a onboarding",
+                  desc: "Zaškolíme tím na nové nástroje a procesy. Dodáme dokumentáciu a priebežnú podporu.",
                 },
                 {
-                  icon: Target,
-                  title: "AI v Obchode a Marketingu",
-                  desc: "Implementujeme nástroje pre personalizáciu oslovovania, analýzu hovorov a automatické generovanie obsahu.",
+                  icon: Layers,
+                  title: "AI CEO — rozhodovacia podpora",
+                  desc: "Koncept executive reportingu: prioritizácia, kontrola pipeline, workflow prehľad a podpora rozhodovania pre vedenie firmy.",
                 },
-                {
-                  icon: GraduationCap,
-                  title: "Školenia pre AI transformáciu",
-                  desc: "Naučíme váš tím efektívne využívať ChatGPT, Copilot a ďalšie nástroje v ich každodennej práci.",
-                },
-                {
-                  icon: FileText,
-                  title: "Analýza dát pomocou AI",
-                  desc: "Získajte hlboké insighty z vašich firemných dát pomocou pokročilých modelov strojového učenia.",
-                },
-              ].map((service) => (
-                <div key={service.title} className="glass-card p-8 group cursor-pointer">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/15 transition-colors">
-                    <service.icon size={24} className="text-primary" />
+              ].map((item) => (
+                <div key={item.title} className="glass-card p-7">
+                  <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center mb-5">
+                    <item.icon size={20} className="text-primary" />
                   </div>
-                  <div className="h-[2px] w-12 bg-gradient-to-r from-primary/30 to-accent/30 mb-5 rounded-full" />
-                  <h3 className="font-display text-lg font-bold text-foreground mb-3">{service.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
+                  <h3 className="font-display text-base font-bold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Results Section */}
-        <section id="referencie" className="relative py-24 md:py-32 section-elevated">
+        {/* ═══════ AKO TO FUNGUJE ═══════ */}
+        <section id="proces" className="py-20 md:py-28">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-display text-section mb-16 text-center text-foreground">
-              Výsledky našej <span className="gradient-text-primary">práce</span>
-            </h2>
+            <div className="max-w-3xl mx-auto text-center mb-16">
+              <h2 className="font-display text-section mb-5 text-foreground">
+                Ako to funguje
+              </h2>
+              <p className="text-muted-foreground text-base leading-relaxed">
+                Štyri kroky od diagnostiky po riadený výkon. Každý krok má jasný výstup.
+              </p>
+            </div>
 
-            <div className="max-w-2xl mx-auto">
-              <div className="glass-card-static p-10 md:p-14">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <Briefcase size={24} className="text-primary" />
-                  </div>
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-primary font-mono font-semibold">Certifikovaný partner</span>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
+              {[
+                {
+                  num: "01",
+                  title: "Diagnostika",
+                  desc: "Zmapujeme obchodné a prevádzkové procesy. Identifikujeme, kde vznikajú straty a kde má AI reálny prínos.",
+                },
+                {
+                  num: "02",
+                  title: "Návrh systému",
+                  desc: "Navrhneme obchodný systém, AI workflow a integrácie. Definujeme KPI a merateľné výstupy.",
+                },
+                {
+                  num: "03",
+                  title: "Implementácia",
+                  desc: "Nasadíme CRM, AI agentov a automatizácie. Prepojíme s existujúcimi nástrojmi a zaškolíme tím.",
+                },
+                {
+                  num: "04",
+                  title: "Správa a optimalizácia",
+                  desc: "Priebežne sledujeme výkon, upravujeme logiku a optimalizujeme dopad. Dlhodobá podpora.",
+                },
+              ].map((step) => (
+                <div key={step.num} className="glass-card-static p-7 relative">
+                  <span className="text-[2rem] font-display font-bold text-primary/10 absolute top-5 right-6">
+                    {step.num}
+                  </span>
+                  <h3 className="font-display text-base font-bold text-foreground mb-2 mt-1">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
                 </div>
-                <h3 className="font-display text-2xl font-bold text-foreground mb-4">
-                  Oficiálny partner OpenAI
-                </h3>
-                <p className="text-muted-foreground leading-relaxed mb-8">
-                  Sme certifikovaným integračným partnerom a pomáhame firmám bezpečne nasadzovať veľké jazykové modely (LLMs) do ich internej infraštruktúry.
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════ PREČO MERCATORES ═══════ */}
+        <section className="py-20 md:py-28 section-elevated">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-5xl mx-auto">
+              <div>
+                <h2 className="font-display text-section mb-6 text-foreground">
+                  Prečo Mercatores
+                </h2>
+                <p className="text-muted-foreground text-base leading-relaxed mb-8">
+                  Nie sme AI agentúra. Sme obchodníci, ktorí rozumejú procesom, riadeniu a implementácii. AI je nástroj výkonu — nie marketingová ozdoba.
                 </p>
-                <a href="#kontakt" className="text-sm text-primary hover:text-primary/80 transition-colors font-semibold uppercase tracking-wider">
-                  POZRIEŤ REFERENCIE →
-                </a>
+                <ul className="space-y-4">
+                  {[
+                    "Dlhoročné skúsenosti v B2B obchode a riadení tímov",
+                    "Vlastná metodika nasadenia AI do obchodných procesov",
+                    "Dodávame systém, nie izolované nástroje",
+                    "Dlhodobá podpora a priebežná optimalizácia",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <CheckCircle2 size={18} className="text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <img src={photoAi2} alt="Obchodný tím" className="rounded-lg w-full h-44 object-cover border border-border" />
+                <img src={photoAi3} alt="AI implementácia" className="rounded-lg w-full h-44 object-cover border border-border mt-6" />
+                <img src={photoAi4} alt="Riadenie výkonu" className="rounded-lg w-full h-44 object-cover border border-border" />
+                <div className="rounded-lg w-full h-44 bg-primary/5 border border-border flex items-center justify-center mt-6 p-6">
+                  <div className="text-center">
+                    <BarChart3 size={28} className="text-primary mx-auto mb-2" />
+                    <span className="text-xs text-muted-foreground font-medium">Merateľný dopad</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section id="faq" className="relative py-24 md:py-32">
+        {/* ═══════ PRE KOHO ═══════ */}
+        <section id="pre-koho" className="py-20 md:py-28">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+            <div className="max-w-3xl mx-auto text-center mb-16">
               <h2 className="font-display text-section mb-5 text-foreground">
-                Na čo sa nás najčastejšie <span className="gradient-text-primary">pýtate</span>
+                Pre koho je to
               </h2>
-              <p className="text-muted-foreground max-w-lg mx-auto text-base leading-relaxed">
-                Nenašli ste, čo ste hľadali? Je to úplne v poriadku. Vieme, že každá firma je iná, má svoje vlastné výzvy a ciele.
+              <p className="text-muted-foreground text-base leading-relaxed">
+                Spolupracujeme s firmami, ktoré chcú riadený rast — nie experimenty.
               </p>
             </div>
 
-            <div className="max-w-3xl mx-auto mb-12">
-              <Accordion type="single" collapsible className="space-y-3">
+            <div className="grid md:grid-cols-2 gap-5 max-w-3xl mx-auto">
+              {[
+                {
+                  icon: GitBranch,
+                  title: "Firmy bez funkčného obchodného systému",
+                  desc: "Máte obchodníkov, ale chýba pipeline, follow-up a reporting. Výkon nie je riadený, ale náhodný.",
+                },
+                {
+                  icon: Settings,
+                  title: "Firmy, ktoré chcú nasadiť AI do procesov",
+                  desc: "Viete, že AI môže pomôcť, ale neviete kde začať. Potrebujete partnera na implementáciu, nie prezentáciu.",
+                },
+                {
+                  icon: BarChart3,
+                  title: "Vedenie, ktoré chce kontrolu nad výkonom",
+                  desc: "Chcete executive prehľad, funkčné KPI a rozhodovaciu podporu — nie ďalšie tabuľky v Exceli.",
+                },
+                {
+                  icon: Users,
+                  title: "Tímy, ktoré strácajú čas na rutine",
+                  desc: "Opakujúce sa úlohy, manuálne procesy a neefektívna komunikácia. AI agenti to vyriešia.",
+                },
+              ].map((item) => (
+                <div key={item.title} className="glass-card p-7">
+                  <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center mb-4">
+                    <item.icon size={20} className="text-primary" />
+                  </div>
+                  <h3 className="font-display text-base font-bold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════ FAQ ═══════ */}
+        <section id="faq" className="py-20 md:py-28 section-elevated">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-14">
+              <h2 className="font-display text-section mb-5 text-foreground">
+                Časté otázky
+              </h2>
+            </div>
+
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-2">
                 {[
                   {
-                    q: "Je AI bezpečná pre naše firemné dáta?",
-                    a: "Absolútne. Pri implementácii využívame enterprise riešenia (napr. Azure OpenAI alebo privátne modely), ktoré garantujú, že vaše dáta sa nepoužijú na trénovanie verejných modelov a zostanú plne pod vašou kontrolou.",
+                    q: "Čo presne dostaneme?",
+                    a: "Funkčný obchodný systém prispôsobený vašej firme — CRM nastavenie, AI agentov, automatizácie, reporting a dlhodobú podporu. Rozsah závisí od diagnostiky.",
                   },
                   {
-                    q: "Nahradí AI našich zamestnancov?",
-                    a: "Našou filozofiou je augmentácia, nie nahradzovanie. AI preberá rutinnú a opakujúcu sa prácu, čím uvoľňuje ruky vašim ľuďom, aby sa mohli venovať kreatívnej a strategickej činnosti.",
+                    q: "Nahradí AI našich ľudí?",
+                    a: "Nie. AI preberá rutinnú prácu — kvalifikáciu, prípravu podkladov, follow-up. Ľudia sa vďaka tomu sústredia na uzatváranie obchodov a strategické rozhodnutia.",
                   },
                   {
-                    q: "Ako prebieha začiatok spolupráce?",
-                    a: "Všetko začína bezplatným AI auditom. Zanalyzujeme vaše procesy a identifikujeme príležitosti pre automatizáciu. Následne navrhneme pilotný projekt s jasne merateľnou návratnosťou investície (ROI).",
+                    q: "Ako rýchlo uvidíme výsledky?",
+                    a: "Prvé nasadenia sú funkčné do 2–4 týždňov. Komplexnejšie systémy do 2–3 mesiacov. Vždy začíname tým, čo prinesie najrýchlejší dopad.",
                   },
                   {
-                    q: "Ako rýchlo uvidím prvé výsledky?",
-                    a: "Pri pilotných projektoch vidíte výsledky zvyčajne do 2 až 4 týždňov. Komplexnejšie automatizácie procesov trvajú 2 až 3 mesiace.",
+                    q: "Potrebujeme vlastných IT ľudí?",
+                    a: "Nie. Dodávame riešenie na kľúč — návrh, implementáciu, zaškolenie aj priebežnú správu.",
                   },
                   {
-                    q: "Potrebujeme vo firme vlastných IT špecialistov?",
-                    a: "Nie. Dodávame riešenia na kľúč. Postaráme sa o vývoj, nasadenie, údržbu a taktiež zaškolíme vašich bežných zamestnancov.",
+                    q: "Čo je AI CEO?",
+                    a: "Koncept executive reportingu a rozhodovacej podpory. Automatizovaný prehľad pipeline, priorít, workflow stavu a KPI pre vedenie firmy. Nie náhrada človeka — nástroj pre rýchlejšie a presnejšie rozhodnutia.",
                   },
                   {
-                    q: "Koľko takáto implementácia stojí?",
-                    a: "Závisí to od rozsahu riešenia. Vždy ale začíname menším pilotným projektom, ktorý sa rýchlo zaplatí z ušetreného času a až následne škálujeme AI do ďalších oddelení.",
+                    q: "Ako začať spoluprácu?",
+                    a: "Úvodná konzultácia je bezplatná. Zmapujeme vaše procesy, identifikujeme príležitosti a navrhneme konkrétny plán s merateľným výstupom.",
                   },
                 ].map((faq, index) => (
                   <AccordionItem
                     key={index}
                     value={`faq-${index}`}
-                    className="glass-card-static px-7 border-none"
+                    className="glass-card-static px-6 border-none"
                   >
-                    <AccordionTrigger className="text-[0.9375rem] font-semibold text-foreground hover:text-primary transition-colors py-6 hover:no-underline gap-4 [&[data-state=open]]:text-primary">
+                    <AccordionTrigger className="text-[0.9375rem] font-semibold text-foreground hover:text-primary transition-colors py-5 hover:no-underline gap-4">
                       {faq.q}
                     </AccordionTrigger>
-                    <AccordionContent className="text-[0.9rem] text-muted-foreground pb-6 leading-relaxed">
+                    <AccordionContent className="text-sm text-muted-foreground pb-5 leading-relaxed">
                       {faq.a}
                     </AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
             </div>
-
-            <div className="text-center">
-              <a href="#kontakt" className="btn-primary inline-flex items-center gap-2 px-8 py-3 text-sm font-bold uppercase tracking-wider">
-                <span>KONTAKTUJTE NÁS</span>
-                <ArrowRight size={16} />
-              </a>
-            </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section id="kontakt" className="relative py-24 md:py-32 section-elevated">
+        {/* ═══════ CTA ═══════ */}
+        <section id="kontakt" className="py-20 md:py-28">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <div className="glass-card-static p-10 md:p-16 text-center relative overflow-hidden">
-                {/* Subtle gradient accent */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-primary rounded-t-lg" />
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-8">
-                  <Brain size={32} className="text-primary" />
-                </div>
-                <h2 className="font-display text-section mb-5 text-foreground">
-                  Neviete, kde začať <span className="gradient-text-primary">s AI?</span>
-                </h2>
-                <p className="text-muted-foreground text-base leading-relaxed max-w-xl mx-auto mb-10">
-                  Nechajte si spraviť bezplatný AI audit. Počas úvodnej konzultácie zistíme, aké procesy vo vašej firme sa dajú automatizovať a akú úsporu by vám to prinieslo.
-                </p>
+            <div className="max-w-2xl mx-auto text-center">
+              <h2 className="font-display text-section mb-5 text-foreground">
+                Zistite, kde vašej firme uniká výkon
+              </h2>
+              <p className="text-muted-foreground text-base leading-relaxed mb-10 max-w-xl mx-auto">
+                Počas úvodnej konzultácie zmapujeme vaše obchodné a prevádzkové procesy a identifikujeme konkrétne miesta, kde systém a AI prinesú najväčší efekt.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
                   href="mailto:ai@mercatores.sk"
-                  className="btn-primary inline-flex items-center gap-2 px-10 py-4 text-sm font-bold uppercase tracking-wider"
+                  className="btn-primary inline-flex items-center gap-2 px-8 py-4 text-sm"
                 >
-                  <span>AI AUDIT ZDARMA</span>
+                  Dohodnúť konzultáciu
                   <ArrowRight size={16} />
                 </a>
+                <a
+                  href="tel:+421905600095"
+                  className="btn-secondary inline-flex items-center gap-2 px-8 py-4 text-sm"
+                >
+                  +421 905 600 095
+                </a>
               </div>
+              <p className="text-xs text-muted-foreground mt-6">
+                Úvodná konzultácia je bezplatná a nezáväzná.
+              </p>
             </div>
           </div>
         </section>
