@@ -9,7 +9,7 @@ const thoughts = [
 
 const Philosophy = () => {
   return (
-    <section className="relative py-32 md:py-44 section-deep overflow-hidden">
+    <section className="relative py-24 md:py-32 section-deep overflow-hidden">
       {/* CROP 1 — Meeting / strategic discussion */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <img src={cropMeeting} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.18] mix-blend-luminosity" />
