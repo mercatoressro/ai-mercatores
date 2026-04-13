@@ -31,7 +31,7 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-[72px]">
           <a href="#" className="font-display font-bold text-[1.3rem] tracking-tight text-foreground">
-            mercatores
+            ai.mercatores<span className="text-primary">.sk</span>
           </a>
 
           <nav className="hidden lg:flex items-center gap-1">
