@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
           <div>
             <div className="font-display font-bold text-xl tracking-tight mb-4 text-foreground">
-              mercatores
+              ai.mercatores<span className="text-primary">.sk</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
               B2B obchod a AI transformácia pre firmy, ktoré chcú rásť.
