@@ -29,6 +29,7 @@ import {
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import heroDashboard from "@/assets/hero-dashboard.jpg";
+import aiBrainNetwork from "@/assets/ai-brain-network.jpg";
 
 const Index = () => {
   return (
@@ -39,7 +40,12 @@ const Index = () => {
             1. HERO
         ═══════════════════════════════════════════ */}
         <section className="relative pt-28 pb-16 md:pt-36 md:pb-24">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* AI Brain Network Background */}
+          <div className="absolute inset-0 z-0">
+            <img src={aiBrainNetwork} alt="" className="w-full h-full object-cover opacity-15" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+          </div>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="animate-[heroFadeUp_0.6s_ease-out]">
                 <div className="text-[0.65rem] uppercase tracking-[0.18em] text-muted-foreground font-medium mb-5">
