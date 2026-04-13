@@ -156,12 +156,12 @@ const BlockCard = ({
         </div>
 
         {/* Title */}
-        <h3 className="font-display font-bold text-[17px] text-white mb-2 leading-tight">
+        <h3 className="font-display font-bold text-base text-white mb-2 leading-tight">
           {block.title}
         </h3>
 
         {/* Desc */}
-        <p className="text-foreground/65 text-[14px] leading-relaxed mb-4">
+        <p className="text-foreground/65 text-sm leading-relaxed mb-4">
           {block.desc}
         </p>
 
@@ -174,7 +174,7 @@ const BlockCard = ({
                   isActive ? "bg-primary/80" : "bg-primary/30 group-hover:bg-primary/50"
                 }`}
               />
-              <span className="text-foreground/85 text-[13.5px] leading-[1.6]">
+              <span className="text-foreground/85 text-sm leading-relaxed">
                 {point}
               </span>
             </li>
@@ -232,13 +232,13 @@ const HundredChanges = () => {
             </span>
           </div>
 
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-6xl font-extrabold mb-7 leading-[1.08] text-white">
+          <h2 className="font-display text-section font-extrabold mb-7 text-white">
             <span className="text-primary">100</span> nevyhnutných zmien,
             <br className="hidden sm:block" />{" "}
             <span className="gradient-text-hero">ktoré menia fungovanie firiem</span>
           </h2>
 
-          <p className="text-foreground/80 max-w-2xl mx-auto text-lg leading-[1.75]">
+          <p className="text-foreground/80 max-w-2xl mx-auto text-base leading-relaxed">
             Svet sa nemení pomaly. Mení sa naraz. AI agenti prestávajú byť
             doplnkom a stávajú sa novou vrstvou riadenia, predaja, marketingu a
             operatívy.

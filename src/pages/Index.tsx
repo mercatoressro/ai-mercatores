@@ -105,7 +105,7 @@ const Index = () => {
                 Problém nie je, že firmám chýba AI.<br className="hidden sm:block" />
                 Problém je, že im chýba systém.
               </h2>
-              <p className="text-muted-foreground text-[0.95rem] leading-relaxed max-w-2xl mx-auto">
+              <p className="text-muted-foreground text-base leading-relaxed max-w-2xl mx-auto">
                 Väčšina firiem dnes skúša nástroje, automatizácie a AI bez toho, aby mala zvládnutý obchodný proces, ownership, reporting a spôsob riadenia. Výsledkom je viac chaosu, nie viac výkonu.
               </p>
             </div>
@@ -169,7 +169,7 @@ const Index = () => {
               <h2 className="font-display text-section mb-4 text-foreground">
                 Jedno riešenie. Tri vrstvy výkonu.
               </h2>
-              <p className="text-muted-foreground text-[0.95rem] leading-relaxed">
+              <p className="text-muted-foreground text-base leading-relaxed">
                 Nie tooly. Nie teória. Reálne nasadenie do fungovania firmy.
               </p>
             </div>
@@ -260,7 +260,7 @@ const Index = () => {
                 AI CEO nie je náhrada vedenia.<br className="hidden sm:block" />
                 Je to riadiaca vrstva pre lepšie rozhodovanie.
               </h2>
-              <p className="text-[0.95rem] leading-relaxed max-w-2xl mx-auto" style={{ color: "hsl(230 15% 65%)" }}>
+              <p className="text-base leading-relaxed max-w-2xl mx-auto" style={{ color: "hsl(230 15% 65%)" }}>
                 Firmám pomáhame navrhnúť koncept AI CEO ako manažérsku vrstvu, ktorá prepája dáta, reporting, priority, obchod, operatívu a interné workflow. Cieľom nie je nahradiť človeka vo vedení. Cieľom je dať CEO a manažmentu lepší prehľad, rýchlejšie rozhodovanie a vyššiu kontrolu.
               </p>
             </div>
