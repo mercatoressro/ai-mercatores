@@ -42,8 +42,8 @@ const Index = () => {
         <section className="relative pt-28 pb-16 md:pt-36 md:pb-24">
           {/* AI Brain Network Background */}
           <div className="absolute inset-0 z-0">
-            <img src={aiBrainNetwork} alt="" className="w-full h-full object-cover opacity-30" />
-            <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background" />
+            <img src={aiBrainNetwork} alt="" className="w-full h-full object-cover opacity-50" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/50 to-background" />
           </div>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
