@@ -3,10 +3,8 @@ import { ArrowRight, Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "Domov", href: "#" },
-  { label: "Riešenia", href: "#riesenia" },
-  { label: "Ako to funguje", href: "#ako-to-funguje" },
-  { label: "Pre koho", href: "#pre-koho" },
-  { label: "100 zmien", href: "#100-zmien" },
+  { label: "O nás", href: "#o-nas" },
+  { label: "Služby", href: "#sluzby" },
   { label: "FAQ", href: "#faq" },
   { label: "Kontakt", href: "#kontakt" },
 ];
@@ -55,7 +53,7 @@ const Header = () => {
               href="#kontakt"
               className="btn-primary inline-flex items-center gap-2 px-6 py-2.5 text-[0.8125rem]"
             >
-              <span>Dohodnúť AI audit</span>
+              <span>Bezplatná konzultácia</span>
               <ArrowRight size={14} />
             </a>
           </div>
@@ -88,7 +86,7 @@ const Header = () => {
                 onClick={() => setMobileOpen(false)}
                 className="btn-primary flex items-center justify-center gap-2 px-6 py-3 text-sm w-full"
               >
-                <span>Dohodnúť AI audit</span>
+                <span>Bezplatná konzultácia</span>
                 <ArrowRight size={14} />
               </a>
             </div>
