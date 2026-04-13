@@ -5,7 +5,8 @@ const navItems = [
   { label: "Domov", href: "#" },
   { label: "O nás", href: "#o-nas" },
   { label: "Služby", href: "#sluzby" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Referencie", href: "#referencie" },
+  { label: "Blog", href: "#blog" },
   { label: "Kontakt", href: "#kontakt" },
 ];
 
@@ -21,19 +22,16 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 animate-[slideDown_0.8s_ease-out] ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 animate-[slideDown_0.8s_ease-out] ${
         scrolled
-          ? "glass shadow-[0_4px_30px_-10px_hsl(200_100%_55%/0.08)]"
+          ? "bg-background/90 backdrop-blur-xl shadow-sm border-b border-border/50"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-[72px]">
-          <a href="#" className="font-display font-bold text-[1.15rem] tracking-tight relative group">
-            <span className="text-foreground">ai.</span>
-            <span className="gradient-text-primary">mercatores</span>
-            <span className="text-foreground/70">.sk</span>
-            <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary/40 transition-all duration-500 group-hover:w-full" />
+          <a href="#" className="font-display font-bold text-[1.3rem] tracking-tight text-foreground">
+            mercatores
           </a>
 
           <nav className="hidden lg:flex items-center gap-1">
@@ -41,7 +39,7 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="px-4 py-2 text-[0.8125rem] text-foreground/70 hover:text-foreground transition-colors duration-400 relative group rounded-lg hover:bg-muted/20"
+                className="px-4 py-2 text-[0.875rem] text-muted-foreground hover:text-primary transition-colors duration-300 rounded-lg"
               >
                 {item.label}
               </a>
@@ -51,10 +49,9 @@ const Header = () => {
           <div className="hidden lg:block">
             <a
               href="#kontakt"
-              className="btn-primary inline-flex items-center gap-2 px-6 py-2.5 text-[0.8125rem]"
+              className="btn-primary inline-flex items-center gap-2 px-6 py-2.5 text-[0.8125rem] font-bold uppercase tracking-wider"
             >
-              <span>Bezplatná konzultácia</span>
-              <ArrowRight size={14} />
+              <span>AI AUDIT ZDARMA</span>
             </a>
           </div>
 
@@ -68,14 +65,14 @@ const Header = () => {
       </div>
 
       {mobileOpen && (
-        <div className="lg:hidden glass border-t border-border/20 overflow-hidden animate-[fadeIn_0.3s_ease-out]">
+        <div className="lg:hidden bg-background border-t border-border/50 animate-[fadeIn_0.3s_ease-out]">
           <div className="px-6 py-6 space-y-1">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
-                className="block px-4 py-3 text-sm text-foreground/75 hover:text-foreground hover:bg-muted/20 rounded-lg transition-all"
+                className="block px-4 py-3 text-sm text-muted-foreground hover:text-primary rounded-lg transition-all"
               >
                 {item.label}
               </a>
@@ -84,10 +81,9 @@ const Header = () => {
               <a
                 href="#kontakt"
                 onClick={() => setMobileOpen(false)}
-                className="btn-primary flex items-center justify-center gap-2 px-6 py-3 text-sm w-full"
+                className="btn-primary flex items-center justify-center gap-2 px-6 py-3 text-sm font-bold uppercase tracking-wider w-full"
               >
-                <span>Bezplatná konzultácia</span>
-                <ArrowRight size={14} />
+                AI AUDIT ZDARMA
               </a>
             </div>
           </div>

@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import {
   Users,
   Brain,
@@ -7,10 +5,8 @@ import {
   Briefcase,
   Target,
   GraduationCap,
-  UserPlus,
   Settings,
   FileText,
-  ChevronDown,
   ArrowRight,
 } from "lucide-react";
 import {
@@ -21,8 +17,7 @@ import {
 } from "@/components/ui/accordion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import bgMeeting from "@/assets/bg-meeting.jpg";
-import bgDashboard from "@/assets/bg-dashboard.jpg";
+import heroImage from "@/assets/hero-ai-room.jpg";
 import logoGHL from "@/assets/logo-gohighlevel.png";
 import logoOpenClaw from "@/assets/logo-openclaw.png";
 import logoOpenAI from "@/assets/logo-openai.png";
@@ -33,34 +28,22 @@ const Index = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center overflow-hidden">
-          <div className="absolute inset-0">
-            <img src={bgMeeting} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.25]" fetchPriority="high" />
-            <div className="absolute inset-0 bg-background/80" />
-          </div>
-          <div className="absolute inset-0 pointer-events-none overflow-hidden">
-            <div className="absolute top-[-30%] left-[-10%] w-[800px] h-[800px] bg-primary/5 rounded-full blur-[180px]" />
-            <div className="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[160px]" />
-          </div>
+        <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Left — text */}
+              <div className="animate-[heroFadeUp_0.7s_ease-out]">
+                <h1 className="font-display text-hero mb-8 text-foreground">
+                  Posúvame váš B2B obchod vpred.{" "}
+                  <span className="gradient-text-primary">S podporou AI.</span>
+                </h1>
 
-          <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-            <div className="max-w-4xl mx-auto text-center">
-              <span className="inline-block text-[10px] uppercase tracking-[0.25em] text-primary font-mono font-semibold mb-6 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5">
-                B2B Obchod · AI · Outsourcing
-              </span>
+                <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mb-10">
+                  V Mercatores sme profesionáli na B2B predaj a outsourcing obchodu.
+                  Kombinujeme dlhoročné obchodné skúsenosti s inováciami a umelou
+                  inteligenciou pre dosiahnutie maximálnych výsledkov.
+                </p>
 
-              <h1 className="font-display text-hero mb-8 text-foreground">
-                Posúvame váš B2B obchod vpred.{" "}
-                <span className="gradient-text-primary">S podporou AI.</span>
-              </h1>
-
-              <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-2xl mx-auto mb-12">
-                V Mercatores sme profesionáli na B2B predaj a outsourcing obchodu.
-                Kombinujeme dlhoročné obchodné skúsenosti s inováciami a umelou
-                inteligenciou pre dosiahnutie maximálnych výsledkov.
-              </p>
-
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
                   href="#sluzby"
                   className="btn-primary inline-flex items-center gap-2 px-8 py-4 text-sm font-bold uppercase tracking-wider"
@@ -68,29 +51,36 @@ const Index = () => {
                   <span>NAŠE SLUŽBY</span>
                   <ArrowRight size={16} />
                 </a>
-                <a
-                  href="#o-nas"
-                  className="inline-flex items-center gap-2 px-8 py-4 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors border border-border/40 rounded-xl hover:border-border/60"
-                >
-                  Zistiť viac
-                </a>
               </div>
 
-              <div className="mt-16 animate-bounce">
-                <ChevronDown size={24} className="mx-auto text-foreground/40" />
+              {/* Right — hero image with gradient border */}
+              <div className="relative flex justify-center lg:justify-end animate-[heroFadeUp_0.7s_ease-out_0.2s_both]">
+                {/* Gradient circle behind image */}
+                <div
+                  className="absolute -inset-8 rounded-full opacity-60 blur-2xl"
+                  style={{
+                    background: "conic-gradient(from 180deg, hsl(186 100% 50%), hsl(262 83% 58%), hsl(186 100% 50%))",
+                  }}
+                />
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl max-w-[560px] w-full">
+                  <img
+                    src={heroImage}
+                    alt="AI boardroom s holografickými displejmi"
+                    className="w-full h-auto object-cover"
+                    fetchPriority="high"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Banner Section */}
-        <section className="relative py-16 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-primary/5 to-secondary/10" />
-          <div className="absolute inset-0 bg-background/60" />
-          <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative py-12 overflow-hidden bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                   <Brain size={24} className="text-primary" />
                 </div>
                 <p className="text-lg md:text-xl font-display font-bold text-foreground max-w-lg">
@@ -109,7 +99,7 @@ const Index = () => {
         </section>
 
         {/* Trust Section */}
-        <section className="py-16 border-y border-border/20">
+        <section className="py-14 border-y border-border">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <p className="text-center text-sm text-muted-foreground uppercase tracking-widest font-mono mb-10">
               Dôverujú nám:
@@ -125,7 +115,7 @@ const Index = () => {
                   src={logo.src}
                   alt={logo.alt}
                   loading="lazy"
-                  className="h-10 w-auto object-contain opacity-60 hover:opacity-90 transition-opacity duration-300 brightness-0 invert"
+                  className="h-10 w-auto object-contain opacity-40 hover:opacity-70 transition-opacity duration-300 grayscale"
                   style={{ maxWidth: logo.width }}
                 />
               ))}
@@ -134,12 +124,12 @@ const Index = () => {
         </section>
 
         {/* About Section */}
-        <section id="o-nas" className="relative py-28 md:py-36">
+        <section id="o-nas" className="relative py-24 md:py-32">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             {/* Quote */}
             <div className="max-w-3xl mx-auto mb-20">
               <div className="glass-card-static p-10 md:p-14 text-center">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mx-auto mb-8">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-8">
                   <Heart size={24} className="text-primary" />
                 </div>
                 <blockquote className="text-xl md:text-2xl font-display font-bold text-foreground leading-relaxed mb-6">
@@ -154,14 +144,14 @@ const Index = () => {
               <h2 className="font-display text-section mb-6 text-foreground">
                 Sme obchodníci s <span className="gradient-text-primary">vášňou pre inovácie</span>
               </h2>
-              <p className="text-foreground/80 text-base leading-relaxed mb-6">
+              <p className="text-muted-foreground text-base leading-relaxed mb-6">
                 Jadrom DNA spoločnosti Mercatores je B2B obchod. Pomáhame firmám rásť, získavať nových klientov a budovať silné obchodné oddelenia. Naše skúsenosti z terénu nám umožňujú prinášať reálne výsledky, nie len teóriu.
               </p>
-              <p className="text-foreground/80 text-base leading-relaxed mb-10">
+              <p className="text-muted-foreground text-base leading-relaxed mb-10">
                 Uvedomujeme si však, že obchod sa vyvíja. Preto do našich procesov aktívne zapájame umelú inteligenciu. AI nám neslúži ako náhrada za ľudský kontakt, ale ako silný nástroj na automatizáciu rutiny, presnejšie cielenie a analytiku, vďaka čomu predávame efektívnejšie.
               </p>
               <a href="#sluzby" className="btn-primary inline-flex items-center gap-2 px-8 py-3 text-sm font-bold uppercase tracking-wider">
-                VIAC O NÁS
+                <span>VIAC O NÁS</span>
                 <ArrowRight size={16} />
               </a>
             </div>
@@ -169,12 +159,8 @@ const Index = () => {
         </section>
 
         {/* Why Us Section */}
-        <section className="relative py-28 md:py-36 section-glow">
-          <div className="absolute inset-0 pointer-events-none overflow-hidden">
-            <img src={bgDashboard} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-[0.15]" />
-            <div className="absolute inset-0 bg-background/90" />
-          </div>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="relative py-24 md:py-32 section-elevated">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="font-display text-section mb-16 text-center text-foreground">
               Prečo práve <span className="gradient-text-primary">my</span>
             </h2>
@@ -197,14 +183,12 @@ const Index = () => {
                   desc: "AI nevnímame ako izolovaný nástroj, ale ako súčasť celého ekosystému firmy. Zabezpečujeme plynulú integráciu s vašimi existujúcimi systémami a procesmi.",
                 },
               ].map((item) => (
-                <div key={item.title} className="gradient-border-card">
-                  <div className="gradient-border-inner p-8">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
-                      <item.icon size={24} className="text-primary" />
-                    </div>
-                    <h3 className="font-display text-lg font-bold text-foreground mb-3">{item.title}</h3>
-                    <p className="text-sm text-foreground/75 leading-relaxed">{item.desc}</p>
+                <div key={item.title} className="glass-card p-8 group">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                    <item.icon size={24} className="text-primary" />
                   </div>
+                  <h3 className="font-display text-lg font-bold text-foreground mb-3">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -212,7 +196,7 @@ const Index = () => {
         </section>
 
         {/* Services Section */}
-        <section id="sluzby" className="relative py-28 md:py-36">
+        <section id="sluzby" className="relative py-24 md:py-32">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 gap-4">
               <h2 className="font-display text-section text-foreground">
@@ -257,12 +241,12 @@ const Index = () => {
                 },
               ].map((service) => (
                 <div key={service.title} className="glass-card p-8 group cursor-pointer">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/15 transition-colors">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/15 transition-colors">
                     <service.icon size={24} className="text-primary" />
                   </div>
-                  <div className="h-[1px] w-12 bg-primary/20 mb-5" />
+                  <div className="h-[2px] w-12 bg-gradient-to-r from-primary/30 to-accent/30 mb-5 rounded-full" />
                   <h3 className="font-display text-lg font-bold text-foreground mb-3">{service.title}</h3>
-                  <p className="text-sm text-foreground/75 leading-relaxed">{service.desc}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{service.desc}</p>
                 </div>
               ))}
             </div>
@@ -270,11 +254,8 @@ const Index = () => {
         </section>
 
         {/* Results Section */}
-        <section className="relative py-28 md:py-36 section-glow">
-          <div className="absolute inset-0 pointer-events-none overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/[0.02] to-background" />
-          </div>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <section id="referencie" className="relative py-24 md:py-32 section-elevated">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="font-display text-section mb-16 text-center text-foreground">
               Výsledky našej <span className="gradient-text-primary">práce</span>
             </h2>
@@ -282,7 +263,7 @@ const Index = () => {
             <div className="max-w-2xl mx-auto">
               <div className="glass-card-static p-10 md:p-14">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                     <Briefcase size={24} className="text-primary" />
                   </div>
                   <span className="text-[10px] uppercase tracking-[0.2em] text-primary font-mono font-semibold">Certifikovaný partner</span>
@@ -290,7 +271,7 @@ const Index = () => {
                 <h3 className="font-display text-2xl font-bold text-foreground mb-4">
                   Oficiálny partner OpenAI
                 </h3>
-                <p className="text-foreground/80 leading-relaxed mb-8">
+                <p className="text-muted-foreground leading-relaxed mb-8">
                   Sme certifikovaným integračným partnerom a pomáhame firmám bezpečne nasadzovať veľké jazykové modely (LLMs) do ich internej infraštruktúry.
                 </p>
                 <a href="#kontakt" className="text-sm text-primary hover:text-primary/80 transition-colors font-semibold uppercase tracking-wider">
@@ -302,14 +283,14 @@ const Index = () => {
         </section>
 
         {/* FAQ Section */}
-        <section id="faq" className="relative py-28 md:py-36">
+        <section id="faq" className="relative py-24 md:py-32">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="font-display text-section mb-5 text-foreground">
                 Na čo sa nás najčastejšie <span className="gradient-text-primary">pýtate</span>
               </h2>
-              <p className="text-foreground/80 max-w-lg mx-auto text-base leading-relaxed">
-                Nenašli ste, čo ste hľadali? Je to úplne v poriadku. Vieme, že každá firma je iná, má svoje vlastné výzvy a ciele, ktoré sa nedajú zhrnúť do pár všeobecných odpovedí.
+              <p className="text-muted-foreground max-w-lg mx-auto text-base leading-relaxed">
+                Nenašli ste, čo ste hľadali? Je to úplne v poriadku. Vieme, že každá firma je iná, má svoje vlastné výzvy a ciele.
               </p>
             </div>
 
@@ -330,11 +311,11 @@ const Index = () => {
                   },
                   {
                     q: "Ako rýchlo uvidím prvé výsledky?",
-                    a: "Pri pilotných projektoch (napríklad nasadenie interného chatbota na znalostnú bázu) vidíte výsledky zvyčajne do 2 až 4 týždňov. Komplexnejšie automatizácie procesov trvajú 2 až 3 mesiace.",
+                    a: "Pri pilotných projektoch vidíte výsledky zvyčajne do 2 až 4 týždňov. Komplexnejšie automatizácie procesov trvajú 2 až 3 mesiace.",
                   },
                   {
                     q: "Potrebujeme vo firme vlastných IT špecialistov?",
-                    a: "Nie. Dodávame riešenia na kľúč. Postaráme sa o vývoj, nasadenie, údržbu a taktiež zaškolíme vašich bežných zamestnancov, aby vedeli nástroje bez problémov používať.",
+                    a: "Nie. Dodávame riešenia na kľúč. Postaráme sa o vývoj, nasadenie, údržbu a taktiež zaškolíme vašich bežných zamestnancov.",
                   },
                   {
                     q: "Koľko takáto implementácia stojí?",
@@ -344,12 +325,12 @@ const Index = () => {
                   <AccordionItem
                     key={index}
                     value={`faq-${index}`}
-                    className="glass-card-static px-7 border-none data-[state=open]:glow-subtle transition-shadow duration-500"
+                    className="glass-card-static px-7 border-none"
                   >
                     <AccordionTrigger className="text-[0.9375rem] font-semibold text-foreground hover:text-primary transition-colors py-6 hover:no-underline gap-4 [&[data-state=open]]:text-primary">
                       {faq.q}
                     </AccordionTrigger>
-                    <AccordionContent className="text-[0.9rem] text-foreground/85 pb-6 leading-relaxed">
+                    <AccordionContent className="text-[0.9rem] text-muted-foreground pb-6 leading-relaxed">
                       {faq.a}
                     </AccordionContent>
                   </AccordionItem>
@@ -359,7 +340,7 @@ const Index = () => {
 
             <div className="text-center">
               <a href="#kontakt" className="btn-primary inline-flex items-center gap-2 px-8 py-3 text-sm font-bold uppercase tracking-wider">
-                KONTAKTUJTE NÁS
+                <span>KONTAKTUJTE NÁS</span>
                 <ArrowRight size={16} />
               </a>
             </div>
@@ -367,28 +348,26 @@ const Index = () => {
         </section>
 
         {/* CTA Section */}
-        <section id="kontakt" className="relative py-28 md:py-36 overflow-hidden">
-          <div className="absolute inset-0 pointer-events-none overflow-hidden">
-            <div className="absolute top-[-20%] left-[10%] w-[600px] h-[600px] bg-primary/5 rounded-full blur-[160px]" />
-            <div className="absolute bottom-[-20%] right-[10%] w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[140px]" />
-          </div>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <section id="kontakt" className="relative py-24 md:py-32 section-elevated">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <div className="glass-card-static p-10 md:p-16 text-center">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mx-auto mb-8">
+              <div className="glass-card-static p-10 md:p-16 text-center relative overflow-hidden">
+                {/* Subtle gradient accent */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-primary rounded-t-lg" />
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-8">
                   <Brain size={32} className="text-primary" />
                 </div>
                 <h2 className="font-display text-section mb-5 text-foreground">
                   Neviete, kde začať <span className="gradient-text-primary">s AI?</span>
                 </h2>
-                <p className="text-foreground/80 text-base leading-relaxed max-w-xl mx-auto mb-10">
+                <p className="text-muted-foreground text-base leading-relaxed max-w-xl mx-auto mb-10">
                   Nechajte si spraviť bezplatný AI audit. Počas úvodnej konzultácie zistíme, aké procesy vo vašej firme sa dajú automatizovať a akú úsporu by vám to prinieslo.
                 </p>
                 <a
                   href="mailto:ai@mercatores.sk"
                   className="btn-primary inline-flex items-center gap-2 px-10 py-4 text-sm font-bold uppercase tracking-wider"
                 >
-                  AI AUDIT ZDARMA
+                  <span>AI AUDIT ZDARMA</span>
                   <ArrowRight size={16} />
                 </a>
               </div>
