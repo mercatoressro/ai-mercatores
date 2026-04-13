@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { label: "Čo riešime", href: "#system" },
+  { label: "Riešenie", href: "#riesenie" },
+  { label: "AI CEO", href: "#ai-ceo" },
   { label: "Ako to funguje", href: "#proces" },
   { label: "Pre koho", href: "#pre-koho" },
-  { label: "FAQ", href: "#faq" },
   { label: "Kontakt", href: "#kontakt" },
 ];
 
@@ -29,12 +29,12 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-[68px]">
-          <a href="#" className="flex flex-col leading-tight">
-            <span className="font-display font-bold text-[1.1rem] text-foreground tracking-tight">
-              Mercatores
+          <a href="#" className="flex items-center gap-2.5">
+            <span className="font-display font-bold text-[1.15rem] text-foreground tracking-tight">
+              mercatores
             </span>
-            <span className="text-[0.65rem] text-muted-foreground tracking-wide uppercase">
-              AI & Growth Division
+            <span className="text-[0.6rem] text-primary font-semibold uppercase tracking-[0.1em] border border-primary/25 rounded px-1.5 py-0.5 leading-none">
+              AI
             </span>
           </a>
 
@@ -53,7 +53,7 @@ const Header = () => {
           <div className="hidden lg:block">
             <a
               href="#kontakt"
-              className="btn-primary inline-flex items-center gap-2 px-5 py-2.5 text-[0.8125rem]"
+              className="btn-primary inline-flex items-center px-5 py-2.5 text-[0.8125rem]"
             >
               Dohodnúť konzultáciu
             </a>

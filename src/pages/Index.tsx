@@ -1,14 +1,24 @@
 import {
+  ArrowRight,
+  CheckCircle2,
+  XCircle,
   BarChart3,
   GitBranch,
   Users,
   Settings,
   Target,
-  ArrowRight,
-  CheckCircle2,
-  Layers,
-  LineChart,
   Bot,
+  LineChart,
+  Layers,
+  Search,
+  Rocket,
+  TrendingUp,
+  Shield,
+  Eye,
+  ListChecks,
+  Workflow,
+  BrainCircuit,
+  Check,
 } from "lucide-react";
 import {
   Accordion,
@@ -18,31 +28,33 @@ import {
 } from "@/components/ui/accordion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import photoAi1 from "@/assets/photo-ai-1.png";
-import photoAi2 from "@/assets/photo-ai-2.png";
-import photoAi3 from "@/assets/photo-ai-3.png";
-import photoAi4 from "@/assets/photo-ai-4.png";
+import heroDashboard from "@/assets/hero-dashboard.jpg";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Header />
       <main>
-        {/* ═══════ HERO ═══════ */}
-        <section className="relative pt-28 pb-20 md:pt-36 md:pb-28">
+        {/* ═══════════════════════════════════════════
+            1. HERO
+        ═══════════════════════════════════════════ */}
+        <section className="relative pt-28 pb-16 md:pt-36 md:pb-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="animate-[heroFadeUp_0.6s_ease-out]">
-                <div className="text-[0.7rem] uppercase tracking-[0.15em] text-muted-foreground font-medium mb-6">
-                  Mercatores · AI & Growth Division
+                <div className="text-[0.65rem] uppercase tracking-[0.18em] text-muted-foreground font-medium mb-5">
+                  Obchodná architektúra Mercatores · AI vrstva pre výkon a riadenie
                 </div>
-                <h1 className="font-display text-hero mb-6 text-foreground">
-                  Obchodný systém, AI nástroje a exekúcia v praxi.
+
+                <h1 className="font-display text-hero mb-6 text-foreground leading-[1.08]">
+                  Pomáhame firmám rásť cez obchodný systém, AI nástroje a&nbsp;exekúciu v&nbsp;praxi.
                 </h1>
-                <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mb-10">
-                  Pomáhame firmám rásť cez funkčný obchodný systém, nasadenie AI agentov do procesov a riadenie výkonu. Nie teória — implementácia, podpora a merateľné výsledky.
+
+                <p className="text-[1.05rem] text-muted-foreground leading-relaxed max-w-xl mb-8">
+                  Navrhneme vám funkčný obchodný model, nasadíme AI do obchodu, marketingu a operatívy a pomôžeme vám to celé reálne uviesť do praxe. Od stratégie až po riadenie výkonu.
                 </p>
-                <div className="flex flex-wrap gap-3">
+
+                <div className="flex flex-wrap gap-3 mb-5">
                   <a
                     href="#kontakt"
                     className="btn-primary inline-flex items-center gap-2 px-7 py-3.5 text-sm"
@@ -51,19 +63,23 @@ const Index = () => {
                     <ArrowRight size={16} />
                   </a>
                   <a
-                    href="#system"
+                    href="#riesenie"
                     className="btn-secondary inline-flex items-center gap-2 px-7 py-3.5 text-sm"
                   >
                     Pozrieť riešenie
                   </a>
                 </div>
+
+                <p className="text-xs text-muted-foreground">
+                  Pre firmy, ktoré nechcú ďalší tool. Chcú systém, ktorý funguje.
+                </p>
               </div>
 
               <div className="relative flex justify-center lg:justify-end animate-[heroFadeUp_0.6s_ease-out_0.15s_both]">
-                <div className="relative rounded-xl overflow-hidden max-w-[520px] w-full border border-border">
+                <div className="relative rounded-xl overflow-hidden max-w-[560px] w-full shadow-2xl shadow-primary/5 border border-border">
                   <img
-                    src={photoAi1}
-                    alt="Executive AI control room"
+                    src={heroDashboard}
+                    alt="Executive AI dashboard — pipeline, CRM, workflow, reporting"
                     className="w-full h-auto object-cover"
                     fetchPriority="high"
                   />
@@ -73,73 +89,204 @@ const Index = () => {
           </div>
         </section>
 
-        {/* ═══════ ČO RIEŠIME — Systém ═══════ */}
-        <section id="system" className="py-20 md:py-28 section-elevated">
+        {/* ═══════════════════════════════════════════
+            2. KDE FIRMY STRÁCAJÚ RAST
+        ═══════════════════════════════════════════ */}
+        <section className="py-20 md:py-28 section-elevated">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-16">
+            <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-5 text-foreground">
-                Čo dodávame
+                Problém nie je, že firmám chýba AI.<br className="hidden sm:block" />
+                Problém je, že im chýba systém.
               </h2>
-              <p className="text-muted-foreground text-base leading-relaxed">
-                Jeden ucelený systém — od obchodnej stratégie cez CRM a AI agentov až po reporting a riadenie výkonu. Nie katalóg služieb, ale funkčný celok.
+              <p className="text-muted-foreground text-[0.95rem] leading-relaxed max-w-2xl mx-auto">
+                Väčšina firiem dnes skúša nástroje, automatizácie a AI bez toho, aby mala zvládnutý obchodný proces, ownership, reporting a spôsob riadenia. Výsledkom je viac chaosu, nie viac výkonu.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {/* Bez systému */}
+              <div className="glass-card-static p-7">
+                <div className="flex items-center gap-2 mb-5">
+                  <XCircle size={18} className="text-destructive" />
+                  <span className="text-sm font-semibold text-foreground">Bez systému</span>
+                </div>
+                <ul className="space-y-3">
+                  {[
+                    "Chaos v obchode",
+                    "Slabý follow-up",
+                    "Nejasné priority",
+                    "CEO preťažený operatívou",
+                    "AI bez dopadu",
+                    "CRM bez disciplíny",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2.5 text-sm text-muted-foreground">
+                      <XCircle size={14} className="text-destructive/60 mt-0.5 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* S naším riešením */}
+              <div className="glass-card-static p-7 border-primary/20">
+                <div className="flex items-center gap-2 mb-5">
+                  <CheckCircle2 size={18} className="text-primary" />
+                  <span className="text-sm font-semibold text-foreground">S naším riešením</span>
+                </div>
+                <ul className="space-y-3">
+                  {[
+                    "Jasný obchodný model",
+                    "AI podpora pre výkon",
+                    "Lepšie riadenie firmy",
+                    "Menej manuálnej práce",
+                    "Viac kontroly",
+                    "Vyššia výkonnosť tímu",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2.5 text-sm text-foreground">
+                      <CheckCircle2 size={14} className="text-primary mt-0.5 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════
+            3. ČO KLIENTOM REÁLNE DODÁVAME
+        ═══════════════════════════════════════════ */}
+        <section id="riesenie" className="py-20 md:py-28">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center mb-14">
+              <h2 className="font-display text-section mb-4 text-foreground">
+                Jedno riešenie. Tri vrstvy výkonu.
+              </h2>
+              <p className="text-muted-foreground text-[0.95rem] leading-relaxed">
+                Nie tooly. Nie teória. Reálne nasadenie do fungovania firmy.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {/* Pilier 1 */}
+              <div className="glass-card p-7">
+                <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center mb-5">
+                  <Target size={20} className="text-primary" />
+                </div>
+                <h3 className="font-display text-lg font-bold text-foreground mb-1">Obchodný systém</h3>
+                <p className="text-xs text-primary font-medium uppercase tracking-wider mb-4">Pilier 1</p>
+                <ul className="space-y-2.5">
+                  {[
+                    "Návrh obchodného procesu",
+                    "ICP a segmentácia",
+                    "CRM a reporting",
+                    "Sales playbook",
+                    "Obchodná stratégia",
+                    "Školenie tímu",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <Check size={14} className="text-primary mt-0.5 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Pilier 2 */}
+              <div className="glass-card p-7">
+                <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center mb-5">
+                  <Bot size={20} className="text-primary" />
+                </div>
+                <h3 className="font-display text-lg font-bold text-foreground mb-1">AI nástroje a agenti</h3>
+                <p className="text-xs text-primary font-medium uppercase tracking-wider mb-4">Pilier 2</p>
+                <ul className="space-y-2.5">
+                  {[
+                    "AI pre obchod",
+                    "AI pre marketing",
+                    "AI pre operatívu",
+                    "AI workflow a automatizácie",
+                    "AI knowledge layer",
+                    "AI follow-up a kvalifikácia leadov",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <Check size={14} className="text-primary mt-0.5 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Pilier 3 */}
+              <div className="glass-card p-7">
+                <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center mb-5">
+                  <Rocket size={20} className="text-primary" />
+                </div>
+                <h3 className="font-display text-lg font-bold text-foreground mb-1">Exekúcia a riadenie</h3>
+                <p className="text-xs text-primary font-medium uppercase tracking-wider mb-4">Pilier 3</p>
+                <ul className="space-y-2.5">
+                  {[
+                    "Zavedenie do praxe",
+                    "Podpora tímu",
+                    "Operatívna pomoc",
+                    "Kontrola výkonu",
+                    "Optimalizácia podľa dát",
+                    "Model AI CEO pre riadenie",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <Check size={14} className="text-primary mt-0.5 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════
+            4. AI CEO
+        ═══════════════════════════════════════════ */}
+        <section id="ai-ceo" className="py-20 md:py-28 section-dark">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center mb-14">
+              <h2 className="font-display text-section mb-5 text-white">
+                AI CEO nie je náhrada vedenia.<br className="hidden sm:block" />
+                Je to riadiaca vrstva pre lepšie rozhodovanie.
+              </h2>
+              <p className="text-[0.95rem] leading-relaxed max-w-2xl mx-auto" style={{ color: "hsl(230 15% 65%)" }}>
+                Firmám pomáhame navrhnúť koncept AI CEO ako manažérsku vrstvu, ktorá prepája dáta, reporting, priority, obchod, operatívu a interné workflow. Cieľom nie je nahradiť človeka vo vedení. Cieľom je dať CEO a manažmentu lepší prehľad, rýchlejšie rozhodovanie a vyššiu kontrolu.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
               {[
-                {
-                  icon: Target,
-                  title: "Obchodný systém",
-                  desc: "Pipeline, CRM, follow-up a štruktúra obchodu. Nastavíme proces, ktorý tím dokáže opakovať a škálovať.",
-                },
-                {
-                  icon: Bot,
-                  title: "AI agenti a automatizácie",
-                  desc: "Nasadíme AI agentov na rutinnú prácu — kvalifikácia leadov, príprava ponúk, interná komunikácia, zákaznícka podpora.",
-                },
-                {
-                  icon: LineChart,
-                  title: "Reporting a riadenie výkonu",
-                  desc: "Executive prehľad v reálnom čase. KPI, pipeline stav, konverzie a výkon tímu na jednom mieste.",
-                },
-                {
-                  icon: Settings,
-                  title: "Integrácia do existujúcich nástrojov",
-                  desc: "Prepojenie s vašim CRM, e-mailom, kalendárom a internými systémami. Žiadne duplikovanie práce.",
-                },
-                {
-                  icon: Users,
-                  title: "Podpora tímu a onboarding",
-                  desc: "Zaškolíme tím na nové nástroje a procesy. Dodáme dokumentáciu a priebežnú podporu.",
-                },
-                {
-                  icon: Layers,
-                  title: "AI CEO — rozhodovacia podpora",
-                  desc: "Koncept executive reportingu: prioritizácia, kontrola pipeline, workflow prehľad a podpora rozhodovania pre vedenie firmy.",
-                },
+                { icon: LineChart, title: "Reporting a executive prehľad" },
+                { icon: GitBranch, title: "Kontrola pipeline a výkonu" },
+                { icon: ListChecks, title: "Prioritizácia úloh a workflow" },
+                { icon: Eye, title: "Dohľad nad operatívou" },
+                { icon: BrainCircuit, title: "Rozhodovacia podpora pre manažment" },
               ].map((item) => (
-                <div key={item.title} className="glass-card p-7">
-                  <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center mb-5">
-                    <item.icon size={20} className="text-primary" />
+                <div key={item.title} className="dark-card p-5 text-center">
+                  <div className="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center mx-auto mb-3">
+                    <item.icon size={18} className="text-primary" />
                   </div>
-                  <h3 className="font-display text-base font-bold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                  <h3 className="text-sm font-semibold text-white leading-snug">{item.title}</h3>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ═══════ AKO TO FUNGUJE ═══════ */}
+        {/* ═══════════════════════════════════════════
+            5. AKO TO FUNGUJE
+        ═══════════════════════════════════════════ */}
         <section id="proces" className="py-20 md:py-28">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-16">
-              <h2 className="font-display text-section mb-5 text-foreground">
-                Ako to funguje
+            <div className="max-w-3xl mx-auto text-center mb-14">
+              <h2 className="font-display text-section mb-4 text-foreground">
+                Od chaosu k systému v 4 krokoch
               </h2>
-              <p className="text-muted-foreground text-base leading-relaxed">
-                Štyri kroky od diagnostiky po riadený výkon. Každý krok má jasný výstup.
-              </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
@@ -147,29 +294,36 @@ const Index = () => {
                 {
                   num: "01",
                   title: "Diagnostika",
-                  desc: "Zmapujeme obchodné a prevádzkové procesy. Identifikujeme, kde vznikajú straty a kde má AI reálny prínos.",
+                  desc: "Zmapujeme obchod, procesy, operatívu a miesta, kde dnes firma stráca výkon.",
+                  icon: Search,
                 },
                 {
                   num: "02",
-                  title: "Návrh systému",
-                  desc: "Navrhneme obchodný systém, AI workflow a integrácie. Definujeme KPI a merateľné výstupy.",
+                  title: "Návrh riešenia",
+                  desc: "Navrhneme obchodný model, AI vrstvu a spôsob riadenia podľa reality firmy.",
+                  icon: Layers,
                 },
                 {
                   num: "03",
                   title: "Implementácia",
-                  desc: "Nasadíme CRM, AI agentov a automatizácie. Prepojíme s existujúcimi nástrojmi a zaškolíme tím.",
+                  desc: "Zavedieme workflow, AI nástroje, reporting, obchodné pravidlá a interné procesy.",
+                  icon: Settings,
                 },
                 {
                   num: "04",
-                  title: "Správa a optimalizácia",
-                  desc: "Priebežne sledujeme výkon, upravujeme logiku a optimalizujeme dopad. Dlhodobá podpora.",
+                  title: "Exekúcia a optimalizácia",
+                  desc: "Pomáhame firme reálne fungovať, merať výkon a ďalej systém zlepšovať.",
+                  icon: TrendingUp,
                 },
               ].map((step) => (
                 <div key={step.num} className="glass-card-static p-7 relative">
-                  <span className="text-[2rem] font-display font-bold text-primary/10 absolute top-5 right-6">
+                  <span className="text-[2.5rem] font-display font-bold text-primary/8 absolute top-4 right-5 leading-none">
                     {step.num}
                   </span>
-                  <h3 className="font-display text-base font-bold text-foreground mb-2 mt-1">{step.title}</h3>
+                  <div className="w-9 h-9 rounded-lg bg-primary/8 flex items-center justify-center mb-4">
+                    <step.icon size={16} className="text-primary" />
+                  </div>
+                  <h3 className="font-display text-base font-bold text-foreground mb-2">{step.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
                 </div>
               ))}
@@ -177,98 +331,131 @@ const Index = () => {
           </div>
         </section>
 
-        {/* ═══════ PREČO MERCATORES ═══════ */}
-        <section className="py-20 md:py-28 section-elevated">
+        {/* ═══════════════════════════════════════════
+            6. PRE KOHO TO JE
+        ═══════════════════════════════════════════ */}
+        <section id="pre-koho" className="py-20 md:py-28 section-elevated">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-5xl mx-auto">
-              <div>
-                <h2 className="font-display text-section mb-6 text-foreground">
-                  Prečo Mercatores
-                </h2>
-                <p className="text-muted-foreground text-base leading-relaxed mb-8">
-                  Nie sme AI agentúra. Sme obchodníci, ktorí rozumejú procesom, riadeniu a implementácii. AI je nástroj výkonu — nie marketingová ozdoba.
-                </p>
-                <ul className="space-y-4">
+            <div className="max-w-3xl mx-auto text-center mb-14">
+              <h2 className="font-display text-section mb-4 text-foreground">
+                Pre firmy, ktoré chcú rásť riadene, nie náhodou
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {/* ÁNO */}
+              <div className="glass-card-static p-7 border-primary/15">
+                <div className="flex items-center gap-2 mb-5">
+                  <CheckCircle2 size={18} className="text-primary" />
+                  <span className="text-sm font-semibold text-foreground">Áno — spolupráca dáva zmysel</span>
+                </div>
+                <ul className="space-y-3">
                   {[
-                    "Dlhoročné skúsenosti v B2B obchode a riadení tímov",
-                    "Vlastná metodika nasadenia AI do obchodných procesov",
-                    "Dodávame systém, nie izolované nástroje",
-                    "Dlhodobá podpora a priebežná optimalizácia",
+                    "B2B firmy s obchodným tímom",
+                    "Majitelia a CEO, ktorí chcú systém",
+                    "Firmy, ktoré chcú zaviesť AI prakticky",
+                    "Firmy, ktoré chcú viac výkonu a menej chaosu",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <CheckCircle2 size={18} className="text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-foreground">{item}</span>
+                    <li key={item} className="flex items-start gap-2.5 text-sm text-foreground">
+                      <CheckCircle2 size={14} className="text-primary mt-0.5 flex-shrink-0" />
+                      {item}
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="grid grid-cols-2 gap-3">
-                <img src={photoAi2} alt="Obchodný tím" className="rounded-lg w-full h-44 object-cover border border-border" />
-                <img src={photoAi3} alt="AI implementácia" className="rounded-lg w-full h-44 object-cover border border-border mt-6" />
-                <img src={photoAi4} alt="Riadenie výkonu" className="rounded-lg w-full h-44 object-cover border border-border" />
-                <div className="rounded-lg w-full h-44 bg-primary/5 border border-border flex items-center justify-center mt-6 p-6">
-                  <div className="text-center">
-                    <BarChart3 size={28} className="text-primary mx-auto mb-2" />
-                    <span className="text-xs text-muted-foreground font-medium">Merateľný dopad</span>
-                  </div>
+
+              {/* NIE */}
+              <div className="glass-card-static p-7">
+                <div className="flex items-center gap-2 mb-5">
+                  <XCircle size={18} className="text-muted-foreground" />
+                  <span className="text-sm font-semibold text-foreground">Nie — nebudeme dobrý fit</span>
                 </div>
+                <ul className="space-y-3">
+                  {[
+                    "Hľadáte len efektný chatbot",
+                    "Nechcete meniť procesy",
+                    "Čakáte instantný výsledok bez implementácie",
+                    "Hľadáte lacný software bez podpory",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2.5 text-sm text-muted-foreground">
+                      <XCircle size={14} className="text-muted-foreground/60 mt-0.5 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══════ PRE KOHO ═══════ */}
-        <section id="pre-koho" className="py-20 md:py-28">
+        {/* ═══════════════════════════════════════════
+            7. VÝSLEDOK PRE KLIENTA
+        ═══════════════════════════════════════════ */}
+        <section className="py-20 md:py-28">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-16">
-              <h2 className="font-display text-section mb-5 text-foreground">
-                Pre koho je to
+            <div className="max-w-3xl mx-auto text-center mb-14">
+              <h2 className="font-display text-section mb-4 text-foreground">
+                Čo klient v skutočnosti získa
               </h2>
-              <p className="text-muted-foreground text-base leading-relaxed">
-                Spolupracujeme s firmami, ktoré chcú riadený rast — nie experimenty.
-              </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-5 max-w-3xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
               {[
-                {
-                  icon: GitBranch,
-                  title: "Firmy bez funkčného obchodného systému",
-                  desc: "Máte obchodníkov, ale chýba pipeline, follow-up a reporting. Výkon nie je riadený, ale náhodný.",
-                },
-                {
-                  icon: Settings,
-                  title: "Firmy, ktoré chcú nasadiť AI do procesov",
-                  desc: "Viete, že AI môže pomôcť, ale neviete kde začať. Potrebujete partnera na implementáciu, nie prezentáciu.",
-                },
-                {
-                  icon: BarChart3,
-                  title: "Vedenie, ktoré chce kontrolu nad výkonom",
-                  desc: "Chcete executive prehľad, funkčné KPI a rozhodovaciu podporu — nie ďalšie tabuľky v Exceli.",
-                },
-                {
-                  icon: Users,
-                  title: "Tímy, ktoré strácajú čas na rutine",
-                  desc: "Opakujúce sa úlohy, manuálne procesy a neefektívna komunikácia. AI agenti to vyriešia.",
-                },
+                { icon: TrendingUp, label: "Viac obchodných príležitostí" },
+                { icon: GitBranch, label: "Lepší follow-up" },
+                { icon: BarChart3, label: "Lepšie využité CRM" },
+                { icon: Settings, label: "Menej manuálnej operatívy" },
+                { icon: Eye, label: "Vyššia kontrola nad výkonom" },
+                { icon: Users, label: "Jasnejšie riadenie tímu" },
+                { icon: Bot, label: "AI s reálnym dopadom" },
+                { icon: Shield, label: "Systém, ktorý nestojí na jednom človeku" },
               ].map((item) => (
-                <div key={item.title} className="glass-card p-7">
-                  <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center mb-4">
-                    <item.icon size={20} className="text-primary" />
+                <div key={item.label} className="glass-card-static p-5 flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-md bg-primary/8 flex items-center justify-center flex-shrink-0">
+                    <item.icon size={15} className="text-primary" />
                   </div>
-                  <h3 className="font-display text-base font-bold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                  <span className="text-sm text-foreground font-medium leading-snug pt-1">{item.label}</span>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ═══════ FAQ ═══════ */}
-        <section id="faq" className="py-20 md:py-28 section-elevated">
+        {/* ═══════════════════════════════════════════
+            8. PREČO MERCATORES + AI
+        ═══════════════════════════════════════════ */}
+        <section className="py-20 md:py-28 section-elevated">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center mb-14">
+              <h2 className="font-display text-section mb-4 text-foreground">
+                Prečo to dáva zmysel práve u nás
+              </h2>
+            </div>
+
+            <div className="max-w-2xl mx-auto space-y-4">
+              {[
+                "Rozumieme obchodu aj riadeniu firmy",
+                "AI nevnímame ako hračku, ale ako vrstvu výkonu",
+                "Vieme navrhnúť aj zaviesť",
+                "Spájame stratégiu, systém a exekúciu",
+                "Klient nedostane len návrh, ale aj pomoc s realizáciou",
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3">
+                  <CheckCircle2 size={18} className="text-primary mt-0.5 flex-shrink-0" />
+                  <span className="text-[0.95rem] text-foreground">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════
+            FAQ (bonus — keeps credibility)
+        ═══════════════════════════════════════════ */}
+        <section id="faq" className="py-20 md:py-28">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
-              <h2 className="font-display text-section mb-5 text-foreground">
+              <h2 className="font-display text-section mb-4 text-foreground">
                 Časté otázky
               </h2>
             </div>
@@ -319,33 +506,35 @@ const Index = () => {
           </div>
         </section>
 
-        {/* ═══════ CTA ═══════ */}
-        <section id="kontakt" className="py-20 md:py-28">
+        {/* ═══════════════════════════════════════════
+            9. ZÁVEREČNÝ CTA
+        ═══════════════════════════════════════════ */}
+        <section id="kontakt" className="py-20 md:py-28 section-dark">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="font-display text-section mb-5 text-foreground">
-                Zistite, kde vašej firme uniká výkon
+              <h2 className="font-display text-section mb-5 text-white">
+                Keď obchod, AI a riadenie fungujú spolu, firma rastie inak.
               </h2>
-              <p className="text-muted-foreground text-base leading-relaxed mb-10 max-w-xl mx-auto">
-                Počas úvodnej konzultácie zmapujeme vaše obchodné a prevádzkové procesy a identifikujeme konkrétne miesta, kde systém a AI prinesú najväčší efekt.
+              <p className="text-[0.95rem] leading-relaxed max-w-xl mx-auto mb-10" style={{ color: "hsl(230 15% 65%)" }}>
+                Ak chcete mať vo firme menej chaosu, viac kontroly a systém, ktorý podporuje rast, poďme sa pozrieť, kde vám dnes uniká výkon.
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-5">
                 <a
                   href="mailto:ai@mercatores.sk"
-                  className="btn-primary inline-flex items-center gap-2 px-8 py-4 text-sm"
+                  className="btn-primary-dark inline-flex items-center gap-2 px-8 py-4 text-sm"
                 >
-                  Dohodnúť konzultáciu
+                  Dohodnúť strategickú konzultáciu
                   <ArrowRight size={16} />
                 </a>
                 <a
                   href="tel:+421905600095"
-                  className="btn-secondary inline-flex items-center gap-2 px-8 py-4 text-sm"
+                  className="btn-outline-dark inline-flex items-center gap-2 px-8 py-4 text-sm"
                 >
                   +421 905 600 095
                 </a>
               </div>
-              <p className="text-xs text-muted-foreground mt-6">
-                Úvodná konzultácia je bezplatná a nezáväzná.
+              <p className="text-xs" style={{ color: "hsl(230 15% 50%)" }}>
+                Bez nezáväzného hype callu. Konkrétne, prakticky a podľa reality vašej firmy.
               </p>
             </div>
           </div>

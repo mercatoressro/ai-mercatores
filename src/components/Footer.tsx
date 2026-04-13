@@ -4,14 +4,12 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
           <div>
-            <div className="font-display font-bold text-lg text-foreground mb-1">
-              Mercatores
-            </div>
-            <div className="text-[0.7rem] text-muted-foreground uppercase tracking-wider mb-4">
-              AI & Growth Division
+            <div className="flex items-center gap-2 mb-4">
+              <span className="font-display font-bold text-lg text-foreground">mercatores</span>
+              <span className="text-[0.6rem] text-primary font-semibold uppercase tracking-[0.1em] border border-primary/25 rounded px-1.5 py-0.5 leading-none">AI</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-              Obchodný systém, AI nástroje a exekúcia pre firmy, ktoré chcú riadený rast.
+              Obchodný systém, AI nástroje a exekúcia pre firmy, ktoré chcú riadený rast pod značkou Mercatores.
             </p>
           </div>
 
@@ -19,10 +17,10 @@ const Footer = () => {
             <h4 className="text-xs uppercase tracking-widest text-muted-foreground font-semibold mb-5">Navigácia</h4>
             <ul className="space-y-3">
               {[
-                { label: "Čo riešime", href: "#system" },
+                { label: "Riešenie", href: "#riesenie" },
+                { label: "AI CEO", href: "#ai-ceo" },
                 { label: "Ako to funguje", href: "#proces" },
                 { label: "Pre koho", href: "#pre-koho" },
-                { label: "FAQ", href: "#faq" },
                 { label: "Kontakt", href: "#kontakt" },
               ].map((link) => (
                 <li key={link.label}>
@@ -47,7 +45,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-16 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-14 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} Mercatores s.r.o. Všetky práva vyhradené.
           </p>
