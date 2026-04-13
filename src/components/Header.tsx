@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
-import { ArrowRight, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { label: "Domov", href: "#" },
-  { label: "O nás", href: "#o-nas" },
-  { label: "Služby", href: "#sluzby" },
-  { label: "Referencie", href: "#referencie" },
-  { label: "Blog", href: "#blog" },
+  { label: "Čo riešime", href: "#system" },
+  { label: "Ako to funguje", href: "#proces" },
+  { label: "Pre koho", href: "#pre-koho" },
+  { label: "FAQ", href: "#faq" },
   { label: "Kontakt", href: "#kontakt" },
 ];
 
@@ -22,16 +21,21 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 animate-[slideDown_0.8s_ease-out] ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 animate-[slideDown_0.6s_ease-out] ${
         scrolled
-          ? "bg-background/90 backdrop-blur-xl shadow-sm border-b border-border/50"
+          ? "bg-background/95 backdrop-blur-md shadow-sm border-b border-border"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-[72px]">
-          <a href="#" className="font-display font-bold text-[1.3rem] tracking-tight text-foreground">
-            ai.mercatores<span className="text-primary">.sk</span>
+        <div className="flex items-center justify-between h-[68px]">
+          <a href="#" className="flex flex-col leading-tight">
+            <span className="font-display font-bold text-[1.1rem] text-foreground tracking-tight">
+              Mercatores
+            </span>
+            <span className="text-[0.65rem] text-muted-foreground tracking-wide uppercase">
+              AI & Growth Division
+            </span>
           </a>
 
           <nav className="hidden lg:flex items-center gap-1">
@@ -39,7 +43,7 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="px-4 py-2 text-[0.875rem] text-muted-foreground hover:text-primary transition-colors duration-300 rounded-lg"
+                className="px-4 py-2 text-[0.8125rem] text-muted-foreground hover:text-foreground transition-colors duration-200"
               >
                 {item.label}
               </a>
@@ -49,9 +53,9 @@ const Header = () => {
           <div className="hidden lg:block">
             <a
               href="#kontakt"
-              className="btn-primary inline-flex items-center gap-2 px-6 py-2.5 text-[0.8125rem] font-bold uppercase tracking-wider"
+              className="btn-primary inline-flex items-center gap-2 px-5 py-2.5 text-[0.8125rem]"
             >
-              <span>AI AUDIT ZDARMA</span>
+              Dohodnúť konzultáciu
             </a>
           </div>
 
@@ -65,14 +69,14 @@ const Header = () => {
       </div>
 
       {mobileOpen && (
-        <div className="lg:hidden bg-background border-t border-border/50 animate-[fadeIn_0.3s_ease-out]">
-          <div className="px-6 py-6 space-y-1">
+        <div className="lg:hidden bg-background border-t border-border animate-[fadeIn_0.2s_ease-out]">
+          <div className="px-6 py-5 space-y-1">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
-                className="block px-4 py-3 text-sm text-muted-foreground hover:text-primary rounded-lg transition-all"
+                className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground rounded-md transition-all"
               >
                 {item.label}
               </a>
@@ -81,9 +85,9 @@ const Header = () => {
               <a
                 href="#kontakt"
                 onClick={() => setMobileOpen(false)}
-                className="btn-primary flex items-center justify-center gap-2 px-6 py-3 text-sm font-bold uppercase tracking-wider w-full"
+                className="btn-primary flex items-center justify-center px-6 py-3 text-sm w-full"
               >
-                AI AUDIT ZDARMA
+                Dohodnúť konzultáciu
               </a>
             </div>
           </div>
