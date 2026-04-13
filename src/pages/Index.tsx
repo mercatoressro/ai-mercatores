@@ -40,6 +40,11 @@ const Index = () => {
             1. HERO
         ═══════════════════════════════════════════ */}
         <section className="relative pt-28 pb-16 md:pt-36 md:pb-24">
+          {/* AI Brain Network Background */}
+          <div className="absolute inset-0 z-0">
+            <img src={aiBrainNetwork} alt="" className="w-full h-full object-cover opacity-15" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+          </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="animate-[heroFadeUp_0.6s_ease-out]">
