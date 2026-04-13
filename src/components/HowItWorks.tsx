@@ -36,7 +36,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section id="ako-to-funguje" className="relative py-28 md:py-36 section-glow">
+    <section id="ako-to-funguje" className="relative py-24 md:py-32 section-glow">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <img src={cropOperations} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.18] mix-blend-luminosity" />
         <div className="absolute inset-0 bg-[hsl(225_30%_3%/0.85)]" />

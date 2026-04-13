@@ -98,7 +98,7 @@ const Index = () => {
         {/* ═══════════════════════════════════════════
             2. KDE FIRMY STRÁCAJÚ RAST
         ═══════════════════════════════════════════ */}
-        <section className="py-20 md:py-28 section-elevated">
+        <section className="py-24 md:py-32 section-elevated">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-5 text-foreground">
@@ -163,7 +163,7 @@ const Index = () => {
         {/* ═══════════════════════════════════════════
             3. ČO KLIENTOM REÁLNE DODÁVAME
         ═══════════════════════════════════════════ */}
-        <section id="riesenie" className="py-20 md:py-28">
+        <section id="riesenie" className="py-24 md:py-32">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">
@@ -253,7 +253,7 @@ const Index = () => {
         {/* ═══════════════════════════════════════════
             4. AI CEO
         ═══════════════════════════════════════════ */}
-        <section id="ai-ceo" className="py-20 md:py-28 section-dark">
+        <section id="ai-ceo" className="py-24 md:py-32 section-dark">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-5 text-white">
@@ -287,7 +287,7 @@ const Index = () => {
         {/* ═══════════════════════════════════════════
             5. AKO TO FUNGUJE
         ═══════════════════════════════════════════ */}
-        <section id="proces" className="py-20 md:py-28">
+        <section id="proces" className="py-24 md:py-32">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">
@@ -340,7 +340,7 @@ const Index = () => {
         {/* ═══════════════════════════════════════════
             6. PRE KOHO TO JE
         ═══════════════════════════════════════════ */}
-        <section id="pre-koho" className="py-20 md:py-28 section-elevated">
+        <section id="pre-koho" className="py-24 md:py-32 section-elevated">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">
@@ -397,7 +397,7 @@ const Index = () => {
         {/* ═══════════════════════════════════════════
             7. VÝSLEDOK PRE KLIENTA
         ═══════════════════════════════════════════ */}
-        <section className="py-20 md:py-28">
+        <section className="py-24 md:py-32">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">
@@ -430,7 +430,7 @@ const Index = () => {
         {/* ═══════════════════════════════════════════
             8. PREČO MERCATORES + AI
         ═══════════════════════════════════════════ */}
-        <section className="py-20 md:py-28 section-elevated">
+        <section className="py-24 md:py-32 section-elevated">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">
@@ -458,7 +458,7 @@ const Index = () => {
         {/* ═══════════════════════════════════════════
             FAQ (bonus — keeps credibility)
         ═══════════════════════════════════════════ */}
-        <section id="faq" className="py-20 md:py-28">
+        <section id="faq" className="py-24 md:py-32">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">

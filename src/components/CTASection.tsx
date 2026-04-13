@@ -27,7 +27,7 @@ const CTASection = () => {
   return (
     <section
       id="kontakt"
-      className="relative py-28 md:py-36 section-deep overflow-hidden"
+      className="relative py-24 md:py-32 section-deep overflow-hidden"
     >
       {/* Photo background */}
       <div className="absolute inset-0 pointer-events-none">

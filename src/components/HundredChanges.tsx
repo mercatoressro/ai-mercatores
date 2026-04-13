@@ -189,7 +189,7 @@ const HundredChanges = () => {
   const [activeId, setActiveId] = useState<string | null>(null);
 
   return (
-    <section id="100-zmien" className="relative py-32 md:py-44 overflow-hidden">
+    <section id="100-zmien" className="relative py-24 md:py-32 overflow-hidden">
       {/* ── BACKGROUND LAYERS ── */}
       {/* Photo texture */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
