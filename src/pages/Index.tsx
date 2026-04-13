@@ -18,6 +18,10 @@ import {
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-ai-room.jpg";
+import photoAi1 from "@/assets/photo-ai-1.png";
+import photoAi2 from "@/assets/photo-ai-2.png";
+import photoAi3 from "@/assets/photo-ai-3.png";
+import photoAi4 from "@/assets/photo-ai-4.png";
 import logoGHL from "@/assets/logo-gohighlevel.png";
 import logoOpenClaw from "@/assets/logo-openclaw.png";
 import logoOpenAI from "@/assets/logo-openai.png";
@@ -64,7 +68,7 @@ const Index = () => {
                 />
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl max-w-[560px] w-full">
                   <img
-                    src={heroImage}
+                    src={photoAi1}
                     alt="AI boardroom s holografickými displejmi"
                     className="w-full h-auto object-cover"
                     fetchPriority="high"
@@ -169,26 +173,34 @@ const Index = () => {
               {[
                 {
                   icon: Brain,
+                  image: photoAi2,
                   title: "Technologická expertíza",
                   desc: "Sme špecialisti na implementáciu AI riešení. Pomohli sme už desiatkam firiem zautomatizovať ich procesy a zaviesť moderné technológie do každodennej praxe.",
                 },
                 {
                   icon: Target,
+                  image: photoAi3,
                   title: "Neustála inovácia",
                   desc: "Sledujeme najnovšie trendy v oblasti umelej inteligencie a strojového učenia. Všetky nové poznatky okamžite testujeme a prinášame priamo do vašej firmy.",
                 },
                 {
                   icon: Settings,
+                  image: photoAi4,
                   title: "Hladká integrácia",
                   desc: "AI nevnímame ako izolovaný nástroj, ale ako súčasť celého ekosystému firmy. Zabezpečujeme plynulú integráciu s vašimi existujúcimi systémami a procesmi.",
                 },
               ].map((item) => (
-                <div key={item.title} className="glass-card p-8 group">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-                    <item.icon size={24} className="text-primary" />
+                <div key={item.title} className="glass-card p-0 group overflow-hidden">
+                  <div className="h-40 overflow-hidden">
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
-                  <h3 className="font-display text-lg font-bold text-foreground mb-3">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                  <div className="p-8">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                      <item.icon size={24} className="text-primary" />
+                    </div>
+                    <h3 className="font-display text-lg font-bold text-foreground mb-3">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
