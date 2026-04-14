@@ -41,10 +41,10 @@
     --ring: 245 72% 55%;
     --radius: 0.625rem;
 
-    /* Dark section */
-    --dark-bg: 230 30% 8%;
-    --dark-card: 230 25% 12%;
-    --dark-border: 230 20% 18%;
+    /* Accent section (formerly dark) */
+    --dark-bg: 240 50% 95%;
+    --dark-card: 240 40% 97%;
+    --dark-border: 240 30% 88%;
     --dark-muted: 230 15% 40%;
 
     --sidebar-background: 0 0% 98%;
@@ -155,7 +155,7 @@
   .btn-outline-dark {
     background: transparent;
     border: 1px solid hsl(var(--dark-border));
-    color: hsl(0 0% 80%);
+    color: hsl(var(--foreground));
     font-weight: 600;
     border-radius: 0.5rem;
     transition: all 0.25s ease;
@@ -163,7 +163,7 @@
 
   .btn-outline-dark:hover {
     border-color: hsl(var(--primary) / 0.5);
-    color: hsl(0 0% 100%);
+    color: hsl(var(--primary));
   }
 }
 
@@ -174,7 +174,7 @@
 
   .section-dark {
     background: hsl(var(--dark-bg));
-    color: hsl(0 0% 90%);
+    color: hsl(var(--foreground));
   }
 }
 
