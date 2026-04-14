@@ -155,7 +155,7 @@
   .btn-outline-dark {
     background: transparent;
     border: 1px solid hsl(var(--dark-border));
-    color: hsl(0 0% 80%);
+    color: hsl(var(--foreground));
     font-weight: 600;
     border-radius: 0.5rem;
     transition: all 0.25s ease;
@@ -163,7 +163,7 @@
 
   .btn-outline-dark:hover {
     border-color: hsl(var(--primary) / 0.5);
-    color: hsl(0 0% 100%);
+    color: hsl(var(--primary));
   }
 }
 
