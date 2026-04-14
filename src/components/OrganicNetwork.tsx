@@ -19,8 +19,8 @@ interface OrganicNetworkProps {
 }
 
 const OrganicNetwork = ({
-  opacity = 0.12,
-  fadeCenterX = 0.6,
+  opacity = 0.25,
+  fadeCenterX = 0.5,
   fadeCenterY = 0.5,
   className = "",
 }: OrganicNetworkProps) => {
@@ -94,9 +94,9 @@ const OrganicNetwork = ({
     const h = () => canvas.offsetHeight;
     const connectionDist = 200;
 
-    // Brand color: hsl(210, 60%, 45%) — muted steel blue
-    const lineColor = (a: number) => `rgba(55, 100, 140, ${a})`;
-    const nodeColor = (a: number) => `rgba(55, 100, 140, ${a})`;
+    // Brand color: hsl(210, 50%, 50%) — muted steel blue, slightly more visible
+    const lineColor = (a: number) => `rgba(70, 115, 155, ${a})`;
+    const nodeColor = (a: number) => `rgba(70, 115, 155, ${a})`;
 
     const draw = () => {
       if (!isVisibleRef.current) {
@@ -147,8 +147,8 @@ const OrganicNetwork = ({
             );
             const centerFade = Math.min(1, distFromCenter * 3);
 
-            const alpha = distFade * centerFade * 0.08;
-            if (alpha < 0.005) continue;
+            const alpha = distFade * centerFade * 0.18;
+            if (alpha < 0.008) continue;
 
             // Bezier curve for organic feel
             const cpx = (nodes[i].x + nodes[j].x) / 2 + Math.sin(nodes[i].phase) * 15;
@@ -170,8 +170,8 @@ const OrganicNetwork = ({
         const distFromCenter = Math.sqrt(
           ((n.x - cx) / cw) ** 2 + ((n.y - cy) / ch) ** 2
         );
-        const centerFade = Math.min(1, distFromCenter * 3);
-        const alpha = pulse * centerFade * 0.15;
+        const centerFade = Math.min(1, distFromCenter * 2.5);
+        const alpha = pulse * centerFade * 0.28;
 
         if (alpha < 0.01) continue;
 
