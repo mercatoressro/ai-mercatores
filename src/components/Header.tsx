@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo-ai-mercatores-transparent.png";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, ArrowRight } from "lucide-react";
 
 const navItems = [
-  { label: "Riešenie", href: "#riesenie" },
-  { label: "AI CEO", href: "#ai-ceo" },
-  { label: "Ako to funguje", href: "#proces" },
+  { label: "Domov", href: "#" },
+  { label: "Riešenia", href: "#riesenia" },
+  { label: "Ako to funguje", href: "#ako-to-funguje" },
   { label: "Pre koho", href: "#pre-koho" },
+  { label: "100 zmien", href: "#100-zmien" },
+  { label: "FAQ", href: "#faq" },
   { label: "Kontakt", href: "#kontakt" },
 ];
 
@@ -21,17 +23,23 @@ const Header = () => {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 animate-[slideDown_0.6s_ease-out] ${
+    <motion.header
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
         scrolled
-          ? "bg-background/95 backdrop-blur-md shadow-sm border-b border-border"
+          ? "glass shadow-[0_4px_30px_-10px_hsl(200_100%_55%/0.08)]"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-[68px]">
-          <a href="#" className="flex items-center">
-            <img src={logo} alt="ai.mercatores.sk" className="h-[84px] w-auto" />
+        <div className="flex items-center justify-between h-[72px]">
+          <a href="#" className="font-display font-bold text-[1.15rem] tracking-tight relative group">
+            <span className="text-white">ai.</span>
+            <span className="gradient-text-primary">mercatores</span>
+            <span className="text-foreground/70">.sk</span>
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary/40 transition-all duration-500 group-hover:w-full" />
           </a>
 
           <nav className="hidden lg:flex items-center gap-1">
@@ -39,7 +47,7 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="px-4 py-2 text-[0.8125rem] text-muted-foreground hover:text-foreground transition-colors duration-200"
+                className="px-4 py-2 text-[0.8125rem] text-foreground/70 hover:text-foreground transition-colors duration-400 relative group rounded-lg hover:bg-muted/20"
               >
                 {item.label}
               </a>
@@ -49,9 +57,10 @@ const Header = () => {
           <div className="hidden lg:block">
             <a
               href="#kontakt"
-              className="btn-primary inline-flex items-center px-5 py-2.5 text-[0.8125rem]"
+              className="btn-primary inline-flex items-center gap-2 px-6 py-2.5 text-[0.8125rem]"
             >
-              Dohodnúť konzultáciu
+              <span>Dohodnúť AI audit</span>
+              <ArrowRight size={14} />
             </a>
           </div>
 
@@ -64,32 +73,41 @@ const Header = () => {
         </div>
       </div>
 
-      {mobileOpen && (
-        <div className="lg:hidden bg-background border-t border-border animate-[fadeIn_0.2s_ease-out]">
-          <div className="px-6 py-5 space-y-1">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={() => setMobileOpen(false)}
-                className="block px-4 py-3 text-sm text-muted-foreground hover:text-foreground rounded-md transition-all"
-              >
-                {item.label}
-              </a>
-            ))}
-            <div className="pt-3">
-              <a
-                href="#kontakt"
-                onClick={() => setMobileOpen(false)}
-                className="btn-primary flex items-center justify-center px-6 py-3 text-sm w-full"
-              >
-                Dohodnúť konzultáciu
-              </a>
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="lg:hidden glass border-t border-border/20 overflow-hidden"
+          >
+            <div className="px-6 py-6 space-y-1">
+              {navItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="block px-4 py-3 text-sm text-foreground/75 hover:text-foreground hover:bg-muted/20 rounded-lg transition-all"
+                >
+                  {item.label}
+                </a>
+              ))}
+              <div className="pt-3">
+                <a
+                  href="#kontakt"
+                  onClick={() => setMobileOpen(false)}
+                  className="btn-primary flex items-center justify-center gap-2 px-6 py-3 text-sm w-full"
+                >
+                  <span>Dohodnúť AI audit</span>
+                  <ArrowRight size={14} />
+                </a>
+              </div>
             </div>
-          </div>
-        </div>
-      )}
-    </header>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
   );
 };
 

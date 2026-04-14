@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 interface SectionDividerProps {
   variant?: "glow" | "gradient" | "subtle";
 }
@@ -19,9 +21,11 @@ const SectionDivider = ({ variant = "gradient" }: SectionDividerProps) => {
   return (
     <div className="relative h-24 w-full overflow-hidden">
       <div className="absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-border/20 to-transparent" />
-      <div
-        className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-60 h-16 rounded-full blur-3xl animate-pulse-glow"
+      <motion.div
+        className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-60 h-16 rounded-full blur-3xl"
         style={{ background: "radial-gradient(ellipse, hsl(200 100% 55% / 0.08), transparent)" }}
+        animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.8, 0.5] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       />
     </div>
   );

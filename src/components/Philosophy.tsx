@@ -9,10 +9,10 @@ const thoughts = [
 
 const Philosophy = () => {
   return (
-    <section className="relative py-24 md:py-32 section-deep overflow-hidden">
+    <section className="relative py-32 md:py-44 section-deep overflow-hidden">
       {/* CROP 1 — Meeting / strategic discussion */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <img src={cropMeeting} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.18] mix-blend-luminosity" />
+        <img src={cropMeeting} alt="" className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.18] mix-blend-luminosity" />
         <div className="absolute inset-0 bg-[hsl(225_30%_3%/0.85)]" />
       </div>
       <div className="absolute inset-0 pointer-events-none">
@@ -23,7 +23,7 @@ const Philosophy = () => {
         <div
           className="max-w-3xl mx-auto text-center"
         >
-          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary font-mono font-medium mb-4">Filozofia</span>
+          <span className="inline-block text-[10px] uppercase tracking-[0.3em] text-primary font-mono font-medium mb-6">Filozofia</span>
 
           <h2 className="font-display text-section mb-14 leading-[1.15] text-white">
             ai.mercatores.sk premieňa AI na{" "}

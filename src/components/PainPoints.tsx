@@ -36,9 +36,9 @@ const cards = [
 
 const PainPoints = () => {
   return (
-    <section className="relative py-24 md:py-32 section-elevated">
+    <section className="relative py-28 md:py-36 section-elevated">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <img src={bgDashboard} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-[0.25]" />
+        <img src={bgDashboard} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.25]" />
         <div className="absolute inset-0 bg-background/85" />
       </div>
       <div className="absolute inset-0 dot-pattern opacity-[0.06] pointer-events-none" />
@@ -46,7 +46,7 @@ const PainPoints = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
           <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary font-mono font-medium mb-4">Diagnostika</span>
-          <h2 className="font-display text-section mb-4 text-white">
+          <h2 className="font-display text-section mb-5 text-white">
             Kde firmy <span className="gradient-text-hero">strácajú výkon</span>
           </h2>
           <p className="text-foreground/80 max-w-lg mx-auto text-base leading-relaxed">

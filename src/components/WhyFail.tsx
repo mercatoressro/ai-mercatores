@@ -23,9 +23,9 @@ const ourWay = [
 
 const WhyFail = () => {
   return (
-    <section className="relative py-24 md:py-32 section-deep overflow-hidden">
+    <section className="relative py-28 md:py-36 section-deep overflow-hidden">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <img src={bgNetwork} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-[0.25]" />
+        <img src={bgNetwork} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.25]" />
         <div className="absolute inset-0 bg-background/85" />
       </div>
       <div className="absolute inset-0 grid-pattern opacity-[0.04] pointer-events-none" />

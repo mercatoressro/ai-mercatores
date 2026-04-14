@@ -47,7 +47,7 @@ const TechFoundation = () => {
 
         {/* Headline */}
         <h2
-          className="font-display text-section text-center mb-5"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6 font-display"
         >
           Technologický základ,{" "}
           <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
@@ -57,7 +57,7 @@ const TechFoundation = () => {
 
         {/* Intro text */}
         <p
-          className="text-muted-foreground text-base text-center max-w-3xl mx-auto mb-14 leading-relaxed"
+          className="text-muted-foreground text-base md:text-lg text-center max-w-3xl mx-auto mb-16 leading-relaxed"
         >
           AI transformácia firmy nestojí na jednom nástroji. Stojí na správne navrhnutej
           kombinácii platforiem, workflow a riadiacej logiky. Preto pracujeme s riešeniami,
@@ -93,12 +93,12 @@ const TechFoundation = () => {
                 </div>
 
                 {/* Name */}
-          <h3 className="text-lg font-bold text-foreground mb-3 font-display">
+                <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-4 font-display">
                   {platform.name}
                 </h3>
 
                 {/* Description */}
-                <p className="text-muted-foreground leading-relaxed text-sm">
+                <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                   {platform.description}
                 </p>
               </div>
@@ -110,10 +110,10 @@ const TechFoundation = () => {
         <div
           className="max-w-3xl mx-auto text-center mb-12"
         >
-          <h3 className="text-lg font-bold text-foreground mb-3 font-display">
+          <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-4 font-display">
             Ako s tým pracujeme
           </h3>
-          <p className="text-muted-foreground leading-relaxed text-sm">
+          <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
             Nepredávame nástroje ako samostatné produkty. Navrhujeme, kde dávajú zmysel,
             prepájame ich s procesmi firmy a spravujeme ich tak, aby prinášali reálny výkon
             — v obchode, marketingu aj operatíve.
@@ -124,7 +124,7 @@ const TechFoundation = () => {
         <div
           className="text-center"
         >
-          <p className="text-muted-foreground/70 text-sm italic max-w-2xl mx-auto border-t border-border/30 pt-8">
+          <p className="text-muted-foreground/70 text-sm md:text-base italic max-w-2xl mx-auto border-t border-border/30 pt-8">
             Nástroje samy osebe firmu nezmenia. Rozhoduje to, ako sú zapojené do reálneho
             fungovania firmy.
           </p>
