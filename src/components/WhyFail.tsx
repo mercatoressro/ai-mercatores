@@ -24,17 +24,14 @@ const ourWay = [
 const WhyFail = () => {
   return (
     <section className="relative py-28 md:py-36 section-deep overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <img src={bgShield} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.15] mix-blend-luminosity" />
-        <div className="absolute inset-0 bg-background/85" />
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 bg-[hsl(225_30%_3%)]" />
       </div>
       <div className="absolute inset-0 grid-pattern opacity-[0.04] pointer-events-none" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div
-          className="text-center mb-6"
-        >
+        <div className="text-center mb-6">
           <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-destructive/80 font-mono font-medium mb-4">
             Realita trhu
           </span>
@@ -46,15 +43,25 @@ const WhyFail = () => {
           </h2>
         </div>
 
-        <p
-          className="text-center text-foreground/85 max-w-xl mx-auto text-[0.9375rem] leading-relaxed mb-16"
-        >
+        <p className="text-center text-foreground/85 max-w-xl mx-auto text-[0.9375rem] leading-relaxed mb-12">
           Firmy dnes často nekupujú zlé nástroje. Zlyhávajú na tom, že ich nevedia premeniť na proces, ownership a dlhodobo riadený výkon.
         </p>
 
+        {/* Featured image */}
+        <div className="max-w-2xl mx-auto mb-16">
+          <div className="relative rounded-2xl overflow-hidden border border-border/30 shadow-[0_0_40px_-10px_hsl(var(--destructive)/0.1)]">
+            <img
+              src={bgShield}
+              alt="AI bezpečnostný systém"
+              className="w-full h-auto object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[hsl(225_30%_3%)] via-transparent to-transparent opacity-50 pointer-events-none" />
+          </div>
+        </div>
+
         {/* Comparison grid */}
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto relative">
-          {/* Vertical divider on desktop */}
           <div className="hidden md:block absolute left-1/2 top-8 bottom-8 w-px -translate-x-1/2">
             <div className="w-full h-full bg-gradient-to-b from-transparent via-border/40 to-transparent" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-background border border-border/40 flex items-center justify-center">
@@ -63,9 +70,7 @@ const WhyFail = () => {
           </div>
 
           {/* Left: Bežný stav */}
-          <div
-            className="glass-card-static p-7 md:p-8 relative overflow-hidden"
-          >
+          <div className="glass-card-static p-7 md:p-8 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-destructive/[0.03] to-transparent pointer-events-none" />
             <div className="relative z-10">
               <div className="flex items-center gap-2.5 mb-8">
@@ -77,13 +82,8 @@ const WhyFail = () => {
               <ul className="space-y-4">
                 {fails.map((f) => (
                   <li key={f} className="flex items-start gap-3">
-                    <XCircle
-                      size={16}
-                      className="text-destructive/70 shrink-0 mt-0.5"
-                    />
-                    <span className="text-[0.9rem] text-foreground/85 leading-relaxed">
-                      {f}
-                    </span>
+                    <XCircle size={16} className="text-destructive/70 shrink-0 mt-0.5" />
+                    <span className="text-[0.9rem] text-foreground/85 leading-relaxed">{f}</span>
                   </li>
                 ))}
               </ul>
@@ -91,8 +91,7 @@ const WhyFail = () => {
           </div>
 
           {/* Right: Riadená AI transformácia */}
-          <div
-          >
+          <div>
             <div className="gradient-border-card h-full">
               <div className="gradient-border-inner p-7 md:p-8 h-full relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.04] to-secondary/[0.02] pointer-events-none" />
@@ -106,17 +105,10 @@ const WhyFail = () => {
                   <ul className="space-y-4">
                     {ourWay.map((w, i) => (
                       <li key={w} className="flex items-start gap-3">
-                        <CheckCircle
-                          size={16}
-                          className="text-primary/90 shrink-0 mt-0.5"
-                        />
+                        <CheckCircle size={16} className="text-primary/90 shrink-0 mt-0.5" />
                         <div>
-                          <span className="text-[10px] font-mono text-primary/70 mr-2">
-                            0{i + 1}
-                          </span>
-                          <span className="text-[0.9rem] text-foreground/95 leading-relaxed">
-                            {w}
-                          </span>
+                          <span className="text-[10px] font-mono text-primary/70 mr-2">0{i + 1}</span>
+                          <span className="text-[0.9rem] text-foreground/95 leading-relaxed">{w}</span>
                         </div>
                       </li>
                     ))}
@@ -128,9 +120,7 @@ const WhyFail = () => {
         </div>
 
         {/* Closing statement */}
-        <div
-          className="text-center mt-16 max-w-2xl mx-auto"
-        >
+        <div className="text-center mt-16 max-w-2xl mx-auto">
           <div className="h-px w-16 mx-auto bg-gradient-to-r from-transparent via-primary/30 to-transparent mb-8" />
           <p className="font-display text-lg md:text-xl font-bold text-white">
             „My nedodávame AI ako efekt.{" "}
