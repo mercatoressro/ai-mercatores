@@ -258,8 +258,12 @@ const Index = () => {
         {/* ═══════════════════════════════════════════
             4. AI CEO
         ═══════════════════════════════════════════ */}
-        <section id="ai-ceo" className="py-24 md:py-32 section-dark">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="ai-ceo" className="py-24 md:py-32 section-dark relative overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <img src={aiSection1} alt="" className="w-full h-full object-cover opacity-[0.15]" loading="lazy" width={1280} height={720} />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
+          </div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-5 text-white">
                 AI CEO nie je náhrada vedenia.<br className="hidden sm:block" />
@@ -292,8 +296,12 @@ const Index = () => {
         {/* ═══════════════════════════════════════════
             5. AKO TO FUNGUJE
         ═══════════════════════════════════════════ */}
-        <section id="proces" className="py-24 md:py-32">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="proces" className="py-24 md:py-32 relative overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <img src={aiSection2} alt="" className="w-full h-full object-cover opacity-[0.08]" loading="lazy" width={1280} height={720} />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/90 to-background" />
+          </div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">
                 Od chaosu k systému v 4 krokoch
