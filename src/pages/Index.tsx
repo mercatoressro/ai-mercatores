@@ -437,8 +437,13 @@ const Index = () => {
         {/* ═══════════════════════════════════════════
             7. VÝSLEDOK PRE KLIENTA
         ═══════════════════════════════════════════ */}
-        <section className="py-24 md:py-32">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-24 md:py-32 relative overflow-hidden">
+          {/* AI lab bg */}
+          <div className="absolute inset-0 z-0">
+            <img src={photoAiLab} alt="" className="w-full h-full object-cover opacity-[0.06]" loading="lazy" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
+          </div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">
                 Čo klient v skutočnosti získa
