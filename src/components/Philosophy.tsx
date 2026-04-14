@@ -1,4 +1,4 @@
-import bgAiLab from "@/assets/bg-ai-lab.webp";
+import bgAiLab from "@/assets/bg-ai-research.webp";
 
 const thoughts = [
   "Obchodné výsledky nie sú náhoda, ale architektúra.",

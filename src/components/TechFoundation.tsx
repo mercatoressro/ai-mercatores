@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import logoGHL from "@/assets/logo-gohighlevel.png";
 import logoOpenClaw from "@/assets/logo-openclaw.png";
-import bgNetwork from "@/assets/bg-network-burst.webp";
+import bgNetwork from "@/assets/bg-network-burst2.webp";
 
 const platforms = [
   {

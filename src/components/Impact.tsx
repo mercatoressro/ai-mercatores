@@ -8,7 +8,7 @@ import {
   Layers,
   TrendingDown,
 } from "lucide-react";
-import bgMetrics from "@/assets/bg-metrics-dashboard.webp";
+import bgMetrics from "@/assets/bg-metrics2.webp";
 
 const impacts = [
   {

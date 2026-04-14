@@ -1,5 +1,5 @@
 import { Search, PenTool, Rocket, Users, BarChart3, ArrowRight } from "lucide-react";
-import bgTeam from "@/assets/bg-team-monitors.webp";
+import bgTeam from "@/assets/bg-ops-center.webp";
 
 const steps = [
   {
