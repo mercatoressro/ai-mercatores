@@ -1,5 +1,5 @@
 import { XCircle, CheckCircle } from "lucide-react";
-import bgShield from "@/assets/bg-shield-server2.webp";
+import bgShield from "@/assets/bg-shield-server.webp";
 
 const fails = [
   "Firma kúpi nástroje bez jasného cieľa",

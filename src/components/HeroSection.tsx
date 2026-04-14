@@ -1,7 +1,7 @@
 import { ArrowRight, Layers, Shield, Zap, BarChart3 } from "lucide-react";
 import NetworkGrid from "./NetworkGrid";
 import bgMeeting from "@/assets/bg-meeting.jpg";
-import heroTeam from "@/assets/hero-team-meeting.webp";
+import heroTeam from "@/assets/bg-boardroom.webp";
 
 const HeroSection = () => {
   return (
