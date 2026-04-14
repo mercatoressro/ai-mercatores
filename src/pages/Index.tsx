@@ -33,6 +33,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-image.png";
 import aiBrainNetwork from "@/assets/ai-brain-network.jpg";
+import photoBoardroom from "@/assets/photo-boardroom.webp";
+import photoTeamMonitors from "@/assets/photo-team-monitors.webp";
+import photoAiDashboards from "@/assets/photo-ai-dashboards.webp";
+import photoNeuralNetwork from "@/assets/photo-neural-network.webp";
+import photoServerShield from "@/assets/photo-server-shield.webp";
+import photoAiLab from "@/assets/photo-ai-lab.webp";
+import bgAiData from "@/assets/bg-ai-data.jpg";
+import bgAiCircuit from "@/assets/bg-ai-circuit.jpg";
 
 const Index = () => {
   return (
@@ -103,6 +111,11 @@ const Index = () => {
         ═══════════════════════════════════════════ */}
         <section className="py-24 md:py-32 section-elevated">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Section photo */}
+            <div className="relative rounded-xl overflow-hidden max-w-4xl mx-auto mb-12 shadow-lg">
+              <img src={photoAiDashboards} alt="AI analytický dashboard s rastúcimi metrikami" className="w-full h-56 md:h-72 object-cover" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+            </div>
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-5 text-foreground">
                 Problém nie je, že firmám chýba AI.<br className="hidden sm:block" />
@@ -166,8 +179,12 @@ const Index = () => {
         {/* ═══════════════════════════════════════════
             3. ČO KLIENTOM REÁLNE DODÁVAME
         ═══════════════════════════════════════════ */}
-        <section id="riesenie" className="py-24 md:py-32">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="riesenie" className="py-24 md:py-32 relative overflow-hidden">
+          {/* Background */}
+          <div className="absolute inset-0 z-0">
+            <img src={bgAiCircuit} alt="" className="w-full h-full object-cover opacity-[0.06]" loading="lazy" />
+          </div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">
                 Jedno riešenie. Tri vrstvy výkonu.
@@ -250,6 +267,12 @@ const Index = () => {
                 </ul>
               </div>
             </div>
+
+            {/* Boardroom photo */}
+            <div className="relative rounded-xl overflow-hidden max-w-5xl mx-auto mt-12 shadow-lg">
+              <img src={photoBoardroom} alt="AI stratégia v praxi — tímové stretnutie" className="w-full h-56 md:h-72 object-cover" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
+            </div>
           </div>
         </section>
 
@@ -257,6 +280,11 @@ const Index = () => {
             4. AI CEO
         ═══════════════════════════════════════════ */}
         <section id="ai-ceo" className="py-24 md:py-32 section-dark relative overflow-hidden">
+          {/* Neural network background */}
+          <div className="absolute inset-0 z-0">
+            <img src={photoNeuralNetwork} alt="" className="w-full h-full object-cover opacity-[0.12]" loading="lazy" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(230,25%,9%)]/60 via-[hsl(230,25%,9%)]/40 to-[hsl(230,25%,9%)]/80" />
+          </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-5 text-white">
@@ -291,6 +319,11 @@ const Index = () => {
             5. AKO TO FUNGUJE
         ═══════════════════════════════════════════ */}
         <section id="proces" className="py-24 md:py-32 relative overflow-hidden">
+          {/* Team monitors photo as subtle bg */}
+          <div className="absolute inset-0 z-0">
+            <img src={photoTeamMonitors} alt="" className="w-full h-full object-cover opacity-[0.06]" loading="lazy" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+          </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">
@@ -343,8 +376,12 @@ const Index = () => {
         {/* ═══════════════════════════════════════════
             6. PRE KOHO TO JE
         ═══════════════════════════════════════════ */}
-        <section id="pre-koho" className="py-24 md:py-32 section-elevated">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="pre-koho" className="py-24 md:py-32 section-elevated relative overflow-hidden">
+          {/* Server shield bg */}
+          <div className="absolute inset-0 z-0">
+            <img src={photoServerShield} alt="" className="w-full h-full object-cover opacity-[0.05]" loading="lazy" />
+          </div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">
                 Pre firmy, ktoré chcú rásť riadene, nie náhodou
@@ -400,8 +437,13 @@ const Index = () => {
         {/* ═══════════════════════════════════════════
             7. VÝSLEDOK PRE KLIENTA
         ═══════════════════════════════════════════ */}
-        <section className="py-24 md:py-32">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-24 md:py-32 relative overflow-hidden">
+          {/* AI lab bg */}
+          <div className="absolute inset-0 z-0">
+            <img src={photoAiLab} alt="" className="w-full h-full object-cover opacity-[0.06]" loading="lazy" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
+          </div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">
                 Čo klient v skutočnosti získa
@@ -433,8 +475,12 @@ const Index = () => {
         {/* ═══════════════════════════════════════════
             8. PREČO MERCATORES + AI
         ═══════════════════════════════════════════ */}
-        <section className="py-24 md:py-32 section-elevated">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-24 md:py-32 section-elevated relative overflow-hidden">
+          {/* AI data bg */}
+          <div className="absolute inset-0 z-0">
+            <img src={bgAiData} alt="" className="w-full h-full object-cover opacity-[0.05]" loading="lazy" />
+          </div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">
                 Prečo to dáva zmysel práve u nás
@@ -518,8 +564,13 @@ const Index = () => {
         {/* ═══════════════════════════════════════════
             9. ZÁVEREČNÝ CTA
         ═══════════════════════════════════════════ */}
-        <section id="kontakt" className="py-20 md:py-28 section-dark">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="kontakt" className="py-20 md:py-28 section-dark relative overflow-hidden">
+          {/* CTA background */}
+          <div className="absolute inset-0 z-0">
+            <img src={bgAiCircuit} alt="" className="w-full h-full object-cover opacity-[0.08]" loading="lazy" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(230,25%,9%)]/50 via-[hsl(230,25%,9%)]/40 to-[hsl(230,25%,9%)]/70" />
+          </div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="font-display text-section mb-5 text-white">
                 Keď obchod, AI a riadenie fungujú spolu, firma rastie inak.
