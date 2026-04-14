@@ -1,66 +1,29 @@
 import { ArrowRight, Layers, Shield, Zap, BarChart3 } from "lucide-react";
-import NetworkGrid from "./NetworkGrid";
+import OrganicNetwork from "./OrganicNetwork";
 import bgMeeting from "@/assets/bg-meeting.jpg";
 import heroTeam from "@/assets/bg-boardroom.webp";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen lg:min-h-[105vh] flex items-center overflow-hidden">
-      {/* ══════ CINEMATIC BACKGROUND ══════ */}
+      {/* ══════ BACKGROUND ══════ */}
       <div className="absolute inset-0">
-        <img src={bgMeeting} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.3]" />
-        <div className="absolute inset-0 bg-[hsl(222_50%_1.5%/0.82)]" />
+        <img src={bgMeeting} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.18]" />
+        <div className="absolute inset-0 bg-[hsl(222_40%_3%/0.88)]" />
       </div>
 
-      {/* Deep room radials */}
+      {/* Subtle ambient depth — warm, muted */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-[-40%] left-[-10%] w-[600px] md:w-[1400px] h-[600px] md:h-[1400px] bg-[hsl(218_80%_8%/0.7)] rounded-full blur-[120px] md:blur-[220px]" />
-        <div className="absolute top-[-10%] right-[-15%] w-[500px] md:w-[1200px] h-[400px] md:h-[1000px] bg-[hsl(210_100%_15%/0.4)] rounded-full blur-[100px] md:blur-[180px]" />
-        <div className="absolute bottom-[-25%] left-[15%] w-[400px] md:w-[1000px] h-[300px] md:h-[800px] bg-[hsl(248_50%_12%/0.3)] rounded-full blur-[100px] md:blur-[190px]" />
-        <div className="hidden md:block absolute top-[15%] right-[15%] w-[900px] h-[700px] bg-[hsl(205_100%_30%/0.1)] rounded-full blur-[150px]" />
-        <div className="hidden md:block absolute top-[40%] left-[30%] w-[1200px] h-[600px] bg-[hsl(215_80%_6%/0.5)] rounded-full blur-[220px]" />
-        <div className="hidden md:block absolute top-[60%] right-[5%] w-[800px] h-[500px] bg-[hsl(220_60%_18%/0.08)] rounded-full blur-[140px]" />
+        <div className="absolute top-[-30%] left-[-5%] w-[500px] md:w-[1000px] h-[500px] md:h-[1000px] bg-[hsl(218_40%_8%/0.5)] rounded-full blur-[160px] md:blur-[220px]" />
+        <div className="absolute top-[-5%] right-[-10%] w-[400px] md:w-[800px] h-[350px] md:h-[700px] bg-[hsl(215_50%_12%/0.3)] rounded-full blur-[120px] md:blur-[180px]" />
+        <div className="absolute bottom-[-15%] left-[20%] w-[300px] md:w-[700px] h-[250px] md:h-[500px] bg-[hsl(220_30%_10%/0.25)] rounded-full blur-[120px] md:blur-[190px]" />
       </div>
 
-      {/* AI room — architectural light structures */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-[6%] left-[3%] right-[3%] h-[1px] opacity-[0.07]" style={{ background: "linear-gradient(to right, transparent 5%, hsl(200 100% 60%) 20%, hsl(200 100% 60%) 80%, transparent 95%)" }} />
-        <div className="absolute top-[7.5%] left-[3%] right-[3%] h-[30px] opacity-[0.015]" style={{ background: "linear-gradient(to bottom, hsl(200 100% 60%), transparent)" }} />
-        <div className="absolute top-[10%] left-[12%] right-[12%] h-[1px] opacity-[0.04]" style={{ background: "linear-gradient(to right, transparent, hsl(210 100% 65%) 35%, hsl(210 100% 65%) 65%, transparent)" }} />
-        <div className="absolute top-[14%] left-[20%] right-[20%] h-[1px] opacity-[0.03]" style={{ background: "linear-gradient(to right, transparent, hsl(200 100% 55%) 40%, hsl(200 100% 55%) 60%, transparent)" }} />
-        <div className="absolute bottom-[12%] left-[8%] right-[8%] h-[1px] opacity-[0.04]" style={{ background: "linear-gradient(to right, transparent, hsl(200 100% 50%) 25%, hsl(200 100% 50%) 75%, transparent)" }} />
-      </div>
-
-      {/* Vertical light pillars */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 left-[6%] w-[2px] h-full opacity-[0.05]" style={{ background: "linear-gradient(to bottom, transparent 3%, hsl(200 100% 55%) 20%, hsl(200 100% 55%) 70%, transparent 95%)" }} />
-        <div className="absolute top-0 right-[6%] w-[2px] h-full opacity-[0.05]" style={{ background: "linear-gradient(to bottom, transparent 3%, hsl(200 100% 55%) 20%, hsl(200 100% 55%) 70%, transparent 95%)" }} />
-        <div className="absolute top-0 left-[32%] w-[1px] h-[80%] opacity-[0.03]" style={{ background: "linear-gradient(to bottom, transparent, hsl(210 100% 60%) 30%, transparent 85%)" }} />
-        <div className="absolute top-0 right-[28%] w-[1px] h-[70%] opacity-[0.025]" style={{ background: "linear-gradient(to bottom, transparent, hsl(260 60% 55%), transparent)" }} />
-      </div>
-
-      {/* AI screen glow */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-[10%] right-[3%] w-[45%] h-[60%] rounded-2xl opacity-[0.02]" style={{ border: "1px solid hsl(200 100% 55% / 0.1)", background: "linear-gradient(180deg, hsl(200 100% 50% / 0.04), transparent 60%)" }} />
-      </div>
-
-      {/* Pulsing focal glows */}
-      <div className="absolute inset-0 pointer-events-none hidden md:block">
-        <div className="absolute top-[5%] right-[8%] w-[900px] h-[600px] bg-[hsl(200_100%_50%/0.1)] rounded-full blur-[140px] animate-pulse" />
-        <div className="absolute top-[30%] left-[25%] w-[600px] h-[500px] bg-[hsl(205_100%_55%/0.05)] rounded-full blur-[110px] animate-pulse" />
-        <div className="absolute bottom-[5%] right-[20%] w-[500px] h-[400px] bg-[hsl(260_60%_50%/0.05)] rounded-full blur-[100px] animate-pulse" />
-      </div>
-
-      {/* Network grid overlay */}
-      <div className="opacity-30">
-        <NetworkGrid />
-      </div>
-
-      {/* Tech grid */}
-      <div className="absolute inset-0 grid-pattern opacity-[0.03] pointer-events-none" />
+      {/* Organic network — slightly stronger in hero */}
+      <OrganicNetwork opacity={0.18} fadeCenterX={0.35} fadeCenterY={0.5} />
 
       {/* Vignette */}
-      <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 70% 60% at 50% 50%, transparent 30%, hsl(222 50% 1.5% / 0.85) 100%)" }} />
+      <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 70% 60% at 50% 50%, transparent 30%, hsl(222 40% 3% / 0.9) 100%)" }} />
 
       {/* ══════ CONTENT ══════ */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-24 pb-16 lg:pb-24">
@@ -70,19 +33,19 @@ const HeroSection = () => {
           <div
             className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full text-[8px] sm:text-[9px] uppercase tracking-[0.18em] sm:tracking-[0.22em] font-mono font-semibold"
             style={{
-              background: "linear-gradient(135deg, hsl(200 100% 55% / 0.14), hsl(200 100% 55% / 0.04))",
-              border: "1px solid hsl(200 100% 55% / 0.25)",
-              color: "hsl(200 100% 82%)",
+              background: "hsl(215 30% 15% / 0.6)",
+              border: "1px solid hsl(215 30% 30% / 0.3)",
+              color: "hsl(210 30% 80%)",
             }}
           >
             <span className="relative flex h-1.5 w-1.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
-              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary" />
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[hsl(210_50%_55%)] opacity-60" />
+              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[hsl(210_50%_55%)]" />
             </span>
             B2B PREDAJ · OUTSOURCING OBCHODU · AI
           </div>
-          <div className="h-[1px] flex-1 max-w-[140px] hidden sm:block" style={{ background: "linear-gradient(to right, hsl(200 100% 55% / 0.25), transparent)" }} />
-          <span className="text-[10px] uppercase tracking-[0.22em] text-foreground/80 font-mono hidden sm:block">
+          <div className="h-[1px] flex-1 max-w-[140px] hidden sm:block" style={{ background: "linear-gradient(to right, hsl(215 30% 35% / 0.3), transparent)" }} />
+          <span className="text-[10px] uppercase tracking-[0.22em] text-foreground/60 font-mono hidden sm:block">
             AI.MERCATORES.SK
           </span>
         </div>
@@ -92,8 +55,8 @@ const HeroSection = () => {
           <div
             className="w-10 h-10 rounded-xl flex items-center justify-center"
             style={{
-              background: "linear-gradient(135deg, hsl(200 100% 50%), hsl(220 100% 45%))",
-              boxShadow: "0 0 25px hsl(200 100% 50% / 0.35), 0 0 60px hsl(200 100% 50% / 0.1)",
+              background: "linear-gradient(135deg, hsl(215 45% 38%), hsl(220 50% 32%))",
+              boxShadow: "0 0 20px hsl(215 40% 35% / 0.2)",
             }}
           >
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -110,22 +73,21 @@ const HeroSection = () => {
 
           {/* ═══ LEFT — 7 cols ═══ */}
           <div className="lg:col-span-7">
-            {/* MASSIVE HEADLINE */}
+            {/* HEADLINE */}
             <h1
               className="font-display leading-[0.92] tracking-[-0.045em] font-extrabold mb-8 md:mb-10"
-              style={{ fontSize: "clamp(2.5rem, 7.5vw, 7rem)", textShadow: "0 0 80px hsl(200 100% 50% / 0.15), 0 2px 4px hsl(220 50% 3% / 0.6)" }}
+              style={{ fontSize: "clamp(2.5rem, 7.5vw, 7rem)" }}
             >
-              <span className="block drop-shadow-[0_0_40px_hsl(200_100%_50%/0.08)]">
+              <span className="block">
                 <span className="text-white">Posúvame váš</span>
               </span>
               <span className="block">
                 <span
                   className="inline-block"
                   style={{
-                    background: "linear-gradient(135deg, hsl(200 100% 60%), hsl(210 100% 70%), hsl(200 100% 55%))",
+                    background: "linear-gradient(135deg, hsl(210 55% 60%), hsl(215 50% 55%), hsl(220 45% 52%))",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
-                    filter: "drop-shadow(0 0 30px hsl(200 100% 50% / 0.3))",
                   }}
                 >
                   B2B obchod
@@ -145,20 +107,15 @@ const HeroSection = () => {
                 href="#kontakt"
                 className="inline-flex items-center gap-3 px-8 py-4 md:px-14 md:py-6 rounded-xl md:rounded-2xl text-[0.85rem] md:text-[0.95rem] font-bold uppercase tracking-[0.12em] text-white relative overflow-hidden group"
                 style={{
-                  background: "linear-gradient(135deg, hsl(200 100% 48%), hsl(215 100% 42%))",
-                  boxShadow: `
-                    0 0 50px -8px hsl(200 100% 50% / 0.55),
-                    0 12px 40px -8px hsl(200 100% 50% / 0.4),
-                    0 0 100px -20px hsl(200 100% 55% / 0.15),
-                    inset 0 1px 0 hsl(200 100% 80% / 0.2)
-                  `,
+                  background: "linear-gradient(135deg, hsl(215 50% 40%), hsl(220 50% 35%))",
+                  boxShadow: "0 8px 30px -8px hsl(215 40% 30% / 0.4), inset 0 1px 0 hsl(215 50% 60% / 0.15)",
                 }}
               >
                 <span className="relative z-10">DOHODNÚŤ KONZULTÁCIU</span>
                 <ArrowRight size={19} className="relative z-10 group-hover:translate-x-1 transition-transform" />
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  style={{ background: "linear-gradient(135deg, hsl(210 100% 42%), hsl(200 100% 48%))" }}
+                  style={{ background: "linear-gradient(135deg, hsl(220 50% 35%), hsl(215 50% 40%))" }}
                 />
               </a>
               <p className="text-[11px] text-muted-foreground mt-4 md:mt-5 tracking-wide">
@@ -177,15 +134,14 @@ const HeroSection = () => {
                   key={b.label}
                   className="px-4 py-3 md:px-5 md:py-4 rounded-xl max-w-[210px]"
                   style={{
-                    background: "linear-gradient(145deg, hsl(225 22% 12% / 0.9), hsl(225 25% 6% / 0.8))",
-                    border: "1px solid hsl(200 100% 55% / 0.1)",
+                    background: "linear-gradient(145deg, hsl(220 25% 12% / 0.9), hsl(222 25% 7% / 0.8))",
+                    border: "1px solid hsl(215 20% 25% / 0.25)",
                     backdropFilter: "blur(20px)",
-                    boxShadow: "0 8px 30px -10px hsl(220 80% 5% / 0.3)",
                   }}
                 >
                   <div className="flex items-center gap-2 mb-2">
-                    <b.icon size={13} className="text-primary" />
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-primary">
+                    <b.icon size={13} className="text-[hsl(210_45%_58%)]" />
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-[hsl(210_40%_65%)]">
                       {b.label}
                     </span>
                   </div>
@@ -203,7 +159,7 @@ const HeroSection = () => {
               {/* Ambient glow behind image */}
               <div
                 className="absolute -inset-24 rounded-3xl blur-[100px]"
-                style={{ background: "radial-gradient(ellipse at 50% 35%, hsl(200 100% 50% / 0.15), hsl(260 70% 50% / 0.03), transparent 65%)" }}
+                style={{ background: "radial-gradient(ellipse at 50% 35%, hsl(215 40% 30% / 0.1), transparent 65%)" }}
               />
 
               {/* ═══ IMAGE FRAME ═══ */}
@@ -211,30 +167,25 @@ const HeroSection = () => {
                 className="relative w-[500px] xl:w-[600px]"
                 style={{ transform: "rotateY(-4deg) rotateX(2deg)" }}
               >
-                {/* Edge glow frame */}
+                {/* Edge frame */}
                 <div
                   className="absolute -inset-[1.5px] rounded-2xl"
                   style={{
-                    background: "linear-gradient(160deg, hsl(200 100% 55% / 0.35), hsl(200 100% 55% / 0.1) 30%, transparent 50%, hsl(200 100% 55% / 0.05) 80%, hsl(200 100% 55% / 0.25))",
+                    background: "linear-gradient(160deg, hsl(215 30% 35% / 0.25), hsl(215 25% 25% / 0.1) 30%, transparent 50%, hsl(215 25% 30% / 0.08) 80%, hsl(215 30% 35% / 0.15))",
                   }}
                 />
 
                 <div
                   className="rounded-2xl overflow-hidden relative"
                   style={{
-                    background: "linear-gradient(165deg, hsl(222 30% 14% / 0.98), hsl(225 40% 5% / 0.99))",
-                    boxShadow: `
-                      0 80px 150px -40px hsl(200 100% 30% / 0.3),
-                      0 40px 80px -25px hsl(220 80% 5% / 0.6),
-                      0 0 120px -30px hsl(200 100% 55% / 0.1),
-                      inset 0 1px 0 hsl(200 100% 80% / 0.08)
-                    `,
+                    background: "linear-gradient(165deg, hsl(222 25% 14% / 0.98), hsl(222 30% 6% / 0.99))",
+                    boxShadow: "0 60px 120px -40px hsl(220 30% 8% / 0.5), 0 30px 60px -20px hsl(220 30% 5% / 0.5)",
                   }}
                 >
                   {/* Top accent bar */}
                   <div
-                    className="absolute top-0 left-0 right-0 h-[2px] z-20"
-                    style={{ background: "linear-gradient(to right, hsl(200 100% 55% / 0.05), hsl(200 100% 55% / 0.6), hsl(210 100% 60% / 0.6), hsl(200 100% 55% / 0.05))" }}
+                    className="absolute top-0 left-0 right-0 h-[1px] z-20"
+                    style={{ background: "linear-gradient(to right, transparent 10%, hsl(215 40% 45% / 0.3), hsl(215 40% 45% / 0.3), transparent 90%)" }}
                   />
 
                   {/* Status badge */}
@@ -242,15 +193,15 @@ const HeroSection = () => {
                     <div
                       className="px-3 py-1.5 rounded-full text-[9px] uppercase tracking-[0.18em] font-mono font-semibold"
                       style={{
-                        background: "linear-gradient(135deg, hsl(200 100% 55% / 0.2), hsl(200 100% 55% / 0.08))",
-                        border: "1px solid hsl(200 100% 55% / 0.3)",
-                        color: "hsl(200 100% 85%)",
+                        background: "hsl(215 25% 18% / 0.7)",
+                        border: "1px solid hsl(215 25% 30% / 0.3)",
+                        color: "hsl(210 25% 75%)",
                         backdropFilter: "blur(10px)",
                       }}
                     >
                       <span className="relative flex h-1.5 w-1.5 mr-1.5 inline-block align-middle">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
-                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary" />
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[hsl(210_45%_50%)] opacity-60" />
+                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[hsl(210_45%_50%)]" />
                       </span>
                       AI v akcii
                     </div>
@@ -259,19 +210,19 @@ const HeroSection = () => {
                   {/* Main image */}
                   <img
                     src={heroTeam}
-                    alt="AI Mercatores - Strategické AI riešenia pre firmy"
+                    alt="AI Mercatores - B2B predaj a outsourcing obchodu"
                     className="w-full h-auto object-cover"
                     style={{ 
-                      filter: "contrast(1.05) saturate(0.95)",
+                      filter: "contrast(1.05) saturate(0.9)",
                       mixBlendMode: "luminosity",
                     }}
                   />
 
-                  {/* Bottom gradient overlay for text */}
+                  {/* Bottom gradient overlay */}
                   <div 
                     className="absolute bottom-0 left-0 right-0 h-32 z-10"
                     style={{
-                      background: "linear-gradient(to top, hsl(222 50% 5% / 0.95), transparent)",
+                      background: "linear-gradient(to top, hsl(222 40% 5% / 0.95), transparent)",
                     }}
                   />
 
@@ -279,29 +230,29 @@ const HeroSection = () => {
                   <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="text-[10px] uppercase tracking-[0.2em] font-mono text-primary/80 mb-1">
+                        <p className="text-[10px] uppercase tracking-[0.2em] font-mono text-[hsl(210_35%_60%)] mb-1">
                           AI.MERCATORES.SK
                         </p>
                         <p className="text-xs text-foreground/70">
-                          Strategické AI riešenia pre váš biznis
+                          B2B predaj a outsourcing obchodu s AI
                         </p>
                       </div>
                       <div
                         className="w-10 h-10 rounded-xl flex items-center justify-center"
                         style={{
-                          background: "linear-gradient(135deg, hsl(200 100% 50% / 0.2), hsl(220 100% 45% / 0.1))",
-                          border: "1px solid hsl(200 100% 55% / 0.2)",
+                          background: "hsl(215 25% 18% / 0.5)",
+                          border: "1px solid hsl(215 25% 28% / 0.25)",
                         }}
                       >
-                        <Layers size={18} className="text-primary" />
+                        <Layers size={18} className="text-[hsl(210_35%_58%)]" />
                       </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Decorative corner accents */}
-                <div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-primary/30 rounded-tr-lg" />
-                <div className="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-primary/30 rounded-bl-lg" />
+                <div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-[hsl(215_30%_35%/0.25)] rounded-tr-lg" />
+                <div className="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-[hsl(215_30%_35%/0.25)] rounded-bl-lg" />
               </div>
             </div>
           </div>
