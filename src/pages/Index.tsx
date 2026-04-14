@@ -31,7 +31,7 @@ import {
 } from "@/components/ui/accordion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import heroDashboard from "@/assets/hero-dashboard.jpg";
+import heroImage from "@/assets/hero-image.png";
 import aiBrainNetwork from "@/assets/ai-brain-network.jpg";
 
 const Index = () => {
@@ -87,8 +87,8 @@ const Index = () => {
               <div className="relative flex justify-center lg:justify-end animate-[heroFadeUp_0.6s_ease-out_0.15s_both]">
                 <div className="relative rounded-xl overflow-hidden max-w-[560px] w-full shadow-2xl shadow-primary/5 border border-border">
                   <img
-                    src={heroDashboard}
-                    alt="Executive dashboard — pipeline, CRM, workflow, reporting"
+                    src={heroImage}
+                    alt="Moderný AI-powered obchodný systém — vizualizácia dát a procesov"
                     className="w-full h-auto object-cover"
                     fetchPriority="high"
                   />
