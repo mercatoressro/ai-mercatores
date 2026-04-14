@@ -116,6 +116,9 @@ const HeroSection = () => {
               style={{ fontSize: "clamp(2.5rem, 7.5vw, 7rem)", textShadow: "0 0 80px hsl(200 100% 50% / 0.15), 0 2px 4px hsl(220 50% 3% / 0.6)" }}
             >
               <span className="block drop-shadow-[0_0_40px_hsl(200_100%_50%/0.08)]">
+                <span className="text-white">Posúvame váš</span>
+              </span>
+              <span className="block">
                 <span
                   className="inline-block"
                   style={{
@@ -125,17 +128,15 @@ const HeroSection = () => {
                     filter: "drop-shadow(0 0 30px hsl(200 100% 50% / 0.3))",
                   }}
                 >
-                  AI
+                  B2B obchod
                 </span>
-                <span className="text-white">, ktoré reálne</span>
               </span>
-              <span className="block text-white">funguje</span>
-              <span className="block text-white">vo firme</span>
+              <span className="block text-white">vpred s AI</span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-base md:text-lg text-foreground/90 leading-[1.85] mb-14 max-w-[520px]">
-              Architektúra, nasadenie a správa AI v obchode, marketingu a operatíve. Systém, ktorý beží — nie prezentácia, ktorá leží v šuplíku.
+            <p className="text-base md:text-lg text-foreground/90 leading-[1.85] mb-14 max-w-[560px]">
+              V ai.mercatores.sk sme profesionáli na B2B predaj a outsourcing obchodu. Kombinujeme dlhoročné obchodné skúsenosti s inováciami a umelou inteligenciou pre dosiahnutie maximálnych výsledkov.
             </p>
 
             {/* CTA */}
