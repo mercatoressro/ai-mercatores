@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo-ai-mercatores.png";
+import logo from "@/assets/logo-ai-mercatores-transparent.png";
 
 const navItems = [
   { label: "Riešenie", href: "#riesenie" },
@@ -31,7 +31,7 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-[68px]">
           <a href="#" className="flex items-center">
-            <img src={logo} alt="ai.mercatores.sk" className="h-8 w-auto" />
+            <img src={logo} alt="ai.mercatores.sk" className="h-10 w-auto" />
           </a>
 
           <nav className="hidden lg:flex items-center gap-1">
