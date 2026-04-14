@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
           <div>
             <div className="mb-4">
-              <img src={logo} alt="ai.mercatores.sk" className="h-10 w-auto mix-blend-multiply" />
+              <img src={logo} alt="ai.mercatores.sk" className="h-12 w-auto" />
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
               Obchodný systém, AI nástroje a exekúcia pre firmy, ktoré chcú riadený rast pod značkou ai.mercatores.sk.
