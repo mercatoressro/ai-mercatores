@@ -309,7 +309,7 @@ const Index = () => {
                   <div className="w-10 h-10 rounded-lg bg-primary/15 flex items-center justify-center mx-auto mb-3">
                     <item.icon size={18} className="text-primary" />
                   </div>
-                  <h3 className="text-sm font-semibold text-white leading-snug">{item.title}</h3>
+                  <h3 className="text-sm font-semibold text-foreground leading-snug">{item.title}</h3>
                 </div>
               ))}
             </div>
@@ -563,17 +563,17 @@ const Index = () => {
         ═══════════════════════════════════════════ */}
         <section id="kontakt" className="py-20 md:py-28 section-dark relative overflow-hidden">
           <ParallaxBackground
-            src={bgAiCircuit}
-            opacity="opacity-[0.08]"
+            src={bgAiLight}
+            opacity="opacity-40"
             speed={0.25}
-            overlay={<div className="absolute inset-0 bg-gradient-to-b from-[hsl(230,25%,9%)]/50 via-[hsl(230,25%,9%)]/40 to-[hsl(230,25%,9%)]/70" />}
+            overlay={<div className="absolute inset-0 bg-gradient-to-b from-[hsl(240,50%,95%)]/60 via-[hsl(240,50%,95%)]/40 to-[hsl(240,50%,95%)]/70" />}
           />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="font-display text-section mb-5 text-white">
+              <h2 className="font-display text-section mb-5 text-foreground">
                 Keď obchod, AI a riadenie fungujú spolu, firma rastie inak.
               </h2>
-              <p className="text-[0.95rem] leading-relaxed max-w-xl mx-auto mb-10" style={{ color: "hsl(230 15% 65%)" }}>
+              <p className="text-[0.95rem] leading-relaxed max-w-xl mx-auto mb-10 text-muted-foreground">
                 Ak chcete mať vo firme menej chaosu, viac kontroly a systém, ktorý podporuje rast, poďme sa pozrieť, kde vám dnes uniká výkon.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-5">
@@ -593,10 +593,10 @@ const Index = () => {
                   WhatsApp: 0905 600 095
                 </a>
               </div>
-              <p className="text-xs" style={{ color: "hsl(230 15% 55%)" }}>
+              <p className="text-xs text-muted-foreground">
                 ai@mercatores.sk · ai@ai.mercatores.sk · 0905 600 095
               </p>
-              <p className="text-xs" style={{ color: "hsl(230 15% 50%)" }}>
+              <p className="text-xs text-muted-foreground">
                 Bez nezáväzného hype callu. Konkrétne, prakticky a podľa reality vašej firmy.
               </p>
             </div>
