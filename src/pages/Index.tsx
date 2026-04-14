@@ -5,20 +5,23 @@ import {
   BarChart3,
   GitBranch,
   Users,
-  Settings,
+  BrainCircuit,
   Target,
   Bot,
   LineChart,
   Layers,
-  Search,
+  Sparkles,
   Rocket,
   TrendingUp,
   Shield,
   Eye,
   ListChecks,
   Workflow,
-  BrainCircuit,
+  Cpu,
   Check,
+  Network,
+  Zap,
+  DatabaseZap,
 } from "lucide-react";
 import {
   Accordion,
@@ -28,8 +31,10 @@ import {
 } from "@/components/ui/accordion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import heroDashboard from "@/assets/hero-dashboard.jpg";
+import heroAiOffice from "@/assets/hero-ai-office.png";
 import aiBrainNetwork from "@/assets/ai-brain-network.jpg";
+import aiSection1 from "@/assets/ai-section-1.jpg";
+import aiSection2 from "@/assets/ai-section-2.jpg";
 
 const Index = () => {
   return (
@@ -84,7 +89,7 @@ const Index = () => {
               <div className="relative flex justify-center lg:justify-end animate-[heroFadeUp_0.6s_ease-out_0.15s_both]">
                 <div className="relative rounded-xl overflow-hidden max-w-[560px] w-full shadow-2xl shadow-primary/5 border border-border">
                   <img
-                    src={heroDashboard}
+                    src={heroAiOffice}
                     alt="Executive AI dashboard — pipeline, CRM, workflow, reporting"
                     className="w-full h-auto object-cover"
                     fetchPriority="high"
@@ -178,7 +183,7 @@ const Index = () => {
               {/* Pilier 1 */}
               <div className="glass-card p-7">
                 <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center mb-5">
-                  <Target size={20} className="text-primary" />
+                  <Network size={20} className="text-primary" />
                 </div>
                 <h3 className="font-display text-lg font-bold text-foreground mb-1">Obchodný systém</h3>
                 <p className="text-xs text-primary font-medium uppercase tracking-wider mb-4">Pilier 1</p>
@@ -226,7 +231,7 @@ const Index = () => {
               {/* Pilier 3 */}
               <div className="glass-card p-7">
                 <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center mb-5">
-                  <Rocket size={20} className="text-primary" />
+                  <Sparkles size={20} className="text-primary" />
                 </div>
                 <h3 className="font-display text-lg font-bold text-foreground mb-1">Exekúcia a riadenie</h3>
                 <p className="text-xs text-primary font-medium uppercase tracking-wider mb-4">Pilier 3</p>
@@ -253,8 +258,12 @@ const Index = () => {
         {/* ═══════════════════════════════════════════
             4. AI CEO
         ═══════════════════════════════════════════ */}
-        <section id="ai-ceo" className="py-24 md:py-32 section-dark">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="ai-ceo" className="py-24 md:py-32 section-dark relative overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <img src={aiSection1} alt="" className="w-full h-full object-cover opacity-[0.15]" loading="lazy" width={1280} height={720} />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
+          </div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-5 text-white">
                 AI CEO nie je náhrada vedenia.<br className="hidden sm:block" />
@@ -287,8 +296,12 @@ const Index = () => {
         {/* ═══════════════════════════════════════════
             5. AKO TO FUNGUJE
         ═══════════════════════════════════════════ */}
-        <section id="proces" className="py-24 md:py-32">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="proces" className="py-24 md:py-32 relative overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <img src={aiSection2} alt="" className="w-full h-full object-cover opacity-[0.08]" loading="lazy" width={1280} height={720} />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/90 to-background" />
+          </div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">
                 Od chaosu k systému v 4 krokoch
@@ -301,7 +314,7 @@ const Index = () => {
                   num: "01",
                   title: "Diagnostika",
                   desc: "Zmapujeme obchod, procesy, operatívu a miesta, kde dnes firma stráca výkon.",
-                  icon: Search,
+                  icon: BrainCircuit,
                 },
                 {
                   num: "02",
@@ -313,7 +326,7 @@ const Index = () => {
                   num: "03",
                   title: "Implementácia",
                   desc: "Zavedieme workflow, AI nástroje, reporting, obchodné pravidlá a interné procesy.",
-                  icon: Settings,
+                  icon: Cpu,
                 },
                 {
                   num: "04",
@@ -409,12 +422,12 @@ const Index = () => {
               {[
                 { icon: TrendingUp, label: "Viac obchodných príležitostí" },
                 { icon: GitBranch, label: "Lepší follow-up" },
-                { icon: BarChart3, label: "Lepšie využité CRM" },
-                { icon: Settings, label: "Menej manuálnej operatívy" },
+                { icon: Network, label: "Lepšie využité CRM" },
+                { icon: Cpu, label: "Menej manuálnej operatívy" },
                 { icon: Eye, label: "Vyššia kontrola nad výkonom" },
                 { icon: Users, label: "Jasnejšie riadenie tímu" },
                 { icon: Bot, label: "AI s reálnym dopadom" },
-                { icon: Shield, label: "Systém, ktorý nestojí na jednom človeku" },
+                { icon: Sparkles, label: "Systém, ktorý nestojí na jednom človeku" },
               ].map((item) => (
                 <div key={item.label} className="glass-card-static p-5 flex items-start gap-3">
                   <div className="w-8 h-8 rounded-md bg-primary/8 flex items-center justify-center flex-shrink-0">
