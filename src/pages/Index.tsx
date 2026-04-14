@@ -584,12 +584,17 @@ const Index = () => {
                   <ArrowRight size={16} />
                 </a>
                 <a
-                  href="tel:+421905600095"
+                  href="https://wa.me/421905600095"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-outline-dark inline-flex items-center gap-2 px-8 py-4 text-sm"
                 >
-                  +421 905 600 095
+                  WhatsApp: 0905 600 095
                 </a>
               </div>
+              <p className="text-xs" style={{ color: "hsl(230 15% 55%)" }}>
+                ai@mercatores.sk · ai@ai.mercatores.sk · 0905 600 095
+              </p>
               <p className="text-xs" style={{ color: "hsl(230 15% 50%)" }}>
                 Bez nezáväzného hype callu. Konkrétne, prakticky a podľa reality vašej firmy.
               </p>
