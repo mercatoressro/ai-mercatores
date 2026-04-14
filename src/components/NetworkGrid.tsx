@@ -14,6 +14,7 @@ const NetworkGrid = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animRef = useRef<number>(0);
   const nodesRef = useRef<Node[]>([]);
+  const isVisibleRef = useRef(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -29,7 +30,10 @@ const NetworkGrid = () => {
     };
 
     const initNodes = () => {
-      const count = Math.min(Math.floor((canvas.offsetWidth * canvas.offsetHeight) / 18000), 60);
+      const isMobile = canvas.offsetWidth < 768;
+      const divisor = isMobile ? 30000 : 18000;
+      const maxNodes = isMobile ? 25 : 60;
+      const count = Math.min(Math.floor((canvas.offsetWidth * canvas.offsetHeight) / divisor), maxNodes);
       const nodes: Node[] = [];
       for (let i = 0; i < count; i++) {
         nodes.push({
@@ -56,11 +60,15 @@ const NetworkGrid = () => {
     const h = () => canvas.offsetHeight;
     const connectionDist = 160;
 
-    const draw = (time: number) => {
+    const draw = () => {
+      if (!isVisibleRef.current) {
+        animRef.current = requestAnimationFrame(draw);
+        return;
+      }
+
       ctx.clearRect(0, 0, w(), h());
       const nodes = nodesRef.current;
 
-      // Update
       for (const n of nodes) {
         n.x += n.vx;
         n.y += n.vy;
@@ -69,7 +77,6 @@ const NetworkGrid = () => {
         if (n.y < 0 || n.y > h()) n.vy *= -1;
       }
 
-      // Connections
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
           const dx = nodes[i].x - nodes[j].x;
@@ -87,13 +94,11 @@ const NetworkGrid = () => {
         }
       }
 
-      // Nodes
       for (const n of nodes) {
         const pulse = Math.sin(n.pulsePhase) * 0.5 + 0.5;
         const r = n.radius + pulse * 1;
         const alpha = 0.2 + pulse * 0.4;
 
-        // Outer glow
         const grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, r * 4);
         grad.addColorStop(0, `rgba(56, 189, 248, ${alpha * 0.3})`);
         grad.addColorStop(1, `rgba(56, 189, 248, 0)`);
@@ -102,7 +107,6 @@ const NetworkGrid = () => {
         ctx.fillStyle = grad;
         ctx.fill();
 
-        // Core
         ctx.beginPath();
         ctx.arc(n.x, n.y, r, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(56, 189, 248, ${alpha})`;
@@ -112,10 +116,20 @@ const NetworkGrid = () => {
       animRef.current = requestAnimationFrame(draw);
     };
 
+    // IntersectionObserver - only animate when visible
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisibleRef.current = entry.isIntersecting;
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(canvas);
+
     animRef.current = requestAnimationFrame(draw);
 
     return () => {
       cancelAnimationFrame(animRef.current);
+      observer.disconnect();
     };
   }, []);
 

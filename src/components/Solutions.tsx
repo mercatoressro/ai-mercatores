@@ -69,7 +69,7 @@ const Solutions = () => {
     <section id="riesenia" className="relative py-28 md:py-36">
       {/* Photo background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <img src={bgBoardroom} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.15] mix-blend-luminosity" />
+        <img src={bgBoardroom} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-[0.15] mix-blend-luminosity" />
         <div className="absolute inset-0 bg-background/85" />
         <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-[hsl(200_100%_55%/0.02)] rounded-full blur-[120px]" />
         <div className="absolute bottom-1/4 -right-20 w-[400px] h-[400px] bg-[hsl(260_70%_60%/0.02)] rounded-full blur-[100px]" />
