@@ -1,19 +1,21 @@
+import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import SectionDivider from "@/components/SectionDivider";
-import PainPoints from "@/components/PainPoints";
-import Solutions from "@/components/Solutions";
-import TechFoundation from "@/components/TechFoundation";
-import WhyFail from "@/components/WhyFail";
-import HowItWorks from "@/components/HowItWorks";
-import ForWhom from "@/components/ForWhom";
-import Impact from "@/components/Impact";
-import Philosophy from "@/components/Philosophy";
-import HundredChanges from "@/components/HundredChanges";
-import FAQSection from "@/components/FAQSection";
-import CTASection from "@/components/CTASection";
-import Footer from "@/components/Footer";
-import CliqSalesForm from "@/components/CliqSalesForm";
+
+const PainPoints = lazy(() => import("@/components/PainPoints"));
+const Solutions = lazy(() => import("@/components/Solutions"));
+const TechFoundation = lazy(() => import("@/components/TechFoundation"));
+const WhyFail = lazy(() => import("@/components/WhyFail"));
+const HowItWorks = lazy(() => import("@/components/HowItWorks"));
+const ForWhom = lazy(() => import("@/components/ForWhom"));
+const Impact = lazy(() => import("@/components/Impact"));
+const Philosophy = lazy(() => import("@/components/Philosophy"));
+const HundredChanges = lazy(() => import("@/components/HundredChanges"));
+const FAQSection = lazy(() => import("@/components/FAQSection"));
+const CTASection = lazy(() => import("@/components/CTASection"));
+const CliqSalesForm = lazy(() => import("@/components/CliqSalesForm"));
+const Footer = lazy(() => import("@/components/Footer"));
 
 const Index = () => {
   return (
@@ -21,6 +23,7 @@ const Index = () => {
       <Header />
       <main>
       <HeroSection />
+      <Suspense fallback={null}>
       <SectionDivider variant="glow" />
       <PainPoints />
       <SectionDivider variant="subtle" />
@@ -44,8 +47,11 @@ const Index = () => {
       <SectionDivider variant="subtle" />
       <CTASection />
       <CliqSalesForm />
+      </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </div>
   );
 };
