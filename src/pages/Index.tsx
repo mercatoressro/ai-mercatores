@@ -42,6 +42,7 @@ import photoServerShield from "@/assets/photo-server-shield.webp";
 import photoAiLab from "@/assets/photo-ai-lab.webp";
 import bgAiData from "@/assets/bg-ai-data.jpg";
 import bgAiCircuit from "@/assets/bg-ai-circuit.jpg";
+import bgAiLight from "@/assets/bg-ai-light-cta.jpg";
 
 const Index = () => {
   return (
@@ -280,18 +281,18 @@ const Index = () => {
         ═══════════════════════════════════════════ */}
         <section id="ai-ceo" className="py-24 md:py-32 section-dark relative overflow-hidden">
           <ParallaxBackground
-            src={photoNeuralNetwork}
-            opacity="opacity-[0.12]"
+            src={bgAiLight}
+            opacity="opacity-[0.35]"
             speed={0.3}
-            overlay={<div className="absolute inset-0 bg-gradient-to-b from-[hsl(230,25%,9%)]/60 via-[hsl(230,25%,9%)]/40 to-[hsl(230,25%,9%)]/80" />}
+            overlay={<div className="absolute inset-0 bg-gradient-to-b from-[hsl(240,50%,95%)]/70 via-[hsl(240,50%,95%)]/50 to-[hsl(240,50%,95%)]/80" />}
           />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-14">
-              <h2 className="font-display text-section mb-5 text-white">
+              <h2 className="font-display text-section mb-5 text-foreground">
                 AI CEO nie je náhrada vedenia.<br className="hidden sm:block" />
                 Je to riadiaca vrstva pre lepšie rozhodovanie.
               </h2>
-              <p className="text-base leading-relaxed max-w-2xl mx-auto" style={{ color: "hsl(230 15% 65%)" }}>
+              <p className="text-base leading-relaxed max-w-2xl mx-auto text-muted-foreground">
                 Firmám pomáhame navrhnúť koncept AI CEO ako manažérsku vrstvu, ktorá prepája dáta, reporting, priority, obchod, operatívu a interné workflow. Cieľom nie je nahradiť človeka vo vedení. Cieľom je dať CEO a manažmentu lepší prehľad, rýchlejšie rozhodovanie a vyššiu kontrolu.
               </p>
             </div>
