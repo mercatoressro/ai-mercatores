@@ -267,6 +267,12 @@ const Index = () => {
                 </ul>
               </div>
             </div>
+
+            {/* Boardroom photo */}
+            <div className="relative rounded-xl overflow-hidden max-w-5xl mx-auto mt-12 shadow-lg">
+              <img src={photoBoardroom} alt="AI stratégia v praxi — tímové stretnutie" className="w-full h-56 md:h-72 object-cover" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
+            </div>
           </div>
         </section>
 
