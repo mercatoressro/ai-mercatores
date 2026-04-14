@@ -29,7 +29,7 @@ const Philosophy = () => {
 
           {/* Featured image */}
           <div className="max-w-2xl mx-auto mb-14">
-            <div className="relative rounded-2xl overflow-hidden border border-border/30 shadow-[0_0_40px_-10px_hsl(var(--primary)/0.15)]">
+            <div className="featured-image-frame">
               <img
                 src={bgAiLab}
                 alt="AI výskumné laboratórium"

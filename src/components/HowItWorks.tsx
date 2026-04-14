@@ -57,7 +57,7 @@ const HowItWorks = () => {
 
         {/* Featured image */}
         <div className="max-w-3xl mx-auto mb-16">
-          <div className="relative rounded-2xl overflow-hidden border border-border/30 shadow-[0_0_40px_-10px_hsl(var(--primary)/0.15)]">
+          <div className="featured-image-frame">
             <img
               src={bgTeam}
               alt="AI operačné centrum"
