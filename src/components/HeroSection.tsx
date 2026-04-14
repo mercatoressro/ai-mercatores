@@ -1,6 +1,7 @@
 import { ArrowRight, Layers, Shield, Zap, BarChart3 } from "lucide-react";
 import NetworkGrid from "./NetworkGrid";
 import bgMeeting from "@/assets/bg-meeting.jpg";
+import heroTeam from "@/assets/hero-team-meeting.webp";
 
 const HeroSection = () => {
   return (
@@ -195,25 +196,25 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* ═══ RIGHT — 5 cols — AI Strategy Artifact ═══ */}
+          {/* ═══ RIGHT — 5 cols — Team Meeting Image ═══ */}
           <div className="lg:col-span-5 hidden lg:flex justify-center items-center">
             <div className="relative" style={{ perspective: "1400px" }}>
-              {/* Ambient glow behind card */}
+              {/* Ambient glow behind image */}
               <div
-                className="absolute -inset-28 rounded-3xl blur-[120px]"
-                style={{ background: "radial-gradient(ellipse at 50% 35%, hsl(200 100% 50% / 0.12), hsl(260 70% 50% / 0.04), transparent 65%)" }}
+                className="absolute -inset-24 rounded-3xl blur-[100px]"
+                style={{ background: "radial-gradient(ellipse at 50% 35%, hsl(200 100% 50% / 0.15), hsl(260 70% 50% / 0.03), transparent 65%)" }}
               />
 
-              {/* ═══ MAIN DOCUMENT CARD ═══ */}
+              {/* ═══ IMAGE FRAME ═══ */}
               <div
-                className="relative w-[360px] xl:w-[420px]"
-                style={{ transform: "rotateY(-6deg) rotateX(3deg)" }}
+                className="relative w-[400px] xl:w-[480px]"
+                style={{ transform: "rotateY(-4deg) rotateX(2deg)" }}
               >
                 {/* Edge glow frame */}
                 <div
                   className="absolute -inset-[1.5px] rounded-2xl"
                   style={{
-                    background: "linear-gradient(160deg, hsl(200 100% 55% / 0.4), hsl(200 100% 55% / 0.1) 30%, transparent 50%, hsl(200 100% 55% / 0.05) 80%, hsl(200 100% 55% / 0.2))",
+                    background: "linear-gradient(160deg, hsl(200 100% 55% / 0.35), hsl(200 100% 55% / 0.1) 30%, transparent 50%, hsl(200 100% 55% / 0.05) 80%, hsl(200 100% 55% / 0.25))",
                   }}
                 />
 
@@ -222,199 +223,84 @@ const HeroSection = () => {
                   style={{
                     background: "linear-gradient(165deg, hsl(222 30% 14% / 0.98), hsl(225 40% 5% / 0.99))",
                     boxShadow: `
-                      0 80px 150px -40px hsl(200 100% 30% / 0.25),
-                      0 40px 80px -25px hsl(220 80% 5% / 0.7),
-                      0 0 120px -30px hsl(200 100% 55% / 0.12),
-                      inset 0 1px 0 hsl(200 100% 80% / 0.08),
-                      inset 0 0 80px hsl(200 100% 55% / 0.02)
+                      0 80px 150px -40px hsl(200 100% 30% / 0.3),
+                      0 40px 80px -25px hsl(220 80% 5% / 0.6),
+                      0 0 120px -30px hsl(200 100% 55% / 0.1),
+                      inset 0 1px 0 hsl(200 100% 80% / 0.08)
                     `,
                   }}
                 >
                   {/* Top accent bar */}
                   <div
-                    className="absolute top-0 left-0 right-0 h-[2px]"
-                    style={{ background: "linear-gradient(to right, hsl(200 100% 55% / 0.05), hsl(200 100% 55% / 0.5), hsl(210 100% 60% / 0.5), hsl(200 100% 55% / 0.05))" }}
+                    className="absolute top-0 left-0 right-0 h-[2px] z-20"
+                    style={{ background: "linear-gradient(to right, hsl(200 100% 55% / 0.05), hsl(200 100% 55% / 0.6), hsl(210 100% 60% / 0.6), hsl(200 100% 55% / 0.05))" }}
                   />
 
-                  {/* ─ Header ─ */}
-                  <div className="px-9 pt-10 pb-7 relative text-center">
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-56 h-36 bg-[hsl(200_100%_55%/0.04)] rounded-full blur-[60px] pointer-events-none" />
-
-                    {/* Status indicator */}
-                    <div className="flex items-center justify-center gap-2 mb-6 relative z-10">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                      <span className="text-[8px] uppercase tracking-[0.25em] font-mono text-primary/80">Systém aktívny</span>
-                    </div>
-
-                    {/* Book icon */}
+                  {/* Status badge */}
+                  <div className="absolute top-4 left-4 z-20 flex items-center gap-2">
                     <div
-                      className="relative z-10 mx-auto mb-6 w-[72px] h-[72px] rounded-2xl flex items-center justify-center"
+                      className="px-3 py-1.5 rounded-full text-[9px] uppercase tracking-[0.18em] font-mono font-semibold"
                       style={{
-                        background: "linear-gradient(135deg, hsl(200 100% 50% / 0.18), hsl(200 100% 55% / 0.06))",
-                        border: "1px solid hsl(200 100% 55% / 0.18)",
-                        boxShadow: "0 0 40px hsl(200 100% 55% / 0.1), inset 0 1px 0 hsl(200 100% 80% / 0.05)",
+                        background: "linear-gradient(135deg, hsl(200 100% 55% / 0.2), hsl(200 100% 55% / 0.08))",
+                        border: "1px solid hsl(200 100% 55% / 0.3)",
+                        color: "hsl(200 100% 85%)",
+                        backdropFilter: "blur(10px)",
                       }}
                     >
-                      <Layers size={30} className="text-primary" />
+                      <span className="relative flex h-1.5 w-1.5 mr-1.5 inline-block align-middle">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
+                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary" />
+                      </span>
+                      AI v akcii
                     </div>
-
-                    {/* Title */}
-                    <h3 className="font-display text-[1.8rem] xl:text-[2rem] font-extrabold tracking-tight mb-2 relative z-10 text-white">
-                      AI CONTROL LAYER
-                    </h3>
-                    <p
-                      className="text-[11px] uppercase tracking-[0.25em] font-mono font-semibold relative z-10"
-                      style={{ color: "hsl(200 100% 70%)" }}
-                    >
-                      BUSINESS TRANSFORMATION
-                    </p>
                   </div>
 
-                  {/* Blue accent divider */}
-                  <div className="mx-10 relative">
-                    <div
-                      className="h-[2px] rounded-full"
-                      style={{
-                        background: "linear-gradient(to right, hsl(200 100% 55% / 0.08), hsl(200 100% 55% / 0.65), hsl(200 100% 55% / 0.08))",
-                        boxShadow: "0 0 16px hsl(200 100% 55% / 0.25)",
-                      }}
-                    />
-                  </div>
-
-                  {/* Tags */}
-                  <div className="px-9 py-5 text-center relative z-10">
-                    <p className="text-[10px] uppercase tracking-[0.15em] text-foreground/75 leading-[2.2]">
-                      Obchodné procesy • Marketing • Operatíva
-                      <br />
-                      Automatizácia • Reporting • Implementácia
-                    </p>
-                  </div>
-
-                  {/* Module list */}
-                  <div
-                    className="mx-7 mb-5 px-6 py-5 rounded-xl"
-                    style={{
-                      background: "linear-gradient(145deg, hsl(222 25% 12% / 0.8), hsl(225 30% 7% / 0.6))",
-                      border: "1px solid hsl(200 100% 55% / 0.08)",
+                  {/* Main image */}
+                  <img
+                    src={heroTeam}
+                    alt="AI Mercatores - Strategické AI riešenia pre firmy"
+                    className="w-full h-auto object-cover"
+                    style={{ 
+                      filter: "contrast(1.05) saturate(0.95)",
+                      mixBlendMode: "luminosity",
                     }}
-                  >
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="text-[9px] uppercase tracking-[0.2em] text-foreground/70 font-mono">Vrstvy</span>
-                      <span className="text-[9px] text-primary/70 font-mono">3 aktívne</span>
-                    </div>
-                    <div className="space-y-3">
-                      {[
-                        { name: "AI pre obchod", progress: 92 },
-                        { name: "AI pre marketing", progress: 87 },
-                        { name: "AI pre operatívu", progress: 78 },
-                      ].map((item, i) => (
-                        <div key={item.name}>
-                          <div className="flex items-center gap-3 mb-1.5">
-                            <span className="text-[9px] font-mono text-primary/70 w-5">0{i+1}</span>
-                            <div className="w-1 h-1 rounded-full bg-primary/50" />
-                            <span className="text-[11.5px] text-foreground/90 flex-1">{item.name}</span>
-                            <span className="text-[9px] font-mono text-primary/65">{item.progress}%</span>
-                          </div>
-                          <div className="ml-8 h-[2px] rounded-full bg-[hsl(200_100%_55%/0.08)] overflow-hidden">
-                            <div
-                              className="h-full rounded-full"
-                              style={{
-                                background: "linear-gradient(to right, hsl(200 100% 55% / 0.3), hsl(200 100% 55% / 0.6))",
-                                boxShadow: "0 0 8px hsl(200 100% 55% / 0.2)",
-                                width: `${item.progress}%`,
-                              }}
-                            />
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                  />
 
-                  {/* Bottom metrics row */}
-                  <div className="mx-7 mb-7 flex gap-3">
-                    {[
-                      { label: "AI Coverage", value: "94%" },
-                      { label: "Procesy", value: "3 aktívne" },
-                    ].map((m) => (
+                  {/* Bottom gradient overlay for text */}
+                  <div 
+                    className="absolute bottom-0 left-0 right-0 h-32 z-10"
+                    style={{
+                      background: "linear-gradient(to top, hsl(222 50% 5% / 0.95), transparent)",
+                    }}
+                  />
+
+                  {/* Bottom text overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-[10px] uppercase tracking-[0.2em] font-mono text-primary/80 mb-1">
+                          AI.MERCATORES.SK
+                        </p>
+                        <p className="text-xs text-foreground/70">
+                          Strategické AI riešenia pre váš biznis
+                        </p>
+                      </div>
                       <div
-                        key={m.label}
-                        className="flex-1 px-4 py-3 rounded-lg text-center"
+                        className="w-10 h-10 rounded-xl flex items-center justify-center"
                         style={{
-                          background: "hsl(222 25% 10% / 0.6)",
-                          border: "1px solid hsl(200 100% 55% / 0.06)",
+                          background: "linear-gradient(135deg, hsl(200 100% 50% / 0.2), hsl(220 100% 45% / 0.1))",
+                          border: "1px solid hsl(200 100% 55% / 0.2)",
                         }}
                       >
-                        <span className="block text-[8px] uppercase tracking-[0.2em] text-foreground/65 font-mono mb-1">{m.label}</span>
-                        <span className="block text-[13px] font-bold font-mono" style={{ color: "hsl(200 100% 70%)" }}>
-                          {m.value}
-                        </span>
+                        <Layers size={18} className="text-primary" />
                       </div>
-                    ))}
+                    </div>
                   </div>
                 </div>
 
-                {/* Left edge accent */}
-                <div
-                  className="absolute left-0 top-[6%] bottom-[6%] w-[2px] rounded-full"
-                  style={{
-                    background: "linear-gradient(to bottom, transparent, hsl(200 100% 55% / 0.55), hsl(200 100% 55% / 0.15), transparent)",
-                    boxShadow: "0 0 12px hsl(200 100% 55% / 0.18), -2px 0 20px hsl(200 100% 55% / 0.06)",
-                  }}
-                />
-              </div>
-
-              {/* ═══ Status badge — bottom center ═══ */}
-              <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 z-20">
-                <div
-                  className="px-4 py-2.5 rounded-xl flex items-center gap-2.5"
-                  style={{
-                    background: "linear-gradient(145deg, hsl(222 28% 13% / 0.97), hsl(225 30% 5% / 0.97))",
-                    border: "1px solid hsl(200 100% 55% / 0.12)",
-                    backdropFilter: "blur(24px)",
-                    boxShadow: "0 20px 40px -12px hsl(200 100% 35% / 0.15)",
-                  }}
-                >
-                  <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                  <span className="text-[9px] font-mono text-foreground/80 uppercase tracking-wider">
-                    3 procesy nasadené
-                  </span>
-                </div>
-              </div>
-
-              {/* Floating badge — top right */}
-              <div className="absolute -top-7 -right-8 z-10">
-                <div
-                  className="px-4 py-2.5 rounded-xl flex items-center gap-2.5"
-                  style={{
-                    background: "linear-gradient(145deg, hsl(222 28% 13% / 0.97), hsl(225 30% 5% / 0.97))",
-                    border: "1px solid hsl(200 100% 55% / 0.15)",
-                    backdropFilter: "blur(24px)",
-                    boxShadow: "0 20px 40px -12px hsl(200 100% 35% / 0.15), 0 0 0 0.5px hsl(200 100% 55% / 0.05)",
-                  }}
-                >
-                  <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                  <span className="text-[9px] font-mono text-primary/80 uppercase tracking-wider">
-                    Live
-                  </span>
-                </div>
-              </div>
-
-              {/* Floating badge — bottom left */}
-              <div className="absolute -bottom-4 -left-10 z-10">
-                <div
-                  className="px-3.5 py-2 rounded-lg flex items-center gap-2"
-                  style={{
-                    background: "linear-gradient(145deg, hsl(222 28% 12% / 0.95), hsl(225 30% 6% / 0.95))",
-                    border: "1px solid hsl(200 100% 55% / 0.1)",
-                    backdropFilter: "blur(20px)",
-                    boxShadow: "0 15px 30px -10px hsl(200 100% 40% / 0.1)",
-                  }}
-                >
-                  <Shield size={10} className="text-primary/70" />
-                  <span className="text-[8px] font-mono text-primary/70 uppercase tracking-wider">
-                    Verified
-                  </span>
-                </div>
+                {/* Decorative corner accents */}
+                <div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-primary/30 rounded-tr-lg" />
+                <div className="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-primary/30 rounded-bl-lg" />
               </div>
             </div>
           </div>
