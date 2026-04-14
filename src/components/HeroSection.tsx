@@ -207,7 +207,7 @@ const HeroSection = () => {
 
               {/* ═══ IMAGE FRAME ═══ */}
               <div
-                className="relative w-[400px] xl:w-[480px]"
+                className="relative w-[500px] xl:w-[600px]"
                 style={{ transform: "rotateY(-4deg) rotateX(2deg)" }}
               >
                 {/* Edge glow frame */}
