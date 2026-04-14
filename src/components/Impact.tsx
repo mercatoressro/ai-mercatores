@@ -56,17 +56,14 @@ const impacts = [
 const Impact = () => {
   return (
     <section className="relative py-28 md:py-36">
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <img src={bgMetrics} alt="" className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.15] mix-blend-luminosity" />
-        <div className="absolute inset-0 bg-[hsl(225_30%_3%/0.85)]" />
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 bg-[hsl(225_30%_3%)]" />
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[hsl(200_100%_55%/0.02)] rounded-full blur-[120px]" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div
-          className="text-center mb-20"
-        >
+        <div className="text-center mb-16">
           <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary font-mono font-medium mb-4">
             Výsledky
           </span>
@@ -79,12 +76,23 @@ const Impact = () => {
           </p>
         </div>
 
+        {/* Featured image */}
+        <div className="max-w-3xl mx-auto mb-16">
+          <div className="relative rounded-2xl overflow-hidden border border-border/30 shadow-[0_0_40px_-10px_hsl(var(--primary)/0.12)]">
+            <img
+              src={bgMetrics}
+              alt="AI metriky a dashboard"
+              className="w-full h-auto object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[hsl(225_30%_3%)] via-transparent to-transparent opacity-50 pointer-events-none" />
+          </div>
+        </div>
+
         {/* Impact cards grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
-          {impacts.map((item, i) => (
-            <div
-              key={item.title}
-            >
+          {impacts.map((item) => (
+            <div key={item.title}>
               <div className="gradient-border-card group h-full">
                 <div className="gradient-border-inner p-6 h-full relative overflow-hidden">
                   <div className="relative z-10">
@@ -105,9 +113,7 @@ const Impact = () => {
         </div>
 
         {/* Closing statement */}
-        <div
-          className="text-center mt-16 max-w-2xl mx-auto"
-        >
+        <div className="text-center mt-16 max-w-2xl mx-auto">
           <div className="h-px w-16 mx-auto bg-gradient-to-r from-transparent via-primary/30 to-transparent mb-8" />
           <p className="text-foreground/85 text-[0.9375rem] leading-relaxed italic">
             „Keď je AI správne navrhnutá a riadená, nevytvára ďalší nástroj. Odstraňuje zbytočné trenie vo firme."
