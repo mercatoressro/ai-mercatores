@@ -376,7 +376,11 @@ const Index = () => {
         {/* ═══════════════════════════════════════════
             6. PRE KOHO TO JE
         ═══════════════════════════════════════════ */}
-        <section id="pre-koho" className="py-24 md:py-32 section-elevated">
+        <section id="pre-koho" className="py-24 md:py-32 section-elevated relative overflow-hidden">
+          {/* Server shield bg */}
+          <div className="absolute inset-0 z-0">
+            <img src={photoServerShield} alt="" className="w-full h-full object-cover opacity-[0.05]" loading="lazy" />
+          </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">
