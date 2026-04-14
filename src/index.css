@@ -41,10 +41,10 @@
     --ring: 245 72% 55%;
     --radius: 0.625rem;
 
-    /* Dark section */
-    --dark-bg: 230 30% 8%;
-    --dark-card: 230 25% 12%;
-    --dark-border: 230 20% 18%;
+    /* Accent section (formerly dark) */
+    --dark-bg: 240 50% 95%;
+    --dark-card: 240 40% 97%;
+    --dark-border: 240 30% 88%;
     --dark-muted: 230 15% 40%;
 
     --sidebar-background: 0 0% 98%;
