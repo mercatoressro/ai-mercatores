@@ -1,25 +1,6 @@
-import { motion } from "framer-motion";
 import { ArrowRight, Layers, Shield, Zap, BarChart3 } from "lucide-react";
 import NetworkGrid from "./NetworkGrid";
 import bgMeeting from "@/assets/bg-meeting.jpg";
-
-const fadeUp = (delay = 0) => ({
-  hidden: { opacity: 0, y: 30 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.7,
-      delay,
-      ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
-    },
-  },
-});
-
-const container = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.1, delayChildren: 0.3 } },
-};
 
 const HeroSection = () => {
   return (
@@ -40,104 +21,51 @@ const HeroSection = () => {
         <div className="hidden md:block absolute top-[60%] right-[5%] w-[800px] h-[500px] bg-[hsl(220_60%_18%/0.08)] rounded-full blur-[140px]" />
       </div>
 
-      {/* AI room — architectural light structures (dimmed) */}
+      {/* AI room — architectural light structures */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div
-          className="absolute top-[6%] left-[3%] right-[3%] h-[1px] opacity-[0.07]"
-          style={{ background: "linear-gradient(to right, transparent 5%, hsl(200 100% 60%) 20%, hsl(200 100% 60%) 80%, transparent 95%)" }}
-        />
-        <div
-          className="absolute top-[7.5%] left-[3%] right-[3%] h-[30px] opacity-[0.015]"
-          style={{ background: "linear-gradient(to bottom, hsl(200 100% 60%), transparent)" }}
-        />
-        <div
-          className="absolute top-[10%] left-[12%] right-[12%] h-[1px] opacity-[0.04]"
-          style={{ background: "linear-gradient(to right, transparent, hsl(210 100% 65%) 35%, hsl(210 100% 65%) 65%, transparent)" }}
-        />
-        <div
-          className="absolute top-[14%] left-[20%] right-[20%] h-[1px] opacity-[0.03]"
-          style={{ background: "linear-gradient(to right, transparent, hsl(200 100% 55%) 40%, hsl(200 100% 55%) 60%, transparent)" }}
-        />
-        <div
-          className="absolute bottom-[12%] left-[8%] right-[8%] h-[1px] opacity-[0.04]"
-          style={{ background: "linear-gradient(to right, transparent, hsl(200 100% 50%) 25%, hsl(200 100% 50%) 75%, transparent)" }}
-        />
+        <div className="absolute top-[6%] left-[3%] right-[3%] h-[1px] opacity-[0.07]" style={{ background: "linear-gradient(to right, transparent 5%, hsl(200 100% 60%) 20%, hsl(200 100% 60%) 80%, transparent 95%)" }} />
+        <div className="absolute top-[7.5%] left-[3%] right-[3%] h-[30px] opacity-[0.015]" style={{ background: "linear-gradient(to bottom, hsl(200 100% 60%), transparent)" }} />
+        <div className="absolute top-[10%] left-[12%] right-[12%] h-[1px] opacity-[0.04]" style={{ background: "linear-gradient(to right, transparent, hsl(210 100% 65%) 35%, hsl(210 100% 65%) 65%, transparent)" }} />
+        <div className="absolute top-[14%] left-[20%] right-[20%] h-[1px] opacity-[0.03]" style={{ background: "linear-gradient(to right, transparent, hsl(200 100% 55%) 40%, hsl(200 100% 55%) 60%, transparent)" }} />
+        <div className="absolute bottom-[12%] left-[8%] right-[8%] h-[1px] opacity-[0.04]" style={{ background: "linear-gradient(to right, transparent, hsl(200 100% 50%) 25%, hsl(200 100% 50%) 75%, transparent)" }} />
       </div>
 
-      {/* Vertical light pillars (dimmed) */}
+      {/* Vertical light pillars */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div
-          className="absolute top-0 left-[6%] w-[2px] h-full opacity-[0.05]"
-          style={{ background: "linear-gradient(to bottom, transparent 3%, hsl(200 100% 55%) 20%, hsl(200 100% 55%) 70%, transparent 95%)" }}
-        />
-        <div
-          className="absolute top-0 right-[6%] w-[2px] h-full opacity-[0.05]"
-          style={{ background: "linear-gradient(to bottom, transparent 3%, hsl(200 100% 55%) 20%, hsl(200 100% 55%) 70%, transparent 95%)" }}
-        />
-        <div
-          className="absolute top-0 left-[32%] w-[1px] h-[80%] opacity-[0.03]"
-          style={{ background: "linear-gradient(to bottom, transparent, hsl(210 100% 60%) 30%, transparent 85%)" }}
-        />
-        <div
-          className="absolute top-0 right-[28%] w-[1px] h-[70%] opacity-[0.025]"
-          style={{ background: "linear-gradient(to bottom, transparent, hsl(260 60% 55%), transparent)" }}
-        />
+        <div className="absolute top-0 left-[6%] w-[2px] h-full opacity-[0.05]" style={{ background: "linear-gradient(to bottom, transparent 3%, hsl(200 100% 55%) 20%, hsl(200 100% 55%) 70%, transparent 95%)" }} />
+        <div className="absolute top-0 right-[6%] w-[2px] h-full opacity-[0.05]" style={{ background: "linear-gradient(to bottom, transparent 3%, hsl(200 100% 55%) 20%, hsl(200 100% 55%) 70%, transparent 95%)" }} />
+        <div className="absolute top-0 left-[32%] w-[1px] h-[80%] opacity-[0.03]" style={{ background: "linear-gradient(to bottom, transparent, hsl(210 100% 60%) 30%, transparent 85%)" }} />
+        <div className="absolute top-0 right-[28%] w-[1px] h-[70%] opacity-[0.025]" style={{ background: "linear-gradient(to bottom, transparent, hsl(260 60% 55%), transparent)" }} />
       </div>
 
-      {/* AI screen glow (dimmed) */}
+      {/* AI screen glow */}
       <div className="absolute inset-0 pointer-events-none">
-        <div
-          className="absolute top-[10%] right-[3%] w-[45%] h-[60%] rounded-2xl opacity-[0.02]"
-          style={{
-            border: "1px solid hsl(200 100% 55% / 0.1)",
-            background: "linear-gradient(180deg, hsl(200 100% 50% / 0.04), transparent 60%)",
-          }}
-        />
+        <div className="absolute top-[10%] right-[3%] w-[45%] h-[60%] rounded-2xl opacity-[0.02]" style={{ border: "1px solid hsl(200 100% 55% / 0.1)", background: "linear-gradient(180deg, hsl(200 100% 50% / 0.04), transparent 60%)" }} />
       </div>
 
-      {/* Pulsing focal glows (dimmed for text readability) */}
+      {/* Pulsing focal glows */}
       <div className="absolute inset-0 pointer-events-none hidden md:block">
-        <motion.div
-          className="absolute top-[5%] right-[8%] w-[900px] h-[600px] bg-[hsl(200_100%_50%/0.1)] rounded-full blur-[140px]"
-          animate={{ opacity: [0.1, 0.18, 0.1], scale: [1, 1.05, 1] }}
-          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute top-[30%] left-[25%] w-[600px] h-[500px] bg-[hsl(205_100%_55%/0.05)] rounded-full blur-[110px]"
-          animate={{ opacity: [0.05, 0.1, 0.05] }}
-          transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        />
-        <motion.div
-          className="absolute bottom-[5%] right-[20%] w-[500px] h-[400px] bg-[hsl(260_60%_50%/0.05)] rounded-full blur-[100px]"
-          animate={{ opacity: [0.05, 0.09, 0.05] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 3.5 }}
-        />
+        <div className="absolute top-[5%] right-[8%] w-[900px] h-[600px] bg-[hsl(200_100%_50%/0.1)] rounded-full blur-[140px] animate-pulse" />
+        <div className="absolute top-[30%] left-[25%] w-[600px] h-[500px] bg-[hsl(205_100%_55%/0.05)] rounded-full blur-[110px] animate-pulse" />
+        <div className="absolute bottom-[5%] right-[20%] w-[500px] h-[400px] bg-[hsl(260_60%_50%/0.05)] rounded-full blur-[100px] animate-pulse" />
       </div>
 
-      {/* Network grid overlay (dimmed) */}
+      {/* Network grid overlay */}
       <div className="opacity-30">
         <NetworkGrid />
       </div>
 
-      {/* Tech grid (dimmed) */}
+      {/* Tech grid */}
       <div className="absolute inset-0 grid-pattern opacity-[0.03] pointer-events-none" />
 
       {/* Vignette */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{ background: "radial-gradient(ellipse 70% 60% at 50% 50%, transparent 30%, hsl(222 50% 1.5% / 0.85) 100%)" }}
-      />
+      <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 70% 60% at 50% 50%, transparent 30%, hsl(222 50% 1.5% / 0.85) 100%)" }} />
 
       {/* ══════ CONTENT ══════ */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-24 pb-16 lg:pb-24">
 
         {/* ── TOP BAR ── */}
-        <motion.div
-          initial={{ opacity: 0, y: -15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex items-center gap-4 mb-5 lg:mb-8"
-        >
+        <div className="flex items-center gap-4 mb-5 lg:mb-8">
           <div
             className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full text-[8px] sm:text-[9px] uppercase tracking-[0.18em] sm:tracking-[0.22em] font-mono font-semibold"
             style={{
@@ -152,22 +80,14 @@ const HeroSection = () => {
             </span>
             AI PRE OBCHOD, MARKETING A OPERATÍVU
           </div>
-          <div
-            className="h-[1px] flex-1 max-w-[140px] hidden sm:block"
-            style={{ background: "linear-gradient(to right, hsl(200 100% 55% / 0.25), transparent)" }}
-          />
+          <div className="h-[1px] flex-1 max-w-[140px] hidden sm:block" style={{ background: "linear-gradient(to right, hsl(200 100% 55% / 0.25), transparent)" }} />
           <span className="text-[10px] uppercase tracking-[0.22em] text-foreground/80 font-mono hidden sm:block">
             AI.MERCATORES.SK
           </span>
-        </motion.div>
+        </div>
 
         {/* ── BRAND ── */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex items-center gap-3 mb-8 md:mb-12 lg:mb-16"
-        >
+        <div className="flex items-center gap-3 mb-8 md:mb-12 lg:mb-16">
           <div
             className="w-10 h-10 rounded-xl flex items-center justify-center"
             style={{
@@ -182,21 +102,15 @@ const HeroSection = () => {
           <span className="text-[16px] font-display font-bold tracking-wide text-white">
             AI.MERCATORES.SK
           </span>
-        </motion.div>
+        </div>
 
         {/* ── MAIN GRID ── */}
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
 
           {/* ═══ LEFT — 7 cols ═══ */}
-          <motion.div
-            variants={container}
-            initial="hidden"
-            animate="show"
-            className="lg:col-span-7"
-          >
+          <div className="lg:col-span-7">
             {/* MASSIVE HEADLINE */}
-            <motion.h1
-              variants={fadeUp(0)}
+            <h1
               className="font-display leading-[0.92] tracking-[-0.045em] font-extrabold mb-8 md:mb-10"
               style={{ fontSize: "clamp(2.5rem, 7.5vw, 7rem)", textShadow: "0 0 80px hsl(200 100% 50% / 0.15), 0 2px 4px hsl(220 50% 3% / 0.6)" }}
             >
@@ -216,18 +130,15 @@ const HeroSection = () => {
               </span>
               <span className="block text-white">funguje</span>
               <span className="block text-white">vo firme</span>
-            </motion.h1>
+            </h1>
 
             {/* Subheadline */}
-            <motion.p
-              variants={fadeUp(0.15)}
-              className="text-base md:text-lg text-foreground/90 leading-[1.85] mb-14 max-w-[520px]"
-            >
+            <p className="text-base md:text-lg text-foreground/90 leading-[1.85] mb-14 max-w-[520px]">
               Architektúra, nasadenie a správa AI v obchode, marketingu a operatíve. Systém, ktorý beží — nie prezentácia, ktorá leží v šuplíku.
-            </motion.p>
+            </p>
 
             {/* CTA */}
-            <motion.div variants={fadeUp(0.25)} className="mb-10 md:mb-14">
+            <div className="mb-10 md:mb-14">
               <a
                 href="#kontakt"
                 className="inline-flex items-center gap-3 px-8 py-4 md:px-14 md:py-6 rounded-xl md:rounded-2xl text-[0.85rem] md:text-[0.95rem] font-bold uppercase tracking-[0.12em] text-white relative overflow-hidden group"
@@ -251,13 +162,10 @@ const HeroSection = () => {
               <p className="text-[11px] text-muted-foreground mt-4 md:mt-5 tracking-wide">
                 Architektúra · Nasadenie · Správa · Výkon
               </p>
-            </motion.div>
+            </div>
 
             {/* Benefit pills */}
-            <motion.div
-              variants={fadeUp(0.35)}
-              className="flex flex-wrap gap-3"
-            >
+            <div className="flex flex-wrap gap-3">
               {[
                 { icon: Zap, label: "MENEJ CHAOSU", desc: "AI zavádzame do existujúcich procesov, nie vedľa nich." },
                 { icon: BarChart3, label: "MERATEĽNÝ VÝKON", desc: "Obchod, konverzie a operatíva pod kontrolou — nie pod dojmom." },
@@ -284,16 +192,11 @@ const HeroSection = () => {
                   </span>
                 </div>
               ))}
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
           {/* ═══ RIGHT — 5 cols — AI Strategy Artifact ═══ */}
-          <motion.div
-            initial={{ opacity: 0, y: 60, rotateY: -10 }}
-            animate={{ opacity: 1, y: 0, rotateY: 0 }}
-            transition={{ duration: 1.2, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="lg:col-span-5 hidden lg:flex justify-center items-center"
-          >
+          <div className="lg:col-span-5 hidden lg:flex justify-center items-center">
             <div className="relative" style={{ perspective: "1400px" }}>
               {/* Ambient glow behind card */}
               <div
@@ -302,9 +205,7 @@ const HeroSection = () => {
               />
 
               {/* ═══ MAIN DOCUMENT CARD ═══ */}
-              <motion.div
-                animate={{ y: [0, -12, 0] }}
-                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+              <div
                 className="relative w-[360px] xl:w-[420px]"
                 style={{ transform: "rotateY(-6deg) rotateX(3deg)" }}
               >
@@ -346,9 +247,7 @@ const HeroSection = () => {
                     </div>
 
                     {/* Book icon */}
-                    <motion.div
-                      animate={{ y: [0, -5, 0] }}
-                      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                    <div
                       className="relative z-10 mx-auto mb-6 w-[72px] h-[72px] rounded-2xl flex items-center justify-center"
                       style={{
                         background: "linear-gradient(135deg, hsl(200 100% 50% / 0.18), hsl(200 100% 55% / 0.06))",
@@ -357,12 +256,10 @@ const HeroSection = () => {
                       }}
                     >
                       <Layers size={30} className="text-primary" />
-                    </motion.div>
+                    </div>
 
                     {/* Title */}
-                    <h3
-                      className="font-display text-[1.8rem] xl:text-[2rem] font-extrabold tracking-tight mb-2 relative z-10 text-white"
-                    >
+                    <h3 className="font-display text-[1.8rem] xl:text-[2rem] font-extrabold tracking-tight mb-2 relative z-10 text-white">
                       AI CONTROL LAYER
                     </h3>
                     <p
@@ -419,15 +316,13 @@ const HeroSection = () => {
                             <span className="text-[9px] font-mono text-primary/65">{item.progress}%</span>
                           </div>
                           <div className="ml-8 h-[2px] rounded-full bg-[hsl(200_100%_55%/0.08)] overflow-hidden">
-                            <motion.div
+                            <div
                               className="h-full rounded-full"
                               style={{
                                 background: "linear-gradient(to right, hsl(200 100% 55% / 0.3), hsl(200 100% 55% / 0.6))",
                                 boxShadow: "0 0 8px hsl(200 100% 55% / 0.2)",
+                                width: `${item.progress}%`,
                               }}
-                              initial={{ width: 0 }}
-                              animate={{ width: `${item.progress}%` }}
-                              transition={{ duration: 1.5, delay: 1.2 + i * 0.2, ease: "easeOut" }}
                             />
                           </div>
                         </div>
@@ -450,10 +345,7 @@ const HeroSection = () => {
                         }}
                       >
                         <span className="block text-[8px] uppercase tracking-[0.2em] text-foreground/65 font-mono mb-1">{m.label}</span>
-                        <span
-                          className="block text-[13px] font-bold font-mono"
-                          style={{ color: "hsl(200 100% 70%)" }}
-                        >
+                        <span className="block text-[13px] font-bold font-mono" style={{ color: "hsl(200 100% 70%)" }}>
                           {m.value}
                         </span>
                       </div>
@@ -469,14 +361,10 @@ const HeroSection = () => {
                     boxShadow: "0 0 12px hsl(200 100% 55% / 0.18), -2px 0 20px hsl(200 100% 55% / 0.06)",
                   }}
                 />
-              </motion.div>
+              </div>
 
               {/* ═══ Status badge — bottom center ═══ */}
-              <motion.div
-                animate={{ y: [0, -7, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-                className="absolute -bottom-10 left-1/2 -translate-x-1/2 z-20"
-              >
+              <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 z-20">
                 <div
                   className="px-4 py-2.5 rounded-xl flex items-center gap-2.5"
                   style={{
@@ -491,14 +379,10 @@ const HeroSection = () => {
                     3 procesy nasadené
                   </span>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Floating badge — top right */}
-              <motion.div
-                animate={{ y: [0, -7, 0] }}
-                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                className="absolute -top-7 -right-8 z-10"
-              >
+              <div className="absolute -top-7 -right-8 z-10">
                 <div
                   className="px-4 py-2.5 rounded-xl flex items-center gap-2.5"
                   style={{
@@ -513,14 +397,10 @@ const HeroSection = () => {
                     Live
                   </span>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Floating badge — bottom left */}
-              <motion.div
-                animate={{ y: [0, -5, 0] }}
-                transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 3 }}
-                className="absolute -bottom-4 -left-10 z-10"
-              >
+              <div className="absolute -bottom-4 -left-10 z-10">
                 <div
                   className="px-3.5 py-2 rounded-lg flex items-center gap-2"
                   style={{
@@ -535,9 +415,9 @@ const HeroSection = () => {
                     Verified
                   </span>
                 </div>
-              </motion.div>
+              </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 

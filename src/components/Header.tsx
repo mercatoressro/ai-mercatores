@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
 
 const navItems = [
@@ -23,10 +22,7 @@ const Header = () => {
   }, []);
 
   return (
-    <motion.header
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
         scrolled
           ? "glass shadow-[0_4px_30px_-10px_hsl(200_100%_55%/0.08)]"
@@ -73,41 +69,33 @@ const Header = () => {
         </div>
       </div>
 
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="lg:hidden glass border-t border-border/20 overflow-hidden"
-          >
-            <div className="px-6 py-6 space-y-1">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="block px-4 py-3 text-sm text-foreground/75 hover:text-foreground hover:bg-muted/20 rounded-lg transition-all"
-                >
-                  {item.label}
-                </a>
-              ))}
-              <div className="pt-3">
-                <a
-                  href="#kontakt"
-                  onClick={() => setMobileOpen(false)}
-                  className="btn-primary flex items-center justify-center gap-2 px-6 py-3 text-sm w-full"
-                >
-                  <span>Dohodnúť AI audit</span>
-                  <ArrowRight size={14} />
-                </a>
-              </div>
+      {mobileOpen && (
+        <div className="lg:hidden glass border-t border-border/20 overflow-hidden">
+          <div className="px-6 py-6 space-y-1">
+            {navItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                onClick={() => setMobileOpen(false)}
+                className="block px-4 py-3 text-sm text-foreground/75 hover:text-foreground hover:bg-muted/20 rounded-lg transition-all"
+              >
+                {item.label}
+              </a>
+            ))}
+            <div className="pt-3">
+              <a
+                href="#kontakt"
+                onClick={() => setMobileOpen(false)}
+                className="btn-primary flex items-center justify-center gap-2 px-6 py-3 text-sm w-full"
+              >
+                <span>Dohodnúť AI audit</span>
+                <ArrowRight size={14} />
+              </a>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.header>
+          </div>
+        </div>
+      )}
+    </header>
   );
 };
 
