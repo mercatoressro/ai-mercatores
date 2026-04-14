@@ -174,7 +174,7 @@
 
   .section-dark {
     background: hsl(var(--dark-bg));
-    color: hsl(0 0% 90%);
+    color: hsl(var(--foreground));
   }
 }
 
