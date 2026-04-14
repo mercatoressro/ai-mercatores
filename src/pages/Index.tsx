@@ -475,8 +475,12 @@ const Index = () => {
         {/* ═══════════════════════════════════════════
             8. PREČO MERCATORES + AI
         ═══════════════════════════════════════════ */}
-        <section className="py-24 md:py-32 section-elevated">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-24 md:py-32 section-elevated relative overflow-hidden">
+          {/* AI data bg */}
+          <div className="absolute inset-0 z-0">
+            <img src={bgAiData} alt="" className="w-full h-full object-cover opacity-[0.05]" loading="lazy" />
+          </div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">
                 Prečo to dáva zmysel práve u nás
@@ -560,8 +564,13 @@ const Index = () => {
         {/* ═══════════════════════════════════════════
             9. ZÁVEREČNÝ CTA
         ═══════════════════════════════════════════ */}
-        <section id="kontakt" className="py-20 md:py-28 section-dark">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="kontakt" className="py-20 md:py-28 section-dark relative overflow-hidden">
+          {/* CTA background */}
+          <div className="absolute inset-0 z-0">
+            <img src={bgAiCircuit} alt="" className="w-full h-full object-cover opacity-[0.08]" loading="lazy" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(230,25%,9%)]/50 via-[hsl(230,25%,9%)]/40 to-[hsl(230,25%,9%)]/70" />
+          </div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="font-display text-section mb-5 text-white">
                 Keď obchod, AI a riadenie fungujú spolu, firma rastie inak.
