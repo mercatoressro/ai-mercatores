@@ -111,6 +111,11 @@ const Index = () => {
         ═══════════════════════════════════════════ */}
         <section className="py-24 md:py-32 section-elevated">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Section photo */}
+            <div className="relative rounded-xl overflow-hidden max-w-4xl mx-auto mb-12 shadow-lg">
+              <img src={photoAiDashboards} alt="AI analytický dashboard s rastúcimi metrikami" className="w-full h-56 md:h-72 object-cover" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+            </div>
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-5 text-foreground">
                 Problém nie je, že firmám chýba AI.<br className="hidden sm:block" />
