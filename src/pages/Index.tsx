@@ -33,6 +33,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-image.png";
 import aiBrainNetwork from "@/assets/ai-brain-network.jpg";
+import photoBoardroom from "@/assets/photo-boardroom.webp";
+import photoTeamMonitors from "@/assets/photo-team-monitors.webp";
+import photoAiDashboards from "@/assets/photo-ai-dashboards.webp";
+import photoNeuralNetwork from "@/assets/photo-neural-network.webp";
+import photoServerShield from "@/assets/photo-server-shield.webp";
+import photoAiLab from "@/assets/photo-ai-lab.webp";
+import bgAiData from "@/assets/bg-ai-data.jpg";
+import bgAiCircuit from "@/assets/bg-ai-circuit.jpg";
 
 const Index = () => {
   return (
