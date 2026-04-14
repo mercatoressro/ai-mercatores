@@ -304,7 +304,7 @@ const Index = () => {
                   num: "01",
                   title: "Diagnostika",
                   desc: "Zmapujeme obchod, procesy, operatívu a miesta, kde dnes firma stráca výkon.",
-                  icon: Search,
+                  icon: BrainCircuit,
                 },
                 {
                   num: "02",
@@ -316,7 +316,7 @@ const Index = () => {
                   num: "03",
                   title: "Implementácia",
                   desc: "Zavedieme workflow, AI nástroje, reporting, obchodné pravidlá a interné procesy.",
-                  icon: Settings,
+                  icon: Cpu,
                 },
                 {
                   num: "04",
@@ -413,7 +413,7 @@ const Index = () => {
                 { icon: TrendingUp, label: "Viac obchodných príležitostí" },
                 { icon: GitBranch, label: "Lepší follow-up" },
                 { icon: BarChart3, label: "Lepšie využité CRM" },
-                { icon: Settings, label: "Menej manuálnej operatívy" },
+                { icon: Cpu, label: "Menej manuálnej operatívy" },
                 { icon: Eye, label: "Vyššia kontrola nad výkonom" },
                 { icon: Users, label: "Jasnejšie riadenie tímu" },
                 { icon: Bot, label: "AI s reálnym dopadom" },
