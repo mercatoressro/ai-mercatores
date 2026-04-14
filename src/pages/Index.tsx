@@ -31,6 +31,7 @@ import {
 } from "@/components/ui/accordion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ParallaxBackground from "@/components/ParallaxBackground";
 import heroImage from "@/assets/hero-image.png";
 import aiBrainNetwork from "@/assets/ai-brain-network.jpg";
 import photoBoardroom from "@/assets/photo-boardroom.webp";
@@ -51,11 +52,12 @@ const Index = () => {
             1. HERO
         ═══════════════════════════════════════════ */}
         <section className="relative pt-28 pb-16 md:pt-36 md:pb-24">
-          {/* AI Brain Network Background */}
-          <div className="absolute inset-0 z-0">
-            <img src={aiBrainNetwork} alt="" className="w-full h-full object-cover opacity-50" />
-            <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/50 to-background" />
-          </div>
+          <ParallaxBackground
+            src={aiBrainNetwork}
+            opacity="opacity-50"
+            speed={0.2}
+            overlay={<div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/50 to-background" />}
+          />
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="animate-[heroFadeUp_0.6s_ease-out]">
@@ -180,10 +182,7 @@ const Index = () => {
             3. ČO KLIENTOM REÁLNE DODÁVAME
         ═══════════════════════════════════════════ */}
         <section id="riesenie" className="py-24 md:py-32 relative overflow-hidden">
-          {/* Background */}
-          <div className="absolute inset-0 z-0">
-            <img src={bgAiCircuit} alt="" className="w-full h-full object-cover opacity-[0.06]" loading="lazy" />
-          </div>
+          <ParallaxBackground src={bgAiCircuit} opacity="opacity-[0.06]" speed={0.15} />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">
@@ -280,11 +279,12 @@ const Index = () => {
             4. AI CEO
         ═══════════════════════════════════════════ */}
         <section id="ai-ceo" className="py-24 md:py-32 section-dark relative overflow-hidden">
-          {/* Neural network background */}
-          <div className="absolute inset-0 z-0">
-            <img src={photoNeuralNetwork} alt="" className="w-full h-full object-cover opacity-[0.12]" loading="lazy" />
-            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(230,25%,9%)]/60 via-[hsl(230,25%,9%)]/40 to-[hsl(230,25%,9%)]/80" />
-          </div>
+          <ParallaxBackground
+            src={photoNeuralNetwork}
+            opacity="opacity-[0.12]"
+            speed={0.3}
+            overlay={<div className="absolute inset-0 bg-gradient-to-b from-[hsl(230,25%,9%)]/60 via-[hsl(230,25%,9%)]/40 to-[hsl(230,25%,9%)]/80" />}
+          />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-5 text-white">
@@ -319,11 +319,12 @@ const Index = () => {
             5. AKO TO FUNGUJE
         ═══════════════════════════════════════════ */}
         <section id="proces" className="py-24 md:py-32 relative overflow-hidden">
-          {/* Team monitors photo as subtle bg */}
-          <div className="absolute inset-0 z-0">
-            <img src={photoTeamMonitors} alt="" className="w-full h-full object-cover opacity-[0.06]" loading="lazy" />
-            <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
-          </div>
+          <ParallaxBackground
+            src={photoTeamMonitors}
+            opacity="opacity-[0.06]"
+            speed={0.2}
+            overlay={<div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />}
+          />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">
@@ -377,10 +378,7 @@ const Index = () => {
             6. PRE KOHO TO JE
         ═══════════════════════════════════════════ */}
         <section id="pre-koho" className="py-24 md:py-32 section-elevated relative overflow-hidden">
-          {/* Server shield bg */}
-          <div className="absolute inset-0 z-0">
-            <img src={photoServerShield} alt="" className="w-full h-full object-cover opacity-[0.05]" loading="lazy" />
-          </div>
+          <ParallaxBackground src={photoServerShield} opacity="opacity-[0.05]" speed={0.15} />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">
@@ -438,11 +436,12 @@ const Index = () => {
             7. VÝSLEDOK PRE KLIENTA
         ═══════════════════════════════════════════ */}
         <section className="py-24 md:py-32 relative overflow-hidden">
-          {/* AI lab bg */}
-          <div className="absolute inset-0 z-0">
-            <img src={photoAiLab} alt="" className="w-full h-full object-cover opacity-[0.06]" loading="lazy" />
-            <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
-          </div>
+          <ParallaxBackground
+            src={photoAiLab}
+            opacity="opacity-[0.06]"
+            speed={0.2}
+            overlay={<div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />}
+          />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">
@@ -476,10 +475,7 @@ const Index = () => {
             8. PREČO MERCATORES + AI
         ═══════════════════════════════════════════ */}
         <section className="py-24 md:py-32 section-elevated relative overflow-hidden">
-          {/* AI data bg */}
-          <div className="absolute inset-0 z-0">
-            <img src={bgAiData} alt="" className="w-full h-full object-cover opacity-[0.05]" loading="lazy" />
-          </div>
+          <ParallaxBackground src={bgAiData} opacity="opacity-[0.05]" speed={0.15} />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">
@@ -565,11 +561,12 @@ const Index = () => {
             9. ZÁVEREČNÝ CTA
         ═══════════════════════════════════════════ */}
         <section id="kontakt" className="py-20 md:py-28 section-dark relative overflow-hidden">
-          {/* CTA background */}
-          <div className="absolute inset-0 z-0">
-            <img src={bgAiCircuit} alt="" className="w-full h-full object-cover opacity-[0.08]" loading="lazy" />
-            <div className="absolute inset-0 bg-gradient-to-b from-[hsl(230,25%,9%)]/50 via-[hsl(230,25%,9%)]/40 to-[hsl(230,25%,9%)]/70" />
-          </div>
+          <ParallaxBackground
+            src={bgAiCircuit}
+            opacity="opacity-[0.08]"
+            speed={0.25}
+            overlay={<div className="absolute inset-0 bg-gradient-to-b from-[hsl(230,25%,9%)]/50 via-[hsl(230,25%,9%)]/40 to-[hsl(230,25%,9%)]/70" />}
+          />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="font-display text-section mb-5 text-white">
