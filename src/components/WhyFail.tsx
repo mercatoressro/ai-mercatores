@@ -1,5 +1,5 @@
 import { XCircle, CheckCircle } from "lucide-react";
-import bgNetwork from "@/assets/bg-network.jpg";
+import bgShield from "@/assets/bg-shield-server.webp";
 
 const fails = [
   "Firma kúpi nástroje bez jasného cieľa",
@@ -25,7 +25,7 @@ const WhyFail = () => {
   return (
     <section className="relative py-28 md:py-36 section-deep overflow-hidden">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <img src={bgNetwork} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.25]" />
+        <img src={bgShield} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.15] mix-blend-luminosity" />
         <div className="absolute inset-0 bg-background/85" />
       </div>
       <div className="absolute inset-0 grid-pattern opacity-[0.04] pointer-events-none" />

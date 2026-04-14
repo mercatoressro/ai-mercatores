@@ -1,5 +1,5 @@
 import { Building2, Briefcase, ShoppingBag, HeartPulse, TrendingUp, XCircle } from "lucide-react";
-import bgOperations from "@/assets/bg-operations.jpg";
+import bgBoardroom from "@/assets/bg-boardroom.webp";
 
 const segments = [
   {
@@ -67,7 +67,7 @@ const ForWhom = () => {
   return (
     <section id="pre-koho" className="relative py-28 md:py-36 section-elevated">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <img src={bgOperations} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.25]" />
+        <img src={bgBoardroom} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.12] mix-blend-luminosity" />
         <div className="absolute inset-0 bg-background/85" />
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

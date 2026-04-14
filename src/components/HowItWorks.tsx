@@ -1,5 +1,5 @@
 import { Search, PenTool, Rocket, Users, BarChart3, ArrowRight } from "lucide-react";
-import cropOperations from "@/assets/crop-operations.jpg";
+import bgTeam from "@/assets/bg-team-monitors.webp";
 
 const steps = [
   {
@@ -38,7 +38,7 @@ const HowItWorks = () => {
   return (
     <section id="ako-to-funguje" className="relative py-28 md:py-36 section-glow">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <img src={cropOperations} alt="" className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.18] mix-blend-luminosity" />
+        <img src={bgTeam} alt="" className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.15] mix-blend-luminosity" />
         <div className="absolute inset-0 bg-[hsl(225_30%_3%/0.85)]" />
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
