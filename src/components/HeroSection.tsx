@@ -79,7 +79,7 @@ const HeroSection = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary" />
             </span>
-            AI PRE OBCHOD, MARKETING A OPERATÍVU
+            B2B PREDAJ · OUTSOURCING OBCHODU · AI
           </div>
           <div className="h-[1px] flex-1 max-w-[140px] hidden sm:block" style={{ background: "linear-gradient(to right, hsl(200 100% 55% / 0.25), transparent)" }} />
           <span className="text-[10px] uppercase tracking-[0.22em] text-foreground/80 font-mono hidden sm:block">
@@ -154,7 +154,7 @@ const HeroSection = () => {
                   `,
                 }}
               >
-                <span className="relative z-10">DOHODNÚŤ AI KONZULTÁCIU</span>
+                <span className="relative z-10">DOHODNÚŤ KONZULTÁCIU</span>
                 <ArrowRight size={19} className="relative z-10 group-hover:translate-x-1 transition-transform" />
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -162,16 +162,16 @@ const HeroSection = () => {
                 />
               </a>
               <p className="text-[11px] text-muted-foreground mt-4 md:mt-5 tracking-wide">
-                Architektúra · Nasadenie · Správa · Výkon
+                B2B predaj · Outsourcing · AI implementácia · Výkon
               </p>
             </div>
 
             {/* Benefit pills */}
             <div className="flex flex-wrap gap-3">
               {[
-                { icon: Zap, label: "MENEJ CHAOSU", desc: "AI zavádzame do existujúcich procesov, nie vedľa nich." },
-                { icon: BarChart3, label: "MERATEĽNÝ VÝKON", desc: "Obchod, konverzie a operatíva pod kontrolou — nie pod dojmom." },
-                { icon: Shield, label: "JEDEN SYSTÉM", desc: "Obchod, marketing a operatíva prepojené v jednom funkčnom modeli." },
+                { icon: Zap, label: "OUTSOURCING OBCHODU", desc: "Prevzatie a riadenie obchodných procesov, aby ste sa sústredili na rast." },
+                { icon: BarChart3, label: "MERATEĽNÉ VÝSLEDKY", desc: "Transparentné KPIs, pipeline pod kontrolou a reálne obchodné čísla." },
+                { icon: Shield, label: "AI + SKÚSENOSTI", desc: "Dlhoročný B2B know-how posilnený AI pre maximálnu efektivitu." },
               ].map((b) => (
                 <div
                   key={b.label}
