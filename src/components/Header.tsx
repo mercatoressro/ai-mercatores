@@ -31,7 +31,7 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-[68px]">
           <a href="#" className="flex items-center">
-            <img src={logo} alt="ai.mercatores.sk" className="h-12 w-auto" />
+            <img src={logo} alt="ai.mercatores.sk" className="h-[84px] w-auto" />
           </a>
 
           <nav className="hidden lg:flex items-center gap-1">
