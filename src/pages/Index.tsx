@@ -33,6 +33,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import heroAiOffice from "@/assets/hero-ai-office.png";
 import aiBrainNetwork from "@/assets/ai-brain-network.jpg";
+import aiSection1 from "@/assets/ai-section-1.jpg";
+import aiSection2 from "@/assets/ai-section-2.jpg";
 
 const Index = () => {
   return (
