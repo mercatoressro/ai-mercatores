@@ -181,7 +181,7 @@ const Index = () => {
               {/* Pilier 1 */}
               <div className="glass-card p-7">
                 <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center mb-5">
-                  <Target size={20} className="text-primary" />
+                  <Network size={20} className="text-primary" />
                 </div>
                 <h3 className="font-display text-lg font-bold text-foreground mb-1">Obchodný systém</h3>
                 <p className="text-xs text-primary font-medium uppercase tracking-wider mb-4">Pilier 1</p>
@@ -229,7 +229,7 @@ const Index = () => {
               {/* Pilier 3 */}
               <div className="glass-card p-7">
                 <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center mb-5">
-                  <Rocket size={20} className="text-primary" />
+                  <Sparkles size={20} className="text-primary" />
                 </div>
                 <h3 className="font-display text-lg font-bold text-foreground mb-1">Exekúcia a riadenie</h3>
                 <p className="text-xs text-primary font-medium uppercase tracking-wider mb-4">Pilier 3</p>
@@ -412,12 +412,12 @@ const Index = () => {
               {[
                 { icon: TrendingUp, label: "Viac obchodných príležitostí" },
                 { icon: GitBranch, label: "Lepší follow-up" },
-                { icon: BarChart3, label: "Lepšie využité CRM" },
+                { icon: Network, label: "Lepšie využité CRM" },
                 { icon: Cpu, label: "Menej manuálnej operatívy" },
                 { icon: Eye, label: "Vyššia kontrola nad výkonom" },
                 { icon: Users, label: "Jasnejšie riadenie tímu" },
                 { icon: Bot, label: "AI s reálnym dopadom" },
-                { icon: Shield, label: "Systém, ktorý nestojí na jednom človeku" },
+                { icon: Sparkles, label: "Systém, ktorý nestojí na jednom človeku" },
               ].map((item) => (
                 <div key={item.label} className="glass-card-static p-5 flex items-start gap-3">
                   <div className="w-8 h-8 rounded-md bg-primary/8 flex items-center justify-center flex-shrink-0">
