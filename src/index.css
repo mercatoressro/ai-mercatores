@@ -20,20 +20,19 @@
     --popover: 225 25% 7%;
     --popover-foreground: 210 30% 93%;
 
-    /* Primary — electric cyan-blue */
-    --primary: 200 100% 55%;
+    /* Primary — professional steel blue */
+    --primary: 210 50% 50%;
     --primary-foreground: 225 30% 3%;
 
-    /* Secondary — luminous indigo-violet */
-    --secondary: 260 70% 60%;
+    /* Secondary — muted navy */
+    --secondary: 220 40% 45%;
     --secondary-foreground: 210 30% 95%;
-
     /* Muted — soft ash */
     --muted: 225 18% 15%;
     --muted-foreground: 220 12% 82%;
 
-    /* Accent — bright sky */
-    --accent: 195 100% 62%;
+    /* Accent — subdued steel */
+    --accent: 210 40% 55%;
     --accent-foreground: 225 30% 3%;
 
     --destructive: 0 72% 55%;
@@ -41,15 +40,15 @@
 
     /* Borders — subtle layering */
     --border: 225 15% 14%;
-    --border-glow: 200 100% 55%;
+    --border-glow: 215 35% 40%;
     --input: 225 18% 13%;
-    --ring: 200 100% 55%;
+    --ring: 210 50% 50%;
     --radius: 0.875rem;
 
-    /* Glow system */
-    --glow-primary: 200 100% 55%;
-    --glow-secondary: 260 70% 60%;
-    --glow-accent: 195 100% 62%;
+    /* Glow system — subtle, professional */
+    --glow-primary: 215 35% 40%;
+    --glow-secondary: 220 30% 35%;
+    --glow-accent: 210 35% 45%;
 
     /* Gradient anchors */
     --gradient-start: 230 50% 12%;
@@ -58,12 +57,12 @@
 
     --sidebar-background: 225 25% 5%;
     --sidebar-foreground: 210 30% 93%;
-    --sidebar-primary: 200 100% 55%;
+    --sidebar-primary: 210 50% 50%;
     --sidebar-primary-foreground: 225 30% 3%;
     --sidebar-accent: 225 18% 11%;
     --sidebar-accent-foreground: 210 30% 93%;
     --sidebar-border: 225 15% 14%;
-    --sidebar-ring: 200 100% 55%;
+    --sidebar-ring: 210 50% 50%;
   }
 }
 
@@ -316,7 +315,7 @@
   }
 
   .gradient-text-hero {
-    background: linear-gradient(135deg, hsl(200 100% 65%), hsl(220 100% 70%), hsl(260 80% 72%));
+    background: linear-gradient(135deg, hsl(210 50% 60%), hsl(215 45% 55%), hsl(220 40% 52%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -325,10 +324,8 @@
   /* ═══════ SECTION BACKGROUNDS ═══════ */
   .hero-gradient {
     background:
-      radial-gradient(ellipse 100% 70% at 50% -10%, hsl(230 50% 15% / 0.8) 0%, transparent 55%),
-      radial-gradient(ellipse 80% 50% at 80% 20%, hsl(var(--glow-primary) / 0.08) 0%, transparent 50%),
-      radial-gradient(ellipse 60% 40% at 15% 40%, hsl(var(--glow-secondary) / 0.06) 0%, transparent 50%),
-      radial-gradient(ellipse 40% 30% at 70% 60%, hsl(var(--glow-primary) / 0.04) 0%, transparent 50%),
+      radial-gradient(ellipse 100% 70% at 50% -10%, hsl(222 35% 10% / 0.6) 0%, transparent 55%),
+      radial-gradient(ellipse 80% 50% at 80% 20%, hsl(var(--glow-primary) / 0.04) 0%, transparent 50%),
       hsl(var(--background));
   }
 
