@@ -184,7 +184,7 @@ const Index = () => {
           <div className="absolute inset-0 z-0">
             <img src={bgAiCircuit} alt="" className="w-full h-full object-cover opacity-[0.06]" loading="lazy" />
           </div>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl mx-auto text-center mb-14">
               <h2 className="font-display text-section mb-4 text-foreground">
                 Jedno riešenie. Tri vrstvy výkonu.
