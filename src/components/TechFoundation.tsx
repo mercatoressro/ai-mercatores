@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import logoGHL from "@/assets/logo-gohighlevel.png";
 import logoOpenClaw from "@/assets/logo-openclaw.png";
+import bgNetwork from "@/assets/bg-network-burst.webp";
 
 const platforms = [
   {
@@ -26,8 +27,10 @@ const platforms = [
 const TechFoundation = () => {
   return (
     <section className="relative py-24 md:py-32 overflow-hidden">
-      {/* Background subtle glow */}
-      <div className="absolute inset-0 pointer-events-none">
+      {/* Background */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <img src={bgNetwork} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.12] mix-blend-luminosity" />
+        <div className="absolute inset-0 bg-background/88" />
         <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[120px] -translate-y-1/2" />
         <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-[120px] -translate-y-1/2" />
       </div>

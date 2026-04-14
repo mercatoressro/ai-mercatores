@@ -1,5 +1,5 @@
 import { TrendingDown, Target, Settings } from "lucide-react";
-import bgDashboard from "@/assets/bg-dashboard.jpg";
+import bgMetrics from "@/assets/bg-metrics-dashboard.webp";
 
 const cards = [
   {
@@ -38,7 +38,7 @@ const PainPoints = () => {
   return (
     <section className="relative py-28 md:py-36 section-elevated">
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <img src={bgDashboard} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.25]" />
+        <img src={bgMetrics} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.18] mix-blend-luminosity" />
         <div className="absolute inset-0 bg-background/85" />
       </div>
       <div className="absolute inset-0 dot-pattern opacity-[0.06] pointer-events-none" />
