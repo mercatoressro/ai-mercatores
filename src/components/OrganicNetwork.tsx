@@ -19,7 +19,7 @@ interface OrganicNetworkProps {
 }
 
 const OrganicNetwork = ({
-  opacity = 0.25,
+  opacity = 0.34,
   fadeCenterX = 0.5,
   fadeCenterY = 0.5,
   className = "",
@@ -94,9 +94,9 @@ const OrganicNetwork = ({
     const h = () => canvas.offsetHeight;
     const connectionDist = 300;
 
-    // Brand color: hsl(210, 50%, 50%) — muted steel blue, slightly more visible
-    const lineColor = (a: number) => `rgba(88, 126, 162, ${a})`;
-    const nodeColor = (a: number) => `rgba(88, 126, 162, ${a})`;
+    // Brand color: muted steel blue, strengthened for better edge visibility
+    const lineColor = (a: number) => `rgba(104, 144, 182, ${a})`;
+    const nodeColor = (a: number) => `rgba(104, 144, 182, ${a})`;
 
     const draw = () => {
       if (!isVisibleRef.current) {
@@ -145,10 +145,10 @@ const OrganicNetwork = ({
             const distFromCenter = Math.sqrt(
               ((midX - cx) / cw) ** 2 + ((midY - cy) / ch) ** 2
             );
-            const centerFade = Math.min(1, distFromCenter * 2.45);
+            const centerFade = Math.min(1, distFromCenter * 2.15);
 
-            const alpha = distFade * centerFade * 0.42;
-            if (alpha < 0.006) continue;
+            const alpha = distFade * centerFade * 0.6;
+            if (alpha < 0.004) continue;
 
             // Bezier curve for organic feel
             const cpx = (nodes[i].x + nodes[j].x) / 2 + Math.sin(nodes[i].phase) * 15;
@@ -158,7 +158,7 @@ const OrganicNetwork = ({
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.quadraticCurveTo(cpx, cpy, nodes[j].x, nodes[j].y);
             ctx.strokeStyle = lineColor(alpha);
-            ctx.lineWidth = 1;
+            ctx.lineWidth = 1.15;
             ctx.stroke();
           }
         }
@@ -170,23 +170,23 @@ const OrganicNetwork = ({
         const distFromCenter = Math.sqrt(
           ((n.x - cx) / cw) ** 2 + ((n.y - cy) / ch) ** 2
         );
-        const centerFade = Math.min(1, distFromCenter * 2.2);
-        const alpha = pulse * centerFade * 0.62;
+        const centerFade = Math.min(1, distFromCenter * 2.05);
+        const alpha = pulse * centerFade * 0.82;
 
         if (alpha < 0.01) continue;
 
         // Soft glow
-        const grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.radius * 3);
+        const grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.radius * 3.4);
         grad.addColorStop(0, nodeColor(alpha * 0.4));
         grad.addColorStop(1, nodeColor(0));
         ctx.beginPath();
-        ctx.arc(n.x, n.y, n.radius * 3, 0, Math.PI * 2);
+        ctx.arc(n.x, n.y, n.radius * 3.4, 0, Math.PI * 2);
         ctx.fillStyle = grad;
         ctx.fill();
 
         // Core dot
         ctx.beginPath();
-        ctx.arc(n.x, n.y, n.radius * 0.7, 0, Math.PI * 2);
+        ctx.arc(n.x, n.y, n.radius * 0.9, 0, Math.PI * 2);
         ctx.fillStyle = nodeColor(alpha);
         ctx.fill();
       }
