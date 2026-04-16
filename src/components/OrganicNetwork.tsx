@@ -44,7 +44,7 @@ const OrganicNetwork = ({
 
     const initNodes = () => {
       const isMobile = canvas.offsetWidth < 768;
-      const count = isMobile ? 18 : 40;
+      const count = isMobile ? 28 : 65;
       const nodes: Node[] = [];
       const w = canvas.offsetWidth;
       const h = canvas.offsetHeight;
@@ -76,7 +76,7 @@ const OrganicNetwork = ({
           y,
           vx: (Math.random() - 0.5) * 0.12,
           vy: (Math.random() - 0.5) * 0.08,
-          radius: 1 + Math.random() * 0.8,
+          radius: 1.2 + Math.random() * 1.2,
           phase: Math.random() * Math.PI * 2,
           speed: 0.002 + Math.random() * 0.004,
         });
@@ -92,7 +92,7 @@ const OrganicNetwork = ({
 
     const w = () => canvas.offsetWidth;
     const h = () => canvas.offsetHeight;
-    const connectionDist = 200;
+    const connectionDist = 260;
 
     // Brand color: hsl(210, 50%, 50%) — muted steel blue, slightly more visible
     const lineColor = (a: number) => `rgba(70, 115, 155, ${a})`;
@@ -147,7 +147,7 @@ const OrganicNetwork = ({
             );
             const centerFade = Math.min(1, distFromCenter * 3);
 
-            const alpha = distFade * centerFade * 0.18;
+            const alpha = distFade * centerFade * 0.35;
             if (alpha < 0.008) continue;
 
             // Bezier curve for organic feel
@@ -158,7 +158,7 @@ const OrganicNetwork = ({
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.quadraticCurveTo(cpx, cpy, nodes[j].x, nodes[j].y);
             ctx.strokeStyle = lineColor(alpha);
-            ctx.lineWidth = 0.5;
+            ctx.lineWidth = 0.8;
             ctx.stroke();
           }
         }
@@ -171,7 +171,7 @@ const OrganicNetwork = ({
           ((n.x - cx) / cw) ** 2 + ((n.y - cy) / ch) ** 2
         );
         const centerFade = Math.min(1, distFromCenter * 2.5);
-        const alpha = pulse * centerFade * 0.28;
+        const alpha = pulse * centerFade * 0.5;
 
         if (alpha < 0.01) continue;
 
