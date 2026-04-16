@@ -23,7 +23,7 @@ const Index = () => {
     <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Global ambient organic network — edges only, fades at content center */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        <OrganicNetwork opacity={0.72} fadeCenterX={0.5} fadeCenterY={0.5} />
+        <OrganicNetwork opacity={0.98} fadeCenterX={0.5} fadeCenterY={0.5} />
       </div>
 
       <div className="relative z-[1]">
