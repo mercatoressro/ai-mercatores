@@ -12,10 +12,13 @@ const navLinks = [
 const Footer = () => {
   return (
     <footer className="relative border-t border-border/25">
-      {/* Subtle top glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+      {/* Dark overlay to tame organic network behind footer text */}
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/92 to-background/75 pointer-events-none z-0" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      {/* Subtle top glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent z-[1]" />
+
+      <div className="relative z-[1] container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
           <div>
             <div className="font-display font-bold text-xl tracking-tight mb-4">
