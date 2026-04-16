@@ -44,7 +44,7 @@ const OrganicNetwork = ({
 
     const initNodes = () => {
       const isMobile = canvas.offsetWidth < 768;
-      const count = isMobile ? 28 : 65;
+      const count = isMobile ? 34 : 82;
       const nodes: Node[] = [];
       const w = canvas.offsetWidth;
       const h = canvas.offsetHeight;
@@ -92,11 +92,11 @@ const OrganicNetwork = ({
 
     const w = () => canvas.offsetWidth;
     const h = () => canvas.offsetHeight;
-    const connectionDist = 260;
+    const connectionDist = 300;
 
     // Brand color: hsl(210, 50%, 50%) — muted steel blue, slightly more visible
-    const lineColor = (a: number) => `rgba(70, 115, 155, ${a})`;
-    const nodeColor = (a: number) => `rgba(70, 115, 155, ${a})`;
+    const lineColor = (a: number) => `rgba(88, 126, 162, ${a})`;
+    const nodeColor = (a: number) => `rgba(88, 126, 162, ${a})`;
 
     const draw = () => {
       if (!isVisibleRef.current) {
@@ -145,10 +145,10 @@ const OrganicNetwork = ({
             const distFromCenter = Math.sqrt(
               ((midX - cx) / cw) ** 2 + ((midY - cy) / ch) ** 2
             );
-            const centerFade = Math.min(1, distFromCenter * 3);
+            const centerFade = Math.min(1, distFromCenter * 2.45);
 
-            const alpha = distFade * centerFade * 0.35;
-            if (alpha < 0.008) continue;
+            const alpha = distFade * centerFade * 0.42;
+            if (alpha < 0.006) continue;
 
             // Bezier curve for organic feel
             const cpx = (nodes[i].x + nodes[j].x) / 2 + Math.sin(nodes[i].phase) * 15;
@@ -158,7 +158,7 @@ const OrganicNetwork = ({
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.quadraticCurveTo(cpx, cpy, nodes[j].x, nodes[j].y);
             ctx.strokeStyle = lineColor(alpha);
-            ctx.lineWidth = 0.8;
+            ctx.lineWidth = 1;
             ctx.stroke();
           }
         }
@@ -170,8 +170,8 @@ const OrganicNetwork = ({
         const distFromCenter = Math.sqrt(
           ((n.x - cx) / cw) ** 2 + ((n.y - cy) / ch) ** 2
         );
-        const centerFade = Math.min(1, distFromCenter * 2.5);
-        const alpha = pulse * centerFade * 0.5;
+        const centerFade = Math.min(1, distFromCenter * 2.2);
+        const alpha = pulse * centerFade * 0.62;
 
         if (alpha < 0.01) continue;
 
