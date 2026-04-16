@@ -44,7 +44,7 @@ const OrganicNetwork = ({
 
     const initNodes = () => {
       const isMobile = canvas.offsetWidth < 768;
-      const count = isMobile ? 34 : 82;
+      const count = isMobile ? 48 : 116;
       const nodes: Node[] = [];
       const w = canvas.offsetWidth;
       const h = canvas.offsetHeight;
@@ -74,9 +74,9 @@ const OrganicNetwork = ({
         nodes.push({
           x,
           y,
-          vx: (Math.random() - 0.5) * 0.12,
-          vy: (Math.random() - 0.5) * 0.08,
-          radius: 1.2 + Math.random() * 1.2,
+          vx: (Math.random() - 0.5) * 0.14,
+          vy: (Math.random() - 0.5) * 0.1,
+          radius: 1.5 + Math.random() * 1.45,
           phase: Math.random() * Math.PI * 2,
           speed: 0.002 + Math.random() * 0.004,
         });
@@ -92,11 +92,17 @@ const OrganicNetwork = ({
 
     const w = () => canvas.offsetWidth;
     const h = () => canvas.offsetHeight;
-    const connectionDist = 300;
+    const connectionDist = 390;
+    const glowPrimary = getComputedStyle(document.documentElement)
+      .getPropertyValue("--glow-primary")
+      .trim();
+    const accent = getComputedStyle(document.documentElement)
+      .getPropertyValue("--accent")
+      .trim();
+    const clampAlpha = (value: number, max = 1) => Math.min(max, Math.max(0, value));
 
-    // Brand color: muted steel blue, strengthened for better edge visibility
-    const lineColor = (a: number) => `rgba(104, 144, 182, ${a})`;
-    const nodeColor = (a: number) => `rgba(104, 144, 182, ${a})`;
+    const lineColor = (a: number) => `hsl(${glowPrimary} / ${clampAlpha(a)})`;
+    const nodeColor = (a: number) => `hsl(${accent} / ${clampAlpha(a)})`;
 
     const draw = () => {
       if (!isVisibleRef.current) {
@@ -110,7 +116,6 @@ const OrganicNetwork = ({
       const ch = h();
       const cx = cw * fadeCenterX;
       const cy = ch * fadeCenterY;
-      const fadeRadius = Math.min(cw, ch) * 0.35;
 
       // Update positions
       for (const n of nodes) {
@@ -145,9 +150,9 @@ const OrganicNetwork = ({
             const distFromCenter = Math.sqrt(
               ((midX - cx) / cw) ** 2 + ((midY - cy) / ch) ** 2
             );
-            const centerFade = Math.min(1, distFromCenter * 2.15);
+            const centerFade = Math.min(1, Math.pow(distFromCenter * 2.7, 1.05));
 
-            const alpha = distFade * centerFade * 0.6;
+            const alpha = clampAlpha(distFade * centerFade * 1.3, 0.95);
             if (alpha < 0.004) continue;
 
             // Bezier curve for organic feel
@@ -158,7 +163,7 @@ const OrganicNetwork = ({
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.quadraticCurveTo(cpx, cpy, nodes[j].x, nodes[j].y);
             ctx.strokeStyle = lineColor(alpha);
-            ctx.lineWidth = 1.15;
+            ctx.lineWidth = 1.45;
             ctx.stroke();
           }
         }
@@ -170,23 +175,23 @@ const OrganicNetwork = ({
         const distFromCenter = Math.sqrt(
           ((n.x - cx) / cw) ** 2 + ((n.y - cy) / ch) ** 2
         );
-        const centerFade = Math.min(1, distFromCenter * 2.05);
-        const alpha = pulse * centerFade * 0.82;
+        const centerFade = Math.min(1, Math.pow(distFromCenter * 2.55, 1.05));
+        const alpha = clampAlpha(pulse * centerFade * 1.45, 1);
 
         if (alpha < 0.01) continue;
 
         // Soft glow
-        const grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.radius * 3.4);
-        grad.addColorStop(0, nodeColor(alpha * 0.4));
+        const grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.radius * 4.8);
+        grad.addColorStop(0, nodeColor(alpha * 0.62));
         grad.addColorStop(1, nodeColor(0));
         ctx.beginPath();
-        ctx.arc(n.x, n.y, n.radius * 3.4, 0, Math.PI * 2);
+        ctx.arc(n.x, n.y, n.radius * 4.8, 0, Math.PI * 2);
         ctx.fillStyle = grad;
         ctx.fill();
 
         // Core dot
         ctx.beginPath();
-        ctx.arc(n.x, n.y, n.radius * 0.9, 0, Math.PI * 2);
+        ctx.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
         ctx.fillStyle = nodeColor(alpha);
         ctx.fill();
       }
