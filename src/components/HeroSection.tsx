@@ -85,11 +85,12 @@ const HeroSection = () => {
                 {/* Glow halo behind text */}
                 <span
                   aria-hidden="true"
-                  className="absolute inset-0 blur-2xl opacity-70 pointer-events-none select-none"
+                  className="absolute inset-0 blur-2xl opacity-70 pointer-events-none select-none animate-glow-pulse"
                   style={{
                     background: "linear-gradient(135deg, hsl(210 100% 60%), hsl(215 95% 55%), hsl(220 90% 50%))",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
+                    transformOrigin: "center",
                   }}
                 >
                   B2B obchod
