@@ -117,21 +117,30 @@ const HeroSection = () => {
 
             {/* CTA */}
             <div className="mb-10 md:mb-14">
-              <a
-                href="#kontakt"
-                className="inline-flex items-center gap-3 px-8 py-4 md:px-14 md:py-6 rounded-xl md:rounded-2xl text-[0.85rem] md:text-[0.95rem] font-bold uppercase tracking-[0.12em] text-white relative overflow-hidden group"
-                style={{
-                  background: "linear-gradient(135deg, hsl(215 50% 40%), hsl(220 50% 35%))",
-                  boxShadow: "0 8px 30px -8px hsl(215 40% 30% / 0.4), inset 0 1px 0 hsl(215 50% 60% / 0.15)",
-                }}
-              >
-                <span className="relative z-10">DOHODNÚŤ KONZULTÁCIU</span>
-                <ArrowRight size={19} className="relative z-10 group-hover:translate-x-1 transition-transform" />
+              <div className="relative inline-block">
                 <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  style={{ background: "linear-gradient(135deg, hsl(220 50% 35%), hsl(215 50% 40%))" }}
+                  aria-hidden="true"
+                  className="absolute -inset-2 rounded-2xl blur-xl opacity-50 pointer-events-none animate-glow-pulse"
+                  style={{
+                    background: "linear-gradient(135deg, hsl(212 100% 60% / 0.55), hsl(218 95% 50% / 0.45))",
+                  }}
                 />
-              </a>
+                <a
+                  href="#kontakt"
+                  className="relative inline-flex items-center gap-3 px-8 py-4 md:px-14 md:py-6 rounded-xl md:rounded-2xl text-[0.85rem] md:text-[0.95rem] font-bold uppercase tracking-[0.12em] text-white overflow-hidden group"
+                  style={{
+                    background: "linear-gradient(135deg, hsl(215 50% 40%), hsl(220 50% 35%))",
+                    boxShadow: "0 8px 30px -8px hsl(215 40% 30% / 0.4), inset 0 1px 0 hsl(215 50% 60% / 0.15)",
+                  }}
+                >
+                  <span className="relative z-10">DOHODNÚŤ KONZULTÁCIU</span>
+                  <ArrowRight size={19} className="relative z-10 group-hover:translate-x-1 transition-transform" />
+                  <div
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    style={{ background: "linear-gradient(135deg, hsl(220 50% 35%), hsl(215 50% 40%))" }}
+                  />
+                </a>
+              </div>
               <p className="text-[11px] text-muted-foreground mt-4 md:mt-5 tracking-wide">
                 B2B predaj · Outsourcing · AI implementácia · Výkon
               </p>
