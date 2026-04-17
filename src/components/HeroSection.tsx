@@ -81,13 +81,26 @@ const HeroSection = () => {
               <span className="block">
                 <span className="text-white">Posúvame váš</span>
               </span>
-              <span className="block">
+              <span className="block relative">
+                {/* Glow halo behind text */}
                 <span
-                  className="inline-block"
+                  aria-hidden="true"
+                  className="absolute inset-0 blur-2xl opacity-70 pointer-events-none select-none"
                   style={{
-                    background: "linear-gradient(135deg, hsl(210 55% 60%), hsl(215 50% 55%), hsl(220 45% 52%))",
+                    background: "linear-gradient(135deg, hsl(210 100% 60%), hsl(215 95% 55%), hsl(220 90% 50%))",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  B2B obchod
+                </span>
+                <span
+                  className="relative inline-block"
+                  style={{
+                    background: "linear-gradient(135deg, hsl(205 100% 78%), hsl(212 100% 68%), hsl(218 95% 58%))",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    filter: "drop-shadow(0 0 18px hsl(212 100% 60% / 0.55)) drop-shadow(0 0 38px hsl(215 100% 55% / 0.35))",
                   }}
                 >
                   B2B obchod
