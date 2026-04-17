@@ -120,9 +120,16 @@ const HeroSection = () => {
               <div className="relative inline-block">
                 <div
                   aria-hidden="true"
-                  className="absolute -inset-2 rounded-2xl blur-xl opacity-50 pointer-events-none animate-glow-pulse"
+                  className="absolute -inset-5 rounded-2xl blur-2xl opacity-90 pointer-events-none animate-glow-pulse"
                   style={{
-                    background: "linear-gradient(135deg, hsl(212 100% 60% / 0.55), hsl(218 95% 50% / 0.45))",
+                    background: "linear-gradient(135deg, hsl(212 100% 62% / 0.85), hsl(218 100% 55% / 0.7), hsl(222 95% 50% / 0.6))",
+                  }}
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute -inset-2 rounded-2xl blur-lg opacity-80 pointer-events-none"
+                  style={{
+                    background: "linear-gradient(135deg, hsl(210 100% 65% / 0.55), hsl(218 100% 55% / 0.5))",
                   }}
                 />
                 <a
