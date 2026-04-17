@@ -299,12 +299,27 @@
 }
 
 @layer utilities {
+  /* ═══════ GRADIENT TEXT GLOW ═══════ */
+  @keyframes heading-glow-pulse {
+    0%, 100% {
+      filter:
+        drop-shadow(0 0 14px hsl(212 100% 60% / 0.35))
+        drop-shadow(0 0 28px hsl(215 100% 55% / 0.18));
+    }
+    50% {
+      filter:
+        drop-shadow(0 0 22px hsl(212 100% 62% / 0.55))
+        drop-shadow(0 0 44px hsl(215 100% 55% / 0.32));
+    }
+  }
+
   /* ═══════ GRADIENT TEXT ═══════ */
   .gradient-text {
     background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)) 60%, hsl(var(--accent)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: heading-glow-pulse 5s ease-in-out infinite;
   }
 
   .gradient-text-primary {
@@ -312,13 +327,15 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: heading-glow-pulse 5s ease-in-out infinite;
   }
 
   .gradient-text-hero {
-    background: linear-gradient(135deg, hsl(210 50% 60%), hsl(215 45% 55%), hsl(220 40% 52%));
+    background: linear-gradient(135deg, hsl(210 70% 70%), hsl(215 65% 62%), hsl(220 60% 55%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: heading-glow-pulse 5s ease-in-out infinite;
   }
 
   /* ═══════ SECTION BACKGROUNDS ═══════ */
