@@ -50,8 +50,8 @@ const PainPoints = () => {
             <div
               className="relative rounded-2xl overflow-hidden max-w-[640px] w-full"
               style={{
-                boxShadow: "0 40px 80px -30px hsl(220 30% 8% / 0.5), 0 20px 40px -15px hsl(220 30% 5% / 0.5)",
-                border: "1px solid hsl(215 20% 25% / 0.25)",
+                boxShadow: "0 0 60px -10px hsl(212 90% 50% / 0.35), 0 0 120px -20px hsl(215 80% 45% / 0.25), 0 40px 80px -30px hsl(220 30% 8% / 0.5), 0 20px 40px -15px hsl(220 30% 5% / 0.5)",
+                border: "1px solid hsl(212 70% 55% / 0.3)",
               }}
             >
               <img
