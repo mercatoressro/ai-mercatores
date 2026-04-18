@@ -2,12 +2,24 @@ import { useEffect } from "react";
 
 const CliqSalesForm = () => {
   useEffect(() => {
+    const existing = document.querySelector<HTMLScriptElement>(
+      'script[src="https://api.cliqsales.cz/js/form_embed.js"]'
+    );
+    if (existing) return;
+
     const script = document.createElement("script");
     script.src = "https://api.cliqsales.cz/js/form_embed.js";
     script.async = true;
     document.body.appendChild(script);
+
     return () => {
-      script.parentNode?.removeChild(script);
+      try {
+        if (script.isConnected) {
+          script.remove();
+        }
+      } catch {
+        // ignore — node may have been moved/removed by the embed script
+      }
     };
   }, []);
 
