@@ -17,7 +17,7 @@ const CliqSalesForm = () => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-3xl mx-auto px-4 relative z-10">
-        <div className="rounded-2xl border border-border bg-card/60 backdrop-blur-sm p-2 shadow-[0_0_40px_-12px_hsl(var(--primary)/0.15)]">
+        <div className="rounded-2xl border bg-card/60 backdrop-blur-sm p-2 animate-blue-glow" style={{ borderColor: "hsl(212 70% 55% / 0.3)" }}>
           <iframe
             src="https://api.cliqsales.cz/widget/form/w0Brv6yuo3WXpKr8ykqT"
             style={{ width: "100%", height: "801px", border: "none", borderRadius: "12px" }}
