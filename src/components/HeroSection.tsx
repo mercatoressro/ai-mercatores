@@ -238,14 +238,25 @@ const HeroSection = () => {
                     </div>
                   </div>
 
-                  {/* Main image */}
-                  <img
-                    src={heroTeam}
-                    alt="AI Mercatores - B2B predaj a outsourcing obchodu"
-                    className="w-full h-auto object-cover"
-                    style={{ 
-                      filter: "contrast(1.05) saturate(0.9)",
-                      mixBlendMode: "luminosity",
+                  {/* Main video */}
+                  <video
+                    src={heroVideo}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    poster={heroTeam}
+                    aria-label="AI Mercatores - B2B predaj a outsourcing obchodu"
+                    className="w-full h-auto object-cover block"
+                    style={{
+                      filter: "contrast(1.05) saturate(1.05)",
+                    }}
+                  />
+                  {/* Subtle brand blue tint over video */}
+                  <div
+                    className="absolute inset-0 pointer-events-none mix-blend-overlay z-10"
+                    style={{
+                      background: "linear-gradient(135deg, hsl(215 80% 40% / 0.25), hsl(220 70% 25% / 0.15) 50%, hsl(212 90% 45% / 0.2))",
                     }}
                   />
 
