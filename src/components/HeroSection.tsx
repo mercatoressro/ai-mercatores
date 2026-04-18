@@ -185,7 +185,7 @@ const HeroSection = () => {
           </div>
 
           {/* ═══ RIGHT — 5 cols — Team Meeting Image ═══ */}
-          <div className="lg:col-span-5 hidden lg:flex justify-center items-center">
+          <div className="lg:col-span-5 hidden lg:flex justify-center items-start lg:-mt-16 xl:-mt-24">
             <div className="relative" style={{ perspective: "1400px" }}>
               {/* Ambient glow behind image */}
               <div
