@@ -9,29 +9,8 @@ const HeroSection = () => {
     <section className="relative min-h-screen lg:min-h-[105vh] flex items-center overflow-hidden">
       {/* ══════ BACKGROUND ══════ */}
       <div className="absolute inset-0">
-        <video
-          src={heroVideo}
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster={bgMeeting}
-          className="absolute inset-0 w-full h-full object-cover opacity-[0.28]"
-        />
-        <div className="absolute inset-0 bg-[hsl(222_40%_3%/0.82)]" />
-        {/* Brand blue tint overlay */}
-        <div
-          className="absolute inset-0 mix-blend-overlay pointer-events-none"
-          style={{
-            background: "linear-gradient(135deg, hsl(215 80% 35% / 0.35), hsl(220 70% 25% / 0.25) 50%, hsl(212 90% 45% / 0.3))",
-          }}
-        />
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: "radial-gradient(ellipse at 30% 40%, hsl(215 70% 30% / 0.18), transparent 60%)",
-          }}
-        />
+        <img src={bgMeeting} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.18]" />
+        <div className="absolute inset-0 bg-[hsl(222_40%_3%/0.88)]" />
       </div>
 
       {/* Subtle ambient depth — warm, muted */}
