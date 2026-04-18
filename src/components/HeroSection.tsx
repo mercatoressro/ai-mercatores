@@ -2,14 +2,23 @@ import { ArrowRight, Layers, Shield, Zap, BarChart3 } from "lucide-react";
 import OrganicNetwork from "./OrganicNetwork";
 import bgMeeting from "@/assets/bg-meeting.jpg";
 import heroTeam from "@/assets/bg-boardroom.webp";
+import heroVideo from "@/assets/hero-video.mp4";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen lg:min-h-[105vh] flex items-center overflow-hidden">
       {/* ══════ BACKGROUND ══════ */}
       <div className="absolute inset-0">
-        <img src={bgMeeting} alt="" className="absolute inset-0 w-full h-full object-cover opacity-[0.18]" />
-        <div className="absolute inset-0 bg-[hsl(222_40%_3%/0.88)]" />
+        <video
+          src={heroVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster={bgMeeting}
+          className="absolute inset-0 w-full h-full object-cover opacity-[0.28]"
+        />
+        <div className="absolute inset-0 bg-[hsl(222_40%_3%/0.82)]" />
       </div>
 
       {/* Subtle ambient depth — warm, muted */}
