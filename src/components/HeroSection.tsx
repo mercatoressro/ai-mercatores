@@ -193,7 +193,42 @@ const HeroSection = () => {
                 style={{ background: "radial-gradient(ellipse at 50% 35%, hsl(215 40% 30% / 0.1), transparent 65%)" }}
               />
 
-              {/* ═══ IMAGE FRAME ═══ */}
+              {/* ═══ PHOTO FRAME (above video) ═══ */}
+              <div
+                className="relative w-[500px] xl:w-[600px] mb-6"
+                style={{ transform: "rotateY(-4deg) rotateX(2deg)" }}
+              >
+                <div
+                  className="absolute -inset-[1.5px] rounded-2xl"
+                  style={{
+                    background: "linear-gradient(160deg, hsl(215 30% 35% / 0.25), hsl(215 25% 25% / 0.1) 30%, transparent 50%, hsl(215 25% 30% / 0.08) 80%, hsl(215 30% 35% / 0.15))",
+                  }}
+                />
+                <div
+                  className="rounded-2xl overflow-hidden relative"
+                  style={{
+                    background: "linear-gradient(165deg, hsl(222 25% 14% / 0.98), hsl(222 30% 6% / 0.99))",
+                    boxShadow: "0 40px 80px -30px hsl(220 30% 8% / 0.5), 0 20px 40px -15px hsl(220 30% 5% / 0.5)",
+                  }}
+                >
+                  <img
+                    src={heroTeam}
+                    alt="AI Mercatores - B2B predaj a outsourcing obchodu"
+                    className="w-full h-auto object-cover block"
+                    style={{
+                      filter: "contrast(1.05) saturate(0.95)",
+                    }}
+                  />
+                  <div
+                    className="absolute inset-0 pointer-events-none mix-blend-overlay"
+                    style={{
+                      background: "linear-gradient(135deg, hsl(215 80% 40% / 0.18), transparent 60%, hsl(212 90% 45% / 0.15))",
+                    }}
+                  />
+                </div>
+              </div>
+
+              {/* ═══ VIDEO FRAME ═══ */}
               <div
                 className="relative w-[500px] xl:w-[600px]"
                 style={{ transform: "rotateY(-4deg) rotateX(2deg)" }}
