@@ -1,5 +1,6 @@
 import { TrendingDown, Target, Settings } from "lucide-react";
 import bgMetrics from "@/assets/bg-metrics-dashboard.webp";
+import diagnosticImage from "@/assets/bg-boardroom.webp";
 
 const cards = [
   {
@@ -45,6 +46,29 @@ const PainPoints = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
+          <div className="flex justify-center mb-10">
+            <div
+              className="relative rounded-2xl overflow-hidden max-w-[640px] w-full"
+              style={{
+                boxShadow: "0 40px 80px -30px hsl(220 30% 8% / 0.5), 0 20px 40px -15px hsl(220 30% 5% / 0.5)",
+                border: "1px solid hsl(215 20% 25% / 0.25)",
+              }}
+            >
+              <img
+                src={diagnosticImage}
+                alt="B2B obchodný tím — diagnostika výkonu"
+                loading="lazy"
+                className="w-full h-auto object-cover block"
+                style={{ filter: "contrast(1.05) saturate(0.95)" }}
+              />
+              <div
+                className="absolute inset-0 pointer-events-none mix-blend-overlay"
+                style={{
+                  background: "linear-gradient(135deg, hsl(215 80% 40% / 0.18), transparent 60%, hsl(212 90% 45% / 0.15))",
+                }}
+              />
+            </div>
+          </div>
           <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary font-mono font-medium mb-4">Diagnostika</span>
           <h2 className="font-display text-section mb-5 text-white">
             Kde firmy <span className="gradient-text-hero">strácajú výkon</span>
