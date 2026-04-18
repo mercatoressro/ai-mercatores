@@ -2,6 +2,7 @@ import { ArrowRight, Layers, Shield, Zap, BarChart3 } from "lucide-react";
 import OrganicNetwork from "./OrganicNetwork";
 import bgMeeting from "@/assets/bg-meeting.jpg";
 import heroTeam from "@/assets/bg-boardroom.webp";
+import heroBrain from "@/assets/ai-brain-mercatores.png";
 import heroVideo from "@/assets/hero-video.mp4";
 
 const HeroSection = () => {
@@ -212,11 +213,11 @@ const HeroSection = () => {
                   }}
                 >
                   <img
-                    src={heroTeam}
-                    alt="AI Mercatores - B2B predaj a outsourcing obchodu"
+                    src={heroBrain}
+                    alt="AI Mercatores - AI mozog koordinujúci obchodné procesy"
                     className="w-full h-auto object-cover block"
                     style={{
-                      filter: "contrast(1.05) saturate(0.95)",
+                      filter: "contrast(1.05) saturate(1)",
                     }}
                   />
                   <div
