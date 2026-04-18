@@ -67,6 +67,13 @@ const PainPoints = () => {
                   background: "linear-gradient(135deg, hsl(215 80% 40% / 0.18), transparent 60%, hsl(212 90% 45% / 0.15))",
                 }}
               />
+              {/* Bottom fade — plynulý prechod do pozadia sekcie */}
+              <div
+                className="absolute bottom-0 left-0 right-0 h-1/2 pointer-events-none"
+                style={{
+                  background: "linear-gradient(to bottom, transparent 0%, hsl(var(--background) / 0.6) 60%, hsl(var(--background)) 100%)",
+                }}
+              />
             </div>
           </div>
           <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-primary font-mono font-medium mb-4">Diagnostika</span>
