@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import SectionDivider from "@/components/SectionDivider";
 import OrganicNetwork from "@/components/OrganicNetwork";
+import ErrorBoundary from "@/components/ErrorBoundary";
 
 const PainPoints = lazy(() => import("@/components/PainPoints"));
 const Solutions = lazy(() => import("@/components/Solutions"));
@@ -30,6 +31,7 @@ const Index = () => {
         <Header />
         <main>
           <HeroSection />
+          <ErrorBoundary>
           <Suspense fallback={null}>
             <SectionDivider variant="glow" />
             <PainPoints />
@@ -55,6 +57,7 @@ const Index = () => {
             <CTASection />
             <CliqSalesForm />
           </Suspense>
+          </ErrorBoundary>
         </main>
         <Suspense fallback={null}>
           <Footer />
