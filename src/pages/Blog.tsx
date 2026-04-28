@@ -25,43 +25,59 @@ const articles: {
     description:
       "Slovenský gastro trh pozná desiatky POS systémov a QR menu nástrojov. AI riadená prevádzka prináša namiesto ďalšieho zoznamu funkcií skutočnú zmenu v každodennom chode reštaurácie.",
     url: "https://www.mercatores.sk/ai-gastro-system-slovensko/",
+    topics: ["Gastro & HoReCa", "AI v obchode"],
   },
   {
     title: "AI v gastro prevádzke: ako reštaurácie a hotely zvyšujú výkon bez ďalšieho personálu",
     description:
       "Úzke marže, fluktuácia personálu a výkyvy návštevnosti. AI prináša iný prístup než ďalšieho zamestnanca — automatizáciu opakovaných úloh a lepšie rozhodovanie v reálnom čase.",
     url: "https://www.mercatores.sk/ai-v-gastro-prevadzke-ako-restauracie-a-hotely-zvysuju-vykon-bez-dalsieho-personalum/",
+    topics: ["Gastro & HoReCa", "Automatizácia"],
   },
   {
     title: "Go High Level: ako automatizovať B2B obchod a marketing na Slovensku",
     description:
       "Väčšina B2B firiem používa 5–8 nástrojov, ktoré spolu nekomunikujú. Ako Go High Level zjednocuje CRM, emaily, landing pages a automatizácie do jednej platformy.",
     url: "https://www.mercatores.sk/ako-automatizovat-b2b-obchod-marketing-go-high-level-slovensko/",
+    topics: ["Automatizácia", "AI v obchode"],
   },
   {
     title: "AI v B2B obchode: ako transformovať predaj pomocou umelej inteligencie",
     description:
       "AI v obchode nie je budúcnosť, ale prítomnosť. Firmy ktoré AI nasadili včas, majú dnes merateľnú výhodu. Praktický pohľad na to, kde AI v B2B predaji reálne funguje.",
     url: "https://www.mercatores.sk/transformacia-predaja-ai-v-obchode-b2b/",
+    topics: ["AI v obchode"],
   },
   {
     title: "Čo je sales outsourcing a kedy sa oplatí?",
     description:
       "Hľadáte obchodníka mesiace bez výsledku? Alebo máte obchodníka s podpriemernými výsledkami? Kedy je sales outsourcing riešenie a kedy nie — porovnanie nákladov a rizík.",
     url: "https://www.mercatores.sk/co-je-sales-outsourcing-a-kedy-sa-oplati/",
+    topics: ["Sales outsourcing"],
   },
   {
     title: "Inovatívne využitie open-source dát v predaji a marketingu",
     description:
       "Dáta sú hnacou silou B2B stratégií, ale bez pochopenia výhod ich integrácie ich hodnota uniká. Úvod do toho, ako open-source dáta optimalizujú predaj a marketing.",
     url: "https://www.mercatores.sk/inovativne-vyuzitie-open-source-dat-v-predaji-a-marketingu/",
+    topics: ["Dáta & analytika", "AI v obchode"],
   },
   {
     title: "Go High Level: automatizácia obchodu na Slovensku",
     description:
       "All-in-one platforma pre CRM, email marketing, AI agenta a automatizácie. Kedy sa oplatí pre B2B firmy a aké sú alternatívy na slovenskom trhu.",
     url: "https://www.mercatores.sk/go-high-level-automatizacia-obchodu-slovensko/",
+    topics: ["Automatizácia"],
   },
+];
+
+const relatedTopics: { name: Topic; description: string }[] = [
+  { name: "AI v obchode", description: "Praktické nasadenie AI v B2B predaji a kvalifikácii leadov." },
+  { name: "Sales outsourcing", description: "Kedy externý obchodný tím dáva zmysel a kedy nie." },
+  { name: "Automatizácia", description: "CRM, kampane a procesy bez manuálnej rutiny." },
+  { name: "Gastro & HoReCa", description: "AI riešenia pre reštaurácie, hotely a prevádzky." },
+  { name: "Prípadové štúdie", description: "Reálne implementácie s merateľnými výsledkami." },
+  { name: "Dáta & analytika", description: "Open-source dáta a analytika pre rast obchodu." },
 ];
 
 const Blog = () => {
