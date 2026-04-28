@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import { Menu, X, ArrowRight } from "lucide-react";
 
 const navItems = [
-  { label: "Domov", href: "#" },
-  { label: "Riešenia", href: "#riesenia" },
-  { label: "Ako to funguje", href: "#ako-to-funguje" },
-  { label: "Pre koho", href: "#pre-koho" },
-  { label: "100 zmien", href: "#100-zmien" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Kontakt", href: "#kontakt" },
+  { label: "Domov", href: "/#" },
+  { label: "Riešenia", href: "/#riesenia" },
+  { label: "Ako to funguje", href: "/#ako-to-funguje" },
+  { label: "Pre koho", href: "/#pre-koho" },
+  { label: "100 zmien", href: "/#100-zmien" },
+  { label: "Blog", href: "/blog" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Kontakt", href: "/#kontakt" },
 ];
 
 const Header = () => {
