@@ -1,16 +1,24 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, BookOpen } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpen, Tag } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import OrganicNetwork from "@/components/OrganicNetwork";
 
-const articles = [
+type Topic = "AI v obchode" | "Sales outsourcing" | "Automatizácia" | "Gastro & HoReCa" | "Prípadové štúdie" | "Dáta & analytika";
+
+const articles: {
+  title: string;
+  description: string;
+  url: string;
+  topics: Topic[];
+}[] = [
   {
     title: "Ako sme implementovali AI do obchodného procesu Magnaseal — prípadová štúdia",
     description:
       "Špecializovaný B2B produkt, fragmentovaný trh a takmer nulová znalosť na Slovensku. Ako sme pomocou AI postavili obchodný proces pre distribútora magnetických záplat Magnaseal.",
     url: "https://www.mercatores.sk/ako-sme-implementovali-ai-do-obchodneho-procesu-magnaseal-pripadova-studia/",
+    topics: ["Prípadové štúdie", "AI v obchode"],
   },
   {
     title: "Na slovenský gastro trh vstupuje nový hráč: AI riadená prevádzka namiesto ďalšieho POS systému",
