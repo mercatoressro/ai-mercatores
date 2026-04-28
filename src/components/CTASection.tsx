@@ -1,5 +1,6 @@
 import { ArrowRight, Mail, Phone, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import { trackFormSubmit } from "@/lib/analytics";
 import bgNetwork from "@/assets/bg-network-burst.webp";
 
 const CTASection = () => {
@@ -19,6 +20,11 @@ const CTASection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    trackFormSubmit("ai_audit_contact", {
+      has_company: Boolean(form.company),
+      has_phone: Boolean(form.phone),
+      conversion_type: "ai_audit_request",
+    });
   };
 
   const inputClasses =

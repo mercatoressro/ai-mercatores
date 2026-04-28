@@ -1,5 +1,6 @@
 import { ArrowRight, Layers, Shield, Zap, BarChart3 } from "lucide-react";
 import OrganicNetwork from "./OrganicNetwork";
+import { trackBookingClick } from "@/lib/analytics";
 import bgMeeting from "@/assets/bg-meeting.jpg";
 import heroTeam from "@/assets/bg-boardroom.webp";
 import heroBrain from "@/assets/ai-brain-mercatores.png";
@@ -136,6 +137,7 @@ const HeroSection = () => {
                 />
                 <a
                   href="#kontakt"
+                  onClick={() => trackBookingClick("hero")}
                   className="relative inline-flex items-center gap-3 px-8 py-4 md:px-14 md:py-6 rounded-xl md:rounded-2xl text-[0.85rem] md:text-[0.95rem] font-bold uppercase tracking-[0.12em] text-white overflow-hidden group"
                   style={{
                     background: "linear-gradient(135deg, hsl(215 50% 40%), hsl(220 50% 35%))",
