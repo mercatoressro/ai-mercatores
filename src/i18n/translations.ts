@@ -295,7 +295,7 @@ const sk = {
         { title: "Go High Level: automatizácia obchodu na Slovensku", description: "All-in-one platforma pre CRM, email marketing, AI agenta a automatizácie. Kedy sa oplatí pre B2B firmy a aké sú alternatívy na slovenskom trhu." },
       ],
     },
-} as const;
+};
 
 export type Dict = typeof sk;
 
