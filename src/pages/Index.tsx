@@ -15,7 +15,6 @@ const Impact = lazy(() => import("@/components/Impact"));
 const Philosophy = lazy(() => import("@/components/Philosophy"));
 const HundredChanges = lazy(() => import("@/components/HundredChanges"));
 const FAQSection = lazy(() => import("@/components/FAQSection"));
-const BlogResources = lazy(() => import("@/components/BlogResources"));
 const CTASection = lazy(() => import("@/components/CTASection"));
 const CliqSalesForm = lazy(() => import("@/components/CliqSalesForm"));
 const Footer = lazy(() => import("@/components/Footer"));
@@ -54,8 +53,6 @@ const Index = () => {
             <Philosophy />
             <SectionDivider variant="glow" />
             <FAQSection />
-            <SectionDivider variant="subtle" />
-            <BlogResources />
             <SectionDivider variant="subtle" />
             <CTASection />
             <CliqSalesForm />
