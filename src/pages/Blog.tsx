@@ -7,6 +7,18 @@ import OrganicNetwork from "@/components/OrganicNetwork";
 
 const articles = [
   {
+    title: "Ako sme implementovali AI do obchodného procesu Magnaseal — prípadová štúdia",
+    description:
+      "Špecializovaný B2B produkt, fragmentovaný trh a takmer nulová znalosť na Slovensku. Ako sme pomocou AI postavili obchodný proces pre distribútora magnetických záplat Magnaseal.",
+    url: "https://www.mercatores.sk/ako-sme-implementovali-ai-do-obchodneho-procesu-magnaseal-pripadova-studia/",
+  },
+  {
+    title: "Na slovenský gastro trh vstupuje nový hráč: AI riadená prevádzka namiesto ďalšieho POS systému",
+    description:
+      "Slovenský gastro trh pozná desiatky POS systémov a QR menu nástrojov. AI riadená prevádzka prináša namiesto ďalšieho zoznamu funkcií skutočnú zmenu v každodennom chode reštaurácie.",
+    url: "https://www.mercatores.sk/ai-gastro-system-slovensko/",
+  },
+  {
     title: "AI v gastro prevádzke: ako reštaurácie a hotely zvyšujú výkon bez ďalšieho personálu",
     description:
       "Úzke marže, fluktuácia personálu a výkyvy návštevnosti. AI prináša iný prístup než ďalšieho zamestnanca — automatizáciu opakovaných úloh a lepšie rozhodovanie v reálnom čase.",
