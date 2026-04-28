@@ -1,21 +1,24 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { trackBookingClick } from "@/lib/analytics";
-
-const navItems = [
-  { label: "Domov", href: "/#" },
-  { label: "Riešenia", href: "/#riesenia" },
-  { label: "Ako to funguje", href: "/#ako-to-funguje" },
-  { label: "Pre koho", href: "/#pre-koho" },
-  { label: "100 zmien", href: "/#100-zmien" },
-  { label: "Blog", href: "/blog" },
-  { label: "FAQ", href: "/#faq" },
-  { label: "Kontakt", href: "/#kontakt" },
-];
+import { useT } from "@/i18n/LanguageContext";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Header = () => {
+  const t = useT();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const navItems = [
+    { label: t.nav.home, href: "/#" },
+    { label: t.nav.solutions, href: "/#riesenia" },
+    { label: t.nav.howItWorks, href: "/#ako-to-funguje" },
+    { label: t.nav.forWhom, href: "/#pre-koho" },
+    { label: t.nav.hundredChanges, href: "/#100-zmien" },
+    { label: t.nav.blog, href: "/blog" },
+    { label: t.nav.faq, href: "/#faq" },
+    { label: t.nav.contact, href: "/#kontakt" },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
@@ -45,30 +48,35 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="px-4 py-2 text-[0.8125rem] text-foreground/70 hover:text-foreground transition-colors duration-400 relative group rounded-lg hover:bg-muted/20"
+                className="px-3 py-2 text-[0.8125rem] text-foreground/70 hover:text-foreground transition-colors duration-400 relative group rounded-lg hover:bg-muted/20"
               >
                 {item.label}
               </a>
             ))}
           </nav>
 
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex items-center gap-3">
+            <LanguageSwitcher />
             <a
               href="#kontakt"
               onClick={() => trackBookingClick("header_desktop")}
               className="btn-primary inline-flex items-center gap-2 px-6 py-2.5 text-[0.8125rem]"
             >
-              <span>Dohodnúť AI audit</span>
+              <span>{t.header.cta}</span>
               <ArrowRight size={14} />
             </a>
           </div>
 
-          <button
-            className="lg:hidden text-foreground/80 hover:text-foreground transition-colors p-2"
-            onClick={() => setMobileOpen(!mobileOpen)}
-          >
-            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
+          <div className="lg:hidden flex items-center gap-2">
+            <LanguageSwitcher />
+            <button
+              className="text-foreground/80 hover:text-foreground transition-colors p-2"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -94,7 +102,7 @@ const Header = () => {
                 }}
                 className="btn-primary flex items-center justify-center gap-2 px-6 py-3 text-sm w-full"
               >
-                <span>Dohodnúť AI audit</span>
+                <span>{t.header.cta}</span>
                 <ArrowRight size={14} />
               </a>
             </div>
