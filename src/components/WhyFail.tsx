@@ -1,27 +1,9 @@
 import { XCircle, CheckCircle } from "lucide-react";
+import { useT } from "@/i18n/LanguageContext";
 import bgShield from "@/assets/bg-shield-server.webp";
 
-const fails = [
-  "Firma kúpi nástroje bez jasného cieľa",
-  "AI sa nenasadí do reálnych procesov",
-  "Chýba interný ownership",
-  "Systémy zostanú odpojené",
-  "Tím nevie, čo má s riešením robiť",
-  "Po spustení sa tomu nikto nevenuje",
-  "Výsledkom je ďalší chaos namiesto výkonu",
-];
-
-const ourWay = [
-  "Začíname auditom a diagnostikou",
-  "Navrhujeme architektúru, nie len tool stack",
-  "AI prepájame s obchodom, marketingom a operatívou",
-  "Riešenie implementujeme do reality firmy",
-  "Nastavujeme ownership a logiku používania",
-  "Riešenie spravujeme a optimalizujeme",
-  "Cieľom je funkčný systém, nie len technológia",
-];
-
 const WhyFail = () => {
+  const t = useT();
   return (
     <section className="relative py-28 md:py-36 section-deep overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
@@ -30,37 +12,27 @@ const WhyFail = () => {
       <div className="absolute inset-0 grid-pattern opacity-[0.04] pointer-events-none" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
         <div className="text-center mb-6">
           <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-destructive/80 font-mono font-medium mb-4">
-            Realita trhu
+            {t.whyFail.eyebrow}
           </span>
           <h2 className="font-display text-section mb-5 max-w-3xl mx-auto text-white">
-            Väčšina AI projektov nezlyhá na technológii.{" "}
-            <span className="gradient-text">
-              Zlyhá na tom, že sa nikdy nestane súčasťou fungovania firmy.
-            </span>
+            {t.whyFail.title1}{" "}
+            <span className="gradient-text">{t.whyFail.titleAccent}</span>
           </h2>
         </div>
 
         <p className="text-center text-foreground/85 max-w-xl mx-auto text-[0.9375rem] leading-relaxed mb-12">
-          Firmy dnes často nekupujú zlé nástroje. Zlyhávajú na tom, že ich nevedia premeniť na proces, ownership a dlhodobo riadený výkon.
+          {t.whyFail.sub}
         </p>
 
-        {/* Featured image */}
         <div className="max-w-2xl mx-auto mb-16">
           <div className="featured-image-frame">
-            <img
-              src={bgShield}
-              alt="AI bezpečnostný systém"
-              className="w-full h-auto object-cover"
-              loading="lazy"
-            />
+            <img src={bgShield} alt="AI" className="w-full h-auto object-cover" loading="lazy" />
             <div className="absolute inset-0 bg-gradient-to-t from-[hsl(225_30%_3%)] via-transparent to-transparent opacity-50 pointer-events-none" />
           </div>
         </div>
 
-        {/* Comparison grid */}
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto relative">
           <div className="hidden md:block absolute left-1/2 top-8 bottom-8 w-px -translate-x-1/2">
             <div className="w-full h-full bg-gradient-to-b from-transparent via-border/40 to-transparent" />
@@ -69,18 +41,17 @@ const WhyFail = () => {
             </div>
           </div>
 
-          {/* Left: Bežný stav */}
           <div className="glass-card-static p-7 md:p-8 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-destructive/[0.03] to-transparent pointer-events-none" />
             <div className="relative z-10">
               <div className="flex items-center gap-2.5 mb-8">
                 <div className="w-2 h-2 rounded-full bg-destructive/50" />
                 <h3 className="font-display text-sm uppercase tracking-widest text-foreground/90 font-bold">
-                  Bežný stav
+                  {t.whyFail.commonState}
                 </h3>
               </div>
               <ul className="space-y-4">
-                {fails.map((f) => (
+                {t.whyFail.fails.map((f) => (
                   <li key={f} className="flex items-start gap-3">
                     <XCircle size={16} className="text-destructive/70 shrink-0 mt-0.5" />
                     <span className="text-[0.9rem] text-foreground/85 leading-relaxed">{f}</span>
@@ -90,7 +61,6 @@ const WhyFail = () => {
             </div>
           </div>
 
-          {/* Right: Riadená AI transformácia */}
           <div>
             <div className="gradient-border-card h-full">
               <div className="gradient-border-inner p-7 md:p-8 h-full relative overflow-hidden">
@@ -99,11 +69,11 @@ const WhyFail = () => {
                   <div className="flex items-center gap-2.5 mb-8">
                     <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                     <h3 className="font-display text-sm uppercase tracking-widest text-primary font-bold">
-                      Riadená AI transformácia
+                      {t.whyFail.ourWay}
                     </h3>
                   </div>
                   <ul className="space-y-4">
-                    {ourWay.map((w, i) => (
+                    {t.whyFail.ourWayItems.map((w, i) => (
                       <li key={w} className="flex items-start gap-3">
                         <CheckCircle size={16} className="text-primary/90 shrink-0 mt-0.5" />
                         <div>
@@ -119,15 +89,11 @@ const WhyFail = () => {
           </div>
         </div>
 
-        {/* Closing statement */}
         <div className="text-center mt-16 max-w-2xl mx-auto">
           <div className="h-px w-16 mx-auto bg-gradient-to-r from-transparent via-primary/30 to-transparent mb-8" />
           <p className="font-display text-lg md:text-xl font-bold text-white">
-            „My nedodávame AI ako efekt.{" "}
-            <span className="gradient-text-primary">
-              Dodávame ju ako riadený systém pre výkon firmy.
-            </span>
-            "
+            {t.whyFail.closing1}{" "}
+            <span className="gradient-text-primary">{t.whyFail.closingAccent}</span>
           </p>
         </div>
       </div>
