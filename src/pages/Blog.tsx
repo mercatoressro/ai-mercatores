@@ -167,6 +167,59 @@ const Blog = () => {
                   </article>
                 ))}
               </div>
+
+              <section aria-labelledby="related-topics" className="mt-24 md:mt-32">
+                <div className="max-w-3xl mb-12">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+                    <Tag className="w-4 h-4 text-primary" />
+                    <span className="text-sm font-medium text-primary">Súvisiace témy</span>
+                  </div>
+                  <h2
+                    id="related-topics"
+                    className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4"
+                  >
+                    Preskúmajte podľa oblasti
+                  </h2>
+                  <p className="text-base md:text-lg text-muted-foreground">
+                    Tematické klastre, ktoré spájajú články do logických celkov — vyberte si oblasť, ktorá vás zaujíma najviac.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+                  {relatedTopics.map((topic) => {
+                    const matches = articles.filter((a) => a.topics.includes(topic.name));
+                    const slug = topic.name.toLowerCase().replace(/\s+&\s+/g, "-").replace(/\s+/g, "-");
+                    return (
+                      <a
+                        key={topic.name}
+                        href={`#topic-${slug}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          const first = matches[0];
+                          if (first) window.open(first.url, "_blank", "noopener,noreferrer");
+                        }}
+                        className="group relative flex flex-col rounded-xl border border-border/60 bg-card/40 backdrop-blur-sm p-6 transition-all duration-300 hover:border-primary/40 hover:bg-card/70 hover:-translate-y-0.5"
+                      >
+                        <div className="flex items-center justify-between mb-3">
+                          <h3 className="font-display text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+                            {topic.name}
+                          </h3>
+                          <span className="text-xs font-medium text-muted-foreground px-2 py-0.5 rounded-full border border-border/60">
+                            {matches.length} {matches.length === 1 ? "článok" : matches.length < 5 ? "články" : "článkov"}
+                          </span>
+                        </div>
+                        <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
+                          {topic.description}
+                        </p>
+                        <span className="inline-flex items-center gap-1.5 text-sm text-primary font-medium">
+                          Čítať najnovší
+                          <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                        </span>
+                      </a>
+                    );
+                  })}
+                </div>
+              </section>
             </div>
           </section>
         </main>
