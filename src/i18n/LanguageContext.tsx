@@ -17,18 +17,32 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [lang, setLangState] = useState<Lang>("sk");
   const [isTransitioning, setIsTransitioning] = useState(false);
   const transitionTimer = useRef<number | null>(null);
+  const langRef = useRef<Lang>("sk");
 
   useEffect(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY) as Lang | null;
-      if (saved === "sk" || saved === "en") setLangState(saved);
-      else {
+      if (saved === "sk" || saved === "en") {
+        setLangState(saved);
+        langRef.current = saved;
+      } else {
         const browser = (navigator.language || "sk").toLowerCase();
-        if (browser.startsWith("en")) setLangState("en");
+        if (browser.startsWith("en")) {
+          setLangState("en");
+          langRef.current = "en";
+        }
       }
     } catch {
       /* ignore */
     }
+
+    // Safety: if the page was reloaded mid-transition, ensure no stale attr.
+    document.documentElement.removeAttribute("data-lang-transition");
+
+    return () => {
+      if (transitionTimer.current) window.clearTimeout(transitionTimer.current);
+      document.documentElement.removeAttribute("data-lang-transition");
+    };
   }, []);
 
   useEffect(() => {
@@ -36,50 +50,44 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   }, [lang]);
 
   const setLang = useCallback((l: Lang) => {
-    setLangState((prev) => {
-      if (prev === l) return prev;
+    if (langRef.current === l) return;
+    langRef.current = l;
 
-      // Preserve focus + scroll across the language swap
-      const active = document.activeElement as HTMLElement | null;
-      const focusSelector = active && active !== document.body ? buildSelector(active) : null;
-      const scrollY = window.scrollY;
+    // Preserve focus + scroll across the language swap
+    const active = document.activeElement as HTMLElement | null;
+    const focusSelector =
+      active && active !== document.body ? buildSelector(active) : null;
+    const scrollY = window.scrollY;
 
-      // Trigger fade-out → swap → fade-in via CSS hook on <html>
-      const root = document.documentElement;
-      root.setAttribute("data-lang-transition", "out");
-      setIsTransitioning(true);
+    const root = document.documentElement;
+    root.setAttribute("data-lang-transition", "out");
+    setIsTransitioning(true);
+
+    try {
+      localStorage.setItem(STORAGE_KEY, l);
+    } catch {
+      /* ignore */
+    }
+
+    // Fade out → swap → fade in
+    window.setTimeout(() => {
+      setLangState(l);
+      root.setAttribute("data-lang-transition", "in");
+      window.scrollTo({ top: scrollY, behavior: "auto" });
 
       window.requestAnimationFrame(() => {
-        // Swap happens after the fade-out frame is committed
-        window.setTimeout(() => {
-          root.setAttribute("data-lang-transition", "in");
-
-          // Restore scroll immediately (layout may shift slightly with EN text)
-          window.scrollTo({ top: scrollY, behavior: "auto" });
-
-          // Restore focus on next frame, after React re-renders new strings
-          window.requestAnimationFrame(() => {
-            if (focusSelector) {
-              const el = document.querySelector<HTMLElement>(focusSelector);
-              el?.focus({ preventScroll: true });
-            }
-          });
-
-          if (transitionTimer.current) window.clearTimeout(transitionTimer.current);
-          transitionTimer.current = window.setTimeout(() => {
-            root.removeAttribute("data-lang-transition");
-            setIsTransitioning(false);
-          }, TRANSITION_MS);
-        }, TRANSITION_MS / 2);
+        if (focusSelector) {
+          const el = document.querySelector<HTMLElement>(focusSelector);
+          el?.focus({ preventScroll: true });
+        }
       });
 
-      try {
-        localStorage.setItem(STORAGE_KEY, l);
-      } catch {
-        /* ignore */
-      }
-      return l;
-    });
+      if (transitionTimer.current) window.clearTimeout(transitionTimer.current);
+      transitionTimer.current = window.setTimeout(() => {
+        root.removeAttribute("data-lang-transition");
+        setIsTransitioning(false);
+      }, TRANSITION_MS);
+    }, TRANSITION_MS / 2);
   }, []);
 
   return (
@@ -89,23 +97,22 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-// Build a best-effort unique selector to restore focus after the swap.
-// Prefers id, then name, then a stable data-* attribute, then tag + index.
 function buildSelector(el: HTMLElement): string | null {
-  if (el.id) return `#${CSS.escape(el.id)}`;
-  const name = el.getAttribute("name");
-  if (name) return `${el.tagName.toLowerCase()}[name="${CSS.escape(name)}"]`;
-  const dataKeys = ["data-focus-key", "data-testid"];
-  for (const k of dataKeys) {
-    const v = el.getAttribute(k);
-    if (v) return `[${k}="${CSS.escape(v)}"]`;
+  try {
+    if (el.id) return `#${CSS.escape(el.id)}`;
+    const name = el.getAttribute("name");
+    if (name) return `${el.tagName.toLowerCase()}[name="${CSS.escape(name)}"]`;
+    for (const k of ["data-focus-key", "data-testid"]) {
+      const v = el.getAttribute(k);
+      if (v) return `[${k}="${CSS.escape(v)}"]`;
+    }
+    const parent = el.parentElement;
+    if (!parent) return null;
+    const idx = Array.from(parent.children).indexOf(el);
+    return `${parent.tagName.toLowerCase()} > ${el.tagName.toLowerCase()}:nth-child(${idx + 1})`;
+  } catch {
+    return null;
   }
-  // Fallback: tag + position among siblings
-  const parent = el.parentElement;
-  if (!parent) return null;
-  const idx = Array.from(parent.children).indexOf(el);
-  const parentSel = parent.tagName.toLowerCase();
-  return `${parentSel} > ${el.tagName.toLowerCase()}:nth-child(${idx + 1})`;
 }
 
 export const useLanguage = () => {
