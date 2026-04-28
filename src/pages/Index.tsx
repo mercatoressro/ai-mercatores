@@ -1,9 +1,10 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import SectionDivider from "@/components/SectionDivider";
 import OrganicNetwork from "@/components/OrganicNetwork";
 import ErrorBoundary from "@/components/ErrorBoundary";
+import { initScrollDepthTracking } from "@/lib/analytics";
 
 const PainPoints = lazy(() => import("@/components/PainPoints"));
 const Solutions = lazy(() => import("@/components/Solutions"));
@@ -20,6 +21,7 @@ const CliqSalesForm = lazy(() => import("@/components/CliqSalesForm"));
 const Footer = lazy(() => import("@/components/Footer"));
 
 const Index = () => {
+  useEffect(() => initScrollDepthTracking(), []);
   return (
     <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Global ambient organic network — edges only, fades at content center */}

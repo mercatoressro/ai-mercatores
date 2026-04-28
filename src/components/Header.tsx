@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ArrowRight } from "lucide-react";
+import { trackBookingClick } from "@/lib/analytics";
 
 const navItems = [
   { label: "Domov", href: "/#" },
@@ -54,6 +55,7 @@ const Header = () => {
           <div className="hidden lg:block">
             <a
               href="#kontakt"
+              onClick={() => trackBookingClick("header_desktop")}
               className="btn-primary inline-flex items-center gap-2 px-6 py-2.5 text-[0.8125rem]"
             >
               <span>Dohodnúť AI audit</span>
@@ -86,7 +88,10 @@ const Header = () => {
             <div className="pt-3">
               <a
                 href="#kontakt"
-                onClick={() => setMobileOpen(false)}
+                onClick={() => {
+                  trackBookingClick("header_mobile");
+                  setMobileOpen(false);
+                }}
                 className="btn-primary flex items-center justify-center gap-2 px-6 py-3 text-sm w-full"
               >
                 <span>Dohodnúť AI audit</span>
