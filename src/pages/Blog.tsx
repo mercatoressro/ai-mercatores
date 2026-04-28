@@ -1,59 +1,83 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, BookOpen } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpen, Tag } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import OrganicNetwork from "@/components/OrganicNetwork";
 
-const articles = [
+type Topic = "AI v obchode" | "Sales outsourcing" | "Automatizácia" | "Gastro & HoReCa" | "Prípadové štúdie" | "Dáta & analytika";
+
+const articles: {
+  title: string;
+  description: string;
+  url: string;
+  topics: Topic[];
+}[] = [
   {
     title: "Ako sme implementovali AI do obchodného procesu Magnaseal — prípadová štúdia",
     description:
       "Špecializovaný B2B produkt, fragmentovaný trh a takmer nulová znalosť na Slovensku. Ako sme pomocou AI postavili obchodný proces pre distribútora magnetických záplat Magnaseal.",
     url: "https://www.mercatores.sk/ako-sme-implementovali-ai-do-obchodneho-procesu-magnaseal-pripadova-studia/",
+    topics: ["Prípadové štúdie", "AI v obchode"],
   },
   {
     title: "Na slovenský gastro trh vstupuje nový hráč: AI riadená prevádzka namiesto ďalšieho POS systému",
     description:
       "Slovenský gastro trh pozná desiatky POS systémov a QR menu nástrojov. AI riadená prevádzka prináša namiesto ďalšieho zoznamu funkcií skutočnú zmenu v každodennom chode reštaurácie.",
     url: "https://www.mercatores.sk/ai-gastro-system-slovensko/",
+    topics: ["Gastro & HoReCa", "AI v obchode"],
   },
   {
     title: "AI v gastro prevádzke: ako reštaurácie a hotely zvyšujú výkon bez ďalšieho personálu",
     description:
       "Úzke marže, fluktuácia personálu a výkyvy návštevnosti. AI prináša iný prístup než ďalšieho zamestnanca — automatizáciu opakovaných úloh a lepšie rozhodovanie v reálnom čase.",
     url: "https://www.mercatores.sk/ai-v-gastro-prevadzke-ako-restauracie-a-hotely-zvysuju-vykon-bez-dalsieho-personalum/",
+    topics: ["Gastro & HoReCa", "Automatizácia"],
   },
   {
     title: "Go High Level: ako automatizovať B2B obchod a marketing na Slovensku",
     description:
       "Väčšina B2B firiem používa 5–8 nástrojov, ktoré spolu nekomunikujú. Ako Go High Level zjednocuje CRM, emaily, landing pages a automatizácie do jednej platformy.",
     url: "https://www.mercatores.sk/ako-automatizovat-b2b-obchod-marketing-go-high-level-slovensko/",
+    topics: ["Automatizácia", "AI v obchode"],
   },
   {
     title: "AI v B2B obchode: ako transformovať predaj pomocou umelej inteligencie",
     description:
       "AI v obchode nie je budúcnosť, ale prítomnosť. Firmy ktoré AI nasadili včas, majú dnes merateľnú výhodu. Praktický pohľad na to, kde AI v B2B predaji reálne funguje.",
     url: "https://www.mercatores.sk/transformacia-predaja-ai-v-obchode-b2b/",
+    topics: ["AI v obchode"],
   },
   {
     title: "Čo je sales outsourcing a kedy sa oplatí?",
     description:
       "Hľadáte obchodníka mesiace bez výsledku? Alebo máte obchodníka s podpriemernými výsledkami? Kedy je sales outsourcing riešenie a kedy nie — porovnanie nákladov a rizík.",
     url: "https://www.mercatores.sk/co-je-sales-outsourcing-a-kedy-sa-oplati/",
+    topics: ["Sales outsourcing"],
   },
   {
     title: "Inovatívne využitie open-source dát v predaji a marketingu",
     description:
       "Dáta sú hnacou silou B2B stratégií, ale bez pochopenia výhod ich integrácie ich hodnota uniká. Úvod do toho, ako open-source dáta optimalizujú predaj a marketing.",
     url: "https://www.mercatores.sk/inovativne-vyuzitie-open-source-dat-v-predaji-a-marketingu/",
+    topics: ["Dáta & analytika", "AI v obchode"],
   },
   {
     title: "Go High Level: automatizácia obchodu na Slovensku",
     description:
       "All-in-one platforma pre CRM, email marketing, AI agenta a automatizácie. Kedy sa oplatí pre B2B firmy a aké sú alternatívy na slovenskom trhu.",
     url: "https://www.mercatores.sk/go-high-level-automatizacia-obchodu-slovensko/",
+    topics: ["Automatizácia"],
   },
+];
+
+const relatedTopics: { name: Topic; description: string }[] = [
+  { name: "AI v obchode", description: "Praktické nasadenie AI v B2B predaji a kvalifikácii leadov." },
+  { name: "Sales outsourcing", description: "Kedy externý obchodný tím dáva zmysel a kedy nie." },
+  { name: "Automatizácia", description: "CRM, kampane a procesy bez manuálnej rutiny." },
+  { name: "Gastro & HoReCa", description: "AI riešenia pre reštaurácie, hotely a prevádzky." },
+  { name: "Prípadové štúdie", description: "Reálne implementácie s merateľnými výsledkami." },
+  { name: "Dáta & analytika", description: "Open-source dáta a analytika pre rast obchodu." },
 ];
 
 const Blog = () => {
@@ -110,6 +134,16 @@ const Blog = () => {
                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
                     <div className="relative flex flex-col flex-1">
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {article.topics.map((topic) => (
+                          <span
+                            key={topic}
+                            className="inline-flex items-center text-xs font-medium px-2.5 py-1 rounded-full bg-primary/10 text-primary border border-primary/20"
+                          >
+                            {topic}
+                          </span>
+                        ))}
+                      </div>
                       <h2 className="font-display text-xl md:text-2xl font-semibold text-foreground mb-4 leading-tight group-hover:text-primary transition-colors">
                         {article.title}
                       </h2>
@@ -133,6 +167,59 @@ const Blog = () => {
                   </article>
                 ))}
               </div>
+
+              <section aria-labelledby="related-topics" className="mt-24 md:mt-32">
+                <div className="max-w-3xl mb-12">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+                    <Tag className="w-4 h-4 text-primary" />
+                    <span className="text-sm font-medium text-primary">Súvisiace témy</span>
+                  </div>
+                  <h2
+                    id="related-topics"
+                    className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4"
+                  >
+                    Preskúmajte podľa oblasti
+                  </h2>
+                  <p className="text-base md:text-lg text-muted-foreground">
+                    Tematické klastre, ktoré spájajú články do logických celkov — vyberte si oblasť, ktorá vás zaujíma najviac.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+                  {relatedTopics.map((topic) => {
+                    const matches = articles.filter((a) => a.topics.includes(topic.name));
+                    const slug = topic.name.toLowerCase().replace(/\s+&\s+/g, "-").replace(/\s+/g, "-");
+                    return (
+                      <a
+                        key={topic.name}
+                        href={`#topic-${slug}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          const first = matches[0];
+                          if (first) window.open(first.url, "_blank", "noopener,noreferrer");
+                        }}
+                        className="group relative flex flex-col rounded-xl border border-border/60 bg-card/40 backdrop-blur-sm p-6 transition-all duration-300 hover:border-primary/40 hover:bg-card/70 hover:-translate-y-0.5"
+                      >
+                        <div className="flex items-center justify-between mb-3">
+                          <h3 className="font-display text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+                            {topic.name}
+                          </h3>
+                          <span className="text-xs font-medium text-muted-foreground px-2 py-0.5 rounded-full border border-border/60">
+                            {matches.length} {matches.length === 1 ? "článok" : matches.length < 5 ? "články" : "článkov"}
+                          </span>
+                        </div>
+                        <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
+                          {topic.description}
+                        </p>
+                        <span className="inline-flex items-center gap-1.5 text-sm text-primary font-medium">
+                          Čítať najnovší
+                          <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                        </span>
+                      </a>
+                    );
+                  })}
+                </div>
+              </section>
             </div>
           </section>
         </main>
