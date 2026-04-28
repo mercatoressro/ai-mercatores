@@ -134,6 +134,16 @@ const Blog = () => {
                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
                     <div className="relative flex flex-col flex-1">
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {article.topics.map((topic) => (
+                          <span
+                            key={topic}
+                            className="inline-flex items-center text-xs font-medium px-2.5 py-1 rounded-full bg-primary/10 text-primary border border-primary/20"
+                          >
+                            {topic}
+                          </span>
+                        ))}
+                      </div>
                       <h2 className="font-display text-xl md:text-2xl font-semibold text-foreground mb-4 leading-tight group-hover:text-primary transition-colors">
                         {article.title}
                       </h2>
