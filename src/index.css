@@ -521,3 +521,34 @@
   background: hsl(var(--primary) / 0.3);
   color: hsl(var(--foreground));
 }
+
+/* ═══════ LANGUAGE TRANSITION ═══════ */
+/* Smooth fade across the whole page when switching SK <-> EN.
+   Driven by data-lang-transition on <html>, set by LanguageProvider. */
+html[data-lang-transition] body {
+  transition: opacity 280ms ease, filter 280ms ease;
+  will-change: opacity, filter;
+}
+html[data-lang-transition="out"] body {
+  opacity: 0.55;
+  filter: blur(1.5px);
+}
+html[data-lang-transition="in"] body {
+  opacity: 1;
+  filter: blur(0);
+  animation: lang-fade-in 280ms ease-out;
+}
+@keyframes lang-fade-in {
+  from { opacity: 0.55; filter: blur(1.5px); }
+  to   { opacity: 1; filter: blur(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-lang-transition] body,
+  html[data-lang-transition="out"] body,
+  html[data-lang-transition="in"] body {
+    transition: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+}
