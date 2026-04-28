@@ -1,7 +1,6 @@
 export type Lang = "sk" | "en";
 
-export const translations = {
-  sk: {
+const sk = {
     // ─── HEADER ───
     nav: {
       home: "Domov",
@@ -298,7 +297,11 @@ export const translations = {
     },
   },
 
-  en: {
+} as const;
+
+export type Dict = typeof sk;
+
+const en: Dict = {
     nav: {
       home: "Home",
       solutions: "Solutions",
