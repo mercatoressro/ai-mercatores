@@ -26,15 +26,10 @@ ai.mercatores.sk je AI divízia Mercatores zameraná na implementáciu umelej in
 
 100 zmien je náš program konkrétnych, merateľných vylepšení obchodného a marketingového procesu pomocou AI nástrojov. Každá zmena je otestovaná v praxi s reálnymi firmami a prináša merateľný výsledok. Pokrýva oblasti: prospecting, kvalifikácia leadov, personalizácia komunikácie, follow-up, CRM automatizácia, reporting, content marketing, social selling.
 
-## Sekcie webu
+## Pages
 
-- Domov
-- Riešenia
-- Ako to funguje
-- Pre koho
-- 100 zmien
-- FAQ
-- Kontakt
+- [Domov](https://ai.mercatores.sk/): AI divízia Mercatores — B2B predaj a outsourcing obchodu s podporou AI, riešenia, ako to funguje, pre koho, 100 zmien, FAQ a kontakt.
+- [Blog](https://ai.mercatores.sk/blog): Užitočné články a zdroje o AI v B2B predaji, automatizácii obchodu a marketingu.
 
 ## Kontakt
 

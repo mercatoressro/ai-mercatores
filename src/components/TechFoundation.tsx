@@ -42,7 +42,7 @@ const TechFoundation = () => {
 
         <div className="max-w-3xl mx-auto mb-16">
           <div className="featured-image-frame">
-            <img src={bgNetwork} alt="AI" className="w-full h-auto object-cover" loading="lazy" />
+            <img src={bgNetwork} alt="Vizualizácia AI siete prepájajúcej obchodné a marketingové nástroje" className="w-full h-auto object-cover" loading="lazy" />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-50 pointer-events-none" />
           </div>
         </div>

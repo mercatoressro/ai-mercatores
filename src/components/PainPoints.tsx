@@ -23,7 +23,8 @@ const PainPoints = () => {
             >
               <img
                 src={diagnosticImage}
-                alt="B2B"
+                alt="B2B obchodný tím na porade analyzujúci výkon predaja"
+
                 loading="lazy"
                 className="w-full h-auto object-cover block"
                 style={{ filter: "contrast(1.05) saturate(0.95)" }}
