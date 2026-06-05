@@ -40,7 +40,7 @@ ai.mercatores.sk je AI divízia Mercatores zameraná na implementáciu umelej in
 
 - Web: https://ai.mercatores.sk
 - Hlavná agentúra: https://www.mercatores.sk
-- Email: ai@ai.mercatores.sk
+- Email: ai@mercatores.sk
 - Telefón: +421 905 600 095
 - CTA: Dohodnúť AI audit (bezplatný úvodný audit)
 
