@@ -47,7 +47,7 @@ const Footer = () => {
           <div>
             <h4 className="font-display text-xs uppercase tracking-widest text-foreground/75 font-bold mb-5">{t.footer.contactTitle}</h4>
             <ul className="space-y-3 text-sm text-foreground/80 mb-8">
-              <li><a href="mailto:ai@ai.mercatores.sk" className="hover:text-foreground transition-colors">ai@ai.mercatores.sk</a></li>
+              
               <li><a href="mailto:ai@mercatores.sk" className="hover:text-foreground transition-colors">ai@mercatores.sk</a></li>
               <li><a href="tel:+421905600095" className="hover:text-foreground transition-colors">0905 600 095</a></li>
               <li><a href="https://wa.me/421905600095" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">WhatsApp: 0905 600 095</a></li>

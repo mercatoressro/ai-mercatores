@@ -200,9 +200,9 @@ const CTASection = () => {
                   {t.cta.side.contactTitle}
                 </div>
                 <div className="space-y-3">
-                  <a href="mailto:ai@ai.mercatores.sk" className="flex items-center gap-3 text-[0.8125rem] text-foreground/85 hover:text-foreground transition-colors">
+                  <a href="mailto:ai@mercatores.sk" className="flex items-center gap-3 text-[0.8125rem] text-foreground/85 hover:text-foreground transition-colors">
                     <Mail size={14} className="text-primary/70 flex-shrink-0" />
-                    ai@ai.mercatores.sk
+                    ai@mercatores.sk
                   </a>
                   <a href="mailto:ai@mercatores.sk" className="flex items-center gap-3 text-[0.8125rem] text-foreground/85 hover:text-foreground transition-colors">
                     <Mail size={14} className="text-primary/70 flex-shrink-0" />
