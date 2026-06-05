@@ -37,12 +37,42 @@ const Blog = () => {
   const { lang } = useLanguage();
 
   useEffect(() => {
+    const blogUrl = "https://ai.mercatores.sk/blog";
+    const prevTitle = document.title;
+
     document.title = t.blog.docTitle;
-    const meta =
-      document.querySelector('meta[name="description"]') ||
-      Object.assign(document.createElement("meta"), { name: "description" });
-    meta.setAttribute("content", t.blog.docDesc);
-    if (!meta.parentElement) document.head.appendChild(meta);
+
+    const setMeta = (selector: string, attr: string, value: string) => {
+      let el = document.querySelector<HTMLMetaElement>(selector);
+      if (!el) {
+        el = document.createElement("meta");
+        const [, key] = selector.match(/\[(?:name|property)="(.+)"\]/) || [];
+        if (selector.includes("property")) el.setAttribute("property", key);
+        else el.setAttribute("name", key);
+        document.head.appendChild(el);
+      }
+      const prev = el.getAttribute("content");
+      el.setAttribute("content", value);
+      return { el, prev };
+    };
+
+    const desc = setMeta('meta[name="description"]', "content", t.blog.docDesc);
+    const ogTitle = setMeta('meta[property="og:title"]', "content", t.blog.docTitle);
+    const ogDesc = setMeta('meta[property="og:description"]', "content", t.blog.docDesc);
+    const ogUrl = setMeta('meta[property="og:url"]', "content", blogUrl);
+
+    const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    const prevCanonical = canonical?.getAttribute("href") || null;
+    if (canonical) canonical.setAttribute("href", blogUrl);
+
+    return () => {
+      document.title = prevTitle;
+      if (desc.prev !== null) desc.el.setAttribute("content", desc.prev);
+      if (ogTitle.prev !== null) ogTitle.el.setAttribute("content", ogTitle.prev);
+      if (ogDesc.prev !== null) ogDesc.el.setAttribute("content", ogDesc.prev);
+      if (ogUrl.prev !== null) ogUrl.el.setAttribute("content", ogUrl.prev);
+      if (canonical && prevCanonical) canonical.setAttribute("href", prevCanonical);
+    };
   }, [t]);
 
   const pluralize = (n: number) => {
