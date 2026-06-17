@@ -1,111 +1,89 @@
-import { useState, useEffect } from "react";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
 import { trackBookingClick } from "@/lib/analytics";
-import { useT } from "@/i18n/LanguageContext";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
+
+const NAV = [
+  { label: "Problém", href: "/#problem" },
+  { label: "Audit", href: "/#audit" },
+  { label: "Metodika", href: "/#metodika" },
+  { label: "Výstup", href: "/#vystup" },
+  { label: "Kontakt", href: "/#kontakt" },
+];
 
 const Header = () => {
-  const t = useT();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const navItems = [
-    { label: t.nav.home, href: "/#" },
-    { label: t.nav.solutions, href: "/#riesenia" },
-    { label: t.nav.howItWorks, href: "/#ako-to-funguje" },
-    { label: t.nav.forWhom, href: "/#pre-koho" },
-    { label: t.nav.hundredChanges, href: "/#100-zmien" },
-    { label: t.nav.blog, href: "/blog" },
-    { label: t.nav.faq, href: "/#faq" },
-    { label: t.nav.contact, href: "/#kontakt" },
-  ];
-
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 30);
-    window.addEventListener("scroll", onScroll);
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
-        scrolled
-          ? "glass shadow-[0_4px_30px_-10px_hsl(200_100%_55%/0.08)]"
-          : "bg-transparent"
+      className={`fixed inset-x-0 top-0 z-50 bg-white transition-shadow duration-300 ${
+        scrolled ? "border-b border-border shadow-[0_1px_3px_rgba(17,24,39,0.04)]" : "border-b border-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-[72px]">
-          <a href="#" aria-label="ai.mercatores.sk — domovská stránka" className="font-display font-bold text-[1.15rem] tracking-tight relative group">
-            <span className="text-white">ai.</span>
-            <span className="gradient-text-primary">mercatores</span>
-            <span className="text-foreground/70">.sk</span>
-            <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary/40 transition-all duration-500 group-hover:w-full" />
-          </a>
+      <div className="mx-auto flex h-[72px] max-w-6xl items-center justify-between px-5 sm:px-8">
+        <a href="/#" aria-label="Mercatores — Rastový audit" className="flex items-baseline gap-2.5">
+          <span className="text-[1.15rem] font-extrabold tracking-tight text-foreground">Mercatores</span>
+          <span className="hidden text-[0.8rem] font-medium text-muted-foreground sm:inline">Rastový audit</span>
+        </a>
 
-          <nav className="hidden lg:flex items-center gap-1">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="px-3 py-2 text-[0.8125rem] text-foreground/70 hover:text-foreground transition-colors duration-400 relative group rounded-lg hover:bg-muted/20"
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
-
-          <div className="hidden lg:flex items-center gap-3">
-            <LanguageSwitcher />
+        <nav className="hidden items-center gap-1 lg:flex">
+          {NAV.map((item) => (
             <a
-              href="#kontakt"
-              onClick={() => trackBookingClick("header_desktop")}
-              className="btn-primary inline-flex items-center gap-2 px-6 py-2.5 text-[0.8125rem]"
+              key={item.label}
+              href={item.href}
+              className="rounded-md px-3 py-2 text-[0.9rem] font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
-              <span>{t.header.cta}</span>
-              <ArrowRight size={14} />
+              {item.label}
             </a>
-          </div>
+          ))}
+        </nav>
 
-          <div className="lg:hidden flex items-center gap-2">
-            <LanguageSwitcher />
-            <button
-              className="text-foreground/80 hover:text-foreground transition-colors p-2"
-              onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label="Toggle menu"
-            >
-              {mobileOpen ? <X size={22} /> : <Menu size={22} />}
-            </button>
-          </div>
+        <div className="hidden lg:block">
+          <a href="/#kontakt" onClick={() => trackBookingClick("header_desktop")} className="btn-primary px-5 py-2.5 text-[0.9rem]">
+            Zistiť úniky v obchode
+          </a>
         </div>
+
+        <button
+          className="p-2 text-foreground lg:hidden"
+          onClick={() => setMobileOpen((v) => !v)}
+          aria-label="Otvoriť menu"
+          aria-expanded={mobileOpen}
+        >
+          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
       </div>
 
       {mobileOpen && (
-        <div className="lg:hidden glass border-t border-border/20 overflow-hidden">
-          <div className="px-6 py-6 space-y-1">
-            {navItems.map((item) => (
+        <div className="border-t border-border bg-white lg:hidden">
+          <div className="space-y-1 px-5 py-4">
+            {NAV.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
-                className="block px-4 py-3 text-sm text-foreground/75 hover:text-foreground hover:bg-muted/20 rounded-lg transition-all"
+                className="block rounded-md px-3 py-3 text-[0.95rem] font-medium text-muted-foreground transition-colors hover:bg-[hsl(var(--surface))] hover:text-foreground"
               >
                 {item.label}
               </a>
             ))}
-            <div className="pt-3">
-              <a
-                href="#kontakt"
-                onClick={() => {
-                  trackBookingClick("header_mobile");
-                  setMobileOpen(false);
-                }}
-                className="btn-primary flex items-center justify-center gap-2 px-6 py-3 text-sm w-full"
-              >
-                <span>{t.header.cta}</span>
-                <ArrowRight size={14} />
-              </a>
-            </div>
+            <a
+              href="/#kontakt"
+              onClick={() => {
+                trackBookingClick("header_mobile");
+                setMobileOpen(false);
+              }}
+              className="btn-primary mt-2 w-full"
+            >
+              Zistiť úniky v obchode
+            </a>
           </div>
         </div>
       )}

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, BookOpen, Tag } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import OrganicNetwork from "@/components/OrganicNetwork";
 import { useT, useLanguage } from "@/i18n/LanguageContext";
 
 const URLS = [
@@ -90,15 +89,11 @@ const Blog = () => {
   }));
 
   return (
-    <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden">
-      <div className="fixed inset-0 pointer-events-none z-0">
-        <OrganicNetwork opacity={1} fadeCenterX={0.5} fadeCenterY={0.5} />
-      </div>
-
+    <div className="relative min-h-screen bg-white text-foreground overflow-x-hidden">
       <div className="relative z-[1]">
         <Header />
         <main>
-          <section className="relative pt-40 pb-24 md:pt-48 md:pb-32 px-4">
+          <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 px-4">
             <div className="max-w-7xl mx-auto">
               <Link
                 to="/"

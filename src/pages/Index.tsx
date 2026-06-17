@@ -1,70 +1,37 @@
-import { lazy, Suspense, useEffect } from "react";
+import { useEffect } from "react";
 import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import SectionDivider from "@/components/SectionDivider";
-import OrganicNetwork from "@/components/OrganicNetwork";
-import ErrorBoundary from "@/components/ErrorBoundary";
+import Footer from "@/components/Footer";
+import Hero from "@/components/audit/Hero";
+import ProblemSection from "@/components/audit/ProblemSection";
+import ForWhomSection from "@/components/audit/ForWhomSection";
+import AuditScopeSection from "@/components/audit/AuditScopeSection";
+import MethodologySection from "@/components/audit/MethodologySection";
+import PhaseDetailSection from "@/components/audit/PhaseDetailSection";
+import DailyRoutineSection from "@/components/audit/DailyRoutineSection";
+import OutputSection from "@/components/audit/OutputSection";
+import WhyMercatoresSection from "@/components/audit/WhyMercatoresSection";
+import DiagnosticForm from "@/components/audit/DiagnosticForm";
 import { initScrollDepthTracking } from "@/lib/analytics";
-
-const PainPoints = lazy(() => import("@/components/PainPoints"));
-const Solutions = lazy(() => import("@/components/Solutions"));
-const TechFoundation = lazy(() => import("@/components/TechFoundation"));
-const WhyFail = lazy(() => import("@/components/WhyFail"));
-const HowItWorks = lazy(() => import("@/components/HowItWorks"));
-const ForWhom = lazy(() => import("@/components/ForWhom"));
-const Impact = lazy(() => import("@/components/Impact"));
-const Philosophy = lazy(() => import("@/components/Philosophy"));
-const HundredChanges = lazy(() => import("@/components/HundredChanges"));
-const FAQSection = lazy(() => import("@/components/FAQSection"));
-const CTASection = lazy(() => import("@/components/CTASection"));
-const CliqSalesForm = lazy(() => import("@/components/CliqSalesForm"));
-const Footer = lazy(() => import("@/components/Footer"));
 
 const Index = () => {
   useEffect(() => initScrollDepthTracking(), []);
-  return (
-    <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden">
-      {/* Global ambient organic network — edges only, fades at content center */}
-      <div className="fixed inset-0 pointer-events-none z-0">
-        <OrganicNetwork opacity={1} fadeCenterX={0.5} fadeCenterY={0.5} />
-      </div>
 
-      <div className="relative z-[1]">
-        <Header />
-        <main>
-          <HeroSection />
-          <ErrorBoundary>
-          <Suspense fallback={null}>
-            <SectionDivider variant="glow" />
-            <PainPoints />
-            <SectionDivider variant="subtle" />
-            <Solutions />
-            <SectionDivider variant="gradient" />
-            <TechFoundation />
-            <SectionDivider variant="subtle" />
-            <WhyFail />
-            <SectionDivider variant="subtle" />
-            <HowItWorks />
-            <SectionDivider variant="glow" />
-            <ForWhom />
-            <SectionDivider variant="subtle" />
-            <Impact />
-            <SectionDivider variant="gradient" />
-            <HundredChanges />
-            <SectionDivider variant="glow" />
-            <Philosophy />
-            <SectionDivider variant="glow" />
-            <FAQSection />
-            <SectionDivider variant="subtle" />
-            <CTASection />
-            <CliqSalesForm />
-          </Suspense>
-          </ErrorBoundary>
-        </main>
-        <Suspense fallback={null}>
-          <Footer />
-        </Suspense>
-      </div>
+  return (
+    <div className="min-h-screen bg-white text-foreground">
+      <Header />
+      <main>
+        <Hero />
+        <ProblemSection />
+        <ForWhomSection />
+        <AuditScopeSection />
+        <MethodologySection />
+        <PhaseDetailSection />
+        <DailyRoutineSection />
+        <OutputSection />
+        <WhyMercatoresSection />
+        <DiagnosticForm />
+      </main>
+      <Footer />
     </div>
   );
 };

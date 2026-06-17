@@ -1,72 +1,51 @@
-import { ArrowRight } from "lucide-react";
-import { useT } from "@/i18n/LanguageContext";
-
 const Footer = () => {
-  const t = useT();
-
-  const navLinks = [
-    { label: t.nav.home, href: "#" },
-    { label: t.nav.solutions, href: "#riesenia" },
-    { label: t.nav.howItWorks, href: "#ako-to-funguje" },
-    { label: t.nav.forWhom, href: "#pre-koho" },
-    { label: t.nav.faq, href: "#faq" },
-    { label: t.nav.contact, href: "#kontakt" },
-  ];
+  const year = new Date().getFullYear();
 
   return (
-    <footer className="relative border-t border-border/25">
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/92 to-background/75 pointer-events-none z-0" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent z-[1]" />
-
-      <div className="relative z-[1] container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
-          <div>
-            <div className="font-display font-bold text-xl tracking-tight mb-4">
-              <span className="text-white">ai.</span>
-              <span className="gradient-text-primary">mercatores</span>
-              <span className="text-foreground/70">.sk</span>
+    <footer className="border-t border-border bg-white">
+      <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8">
+        <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+          <div className="max-w-sm">
+            <div className="flex items-baseline gap-2.5">
+              <span className="text-[1.1rem] font-extrabold tracking-tight text-foreground">Mercatores</span>
+              <span className="text-[0.8rem] font-medium text-muted-foreground">Rastový audit</span>
             </div>
-            <p className="text-sm text-foreground/80 leading-relaxed max-w-xs">
-              {t.footer.tagline}
+            <p className="mt-4 text-[0.95rem] leading-relaxed text-muted-foreground">
+              Diagnostika obchodu, dopytu a procesov pre firmy, ktoré už predávajú,
+              ale rastú chaoticky.
             </p>
+            <div className="mt-4 space-y-1">
+              <a href="mailto:info@mercatores.sk" className="block text-[0.95rem] font-medium text-primary hover:underline">
+                info@mercatores.sk
+              </a>
+              <a href="tel:+421905600095" className="block text-[0.95rem] text-muted-foreground hover:text-foreground">
+                0905 600 095
+              </a>
+              <p className="text-[0.9rem] text-muted-foreground">Slovensko</p>
+            </div>
           </div>
 
-          <div>
-            <h4 className="font-display text-xs uppercase tracking-widest text-foreground/75 font-bold mb-5">{t.footer.navTitle}</h4>
-            <ul className="space-y-3">
-              {navLinks.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href} className="text-sm text-foreground/80 hover:text-foreground transition-colors duration-300">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-display text-xs uppercase tracking-widest text-foreground/75 font-bold mb-5">{t.footer.contactTitle}</h4>
-            <ul className="space-y-3 text-sm text-foreground/80 mb-8">
-              
-              <li><a href="mailto:ai@mercatores.sk" className="hover:text-foreground transition-colors">ai@mercatores.sk</a></li>
-              <li><a href="tel:+421905600095" className="hover:text-foreground transition-colors">0905 600 095</a></li>
-              <li><a href="https://wa.me/421905600095" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">WhatsApp: 0905 600 095</a></li>
-            </ul>
-            <a href="#kontakt" className="btn-primary inline-flex items-center gap-2 px-6 py-3 text-sm">
-              <span>{t.footer.cta}</span>
-              <ArrowRight size={14} />
+          <nav className="flex flex-col gap-3">
+            <span className="text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+              Odkazy
+            </span>
+            <a href="https://www.mercatores.sk" className="text-[0.95rem] text-foreground hover:text-primary">
+              Služby
             </a>
-          </div>
+            <a href="/#kontakt" className="text-[0.95rem] text-foreground hover:text-primary">
+              Kontakt
+            </a>
+            <a
+              href="https://www.mercatores.sk/ochrana-osobnych-udajov/"
+              className="text-[0.95rem] text-foreground hover:text-primary"
+            >
+              Ochrana osobných údajov
+            </a>
+          </nav>
         </div>
 
-        <div className="mt-20 pt-8 border-t border-border/20 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-foreground/60">
-            © {new Date().getFullYear()} ai.mercatores.sk. {t.footer.rights}
-          </p>
-          <div className="flex gap-8 text-xs text-foreground/60">
-            <a href="#" className="hover:text-foreground/80 transition-colors duration-300">{t.footer.privacy}</a>
-            <a href="#" className="hover:text-foreground/80 transition-colors duration-300">{t.footer.terms}</a>
-          </div>
+        <div className="mt-12 border-t border-border pt-6 text-[0.85rem] text-muted-foreground">
+          © {year} Mercatores. Všetky práva vyhradené.
         </div>
       </div>
     </footer>
