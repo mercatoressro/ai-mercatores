@@ -1,46 +1,48 @@
-# Mercatores AI
+# Rastový audit Mercatores
 
-> B2B predaj a outsourcing obchodu s podporou umelej inteligencie. Kombinujeme 15+ rokov obchodných skúseností s AI nástrojmi pre maximálne výsledky v obchode, marketingu a operatíve. Pôsobíme na Slovensku a v Čechách.
+> Praktická diagnostika obchodu, dopytu, CRM a procesov pre firmy, ktoré už predávajú, ale rastú chaoticky. Mercatores pomocou metodiky Rastový Kompas určí, kde firme uniká rast a čo má opraviť ako prvé. Pôsobíme na Slovensku.
 
 ## Čo robíme
 
-ai.mercatores.sk je AI divízia Mercatores zameraná na implementáciu umelej inteligencie do obchodných a marketingových procesov B2B firiem. Nepredávame teóriu — implementujeme konkrétne AI nástroje ktoré prinášajú merateľné výsledky.
+Rastový audit je diagnostika obchodného systému firmy. Nepredávame teóriu — preveríme dopyt, predaj, CRM, ponuku, procesy, ľudí a financie a určíme, ktorý problém má najvyššiu prioritu. Výstup slúži ako rozhodovací podklad pre majiteľa firmy.
 
-## Služby
+## Čo audit preveruje
 
-- AI Audit obchodného procesu — analýza a identifikácia príležitostí pre AI s ROI odhadom
-- Outsourcing obchodu s AI podporou — prenájom obchodníkov využívajúcich AI nástroje
-- Automatizácia obchodného procesu — od prospectingu po closing a reporting
-- Automatizácia marketingu — content, lead gen, email a social media s AI
-- Program 100 zmien — 100 konkrétnych otestovaných zmien pre obchod a marketing pomocou AI
-- AI školenia pre obchodné tímy
+- Dopyt — odkiaľ prichádzajú obchodné príležitosti a ako pravidelne
+- Predaj — či má firma opakovateľný obchodný proces
+- CRM a pipeline — či sú dáta úplné, aktuálne a použiteľné na riadenie
+- Ponuka — či je služba jasne pomenovaná, nacenená a pochopiteľná
+- Procesy a ľudia — čo stále závisí od majiteľa a čo sa dá delegovať
+- Financie a priorita — ktorý problém má najvyšší dopad na cashflow, maržu a rast
+
+## Metodika Rastový Kompas
+
+Rastový Kompas je metodika, ktorou Mercatores hodnotí fázu rastu firmy. Má 10 fáz (0–9): 0 Chaos, 1 Prvé peniaze, 2 Dopyt, 3 Stabilita, 4 Fokus, 5 Produktizácia, 6 Efektivita, 7 Segmentácia, 8 Špecializácia, 9 Kapitál. Každá fáza má inú brzdu; cieľom auditu je určiť aktuálnu fázu a najväčšiu brzdu rastu.
 
 ## Pre koho
 
-- B2B firmy s 5–200 zamestnancami na Slovensku a v Čechách
-- Firmy ktoré chcú zvýšiť efektivitu obchodu bez navyšovania fixných nákladov
-- Obchodné tímy ktoré chcú využívať AI nástroje v praxi
-- Manažéri hľadajúci merateľné výsledky z AI investícií
+- Firmy, ktoré už majú platiacich zákazníkov, ale nestabilný prísun dopytov
+- Firmy, kde obchod stojí na majiteľovi alebo jednom človeku
+- Firmy bez jasného CRM a merania pipeline
+- Majitelia, ktorí chcú rásť systémovo, nie páliť peniaze na náhodný marketing
 
-## Čo je program 100 zmien
+## Výstup z auditu
 
-100 zmien je náš program konkrétnych, merateľných vylepšení obchodného a marketingového procesu pomocou AI nástrojov. Každá zmena je otestovaná v praxi s reálnymi firmami a prináša merateľný výsledok. Pokrýva oblasti: prospecting, kvalifikácia leadov, personalizácia komunikácie, follow-up, CRM automatizácia, reporting, content marketing, social selling.
+- Určenie aktuálnej fázy rastu
+- Identifikácia najväčšej brzdy
+- Prioritizácia problémov podľa dopadu
+- Návrh prvého kroku na najbližších 30 dní
+- Odporúčanie, či riešiť obchod, CRM, ľudí, procesy alebo ponuku
 
 ## Pages
 
-- [Domov](https://ai.mercatores.sk/): AI divízia Mercatores — B2B predaj a outsourcing obchodu s podporou AI, riešenia, ako to funguje, pre koho, 100 zmien, FAQ a kontakt.
-- [Blog](https://ai.mercatores.sk/blog): Užitočné články a zdroje o AI v B2B predaji, automatizácii obchodu a marketingu.
+- [Domov](https://ai.mercatores.sk/): Rastový audit Mercatores — diagnostika obchodu, dopytu, CRM a procesov, metodika Rastový Kompas, výstup z auditu a kontakt.
+- [Blog](https://ai.mercatores.sk/blog): Články o obchode, predaji, CRM a raste B2B firiem.
 
 ## Kontakt
 
 - Web: https://ai.mercatores.sk
 - Hlavná agentúra: https://www.mercatores.sk
-- Email: ai@mercatores.sk
+- Email: info@mercatores.sk
 - Telefón: +421 905 600 095
-- CTA: Dohodnúť AI audit (bezplatný úvodný audit)
-
-## Súvisiace zdroje
-
-- Hlavný web Mercatores: https://www.mercatores.sk
-- ICP nástroj zadarmo: https://icp.mercatores.sk
-- Blog: https://www.mercatores.sk/blog
+- CTA: Zistiť úniky v obchode (diagnostický formulár)
