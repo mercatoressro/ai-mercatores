@@ -82,14 +82,13 @@ const sk = {
       badge: "Technologický základ",
       title1: "Technologický základ,",
       titleAccent: "na ktorom staviame",
-      intro: "AI transformácia firmy nestojí na jednom nástroji. Stojí na správne navrhnutej kombinácii platforiem, workflow a riadiacej logiky.",
+      intro: "AI transformácia firmy nestojí na jednom nástroji. Stojí na jednej riadenej platforme, ktorá prepája procesy, dáta a automatizácie do jedného celku.",
       platforms: [
-        { name: "Go High Level", description: "Využívame ho tam, kde firma potrebuje prepojiť lead management, CRM, kampane, komunikáciu, formuláre, funnel logiku a automatizované follow-upy do jedného riadeného prostredia." },
-        { name: "OpenClaw", description: "Využívame ho tam, kde je cieľom vyššia miera autonómie, práca s AI agentmi, špecializované workflow a flexibilnejšie nasadenie inteligentných procesov nad konkrétnym firemným použitím." },
+        { name: "CliqSales", description: "Náš technologický motor. CliqSales prepája lead management, CRM, kampane, komunikáciu, formuláre, funnel logiku, automatizované follow-upy a AI agentov do jedného riadeného prostredia." },
       ],
       howTitle: "Ako s tým pracujeme",
       howDesc: "Nepredávame nástroje ako samostatné produkty. Navrhujeme, kde dávajú zmysel, prepájame ich s procesmi firmy a spravujeme ich tak, aby prinášali reálny výkon.",
-      closing: "Nástroje samy osebe firmu nezmenia. Rozhoduje to, ako sú zapojené do reálneho fungovania firmy.",
+      closing: "Nástroj sám firmu nezmení. Rozhoduje to, ako je CliqSales zapojený do reálneho fungovania firmy.",
     },
 
     // ─── WHY FAIL ───
