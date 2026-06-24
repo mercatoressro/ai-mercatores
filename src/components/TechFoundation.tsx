@@ -1,12 +1,9 @@
 import { Badge } from "@/components/ui/badge";
 import { useT } from "@/i18n/LanguageContext";
-import logoGHL from "@/assets/logo-gohighlevel.webp";
-import logoOpenClaw from "@/assets/logo-openclaw.webp";
 import bgNetwork from "@/assets/bg-network-burst.webp";
 
 const platformMeta = [
-  { logo: logoGHL, gradient: "from-primary/20 to-primary/5", borderGlow: "group-hover:shadow-[0_0_30px_-5px_hsl(var(--primary)/0.3)]" },
-  { logo: logoOpenClaw, gradient: "from-secondary/20 to-secondary/5", borderGlow: "group-hover:shadow-[0_0_30px_-5px_hsl(var(--secondary)/0.3)]" },
+  { gradient: "from-primary/20 to-primary/5", borderGlow: "group-hover:shadow-[0_0_30px_-5px_hsl(var(--primary)/0.3)]" },
 ];
 
 const TechFoundation = () => {
