@@ -375,14 +375,13 @@ const en: Dict = {
       badge: "Technology foundation",
       title1: "The technology foundation",
       titleAccent: "we build on",
-      intro: "AI transformation doesn't rest on a single tool. It rests on the right combination of platforms, workflows and operating logic.",
+      intro: "AI transformation doesn't rest on a single tool. It rests on one managed platform that connects processes, data and automation into a single whole.",
       platforms: [
-        { name: "Go High Level", description: "We use it where a company needs to connect lead management, CRM, campaigns, communication, forms, funnel logic and automated follow-ups into one managed environment." },
-        { name: "OpenClaw", description: "We use it where the goal is greater autonomy, working with AI agents, specialized workflows and more flexible deployment of intelligent processes for specific business use." },
+        { name: "CliqSales", description: "Our technology engine. CliqSales connects lead management, CRM, campaigns, communication, forms, funnel logic, automated follow-ups and AI agents into one managed environment." },
       ],
       howTitle: "How we work with them",
       howDesc: "We don't sell tools as standalone products. We design where they make sense, connect them with the company's processes and manage them so they deliver real performance.",
-      closing: "Tools alone won't change a company. What matters is how they are wired into how the company actually operates.",
+      closing: "A tool alone won't change a company. What matters is how CliqSales is wired into how the company actually operates.",
     },
 
     whyFail: {
