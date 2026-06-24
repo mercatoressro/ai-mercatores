@@ -44,19 +44,19 @@ const TechFoundation = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-16">
+        <div className="max-w-xl mx-auto mb-16">
           {t.tech.platforms.map((platform, index) => (
             <div key={platform.name} className="group">
               <div
                 className={`relative h-full rounded-2xl border border-border/50 bg-gradient-to-b ${platformMeta[index].gradient} backdrop-blur-sm p-8 md:p-10 transition-all duration-500 ${platformMeta[index].borderGlow}`}
               >
                 <div
-                  className={`absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent ${
-                    index === 0 ? "via-primary/40" : "via-secondary/40"
-                  } to-transparent`}
+                  className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent"
                 />
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl border border-border/30 bg-white/10 backdrop-blur-sm mb-6 p-2">
-                  <img src={platformMeta[index].logo} alt={`${platform.name} logo`} loading="lazy" className="w-full h-full object-contain" />
+                <div className="inline-flex items-center justify-center rounded-xl border border-border/30 bg-white/10 backdrop-blur-sm mb-6 px-5 py-3">
+                  <span className="text-lg md:text-xl font-bold font-display bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent tracking-tight">
+                    {platform.name}
+                  </span>
                 </div>
                 <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-4 font-display">
                   {platform.name}
