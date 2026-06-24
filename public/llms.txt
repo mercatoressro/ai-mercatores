@@ -44,3 +44,9 @@ ai.mercatores.sk je AI divízia Mercatores zameraná na implementáciu umelej in
 - Hlavný web Mercatores: https://www.mercatores.sk
 - ICP nástroj zadarmo: https://icp.mercatores.sk
 - Blog: https://www.mercatores.sk/blog
+
+## Markdown Mirrors
+
+Every important page on this website has a clean markdown version for AI tools.
+
+- https://ai.mercatores.sk/index.md
