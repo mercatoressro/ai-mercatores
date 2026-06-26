@@ -147,35 +147,6 @@ const CTASection = () => {
                   ))}
                 </div>
               </div>
-            </div>
-
-            <div className="gradient-border-card">
-              <div className="gradient-border-inner p-6">
-                <div className="text-[10px] uppercase tracking-widest text-foreground/70 font-medium mb-4">
-                  {t.cta.side.contactTitle}
-                </div>
-                <div className="space-y-3">
-                  <a href="mailto:ai@mercatores.sk" className="flex items-center gap-3 text-[0.8125rem] text-foreground/85 hover:text-foreground transition-colors">
-                    <Mail size={14} className="text-primary/70 flex-shrink-0" />
-                    ai@mercatores.sk
-                  </a>
-                  <a href="mailto:ai@mercatores.sk" className="flex items-center gap-3 text-[0.8125rem] text-foreground/85 hover:text-foreground transition-colors">
-                    <Mail size={14} className="text-primary/70 flex-shrink-0" />
-                    ai@mercatores.sk
-                  </a>
-                  <a href="tel:+421905600095" className="flex items-center gap-3 text-[0.8125rem] text-foreground/85 hover:text-foreground transition-colors">
-                    <Phone size={14} className="text-primary/70 flex-shrink-0" />
-                    0905 600 095
-                  </a>
-                  <a href="https://wa.me/421905600095" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[0.8125rem] text-foreground/85 hover:text-foreground transition-colors">
-                    <MessageCircle size={14} className="text-primary/70 flex-shrink-0" />
-                    WhatsApp: 0905 600 095
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
