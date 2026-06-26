@@ -105,48 +105,6 @@ const CTASection = () => {
             </div>
           </div>
         </div>
-            <div className="gradient-border-card">
-              <div className="gradient-border-inner p-6">
-                <div className="flex items-center gap-2 mb-5">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                  <span className="text-[10px] uppercase tracking-widest text-foreground/75 font-mono">
-                    {t.cta.side.overview}
-                  </span>
-                </div>
-                <div className="space-y-4">
-                  {areas.map((area) => (
-                    <div key={area.label} className="space-y-1.5">
-                      <div className="flex justify-between">
-                        <span className="text-[11px] text-foreground/85">{area.label}</span>
-                        <span className="text-[10px] text-primary/75 font-mono">{area.w}</span>
-                      </div>
-                      <div className="h-1.5 rounded-full bg-muted/40 overflow-hidden">
-                        <div
-                          className="h-full rounded-full bg-gradient-to-r from-primary/80 to-accent/60"
-                          style={{ width: area.w }}
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="gradient-border-card">
-              <div className="gradient-border-inner p-6">
-                <div className="text-[10px] uppercase tracking-widest text-foreground/70 font-medium mb-3">
-                  {t.cta.side.processTitle}
-                </div>
-                <div className="space-y-3">
-                  {t.cta.side.processSteps.map((step, i) => (
-                    <div key={step} className="flex items-center gap-3 text-[0.8125rem]">
-                      <span className="text-[10px] font-mono text-primary/70 w-4">0{i + 1}</span>
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary/50" />
-                      <span className="text-foreground/85">{step}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
       </div>
     </section>
   );
