@@ -1,36 +1,9 @@
-import { ArrowRight, Mail, Phone, MessageCircle } from "lucide-react";
-import { useState } from "react";
-import { trackFormSubmit } from "@/lib/analytics";
+import { Mail, Phone, MessageCircle } from "lucide-react";
 import { useT } from "@/i18n/LanguageContext";
 import bgNetwork from "@/assets/bg-network-burst.webp";
 
 const CTASection = () => {
   const t = useT();
-  const [form, setForm] = useState({
-    name: "",
-    company: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    trackFormSubmit("ai_audit_contact", {
-      has_company: Boolean(form.company),
-      has_phone: Boolean(form.phone),
-      conversion_type: "ai_audit_request",
-    });
-  };
-
-  const inputClasses =
-    "w-full px-5 py-3.5 rounded-xl bg-[hsl(225_25%_8%/0.9)] border border-border/50 text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/40 focus:shadow-[0_0_20px_-5px_hsl(200_100%_55%/0.15)] transition-all duration-300";
 
   const areas = [
     { label: t.cta.side.sales, w: "85%" },
