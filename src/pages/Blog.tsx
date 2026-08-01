@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, BookOpen, Tag } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import OrganicNetwork from "@/components/OrganicNetwork";
+import SoroBlog from "@/components/SoroBlog";
 import { useT, useLanguage } from "@/i18n/LanguageContext";
 
 const URLS = [
@@ -163,6 +164,9 @@ const Blog = () => {
                   </article>
                 ))}
               </div>
+
+              <SoroBlog />
+
 
               <section aria-labelledby="related-topics" className="mt-24 md:mt-32">
                 <div className="max-w-3xl mb-12">
